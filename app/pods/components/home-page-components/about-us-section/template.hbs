@@ -1,0 +1,25 @@
+<section id="about-us" class="py-5">
+  <div class="my-5">
+    <div class="container my-5">
+      <div class="py-3">
+        <div class="row">
+          {{#each _about_Us_Section as |aboutItem|}}
+            <div class="col-md-4">
+              <div class="card position-relative">
+                <img
+                  class="card-img-top"
+                  src={{aboutItem.better_featured_image.source_url}}
+                  alt="image"
+                >
+                <a href="#" class="position-absolute">
+                  <h3 class="card-title text-white">{{aboutItem.title}}</h3>
+                </a>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{yield}}

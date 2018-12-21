@@ -2,7 +2,9 @@
 
 module.exports = function(environment) {
   let ENV = {
+    wordpressHost: 'http://localhost:8080/systematix',
     modulePrefix: 'systematix',
+    podModulePrefix: 'systematix/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',

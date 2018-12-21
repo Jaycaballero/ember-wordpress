@@ -1,0 +1,74 @@
+<header class="position-relative">
+  <div class="subpage-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="subpage-banner-content position-absolute">
+            <h1 class="display-3 text-white">{{_how_We_Train_Template.firstObject.title}}</h1>
+            <div class="pre-text mt-4">
+              <p>{{_how_We_Train_Template.firstObject.acf.header_sub_text}}</p>
+            </div>
+            <div class="call-to-action">
+              {{#each newLink as |callToAction|}}
+                <a
+                  class="btn btn-primary mt-4 btn-white-hover"
+                  href={{callToAction.link}}
+                  role="button"
+                >
+                  {{callToAction.title}}
+                </a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          {{#each _how_We_Train_Template as |howWeTrainImage|}}
+            {{subpages-templates/subpage-background-image
+              class="background-image banner-image"
+              imageUrl=howWeTrainImage.better_featured_image.source_url
+            }}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="subpage-content" class="how-we-train py-5">
+  <div class="my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col pb-4 mb-1">
+          <div class="row">
+            {{#each content as |contentItems|}}
+              <div class="col-md-4">
+                <div class="card">
+                  {{subpages-templates/subpage-background-image
+                    class="background-image card-img-top"
+                    imageUrl=contentItems.image
+                  }}
+                  <div class="custom-card-holder d-table bg-white py-4 px-4 my-1 mx-3">
+                    <div class="card-body px-0 pt-0">
+                      <h3 class="card-title text-capitalized mb-2">{{contentItems.itemTitle}}</h3>
+                      {{contentItems.excerpt}}
+                    </div>
+                    <div class="card-footer px-0 py-0">
+                      {{#link-to
+                        "page.howwetrain"
+                        _how_We_Train_Template.query.slug
+                        contentItems.slug
+                        class="btn btn-primary text-capitalized mb-1"
+                      }}
+                        Learn More
+                      {{/link-to}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{yield}}

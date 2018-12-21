@@ -1,0 +1,33 @@
+<section id="branding" class="py-5">
+  <div class="my-5">
+    <div class="container">
+      <div class="row">
+        {{#each _branding_Section as |brandingItem|}}
+          <div class="col-md-6 pr-5">
+            <h3 class="mb-0">{{brandingItem.title}}</h3>
+            <div class="mt-4">
+              {{textContent}}
+            </div>
+            <a
+              href={{bradingItem.acf.call_to_action_link.url}}
+              class="btn btn-primary mt-4 "
+              role="button"
+            >
+              {{brandingItem.acf.call_to_action_link.title}}
+            </a>
+          </div>
+          <div class="col-md-6 pl-5">
+            <div class="ml-2">
+              <img
+                src={{brandingItem.better_featured_image.source_url}}
+                alt="image"
+                width="100%"
+              >
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+{{yield}}

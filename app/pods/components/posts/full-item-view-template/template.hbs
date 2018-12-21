@@ -1,0 +1,18 @@
+{{set-body-class "full-item-view"}}
+<section id="full-item-view-content" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {{#each fullItemViewContent as |fullItem|}}
+          <h1>{{fullItem.title}}</h1>
+          {{fullItem.content}}
+          {{posts/full-item-view-bg-img
+            class="background-image"
+            imageUrl=fullItem.image
+          }}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+{{yield}}

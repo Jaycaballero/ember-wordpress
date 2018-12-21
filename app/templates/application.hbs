@@ -1,5 +1,86 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#bs-navbar
+  id="navbarSupportedContent"
+  class="py-4"
+  type=type
+  collapsed=collapsed
+  onCollapse=(action (mut collapsed) true)
+  onExpand=(action (mut collapsed) false)
+as |navbar|
+}}
+  <div class="container">
+    <div class="navbar-header">
+      {{navbar.toggle}}
+      {{#link-to
+        "index"
+        class="navbar-brand"
+      }}
+      {{/link-to}}
+    </div>
+    <div class="row">
+      <div class="col top-info">
+        {{home-page-components/contact-details _contact_Details=contactDetails}}
+      </div>
+      <div class="w-100"></div>
+      <div class="col">
+        {{#navbar.content}}
+          {{#navbar.nav class="ml-auto" as |nav|}}
+            {{#each menu.items as |page|}}
+              {{#if page.children}}
+                {{#nav.dropdown as |dd|}}
+                  {{#dd.toggle}}{{page.title}}<span class="caret"></span>{{/dd.toggle}}
+                  {{#dd.menu as |ddm|}}
+                    {{#each page.children as |child|}}
+                      {{#ddm.item}}
+                        {{#ddm.link-to "page" child.object_slug}}{{child.title}}{{/ddm.link-to}}
+                      {{/ddm.item}}
+                    {{/each}}
+                  {{/dd.menu}}
+                {{/nav.dropdown}}
+              {{else}}
+                {{#nav.item}}
+                  {{#nav.link-to "page" page.object_slug}}
+                    {{menu-item-title-html-safe _menu_Item_Title_Html_Safe=page}}
+                  {{/nav.link-to}}
+                {{/nav.item}}
+              {{/if}}
+            {{/each}}
+          {{/navbar.nav}}
+        {{/navbar.content}}
+      </div>
+    </div>
+  </div>
+{{/bs-navbar}}
 
 {{outlet}}
+
+<section id="footer" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="footer-menu mb-0 p-0">
+          {{#each footerMenu.items as |footerMenuItem|}}
+            <li>{{#link-to "page" footerMenuItem.object_slug}}{{footerMenuItem.title}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col-md-6">
+        {{home-page-components/social-links _social_Links=socialLink}}
+      </div>
+      <div class="col"><hr></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        {{#link-to
+          "index"
+          class="navbar-brand footer mt-2"
+        }}
+        {{/link-to}}
+      </div>
+      <div class="col-md-6">
+        <div class="mt-4 d-table w-100">
+          {{home-page-components/contact-details _contact_Details=contactDetails}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

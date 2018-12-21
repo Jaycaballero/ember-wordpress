@@ -1,0 +1,16 @@
+<ul class="info text-right m-0 p-0">
+  {{#each contactDetails as |contactDetailsItem|}}
+    <li>
+      <div class="row">
+        <div class="col-md-2 d-table">
+          <img src={{contactDetailsItem.image}} alt="image">
+        </div>
+        <div class="col pl-0">
+          {{contactDetailsItem.content}}
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>
+{{!-- {{log contactDetails}} --}}
+{{yield}}

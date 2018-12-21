@@ -1,0 +1,23 @@
+<section id="benefits" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="mt-2 text-center">{{_section_title.name}}</h1>
+      </div>
+    </div>
+    <div class="row mt-5">
+      {{#each ourBenefits as |benefitItem|}}
+        <div class="col-md-4 text-center mb-4">
+          <img
+            class="rounded-circle img-fluid d-block mx-auto mb-3"
+            src={{benefitItem.image}}
+            alt="image"
+          >
+          <div class="lead">{{benefitItem.title}}</div>
+          <div class="mb-4">{{benefitItem.content}}</div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+{{yield}}

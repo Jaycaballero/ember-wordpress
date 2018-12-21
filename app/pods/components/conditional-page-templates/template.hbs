@@ -1,0 +1,15 @@
+{{#if (eq templateType "about-us-template.php")}}
+  {{subpages-templates/about-us-template
+    _about_Us_Template = _default_Template
+    _client_Testimonial = _testimonials
+    _testimonials_Carousel_Title = _testimonial_Carousel_Title
+  }}
+{{else if (eq templateType "how-we-train-template.php")}}
+  {{subpages-templates/how-we-train-template
+    _how_We_Train_Template = _default_Template
+    _how_We_Trains = _how_We_Train
+  }}
+{{else}}
+  {{subpages-templates/default-template _default_Template = _default_Template}}
+{{/if}}
+{{yield}}
