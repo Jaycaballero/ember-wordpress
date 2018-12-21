@@ -9,6 +9,10 @@
     _how_We_Train_Template = _default_Template
     _how_We_Trains = _how_We_Train
   }}
+{{else if (eq templateType "contact-us.php")}}
+  {{subpages-templates/contact-us-template
+    _contact_Us_Template = _default_Template
+  }}
 {{else}}
   {{subpages-templates/default-template _default_Template = _default_Template}}
 {{/if}}

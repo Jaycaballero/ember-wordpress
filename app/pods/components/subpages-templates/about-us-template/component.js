@@ -6,7 +6,7 @@ import { htmlSafe } from '@ember/string';
 
 export default Component.extend({
 
-  classNames: ['sub-page'],
+  classNames: ['sub-page subpage-inner-content'],
 
   textContent: computed('_about_Us_Template', function(){
     let texts = get(this, '_about_Us_Template');

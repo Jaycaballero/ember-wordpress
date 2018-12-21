@@ -302,3 +302,17 @@ ul.client-testimonials-listing .carousel-item > li:nth-child(2)::after {
 body.full-item-view .subpage-inner-content {
 	display: none;
 }
+.full-item.background-image {
+	height: 250px;
+}
+.item-header-title {
+	background: #005f8b;
+}
+body.contact-us #subpage-content a {
+	color: #e84d3d;
+	font-family: calibri-bold;
+  text-decoration: none;
+}
+.far.fa-clock, #subpage-content .fas.fa-phone, #subpage-content .fas.fa-envelope, .fas.fa-building {
+	color: #005f8b;
+}

@@ -1,17 +1,30 @@
 {{set-body-class "full-item-view"}}
-<section id="full-item-view-content" class="py-5">
+<header class="item-header-title position-relative">
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="display-3 text-white mb-0">{{_page_Title.firstObject.title}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="full-item-view-content" class="my-5 py-5">
   <div class="container">
     <div class="row">
-      <div class="col">
-        {{#each fullItemViewContent as |fullItem|}}
-          <h1>{{fullItem.title}}</h1>
-          {{fullItem.content}}
+      {{#each fullItemViewContent as |fullItem|}}
+        <div class="col-md-6">
           {{posts/full-item-view-bg-img
-            class="background-image"
+            class="full-item background-image"
             imageUrl=fullItem.image
           }}
-        {{/each}}
-      </div>
+        </div>
+        <div class="col-md-6">
+          <h2>{{fullItem.title}}</h2>
+          {{fullItem.content}}
+        </div>
+      {{/each}}
     </div>
   </div>
 </section>
