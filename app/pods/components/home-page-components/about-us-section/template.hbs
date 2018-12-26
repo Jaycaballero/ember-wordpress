@@ -11,9 +11,13 @@
                   src={{aboutItem.better_featured_image.source_url}}
                   alt="image"
                 >
-                <a href="#" class="position-absolute">
+                {{#link-to
+                  "about"
+                  aboutItem.slug
+                  class="position-absolute"
+                }}
                   <h3 class="card-title text-white">{{aboutItem.title}}</h3>
-                </a>
+                {{/link-to}}
               </div>
             </div>
           {{/each}}

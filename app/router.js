@@ -3,14 +3,13 @@ import config from './config/environment';
 
 const Router = EmberRouter.extend({
   location: config.locationType,
-  rootURL: config.rootURL
+  rootURL: config.rootURL,
 });
 
 Router.map(function() {
-  this.route('page', {path: "/:page"}, function(){
-    this.route('howwetrain', {path: "howwetrain/:howwetrain"});
-    this.route('about', {path: "/:about"});
-  })
+  this.route('about', {path: "about-us/:about"});
+  this.route('howwetrain', {path: "how-we-train/:howwetrain"});
+  this.route('page', {path: "/:page"});
 });
 
 export default Router;

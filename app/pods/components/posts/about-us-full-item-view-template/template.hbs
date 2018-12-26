@@ -1,0 +1,31 @@
+{{set-body-class "full-item-view"}}
+<header class="item-header-title position-relative">
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          {{#link-to "page" linkUrl}}
+            <h1 class="display-3 text-white mb-0">{{_page_Title.firstObject.title}}</h1>
+          {{/link-to}}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="full-item-view-content" class="my-5 py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {{posts/full-item-view-bg-img
+          class="full-item background-image"
+          imageUrl=fullItemViewContent.image
+        }}
+      </div>
+      <div class="col-md-6">
+        <h2>{{fullItemViewContent.title}}</h2>
+        {{fullItemViewContent.content}}
+      </div>
+    </div>
+  </div>
+</section>
+{{yield}}
