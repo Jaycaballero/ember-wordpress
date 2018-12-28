@@ -4,7 +4,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <h1 class="display-3 text-white mb-0">{{_page_Title.firstObject.title}}</h1>
+          {{#link-to "page" linkUrl}}
+            <h1 class="display-3 text-white mb-0">{{_page_Title.firstObject.title}}</h1>
+          {{/link-to}}
         </div>
       </div>
     </div>

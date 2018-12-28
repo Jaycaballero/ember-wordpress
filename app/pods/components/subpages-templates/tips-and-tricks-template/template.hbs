@@ -1,0 +1,88 @@
+{{set-body-class "tips-and-tricks"}}
+<header class="position-relative">
+  <div class="subpage-header">
+    <div class="container">
+      <div class="row">
+        {{#each featuredPostContent as |featuredPost|}}
+          <div class="col-lg-6">
+            <div class="subpage-banner-content position-absolute pr-5">
+              <div class="featured-article-in-the-header">
+                <h3 class="text-white article-title-in-the-header">
+                  {{featuredPost.title}}
+                </h3>
+                <div class="pre-text mt-2">
+                  {{featuredPost.excerpt}}
+                </div>
+                <small class="text-white">
+                  By {{featuredPost.author}}
+                  {{moment-format featuredPost.date "[on] DD MMM YYYY"}}
+                </small>
+                <div class="call-to-action">
+                  {{#link-to
+                    "page"
+                    class="btn btn-primary mt-4 btn-white-hover"
+                  }}
+                    Read More
+                  {{/link-to}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            {{subpages-templates/subpage-background-image
+              class="featured background-image"
+              imageUrl=featuredPost.image
+            }}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</header>
+<section id="subpage-content" class="pt-4 pb-5">
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-12"><hr></div>
+      <div class="col-md-8">
+        {{#each content as |tipsAndTricksItems|}}
+          <div class="col-md-6 px-0 py-3 float-left">
+            <div class="card">
+              {{subpages-templates/subpage-background-image
+                class="background-image card-img-top"
+                imageUrl=tipsAndTricksItems.image
+              }}
+              <div class="custom-card-holder d-table bg-white py-4 px-4 mx-2">
+                <div class="card-body px-0 pt-0 pb-0">
+                  <div class="mb-3">
+                    {{#link-to
+                      "page"
+                      class="card-title text-capitalized mb-0 d-table"
+                    }}
+                      {{tipsAndTricksItems.title}}
+                    {{/link-to}}
+                    <div class="author-date">
+                      <small>
+                        By {{tipsAndTricksItems.author}}
+                        {{moment-format tipsAndTricksItems.date "[on] DD MMM YYYY"}}
+                      </small>
+                    </div>
+                  </div>
+                  {{tipsAndTricksItems.excerpt}}
+                </div>
+                <div class="card-footer mt-3 px-0 py-0">
+                  {{#link-to
+                    "page"
+                    class="read-more text-capitalized"
+                  }}
+                    Read More
+                  {{/link-to}}
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+{{yield}}

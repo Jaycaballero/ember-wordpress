@@ -13,6 +13,12 @@
   {{subpages-templates/contact-us-template
     _contact_Us_Template = _default_Template
   }}
+{{else if (eq templateType "tips-and-tricks-template.php")}}
+  {{subpages-templates/tips-and-tricks-template
+    _tips_And_Tricks_Template = _default_Template
+    _tips_And_Tricks = _tip_And_Trick
+    _tips_And_Tricks_Featured_Post = _tips_And_Tricks_Featured
+  }}
 {{else}}
   {{subpages-templates/default-template _default_Template = _default_Template}}
 {{/if}}

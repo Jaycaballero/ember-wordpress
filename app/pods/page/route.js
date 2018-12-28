@@ -12,6 +12,8 @@ export default Route.extend({
       howWeTrain:this.store.query('howwetrain', {per_page: 99, order: 'asc'}),
       testimonials: this.store.query('clienttestimonial', {per_page: 6, order: 'desc'}),
       testimonialsCarouselTitle: this.get('sectionTitle').request('types/clienttestimonials'),
+      tipsAndTricks: this.store.query('tipsandtrick', {per_page: 99, order: 'desc'}),
+      tipsAndTricksFeatured: this.store.query('tipsandtrick', {tipsandtrickscategories: 8, per_page: 1,}),
     });
   },
   setupController(controller, model){
@@ -19,5 +21,7 @@ export default Route.extend({
     controller.set('howWeTrain', model.howWeTrain);
     controller.set('testimonials', model.testimonials);
     controller.set('testimonialsCarouselTitle', model.testimonialsCarouselTitle);
+    controller.set('tipsAndTricks', model.tipsAndTricks);
+    controller.set('tipsAndTricksFeatured', model.tipsAndTricksFeatured);
   }
 });
