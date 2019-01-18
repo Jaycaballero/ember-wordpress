@@ -1,0 +1,24 @@
+image-builder:
+  build:
+    image: eu.gcr.io/neso-io/sx-ember-wordpress
+    dockerfile: Dockerfile
+    args:
+      BRANCH: "{{ .Branch }}"
+    encrypted_args_file: google.env.encrypted
+  cached: true
+
+codeship-gcr-dockercfg:
+  image: codeship/gcr-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: google.env.encrypted
+
+codeship-gce-service:
+  image: codeship/google-cloud-deployment
+  encrypted_env_file: google.env.encrypted
+  add_docker: true
+  working_dir: /deploy
+  volumes:
+    - ./:/deploy
+
+master:
+  image: eu.gcr.io/neso-io/mh-supplier-portal:master

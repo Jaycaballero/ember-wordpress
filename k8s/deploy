@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+NAMESPACE="development"
+if [ ! -z "$1" ]
+then
+    NAMESPACE="$1"
+fi
+
+. k8s/authenticate
+
+kubectl -n $NAMESPACE apply -f k8s/deployment.yml
+kubectl -n $NAMESPACE apply -f k8s/service.yml
+
+echo "$NAMESPACE: Updating $APP_NAME service to $IMAGE_NAME:$TAG"
+kubectl -n $NAMESPACE set image deployment/$APP_NAME $APP_NAME="$IMAGE_NAME:$TAG"

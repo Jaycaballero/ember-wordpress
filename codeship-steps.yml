@@ -1,0 +1,49 @@
+- type: parallel
+  name: "Build Stage"
+  steps:
+  - name: "Building Image"
+    service: image-builder
+    tag: ^(master|staging)
+    command: echo "Build completed"
+
+- type: parallel
+  name: "Push Stage"
+  steps:
+  - name: 'Push SHA tag'
+    service: image-builder
+    tag: ^(master|staging)
+    type: push
+    image_name: "eu.gcr.io/neso-io/sx-ember-wordpress"
+    image_tag: "{{printf \"%.8s\" .CommitID}}"
+    registry: https://eu.gcr.io
+    dockercfg_service: codeship-gcr-dockercfg
+  - name: "Push branch tag"
+    service: image-builder
+    type: push
+    tag: ^(master|staging)
+    image_name: "eu.gcr.io/neso-io/sx-ember-wordpress"
+    image_tag: "{{ .Branch }}"
+    registry: https://eu.gcr.io
+    dockercfg_service: codeship-gcr-dockercfg
+  - name: "Push version tag"
+    service: master
+    tag: ^([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+[0-9A-Za-z-]+)?
+    type: push
+    image_name: "eu.gcr.io/neso-io/sx-ember-wordpress"
+    image_tag: "{{ .Branch }}"
+    registry: https://eu.gcr.io
+    dockercfg_service: codeship-gcr-dockercfg
+  - name: "Push stable tag"
+    service: master
+    type: push
+    tag: ^([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+[0-9A-Za-z-]+)?
+    image_name: "eu.gcr.io/neso-io/sx-ember-wordpress"
+    image_tag: "{{ .Branch }}"
+    registry: https://eu.gcr.io
+    dockercfg_service: codeship-gcr-dockercfg
+
+
+- name: "Rollout Image to Production"
+  service: codeship-gce-service
+  tag: ^([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+[0-9A-Za-z-]+)?
+  command: k8s/deploy production

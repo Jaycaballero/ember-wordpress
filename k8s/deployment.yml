@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ name: sx-ember-wordpress
+spec:
+ template:
+   metadata:
+     labels:
+       name: sx-ember-wordpress
+   spec:
+     containers:
+     - image: gcr.io/neso-io/sx-ember-wordpress:master
+       name: sx-ember-wordpress
+       ports:
+       - containerPort: 80
+       command: ["nginx", "-g", "daemon off;"]
+       env:
+         - name:  PORT
+           value: "80"
