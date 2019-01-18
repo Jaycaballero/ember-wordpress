@@ -1,6 +1,7 @@
 import AjaxService from 'ember-ajax/services/ajax';
+import ENV from 'systematix/config/environment';
 
 export default AjaxService.extend({
-  host: 'http://localhost:8080',
+  host: ENV.wordpressHost,
   namespace: 'systematix/wp-json/wp-api-menus/v2'
 });

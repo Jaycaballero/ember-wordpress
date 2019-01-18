@@ -7,8 +7,6 @@ export default Route.extend({
   mainMenu: service(),
 
   model() {
-    //return this.get('ajax').request('http://localhost:8080/wordpress_api/wp-json/wp-api-menus/v2/menus/2');
-    //return this.get('wordpressAjax').request('menus/2');
     return RSVP.hash({
       menu: this.get('mainMenu').request('menus/2'),
       footerMenu: this.get('mainMenu').request('menus/7'),
