@@ -1,10 +1,6 @@
 {{#bs-navbar
   id="navbarSupportedContent"
   class="py-4"
-  type=type
-  collapsed=collapsed
-  onCollapse=(action (mut collapsed) true)
-  onExpand=(action (mut collapsed) false)
 as |navbar|
 }}
   <div class="container">
@@ -16,7 +12,7 @@ as |navbar|
       }}
       {{/link-to}}
     </div>
-    <div class="row">
+    <div class="row top-info-wrapper">
       <div class="col top-info">
         {{home-page-components/contact-details _contact_Details=contactDetails}}
       </div>

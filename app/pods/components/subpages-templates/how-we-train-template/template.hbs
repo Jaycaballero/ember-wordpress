@@ -1,3 +1,4 @@
+{{set-body-class "how-we-train"}}
 <header class="position-relative">
   <div class="subpage-header">
     <div class="container">
@@ -40,10 +41,12 @@
         {{#each content as |contentItems|}}
           <div class="col-md-4 pb-4 mb-1">
             <div class="card">
-              {{subpages-templates/subpage-background-image
-                class="background-image card-img-top"
-                imageUrl=contentItems.image
-              }}
+              <div class="subpage-thumbnails position-relative">
+                {{subpages-templates/subpage-background-image
+                  class="background-image card-img-top"
+                  imageUrl=contentItems.image
+                }}
+              </div>
               <div class="custom-card-holder d-table bg-white py-4 px-4 my-1 mx-3">
                 <div class="card-body px-0 pt-0">
                   <h3 class="card-title text-capitalized mb-2">{{contentItems.itemTitle}}</h3>
