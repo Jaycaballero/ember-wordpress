@@ -9,8 +9,23 @@
           <div class="row">
             <div class="col-lg-12">
               <h1 class="display-3 text-center text-white">{{bannerITem.title}}</h1>
-              <div class="pre-text text-center mt-4">
+              <div class="pre-text text-center mt-3 search-banner">
                 {{compute (action "content") bannerITem}}
+                <form {{action on="submit"}}>
+                  <div class="col-lg-5 mx-auto mt-4 mb-2 input-group">
+                    {{input
+                      value=search
+                      placeholder="Search for a course or subject"
+                      class="form-control py-2 border-right-0 border"
+                    }}
+                    <button
+                      class="btn btn-outline-secondary bg-white border-left-0 border"
+                      type="button"
+                    >
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </form>
                 <div class="call-to-action text-center">
                   <a href={{newLink}} class="btn btn-primary mt-4 btn-white-hover"role="button">
                     {{bannerITem.acf.call_to_action_link.title}}
