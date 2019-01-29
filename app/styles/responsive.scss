@@ -23,6 +23,9 @@
 	  height: 415px;
 	  margin-top: 50px;
   }
+  .services-content p {
+	  font-size: 20px;
+  }
   section#subpage-content.how-we-train .custom-card-holder {
 	  height: 435px;
   }
@@ -62,6 +65,23 @@
   }
   .pre-text p {
 	  font-size: 21px;
+  }
+  section#services ul.services-contentItems li {
+	  width: 100%;
+  }
+  section#services ul.services-contentItems li img {
+  	position: relative;
+  	top: 0;
+  	transform: none;
+  	width: 20%;
+  	display: table;
+  	margin: 10px auto;
+  }
+  section#services .col-md-4:not(:nth-child(3)) {
+	  margin-right: 61px !important;
+  }
+  section#services .col-md-4 {
+	  max-width: calc(30.33% - 20px) !important;
   }
   #navbarSupportedContent ul.navbar-nav > li > a {
 	  margin-right: 0;
@@ -296,6 +316,12 @@
   }
   .pre-text p {
 	  font-size: 20px !important;
+  }
+  section#services .container .row .col .col-md-4 {
+    max-width: 100%;
+    display: table;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
   section#branding > .my-5 {
 	  margin: 0 !important;

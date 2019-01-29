@@ -1,0 +1,25 @@
+<section
+  id="services"
+  class="py-5"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {{#each servicesItem as |serviceItem|}}
+          <div class="col-md-4 float-left">
+            <ul class="services-contentItems p-0 position-relative mb-0">
+              <li><img class="service-item-icon" src={{serviceItem.image}} alt="image"></li>
+              <li>
+                <div class="services-title-item">
+                  <h4 class="services-title mb-0">{{serviceItem.title}}</h4>
+                  <div class="services-content">{{serviceItem.content}}</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+{{yield}}
