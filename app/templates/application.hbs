@@ -1,3 +1,16 @@
+<section id="top" class="py-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <span class="top-contact">Speak to our team now  <strong>0118 324 3000</strong></span>
+      </div>
+      <div class="col-md-6 top-buttons text-right">
+        <a class="request-quote btn btn-primary" role="button">Request a quote</a>
+        <a class="sign-in btn btn-primary" role="button">Sign in MySX</a>
+      </div>
+    </div>
+  </div>
+</section>
 {{#bs-navbar
   id="navbarSupportedContent"
   class="py-4"
@@ -12,38 +25,30 @@ as |navbar|
       }}
       {{/link-to}}
     </div>
-    <div class="row top-info-wrapper">
-      <div class="col top-info">
-        {{home-page-components/contact-details _contact_Details=contactDetails}}
-      </div>
-      <div class="w-100"></div>
-      <div class="col">
-        {{#navbar.content}}
-          {{#navbar.nav class="ml-auto" as |nav|}}
-            {{#each menu.items as |page|}}
-              {{#if page.children}}
-                {{#nav.dropdown as |dd|}}
-                  {{#dd.toggle}}{{page.title}}<span class="caret"></span>{{/dd.toggle}}
-                  {{#dd.menu as |ddm|}}
-                    {{#each page.children as |child|}}
-                      {{#ddm.item}}
-                        {{#ddm.link-to "page" child.object_slug}}{{child.title}}{{/ddm.link-to}}
-                      {{/ddm.item}}
-                    {{/each}}
-                  {{/dd.menu}}
-                {{/nav.dropdown}}
-              {{else}}
-                {{#nav.item}}
-                  {{#nav.link-to "page" page.object_slug}}
-                    {{menu-item-title-html-safe _menu_Item_Title_Html_Safe=page}}
-                  {{/nav.link-to}}
-                {{/nav.item}}
-              {{/if}}
-            {{/each}}
-          {{/navbar.nav}}
-        {{/navbar.content}}
-      </div>
-    </div>
+    {{#navbar.content}}
+      {{#navbar.nav class="ml-auto" as |nav|}}
+        {{#each menu.items as |page|}}
+          {{#if page.children}}
+            {{#nav.dropdown as |dd|}}
+              {{#dd.toggle}}{{page.title}}<span class="caret"></span>{{/dd.toggle}}
+              {{#dd.menu as |ddm|}}
+                {{#each page.children as |child|}}
+                  {{#ddm.item}}
+                    {{#ddm.link-to "page" child.object_slug}}{{child.title}}{{/ddm.link-to}}
+                  {{/ddm.item}}
+                {{/each}}
+              {{/dd.menu}}
+            {{/nav.dropdown}}
+          {{else}}
+            {{#nav.item}}
+              {{#nav.link-to "page" page.object_slug}}
+                {{menu-item-title-html-safe _menu_Item_Title_Html_Safe=page}}
+              {{/nav.link-to}}
+            {{/nav.item}}
+          {{/if}}
+        {{/each}}
+      {{/navbar.nav}}
+    {{/navbar.content}}
   </div>
 {{/bs-navbar}}
 
