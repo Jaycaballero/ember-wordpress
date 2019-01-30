@@ -57,10 +57,13 @@ section#top {
   border-radius: 3px;
   text-transform: capitalize;
 }
+.top-buttons a > i {
+	margin-right: 7px;
+}
 section#top .top-buttons a.sign-in {
   background-color: #fff !important;
   border: 1px solid #fff !important;
-  color: #e84d3d !important;
+  color: #666666 !important;
 }
 section#top .top-buttons a.btn:hover {
   color: #fff !important;
