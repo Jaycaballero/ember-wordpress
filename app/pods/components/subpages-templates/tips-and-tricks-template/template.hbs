@@ -43,16 +43,20 @@
 <section id="subpage-content" class="pt-4 pb-5">
   <div class="container mt-2">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="form-group select-category">
           {{#power-select
-            selected=category
-            options=categories
+            selected=selectedCategory
+            options=tipsAndTricksCategories
             onchange=(action "chooseCategory")
-          as |categoryName|
+            placeholder="All"
+          as |category|
           }}
-            {{categoryName}}
+            {{category.name}}
           {{/power-select}}
+          {{#bs-button onClick=(action "clear") class="clear"}}
+            X
+          {{/bs-button}}
         </div>
       </div>
       <div class="col-md-12"><hr></div>

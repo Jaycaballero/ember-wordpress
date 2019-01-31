@@ -35,7 +35,7 @@ h2, section#branding h3 {
   color: #fff;
   font-size: 23px;
 }
-body p, ul li, .form-check-label {
+body p, ul li, .form-check-label, ol li {
   font-size: 20px;
   color: #707070;
   font-family: calibri-regular;
@@ -243,6 +243,23 @@ section#footer ul.info li a, section#footer ul.info li p {
   transition: color 0.2s ease-out;
 }
 /* subpage */
+.ember-basic-dropdown-trigger, button.clear {
+	float: left;
+}
+button.clear {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.form-group.select-category button.clear:hover {
+	background-color: #6c757d !important;
+	color: #fff !important;
+	border-color: #6c757d !important;
+}
+.select-category .ember-basic-dropdown-trigger {
+	width: 89%;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
 .sub-page .subpage-header {
   background-color: #005f8b;
   background-image: none;
@@ -396,10 +413,10 @@ body.tips-and-tricks .custom-card-holder .card-body p {
   font-size: 17px;
 }
 body.tips-and-tricks .card .custom-card-holder {
-  height: auto;
+  height: 300px;
 }
 body.tips-and-tricks .custom-card-holder .card-title {
-  font-size: 19px !important;
+  font-size: 21px !important;
   font-family: calibri-bold;
   transition: color 0.3s ease-in-out;
   text-decoration: none;
@@ -548,4 +565,22 @@ section#subpage-content .card:hover {
   &:hover .full-item.background-image {
     transform: scale(1.1);
   }
+}
+body.full-item-view a {
+	color: #e84d3d;
+  text-decoration: none;
+}
+body.tips-and-tricks #full-item-view-content .post-full-item-image {
+	float: left;
+	width: 50%;
+	margin-right: 24px;
+}
+#full-item-view-content h3, #full-item-view-content h5 {
+	font-family: calibri-bold !important;
+	color: #005f8b;
+}
+pre {
+	padding: 10px;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
 }

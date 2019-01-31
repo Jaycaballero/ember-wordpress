@@ -1,4 +1,4 @@
-{{set-body-class "full-item-view"}}
+{{set-body-class "full-item-view tips-and-tricks"}}
 <header class="item-header-title position-relative">
   <div class="py-5">
     <div class="container">
@@ -16,15 +16,13 @@
   <div class="container">
     <div class="row">
       {{#each fullItemViewContent as |fullItem|}}
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="post-full-item-image position-relative">
             {{posts/full-item-view-bg-img
               class="full-item background-image"
               imageUrl=fullItem.image
             }}
           </div>
-        </div>
-        <div class="col-md-6">
           <h2>{{fullItem.title}}</h2>
           {{fullItem.content}}
         </div>

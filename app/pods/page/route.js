@@ -14,6 +14,7 @@ export default Route.extend({
       testimonialsCarouselTitle: this.get('sectionTitle').request('types/clienttestimonials'),
       tipsAndTricks: this.store.query('tipsandtrick', {per_page: 99, order: 'desc'}),
       tipsAndTricksFeatured: this.store.query('tipsandtrick', {tipsandtrickscategories: 8, per_page: 1,}),
+      tipsAndTricksCategories: this.store.query('tipsandtrickscategory', {}),
     });
   },
   setupController(controller, model){
@@ -23,5 +24,6 @@ export default Route.extend({
     controller.set('testimonialsCarouselTitle', model.testimonialsCarouselTitle);
     controller.set('tipsAndTricks', model.tipsAndTricks);
     controller.set('tipsAndTricksFeatured', model.tipsAndTricksFeatured);
+    controller.set('tipsAndTricksCategories', model.tipsAndTricksCategories);
   }
 });

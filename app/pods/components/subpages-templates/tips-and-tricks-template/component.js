@@ -1,17 +1,24 @@
 import Component from '@ember/component';
-import { get } from '@ember/object';
+import { get, set } from '@ember/object';
 import { map } from '@ember/object/computed';
 import { htmlSafe } from '@ember/string';
 import moment from 'moment';
 
 export default Component.extend({
 
-  categories: ['Category', 'Category One', 'Category Two'],
-  category: 'Category',
+  //categories: ['Featured Excel', 'Excel', 'Share Point', 'Project', 'Access', 'SQL Querying', 'Microsoft SQL Server', 'Crystal Reports', 'Web Development', 'Q&A SQL'],
+  //category: 'Featured Excel',
 
   actions: {
     chooseCategory(cat) {
-      this.set('category', cat);
+      this.set('selectedCategory', cat);
+      get(this, 'filter')(cat.id);
+    },
+    clear() {
+      get(this, 'clearFilter')()
+        .then(() => {
+          set(this, 'selectedCategory', "");
+        });
     }
   },
 
