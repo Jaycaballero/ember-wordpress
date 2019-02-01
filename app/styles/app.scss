@@ -575,9 +575,13 @@ body.tips-and-tricks #full-item-view-content .post-full-item-image {
 	width: 50%;
 	margin-right: 24px;
 }
-#full-item-view-content h3, #full-item-view-content h5 {
+#full-item-view-content h3, #full-item-view-content h4, #full-item-view-content h5 {
 	font-family: calibri-bold !important;
 	color: #005f8b;
+}
+#full-item-view-content ul {
+	padding: 0;
+	list-style: inside;
 }
 pre {
 	padding: 10px;
