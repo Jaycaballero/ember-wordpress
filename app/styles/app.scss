@@ -35,7 +35,7 @@ h2, section#branding h3 {
   color: #fff;
   font-size: 23px;
 }
-body p, ul li, .form-check-label, ol li {
+body p, ul li, .form-check-label, ol li, table tr td {
   font-size: 20px;
   color: #707070;
   font-family: calibri-regular;
@@ -393,7 +393,7 @@ body.full-item-view .subpage-inner-content {
   display: none;
 }
 .full-item.background-image {
-  height: 250px;
+  height: 350px;
 }
 .item-header-title {
   background: #005f8b;

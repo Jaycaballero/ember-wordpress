@@ -52,7 +52,7 @@
             placeholder="All"
           as |category|
           }}
-            {{category.name}}
+            {{html-safe category.name}}
           {{/power-select}}
           {{#bs-button onClick=(action "clear") class="clear"}}
             X
