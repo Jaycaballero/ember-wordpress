@@ -25,17 +25,18 @@ module.exports = function(environment) {
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      coursesApi: {
+        host: '',
+        namespace: 'api',
+        standardsTree: 'x',
+        version: 'v1'
+      }
     }
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.coursesApi.host = 'http://bifrost.localhost:8080';
+    ENV.APP.coursesApi.version = 'v1'
   }
 
   if (environment === 'test') {
