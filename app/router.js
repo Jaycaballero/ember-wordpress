@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('howwetrain', {path: "how-we-train/:howwetrain"});
   this.route('tipsandtrick', {path: "tips-tricks/:tipsandtrick"});
   this.route('page', {path: "/:page"});
+  this.route('courses');
 });
 
 export default Router;
