@@ -1,0 +1,25 @@
+{{set-body-class "courses"}}
+<header class="subpage-header position-relative">
+  <div class="subpage-header py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg">
+          <h1 class="display-3 text-white mb-0">{{_courses_Template.firstObject.title}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="subpage-content" class="pt-4 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {{#each _course as |courseItems|}}
+          <h2>{{courseItems.title}}</h2>
+          {{courseItems.description}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+{{yield}}
