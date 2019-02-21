@@ -23,6 +23,11 @@
     tipsAndTricksCategories=tipsAndTricksCategories
     clearFilter=clearFilter
   }}
+{{else if (eq templateType "courses-template.php")}}
+  {{subpages-templates/courses-template
+    _courses_Template = _default_Template
+    _course = _courses
+  }}
 {{else}}
   {{subpages-templates/default-template _default_Template = _default_Template}}
 {{/if}}
