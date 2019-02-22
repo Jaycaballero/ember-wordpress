@@ -3,28 +3,80 @@
   <div class="subpage-header py-5">
     <div class="container">
       <div class="row">
-        <div class="col-lg">
+        <div class="col-lg-6">
           <h1 class="display-3 text-white mb-0">{{_courses_Template.firstObject.title}}</h1>
+          <div class="pre-text">
+            <p>{{_courses_Template.firstObject.acf.header_sub_text}}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="header-call-to-action position-absolute">
+            {{#each newLink as |callToAction|}}
+              <a
+                class="btn btn-primary btn-white-hover"
+                href={{callToAction.link}}
+                role="button"
+              >
+                {{callToAction.linkTitle}}
+              </a>
+            {{/each}}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </header>
-<section id="subpage-content" class="pt-4 pb-5">
-  <div class="container">
+<section id="subpage-content" class="courses pt-5 pb-5">
+  <div class="container p-5">
     <div class="row">
-      <div class="col">
-        {{#each _course as |courseItems|}}
-          <h2>{{courseItems.title}}</h2>
-          {{courseItems.description}}
-        {{/each}}
+      <div class="col-md-4">
+        <h3 class="course-category-title">Select Categories</h3>
+        <form class="mt-4">
+          {{#each _categories as |selectCategory|}}
+          <div class="form-row">
+            <div class="form-group col">
+              {{input
+                type="checkbox"
+              }}
+              {{selectCategory.title}}
+            </div>
+          </div>
+          {{/each}}
+        </form>
+      </div>
+      <div class="col-md-8">
         {{#each _categories as |category|}}
-          <h2>{{category.title}}</h2>
-        {{/each}}
-        {{#each _subCategories as |subCategory|}}
-          <h2>{{subCategory.title}}</h2>
+        <div class="col-md-6 float-left mb-4 p-0">
+          <div class="card">
+            <div class="card-body p-4">
+              <h3 class="course-category-title mb-4">{{category.title}}</h3>
+              <ul class="course-sub-category-listing">
+                {{#each _subCategories as |subCategory|}}
+                  <li>
+                    <div class="course-subCategory-title">{{subCategory.title}}</div>
+                    <div class="course-sub-category-introtext">{{subCategory.introtext}}</div>
+                  </li>
+                {{/each}}
+              </ul>
+              <div class="course-category-button card-footer px-0">
+                {{log _courses_Template.query.slug}}
+                {{#link-to
+                  "course"
+                  category.slug
+                  class="btn btn-primary text-capitalized mb-1"
+                }}
+                View more
+              {{/link-to}}
+              </div>
+            </div>
+          </div>
+        </div>
         {{/each}}
       </div>
+      {{!--#each _course as |courseItems|}}
+        <h2>{{courseItems.title}}</h2>
+        {{courseItems.description}}
+      {{/each--}}
     </div>
   </div>
 </section>

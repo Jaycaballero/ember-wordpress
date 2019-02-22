@@ -587,3 +587,35 @@ pre {
 	background-color: #f5f5f5;
 	border: 1px solid #ccc;
 }
+section#subpage-content.courses {
+	background-color: #f1f2f2;
+}
+body.courses #subpage-content ul li::before {
+	content: none;
+}
+.course-subCategory-title {
+	color: #707070;
+	font-size: 23px;
+}
+ul.course-sub-category-listing li {
+	margin-bottom: 20px;
+  .course-sub-category-introtext {
+    font-size: 16px !important;
+  }
+}
+h3.course-category-title {
+	font-family: calibri-bold;
+	font-size: 25px;
+	color: #005f8b;
+}
+section#subpage-content.courses .col-md-6:nth-child(2n+1) {
+	margin-right: 24px;
+}
+section#subpage-content.courses .col-md-6 {
+	max-width: calc(50% - 12px);
+}
+.course-category-button a.btn {
+	font-size: 16px;
+	padding: 4px 25px;
+	font-family: calibri-bold;
+}
