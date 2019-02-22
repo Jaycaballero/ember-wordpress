@@ -18,6 +18,12 @@
           <h2>{{courseItems.title}}</h2>
           {{courseItems.description}}
         {{/each}}
+        {{#each _categories as |category|}}
+          <h2>{{category.title}}</h2>
+        {{/each}}
+        {{#each _subCategories as |subCategory|}}
+          <h2>{{subCategory.title}}</h2>
+        {{/each}}
       </div>
     </div>
   </div>
