@@ -8,7 +8,7 @@ RUN npm install
 
 COPY ./ /usr/src/
 
-RUN ember build --environment=production
+RUN ember build
 
 FROM nginx:stable
 
