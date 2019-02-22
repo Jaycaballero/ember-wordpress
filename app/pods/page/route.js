@@ -9,6 +9,8 @@ export default Route.extend({
   model(params) {
     return RSVP.hash({
       courses: this.store.query('course', {}),
+      categories: this.store.query('category', {}),
+      subCategories: this.store.query('subCategory', {}),
       defaultTemplate: this.store.query('page', {slug: params.page}),
       howWeTrain:this.store.query('howwetrain', {per_page: 99, order: 'asc'}),
       testimonials: this.store.query('clienttestimonial', {per_page: 6, order: 'desc'}),
@@ -20,6 +22,8 @@ export default Route.extend({
   },
   setupController(controller, model){
     controller.set('courses', model.courses);
+    controller.set('categories', model.categories);
+    controller.set('subCategories', model.subCategories);
     controller.set('defaultTemplate', model.defaultTemplate);
     controller.set('howWeTrain', model.howWeTrain);
     controller.set('testimonials', model.testimonials);

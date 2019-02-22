@@ -8,4 +8,3 @@ export default function(server) {
     subCategory: server.schema.subCategories.find(1)
   });
 }
-
