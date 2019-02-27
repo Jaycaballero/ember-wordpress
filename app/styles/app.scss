@@ -647,6 +647,9 @@ ul.sub-category-listing {
 }
 ul.course-sub-category-listing li a {
 	text-decoration: none;
+  &:hover .course-subCategory-title {
+    color: #005f8b !important;
+  }
 }
 a.course-sub-category-link {
 	background-color: #fff;

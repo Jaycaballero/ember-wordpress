@@ -6,7 +6,6 @@ export default Route.extend({
     return RSVP.hash({
       category: this.store.query('category', {slug: params.course}),
       subCategory: this.store.query('sub-category', {slug: params.course}),
-      //subCategory: this.findBy('slug', {params.subCategory});
     });
   },
 

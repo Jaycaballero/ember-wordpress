@@ -6,7 +6,7 @@ const {
 } = DS;
 
 export default Model.extend({
-  image: attr(''),
+  image: attr('string'),
   priority: attr('number'),
   slug: attr('string'),
   title: attr('string')

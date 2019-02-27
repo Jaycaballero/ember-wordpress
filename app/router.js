@@ -13,8 +13,6 @@ Router.map(function() {
   this.route('course', {path: "courses/:course"}, function() {
     this.route('sub-category', { path: '/:sub_category'}, function() {});
   });
-  // this.route('category', {path: "categories/:category"});
-  // this.route('sub-category', {path: "subCategories/:sub-category"});
   this.route('page', {path: "/:page"});
 });
 
