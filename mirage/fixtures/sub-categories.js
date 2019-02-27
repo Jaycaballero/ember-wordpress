@@ -1,11 +1,11 @@
 export default [
-  {slug: 'six-sigma', title: 'Six Sigma', priority: 1},
-  {slug: 'primavera', title: 'Primavera', priority: 2},
-  {slug: 'microsoft-windows', title: 'Microsoft Windows', priority: 3},
-  {slug: 'citrix', title: 'Citrix', priority: 4},
-  {slug: 'microsoft-sharepoint', title: 'Microsoft Sharepoint', priority: 5},
-  {slug: 'adobe', title: 'Adobe', priority: 6},
-  {slug: 'pmp®', title: 'PMP®', priority: 7},
+  {slug: 'six-sigma', title: 'Six Sigma', priority: 1, introtext: 'Six Sigma is a globally recognised, data-driven methodology that aims to eliminate defects through successive business process improvement'},
+  {slug: 'primavera', title: 'Primavera', priority: 2, introtext: 'Primavera is an easy to use, high-performance project management software that facilitates large scale, complex projects.'},
+  {slug: 'microsoft-windows', title: 'Microsoft Windows', priority: 3, introtext: 'Microsoft Windows is an operating system that promotes ease of use for the user.'},
+  {slug: 'citrix', title: 'Citrix', priority: 4, introtext: 'Citrix course will provide the skills needed to pass the Citrix XenApp 6.5 Administration exam.'},
+  {slug: 'microsoft-sharepoint', title: 'Microsoft Sharepoint', priority: 5, introtext: 'First launched in 2001, SharePoint is a collaborative offering from Microsoft designed primarily for document management and storage.'},
+  {slug: 'adobe', title: 'Adobe', priority: 6, introtext: 'Adobe InDesign Masterclass aims to introduce delegates on the full process of creating, editing, and outputting a document.'},
+  /*{slug: 'pmp®', title: 'PMP®', priority: 7},
   {slug: 'matlab-spss', title: 'MATLAB & SPSS', priority: 8},
   {slug: 'apmp', title: 'APMP', priority: 9},
   {slug: 'ccna', title: 'CCNA', priority: 10},
@@ -92,6 +92,5 @@ export default [
   {slug: 'kaizen', title: 'Kaizen', priority: 92},
   {slug: 'autocad', title: 'AutoCAD', priority: 93},
   {slug: 'communication-skills', title: 'Communication Skills', priority: 94},
-  {slug: 'togaf®', title: 'TOGAF®', priority: 95}
+  {slug: 'togaf®', title: 'TOGAF®', priority: 95}*/
 ];
-
