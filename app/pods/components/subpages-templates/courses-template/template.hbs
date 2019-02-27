@@ -33,44 +33,55 @@
         <h3 class="course-category-title">Select Categories</h3>
         <form class="mt-4">
           {{#each _categories as |selectCategory|}}
-          <div class="form-row">
-            <div class="form-group col">
-              {{input
-                type="checkbox"
-              }}
-              {{selectCategory.title}}
+            <div class="form-row">
+              <div class="form-group col">
+                {{input
+                  type="checkbox"
+                }}
+                {{selectCategory.title}}
+              </div>
             </div>
-          </div>
           {{/each}}
         </form>
       </div>
       <div class="col-md-8">
         {{#each _categories as |category|}}
-        <div class="col-md-6 float-left mb-4 p-0">
-          <div class="card">
-            <div class="card-body p-4">
-              <h3 class="course-category-title mb-4">{{category.title}}</h3>
-              <ul class="course-sub-category-listing">
-                {{#each _subCategories as |subCategory|}}
-                  <li>
-                    <div class="course-subCategory-title">{{subCategory.title}}</div>
-                    <div class="course-sub-category-introtext">{{subCategory.introtext}}</div>
-                  </li>
-                {{/each}}
-              </ul>
-              <div class="course-category-button card-footer px-0">
-                {{log _courses_Template.query.slug}}
+          <div class="col-md-6 float-left mb-4 p-0">
+            <div class="card">
+              <div class="card-body p-4">
                 {{#link-to
                   "course"
                   category.slug
-                  class="btn btn-primary text-capitalized mb-1"
+                  class="cat-button"
                 }}
-                View more
-              {{/link-to}}
+                  <h3 class="course-category-title mb-4">{{category.title}}</h3>
+                {{/link-to}}
+                <ul class="course-sub-category-listing">
+                  {{#each _subCategories as |subCategory|}}
+                    <li>
+                      {{#link-to
+                        "course.sub-category"
+                        category.slug
+                        subCategory.slug
+                      }}
+                        <div class="course-subCategory-title">{{subCategory.title}}</div>
+                      {{/link-to}}
+                      <div class="course-sub-category-introtext">{{subCategory.introtext}}</div>
+                    </li>
+                  {{/each}}
+                </ul>
+                <div class="course-category-button card-footer px-0">
+                  {{#link-to
+                    "course"
+                    category.slug
+                    class="btn btn-primary text-capitalized mb-1"
+                  }}
+                    View more
+                  {{/link-to}}
+                </div>
               </div>
             </div>
           </div>
-        </div>
         {{/each}}
       </div>
       {{!--#each _course as |courseItems|}}

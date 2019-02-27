@@ -1,0 +1,23 @@
+{{set-body-class "sub-category-page"}}
+<header class="item-header-title position-relative">
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="display-3 text-white mb-0">{{_subCategory.title}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="course-sub-category">
+  <div class="container py-5">
+    <div class="row py-5">
+      <ul class="sub-category-listing">
+        {{_subCategory.introtext}}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{{yield}}

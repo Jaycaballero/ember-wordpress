@@ -10,7 +10,18 @@ export default function() {
 
   this.get('/courses');
   this.get('/courses/:id');
-  this.get('/categories');
+  this.get('/categories', ({ categories }, request) => {
+    let slug = request.queryParams.slug;
+    let cats = categories.all();
+
+    if (slug) {
+      cats = cats.filter(function(cat) {
+        return cat.slug == slug;
+      });
+    }
+    return cats;
+  });
+
   this.get('/categories/:id');
   this.get('/subCategories');
   this.get('/subCategories/:id');

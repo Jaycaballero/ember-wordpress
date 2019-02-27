@@ -608,6 +608,9 @@ h3.course-category-title {
 	font-size: 25px;
 	color: #005f8b;
 }
+a.cat-button:hover{
+  text-decoration: none;
+}
 section#subpage-content.courses .col-md-6:nth-child(2n+1) {
 	margin-right: 24px;
 }
@@ -618,4 +621,42 @@ section#subpage-content.courses .col-md-6 {
 	font-size: 16px;
 	padding: 4px 25px;
 	font-family: calibri-bold;
+}
+#course-parent-category {
+	background-color: #f1f2f2;
+}
+ul.sub-category-listing {
+	list-style: none;
+	padding: 15px;
+  li{
+    width: calc(33% - 7px);
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  li:nth-child(3n) {
+    margin-right: 0;
+  }
+  a .course-subcategory-title{
+    color: #005f8b;
+  }
+  .course-subcategory-introtext {
+    color: #666666;
+    font-size: 17px;
+  }
+}
+ul.course-sub-category-listing li a {
+	text-decoration: none;
+}
+a.course-sub-category-link {
+	background-color: #fff;
+	display: block;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+	text-align: center;
+	height: 200px;
+	padding: 15px;
+}
+body.sub-category-page .course-category-listing {
+	display: none;
 }
