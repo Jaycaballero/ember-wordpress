@@ -23,6 +23,16 @@ export default function() {
   });
 
   this.get('/categories/:id');
-  this.get('/subCategories');
+  this.get('/subCategories', ({ subCategories }, request) => {
+    let slug = request.queryParams.slug;
+    let cats = subCategories.all();
+
+    if (slug) {
+      cats = cats.filter(function(cat) {
+        return cat.slug == slug;
+      });
+    }
+    return cats;
+  });
   this.get('/subCategories/:id');
 }

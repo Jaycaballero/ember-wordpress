@@ -1,3 +1,7 @@
-{{course-subcategory
-  _subCategory = subCategory
-}}
+<h2>{{subCategory.title}}</h2>
+<p>{{subCategory.introtext}}</p>
+<ul>
+  {{#each subCategory.categories as |category|}}
+    <li>{{category.title}}</li>
+  {{/each}}
+</ul>
