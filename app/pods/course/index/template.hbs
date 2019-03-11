@@ -1,51 +1,51 @@
 {{set-body-class "full-item-view tips-and-tricks"}}
 
-{{#course-outline title=category.title}}
-  <section id="course-parent-category">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-md-4 sidebar">
-          <ul class="sidebar-category-lists p-0 mt-3">
-            {{#each category.subCategories as |subCategory|}}
-              <li class="position-relative">
-                {{#link-to
-                  "course.sub-category"
-                  subCategory.slug
-                  class="course-sub-category-link"
-                }}
-                  <div class="cat-title-and-icon">
-                    <img class="cat-ico" src={{subCategory.icon}} alt="image">
-                    <div class="cat-title">{{subCategory.title}}</div>
+{{course-outline/category-header title=category.title}}
+{{log category.title}}
+<section id="course-parent-category">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-4 sidebar">
+        <ul class="sidebar-category-lists p-0 mt-3">
+          {{#each category.subCategories as |subCategory|}}
+            <li class="position-relative">
+              {{#link-to
+                "course.sub-category"
+                subCategory.slug
+                class="course-sub-category-link"
+              }}
+                <div class="cat-title-and-icon">
+                  <img class="cat-ico" src={{subCategory.icon}} alt="image">
+                  <div class="cat-title">{{subCategory.title}}</div>
+                </div>
+              {{/link-to}}
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col-md-8 pr-0">
+        <ul class="sub-category-listing d-table w-100">
+          {{#each category.subCategories as |subCategory|}}
+            <li>
+              {{#link-to
+                "course.sub-category"
+                subCategory.slug
+                class="course-sub-category-link"
+              }}
+                <div class="card-image">
+                  <img src={{subCategory.image}} alt="image" class="d-table m-auto">
+                </div>
+                <div class="card-body">
+                  <div class="course-subcategory-title mb-3">
+                    {{subCategory.title}}
                   </div>
-                {{/link-to}}
-              </li>
-            {{/each}}
-          </ul>
-        </div>
-        <div class="col-md-8 pr-0">
-          <ul class="sub-category-listing d-table w-100">
-            {{#each category.subCategories as |subCategory|}}
-              <li>
-                {{#link-to
-                  "course.sub-category"
-                  subCategory.slug
-                  class="course-sub-category-link"
-                }}
-                  <div class="card-image">
-                    <img src={{subCategory.image}} alt="image" class="d-table m-auto">
-                  </div>
-                  <div class="card-body">
-                    <div class="course-subcategory-title mb-3">
-                      {{subCategory.title}}
-                    </div>
-                    <div class="learn-more text-uppercase d-table m-auto">Learn</div>
-                  </div>
-                {{/link-to}}
-              </li>
-            {{/each}}
-          </ul>
-        </div>
+                  <div class="learn-more text-uppercase d-table m-auto">Learn</div>
+                </div>
+              {{/link-to}}
+            </li>
+          {{/each}}
+        </ul>
       </div>
     </div>
-  </section>
-{{/course-outline}}
+  </div>
+</section>

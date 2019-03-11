@@ -228,13 +228,97 @@ export default function(server) {
     image: 'assets/images/cloud.svg',
     subCategories: [
       server.create('sub-category', {
+        bannerImage: '/assets/images/ms-excel-banner.jpg',
         icon: '/assets/images/power-point-ico.svg',
         image: '/assets/images/ms-excel.svg',
         slug: 'ms-excel-training',
         title: 'MS Excel Training',
         priority: 5,
         introtext: 'Features calculation, graphing, tools, pivot tables',
-        categories: []
+        content: `
+          <h2>Which Excel course is right for you?</h2>
+
+          <p>We have bags of experience from teaching Excel over the last 30
+            years and we can help you choose the most useful course for your purposes.
+          </p>
+          <p>Our Excel course are arranged into 3 groups: standard courses,
+          business intelligence courses and VBA (macros) courses.
+          </p>
+          <br/>
+
+          <h2>Standard Excel Courses</h2>
+
+          <div class="card mt-4">
+            <div class="card-body p-0">
+              <div class="card-title">
+                <h5>Excel Introduction - 1 day</h5>
+              </div>
+              <div class="card-text">
+                <strong>This course includes: </strong>
+                <ul class="p-0 mt-2">
+                  <li>Getting Started with Microsoft Excel</li>
+                  <li>Performing Calculations</li>
+                  <li>Modifying a Worksheet</li>
+                  <li>Formatting a Worksheet</li>
+                  <li>Printing Workbook Contents</li>
+                  <li>Managing Large Workbooks</li>
+                  <li>Customizing the Excel Environment</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="view-outline" href="">View Outline</a>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-body p-0">
+              <div class="card-title">
+                <h5>Excel Intermediate - 1 day</h5>
+              </div>
+              <div class="card-text">
+                <strong>This course includes: </strong>
+                <ul class="p-0 mt-2">
+                  <li>Creating Advanced Formulas</li>
+                  <li>Applying Logical and Lookup Functions</li>
+                  <li>Organizing Worksheet Data with Tables</li>
+                  <li>Visualizing Data with Charts</li>
+                  <li>Using PivotTables, Slicers, and PivotCharts</li>
+                  <li>Inserting Graphics</li>
+                  <li>Enhancing Workbooks</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="view-outline" href="">View Outline</a>
+            </div>
+          </div>
+          <br/>
+          <h2>Business Intelligence Excel Courses</h2>
+
+          <div class="card mt-4">
+            <div class="card-body p-0">
+              <div class="card-title">
+                <h5>Excel Pivot Tables - 1 day</h5>
+              </div>
+              <div class="card-text">
+                <strong>This course includes: </strong>
+                <ul class="p-0 mt-2">
+                  <li>Pivot Table Fundamentals</li>
+                  <li>Creating Basic Pivot Tables</li>
+                  <li>Pivot Table Calculations</li>
+                  <li>Pivot Charts</li>
+                  <li>Working with Data Sources</li>
+                  <li>Automatting Pivot Tables with Macros</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="view-outline" href="">View Outline</a>
+            </div>
+          </div>
+        `,
+        categories: [],
+        outline: []
       }),
       server.create('sub-category', {
         icon: '/assets/images/power-point-ico.svg',

@@ -280,8 +280,9 @@ button.clear {
 .gravatar-with-info img {
   width: 70px;
 }
-.rct-container h2, .get-in-touch-form h2 {
+.rct-container h2, .get-in-touch-form h2, .request-a-call-back-form h2 {
   color: #707070 !important;
+  font-size: 25px !important;
 }
 b, strong {
   font-family: calibri-regular;
@@ -399,6 +400,7 @@ body.full-item-view .subpage-inner-content {
   	color: #70d1ef !important;
   	font-family: calibri-regular;
   	font-size: 25px;
+    text-decoration: none;
     &::before {
     	content: "\f053";
     	font-weight: 900;
@@ -791,4 +793,79 @@ body.sub-category-page .course-category-listing {
 }
 .course-category-image img {
 	width: 15%;
+}
+body.sub-category.courses {
+  .course-banner-image {
+    height: 300px;
+  }
+  nav#scroll-to-section {
+    background-color: #f1f2f2;
+    ul.child-items-navigation li {
+  	  display: inline-block;
+  	  margin-right: 50px;
+      margin-bottom: 0;
+      > a {
+        color: #666666;
+        font-family: calibri-bold;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          text-decoration: none;
+          color: #e84d3d;
+        }
+      }
+    }
+  }
+  section#course-sub-category {
+    .course-content .card {
+      border: 1px solid #dcdedf !important;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    .card-title {
+      border-bottom: 1px solid #dcdedf !important;
+      padding: 15px 30px;
+      color: #005f8b;
+      font-family: calibri-bold;
+    }
+    .card-text {
+    	padding: 0 30px;
+    }
+    ul {
+      > li {
+        list-style: none;
+        &:before {
+          content: "•";
+          color: #005f8b;
+          margin-right: 5px;
+        }
+      }
+    }
+    .card {
+      .card-footer {
+        a.view-outline {
+        	background-color: #e84d3d;
+        	color: #fff;
+        	border: 1px solid #e84d3d !important;
+        	border-radius: 0.25rem;
+        	font-size: 18px;
+        	padding: 8px;
+        	font-family: calibri-bold;
+        	transition: 0.3s ease-in-out;
+        	display: table;
+        	width: 100%;
+        	text-align: center;
+          &:hover {
+            background-color: transparent !important;
+            color: #e84d3d !important;
+            text-decoration: none;
+          }
+        }
+        padding: 0 30px 30px 30px;
+      }
+    }
+    .request-a-call-back-form {
+      background-color: #f1f2f2;
+    }
+  }
 }
