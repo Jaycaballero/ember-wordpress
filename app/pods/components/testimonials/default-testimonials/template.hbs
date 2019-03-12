@@ -1,0 +1,28 @@
+<div class="col">
+  <div class="right-side-bar">
+    <div class="rct-container mt-5 p-4">
+      <h2 class="mt-0 mb-3">Testimonials</h2>
+      <ul class="client-testimonials-listing p-0">
+        {{#each _testimonials as |testimonialItem|}}
+          <li>
+            <i class="fas fa-quote-left mb-2"></i>
+            {{html-safe testimonialItem.acf.editor}}
+            <div class="gravatar-with-info my-4">
+              <div class="gravatar d-inline-block mr-3">
+                <img
+                  class="rounded-circle"
+                  src={{testimonialItem.better_featured_image.source_url}}
+                  alt="image"
+                >
+              </div>
+              <div class="info d-inline-block position-absolute">
+                <strong>{{testimonialItem.acf.name}}</strong><br>
+                <p>{{testimonialItem.acf.company}}</p>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
