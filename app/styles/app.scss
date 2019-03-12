@@ -698,12 +698,15 @@ ul.sub-category-listing {
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
+    a {
+      text-decoration: none;
+      .course-subcategory-title{
+        color: #005f8b;
+      }
+    }
   }
   li:nth-child(3n) {
     margin-right: 0;
-  }
-  a .course-subcategory-title{
-    color: #005f8b;
   }
   .course-subcategory-introtext {
     color: #666666;
@@ -734,6 +737,7 @@ ul.sidebar-category-lists {
   	padding: 7px 15px;
     > a {
       color: #666666;
+      text-decoration: none;
       &::after {
         content: "\f054";
         font-family: "Font Awesome 5 Free";

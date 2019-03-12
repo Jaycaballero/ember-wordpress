@@ -9,7 +9,7 @@ export default Route.extend({
     });
   },
 
-  setupController(controller, model, subCategory) {
+  setupController(controller, model) {
     const category = this.modelFor('course');
     controller.set('category', category);
     controller.set('subCategory', model.subCategory);

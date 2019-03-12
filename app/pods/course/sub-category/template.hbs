@@ -25,12 +25,12 @@
 <section id="course-sub-category">
   <div class="container py-5">
     <div class="row">
-      <div class="col-md-8 pr-5">
+      <div class="col-md-8 course-subcategory-content pr-5">
         <div class="course-content">
           {{html-safe subCategory.content}}
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 course-subcategory-sidebar">
         {{forms/request-a-callback-form}}
         {{components/testimonials/default-testimonials _testimonials=testimonials}}
       </div>
