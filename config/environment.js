@@ -27,7 +27,8 @@ module.exports = function(environment) {
     APP: {
       coursesApi: {
         host: '',
-        namespace: 'api',
+        namespace: 'api/site',
+        subtype: 'systematix',
         standardsTree: 'x',
         version: 'v1'
       }
