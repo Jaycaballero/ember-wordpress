@@ -32,6 +32,10 @@ module.exports = function(environment) {
         standardsTree: 'x',
         version: 'v1'
       }
+    },
+
+    fastboot: {
+      hostWhitelist: ['newdev.systematix.co.uk', /^localhost:\d+$/]
     }
   };
 
