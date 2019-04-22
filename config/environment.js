@@ -35,7 +35,7 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: ['newdev.systematix.co.uk', /^localhost:\d+$/]
+      hostWhitelist: ['www.systematix.co.uk', 'www2.systematix.co.uk', /^localhost:\d+$/]
     }
   };
 
