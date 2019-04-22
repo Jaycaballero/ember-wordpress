@@ -13,7 +13,6 @@ spec:
        name: sx-ember-wordpress
        ports:
        - containerPort: 80
-       command: ["nginx", "-g", "daemon off;"]
        env:
          - name:  PORT
            value: "80"

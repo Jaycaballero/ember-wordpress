@@ -1,5 +1,5 @@
-FROM node:6.9.1 as build-stage
-RUN npm install -g ember-cli
+FROM node:6.9.1
+RUN npm install -g ember-cli fastboot-app-server
 
 WORKDIR /usr/src/
 
@@ -8,14 +8,8 @@ RUN npm install
 
 COPY ./ /usr/src/
 
-RUN ember build
+RUN ember build --environment production
 
-FROM nginx:stable
 
-COPY --from=build-stage /usr/src/dist /usr/share/nginx/html
-
-COPY build/default_nginx.conf /etc/nginx/conf.d/default.conf
-
-WORKDIR /usr/share/nginx/html
-
-EXPOSE 80
+EXPOSE 4000
+CMD [ "node", "server.js"]

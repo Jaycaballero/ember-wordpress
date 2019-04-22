@@ -58,6 +58,7 @@
     "ember-welcome-page": "^3.2.0",
     "ember-wordpress": "^0.1.8",
     "eslint-plugin-ember": "^5.2.0",
+    "fastboot-app-server": "^1.1.2-beta.1",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0",
     "sass": "^1.15.1"
