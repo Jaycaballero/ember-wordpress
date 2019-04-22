@@ -12,7 +12,5 @@ spec:
      - image: gcr.io/neso-io/sx-ember-wordpress:master
        name: sx-ember-wordpress
        ports:
-       - containerPort: 80
-       env:
-         - name:  PORT
-           value: "80"
+       - containerPort: 4000
+
