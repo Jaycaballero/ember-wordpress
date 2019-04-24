@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   web:
     build:
@@ -6,4 +6,10 @@ services:
     image: eu.gcr.io/neso-io/sx-ember-wordpress
     ports:
       - 4000:4000
+  cache:
+    image: jonbaldie/varnish:latest
+    volumes:
+      - ./varnish:/etc/varnish
+    ports:
+      - 8080:80
 

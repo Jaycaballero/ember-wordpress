@@ -12,6 +12,10 @@ fi
 
 kubectl -n $NAMESPACE apply -f k8s/deployment.yml
 kubectl -n $NAMESPACE apply -f k8s/service.yml
+kubectl -n $NAMESPACE apply -f k8s/varnish.yml
 
 echo "$NAMESPACE: Updating $APP_NAME service to $IMAGE_NAME:$TAG"
 kubectl -n $NAMESPACE set image deployment/$APP_NAME $APP_NAME="$IMAGE_NAME:$TAG"
+
+kubectl -n $NAMESPACE delete po `kubectl get pods --selector=name=cache -n $NAMESPACE --field-selector=status.phase=Running -o jsonpath='{.items[0].metadata.name}'`
+
