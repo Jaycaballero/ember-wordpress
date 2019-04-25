@@ -12,5 +12,4 @@ RUN touch .env && ember build --environment production
 RUN cd dist && npm install
 
 EXPOSE 4000
-ENTRYPOINT ember build --environment production && node fastboot.js
-CMD [ "node", "fastboot.js"]
+CMD ember build --environment production && node fastboot.js
