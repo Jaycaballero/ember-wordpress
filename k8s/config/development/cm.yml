@@ -4,4 +4,4 @@ metadata:
   name: sx-ember-wordpress-config
   namespace: development
 data:
-  courses-api-url: www3.systematix.co.uk
+  courses-api-url: https://www3.systematix.co.uk
