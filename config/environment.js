@@ -26,7 +26,7 @@ module.exports = function(environment) {
 
     APP: {
       coursesApi: {
-        host: '',
+        host: process.env.COURSES_API_URL,
         namespace: 'api/site',
         subtype: 'systematix',
         standardsTree: 'x',
@@ -35,14 +35,12 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: ['www.systematix.co.uk', 'www2.systematix.co.uk', /^localhost:\d+$/]
+      hostWhitelist: ['www.systematix.co.uk', 'www2.systematix.co.uk', 'www3.systematix.co.uk', /^localhost:\d+$/]
     }
   };
 
-  if (environment === 'development') {
-    ENV.APP.coursesApi.host = 'http://bifrost.localhost:8080';
-    ENV.APP.coursesApi.version = 'v1'
-  }
+
+
 
   if (environment === 'test') {
     // Testem prefers this...
@@ -54,10 +52,6 @@ module.exports = function(environment) {
 
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
-  }
-
-  if (environment === 'production') {
-    ENV.APP.coursesApi.host = 'https://www2.systematix.co.uk';
   }
 
   return ENV;

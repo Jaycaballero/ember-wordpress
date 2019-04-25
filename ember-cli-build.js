@@ -8,6 +8,9 @@ module.exports = function(defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false
+    },
+    dotEnv: {
+      fastbootAllowedKeys: ['COURSES_API_URL']
     }
   });
 

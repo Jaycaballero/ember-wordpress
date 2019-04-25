@@ -4,6 +4,8 @@ services:
     build:
       context: ./
     image: eu.gcr.io/neso-io/sx-ember-wordpress
+    environment:
+      COURSES_API_URL: http://bifrost.local
     ports:
       - 4000:4000
   cache:
