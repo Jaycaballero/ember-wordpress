@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: sx-ember-wordpress-config
   namespace: production
-  data:
-    courses-api-url: www2.systematix.co.uk
+data:
+  courses-api-url: www2.systematix.co.uk
