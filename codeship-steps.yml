@@ -43,6 +43,11 @@
     dockercfg_service: codeship-gcr-dockercfg
 
 
+- name: "Rollout Image to Development"
+  service: codeship-gce-service
+  tag: master
+  command: k8s/deploy development
+
 - name: "Rollout Image to Production"
   service: codeship-gce-service
   tag: ^([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+[0-9A-Za-z-]+)?
