@@ -12,11 +12,11 @@ spec:
      - image: gcr.io/neso-io/sx-ember-wordpress:master
        name: sx-ember-wordpress
        env:
-         - name: COURSES_API_URL
-           valueFrom:
-             configMapRef:
-               name: sx-ember-wordpress-config
-               key: courses-api-url
+       - name: COURSES_API_URL
+         valueFrom:
+           configMapKeyRef:
+             name: sx-ember-wordpress-config
+             key: courses-api-url
        ports:
        - containerPort: 4000
 
