@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sx-ember-wordpress-config
+  namespace: development
+  data:
+    courses-api-url: www3.systematix.co.uk
