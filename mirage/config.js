@@ -5,7 +5,7 @@ export default function() {
   this.passthrough('/https://newdev.systematix.co.uk/**');
 
   this.urlPrefix = ENV.APP.coursesApi.host;
-  this.namespace = 'api';
+  this.namespace = 'api/site';
   this.timing = 400;
 
   this.get('/courses');

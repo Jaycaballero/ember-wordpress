@@ -55,19 +55,43 @@
 	    height: 155px !important;
     }
   }
+  body.outline.course {
+    #outline-header {
+      .outline-container-holder {
+        .container.outline {
+          .export-share-button a {
+	          padding: 7px !important;
+          }
+        }
+      }
+    }
+    .outline-sidbar {
+      transform: translate(0, -16%) !important;
+    }
+  }
 }
 
 /* Tablet Modes */
 @media (min-width: 768px) and (max-width: 991px){
+  .top-buttons a.btn:not(:nth-child(2)) {
+	  margin-right: 0 !important;
+  }
   nav .navbar-header, nav .top-info-wrapper {
     width: 100%;
   }
-  .navbar-header button.navbar-toggler {
-    position: absolute;
-  }
-  nav .navbar-header .navbar-brand {
+  nav .navbar-header{
     margin: 0 auto 25px;
-    display: table;
+    position: relative;
+    padding: 0 38px;
+    button.navbar-toggler {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    .navbar-brand {
+      margin: 0 auto;
+      display: table;
+    }
   }
   .top-info ul.info {
     text-align: center !important;
@@ -93,43 +117,39 @@
   section#services .col-md-4 {
     max-width: calc(30.33% - 20px) !important;
   }
-  #navbarSupportedContent ul.navbar-nav > li > a {
-    margin-right: 0;
-  }
   #navbarSupportedContent {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0 !important;
-  }
-  #navbarSupportedContent > .container {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-  }
-  #navbarSupportedContent > .container .row.top-info-wrapper {
-    margin: 0;
-  }
-  #navbarSupportedContent > .container .row.top-info-wrapper .col {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .navbar-collapse {
-    background: #176D95;
-    box-shadow: inset 0 0 5px #000;
-    background-image: url("/images/noise.png");
-  }
-  .navbar-collapse .nav.navbar-nav {
-    padding: 25px 39px;
-  }
-  #navbarSupportedContent ul.navbar-nav > li > a {
-    color: #70d1ef !important;
-    transition: color 0.3s ease-in-out;
-  }
-  #navbarSupportedContent ul.navbar-nav > li:hover > a, #navbarSupportedContent ul.navbar-nav > li.nav-item.active > a {
-    color: #fff !important;
-  }
-  nav .navbar-header {
-    padding: 0 39px;
+    ul.navbar-nav > li > a {
+      margin-right: 0;
+      color: #70d1ef !important;
+      transition: color 0.3s ease-in-out;
+    }
+    ul.navbar-nav > li:hover > a, ul.navbar-nav > li.nav-item.active > a{
+      color: #fff !important;
+    }
+    > .container {
+      max-width: 100%;
+      .row.top-info-wrapper {
+        margin: 0;
+        .col {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+    .navbar-collapse {
+      background: #176D95;
+      box-shadow: inset 0 0 5px #000;
+      background-image: url("/images/noise.png");
+    }
+    .navbar-collapse .nav.navbar-nav {
+      padding: 25px 39px;
+    }
+    nav .navbar-header {
+      padding: 0 39px;
+    }
   }
   .banner-content .pre-text p {
     font-size: 22px;
@@ -289,7 +309,64 @@
     	flex: none;
     }
   }
+  body.outline.course {
+    #outline-header {
+      .outline-container-holder {
+        .container.outline {
+          .export-share-button a {
+            display: block !important;
+            margin-bottom: 15px !important;
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+    section#tabs {
+      > .container > .row > .col-8 {
+        padding-right: 15px !important;
+        .custom-tabs {
+          ul.nav-tabs {
+            li.nav-item {
+              a {
+      	        margin-right: 30px !important;
+              }
+            }
+          }
+          .tab-content {
+            ul.location-lists li, li .location-label {
+              width: 50%;
+            }
+            .training-centres .info-content {
+              width: 50%;
+              margin-left: 15px !important;
+            }
+            .whats-include .row:nth-child(2) {
+            	margin-top: 0 !important;
+            }
+            ul.included-listing {
+              li {
+                .include-label {
+                  width: 50% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+      .outline-sidbar {
+        transform: translate(0, -9%) !important;
+        .get-started-form, .related-courses, .client-testimonials {
+          padding: 15px !important
+        }
+        .client-testimonials-listing .info {
+        	position: relative !important;
+        	margin-top: 10px;
+        }
+      }
+    }
+  }
 }
+
 
 /* Mobile Modes */
 @media (max-width: 767px) {
@@ -601,6 +678,98 @@
       }
     }
   }
+  body.outline.course {
+    #outline-header {
+      height: auto !important;
+      .outline-container-holder {
+        .container.outline {
+          position: relative !important;
+          top: 0 !important;
+          transform: none !important;
+          left: 0 !important;
+          padding: 15px;
+          .col-8, .col-4 {
+            max-width: 100% !important;
+            flex: none !important;
+          }
+        }
+        .export-share-button {
+          float: none !important;
+          margin: 20px 0;
+          a {
+            text-align: center;
+          }
+        }
+      }
+    }
+    section#tabs {
+      .container {
+        .row {
+          .col-8 {
+            padding-right: 15px !important;
+          }
+          .col-8, .col-4 {
+            max-width: 100%;
+            flex: none;
+            .outline-sidbar {
+            	position: relative !important;
+            	transform: none !important;
+              .col {
+                padding: 0 !important;
+              }
+              .related-courses, .client-testimonials {
+                margin-top: 15px !important;
+
+              }
+            }
+            .custom-tabs {
+              ul.nav-tabs li.nav-item a {
+              	margin-right: 40px !important;
+              }
+            }
+          }
+          .tab-content {
+            .tab-pane .container {
+          	  padding: 30px 0 !important;
+              margin: 0 !important;
+            }
+            .search-centre .form-group .col-4 {
+              padding-left: 15px !important;
+              margin-top: 15px;
+            }
+            .training-centres.container {
+              .info-content {
+                width: 50%;
+                margin-left: 15px !important;
+              }
+              padding: 0px 15px !important;
+              .col-12:last-child {
+                margin-bottom: 0;
+              }
+            }
+            ul.location-lists {
+              margin: 30px 0 !important;
+              li .location-label {
+                width: 50%;
+              }
+              li:last-child {
+                margin-bottom: 0;
+              }
+            }
+            .whats-include {
+              .row {
+                margin-bottom: 0 !important;
+                ul.included-listing li .include-label {
+                  width: 50% !important;
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -615,7 +784,6 @@
   nav .navbar-header .navbar-brand {
     height: 45px;
     width: 219px;
-    margin-right: 0;
   }
   .top-info-wrapper .top-info ul.info .col-md-2 {
     width: auto;
@@ -694,5 +862,60 @@
       	margin-right: 0 !important;
       }
     }
+  }
+  body.outline.course {
+    #outline-header {
+      .outline-container-holder {
+        .breadcrumb > li, .breadcrumb > li > a {
+          font-size: 16px !important;
+        }
+        .container.outline {
+          .export-share-button a {
+            display: block !important;
+            margin-bottom: 15px !important;
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+    section#tabs > .container > .row > .col-8 {
+      .custom-tabs {
+        ul.nav-tabs li.nav-item a {
+        	font-size: 16px !important;
+        	margin-right: 30px !important;
+        }
+        ul.nav-tabs li:last-child.nav-item a {
+          margin-right: 0 !important;
+        }
+        .tab-content {
+          ul.location-lists li {
+            width: 100% !important;
+            .location-label {
+              width: auto !important;
+            }
+          }
+          .training-centres {
+            .col-12 {
+              padding: 15px;
+            }
+            .info-content {
+              position: relative;
+              top: 0;
+              transform: none;
+              width: 100% !important;
+              margin-left: 0 !important;
+            }
+            .place-image img {
+            	float: none !important;
+            	width: 100%;
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  nav .navbar-header .navbar-brand {
+	  margin-right: 0;
   }
 }

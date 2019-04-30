@@ -7,6 +7,7 @@ const {
 } = DS;
 
 export default Model.extend({
+  courses: hasMany('course'),
   image: attr('string'),
   priority: attr('number'),
   slug: attr('string'),

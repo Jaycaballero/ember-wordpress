@@ -1,0 +1,58 @@
+{{set-body-class "outline course"}}
+<header id="outline-header" class="position-relative">
+  <div class="outline-container-holder">
+    <div class="container outline">
+      <div class="row">
+        <div class="col-8">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Course</a></li>
+              <li class="breadcrumb-item"><a href="#">Microsoft Office Training</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Excel</li>
+            </ol>
+          </nav>
+          <h1 class="display-3 text-white mb-2">Excel Introduction</h1>
+          <ul class="course-header-info p-0 text-white">
+            <li><strong>Level:</strong> Introduction</li>
+            <li><strong>Duration:</strong> 1 Day</li>
+            <li><strong>Versions:</strong> 2007, 2010, 2013, 2016, Office 35</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="export-share-button float-right">
+            <a href="#"><i class="fas fa-file-pdf mr-3"></i>Export PDF</a>
+            <a href="#"><i class="fas fa-share-alt mr-3"></i>Share this</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="tabs">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 pr-5">
+        <div class="custom-tabs position-relative">
+          {{#bs-tab as |tab|}}
+            {{#tab.pane title="Overview"}}
+              {{outline-tabs/overview}}
+            {{/tab.pane}}
+            {{#tab.pane title="Locations"}}
+              {{outline-tabs/locations}}
+            {{/tab.pane}}
+            {{#tab.pane title="Whats Included"}}
+              {{outline-tabs/whats-include}}
+            {{/tab.pane}}
+          {{/bs-tab}}
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="outline-sidbar">
+          {{forms/get-started-form}}
+          {{outline-sidebar/related-course}}
+          {{outline-sidebar/testimonials}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

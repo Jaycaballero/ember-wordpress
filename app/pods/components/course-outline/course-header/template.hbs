@@ -1,16 +1,27 @@
-<header class="subpage-header item-header-title position-relative">
-  <div class="subpage-header py-5">
+<header class="subpage-header item-header-title">
+  <div class="subpage-header">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="back-to-link">
             {{#link-to
+              "page"
+              parentLink
+            }}
+              {{ parentNav }}
+            {{/link-to}}
+            {{#link-to
               "course"
             }}
               {{ catTitle }}
             {{/link-to}}
+            {{#link-to
+              "course"
+              subCategory.slug
+            }}
+              {{ subCatTitle }}
+            {{/link-to}}
           </div>
-          <h1 class="display-3 text-white mb-0">{{ headerSubCatTitle }}</h1>
         </div>
         <div class="col-lg-6">
           <div class="header-call-to-action position-absolute">

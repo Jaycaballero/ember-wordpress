@@ -3,7 +3,8 @@ import DS from 'ember-data';
 const {
   Model,
   attr,
-  belongsTo
+  belongsTo,
+  hasMany
 } = DS;
 
 export default Model.extend({
@@ -15,8 +16,8 @@ export default Model.extend({
   description: attr('string'),
   slug: attr('string'),
   title: attr('string'),
-
   attribute: belongsTo(),
-  category: belongsTo(),
-  subCategory: belongsTo()
+  category: hasMany(),
+  subCategory: hasMany(),
+  fullDescription: attr('string')
 });
