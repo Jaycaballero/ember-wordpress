@@ -11,7 +11,9 @@ Router.map(function() {
   this.route('howwetrain', {path: "how-we-train/:howwetrain"});
   this.route('tipsandtrick', {path: "tips-tricks/:tipsandtrick"});
   this.route('course', {path: "courses/:course"}, function() {
-    this.route('sub-category', { path: '/:sub_category'}, function() {});
+    this.route('sub-category', { path: "/:subCategory"}, function() {
+        this.route('outline', { path: '/:outline' });
+    });
   });
   this.route('page', {path: "/:page"});
 });

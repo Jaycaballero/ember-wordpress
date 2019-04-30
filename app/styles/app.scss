@@ -680,7 +680,6 @@ section#subpage-content.courses .col-md-6:nth-child(2n+1) {
 }
 section#subpage-content.courses .col-md-6 {
 	max-width: calc(50% - 12px);
-  display: flex;
 }
 .course-category-button a.btn {
 	font-size: 16px;
@@ -868,8 +867,220 @@ body.sub-category.courses {
         padding: 0 30px 30px 30px;
       }
     }
-    .request-a-call-back-form {
+    .request-a-call-back-form, .get-started-form {
       background-color: #f1f2f2;
     }
+  }
+}
+body.outline.course {
+  #outline-header {
+    background-image: url("/assets/images/ms-excel-banner.jpg");
+    background: linear-gradient( rgba(0, 95, 139, 0.8), rgba(0, 95, 139, 0.8) ), url("/assets/images/ms-excel-banner.jpg");
+    height: 300px;
+    background-size: cover;
+    .outline-container-holder {
+      .breadcrumb {
+      	background-color: transparent;
+      	padding: 0;
+        > li {
+          color: #fff;
+          font-size: 25px;
+          > a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+          }
+        }
+        li.active {
+          color: #70d1ef;
+        }
+        li::before {
+          content: "\f054";
+          font-weight: 900;
+          font-family: "Font Awesome 5 Free";
+          color: #70d1ef;
+        }
+        li:nth-child(1)::before {
+          content: none;
+        }
+      }
+      .container.outline {
+      	position: absolute;
+      	top: 50%;
+      	transform: translate(-50%, -50%);
+      	left: 50%;
+        ul.course-header-info {
+          li {
+            list-style: none;
+            color: #fff;
+            strong {
+              color: #fff;
+            }
+          }
+        }
+        .export-share-button {
+          a {
+          	color: #fff;
+          	font-family: calibri-regular;
+          	font-size: 20px;
+          	border: 1px solid #fff;
+          	padding: 8px 15px;
+            margin-right: 16px;
+            text-decoration: none;
+          }
+          a:nth-child(2) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .custom-tabs {
+    ul.nav-tabs {
+      border: 0;
+      li.nav-item a {
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        font-family: calibri-bold;
+        color: #666;
+        padding: 10px 0;
+        padding-left: 0px;
+        position: relative;
+        margin-right: 50px;
+      }
+      li:nth-child(1).nav-item a {
+        padding-left: 0;
+      }
+      li.nav-item a.active::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #005f8b;
+        bottom: 0;
+        position: absolute;
+      }
+    }
+    .tab-content {
+	    background-color: #fff;
+      ul.location-lists {
+        display: table;
+        li {
+          list-style: none;
+          float: left;
+          width: 50%;
+          margin-bottom: 20px;
+          .location-image, .location-label {
+          	float: left;
+          }
+          .location-image {
+          	margin-right: 15px;
+          }
+          .location-label {
+          	display: flex;
+          	height: 4em;
+          	align-items: center;
+            font-family: calibri-bold;
+          }
+        }
+      }
+      form.search-centre {
+        #post-code {
+        	padding-left: 40px;
+        }
+        .input-holder::before {
+        	content: "\f3c5";
+          font-family: "Font Awesome 5 Free";
+          color: #005f8b;
+          font-weight: 900;
+        	position: absolute;
+        	top: 50%;
+        	transform: translate(0, -50%);
+        	left: 16px;
+          z-index: 1;
+        }
+      }
+      .training-centres {
+        .col-12 {
+        	padding: 0;
+        	border: 1px solid #ced4da;
+        	margin-bottom: 20px;
+          position: relative;
+        }
+        .info-content {
+        	position: absolute;
+        	top: 50%;
+        	transform: translate(0, -50%);
+        	margin-left: 30px;
+        }
+        .place-name {
+        	font-family: calibri-bold;
+        	font-size: 20px;
+        	color: #707070;
+        	margin-bottom: 7px;
+        }
+        .location {
+        	font-family: calibri-regular;
+        	font-size: 20px;
+        	color: #707070;
+          margin-bottom: 20px;
+        }
+        .find-nearest a {
+        	font-family: calibri-regular;
+        	font-size: 20px;
+        	color: #e84d3d;
+        }
+      }
+      .whats-include {
+        ul.included-listing li {
+          list-style: none;
+          margin-bottom: 20px;
+          display: table;
+          .include-image {
+            float: left;
+            margin-right: 15px;
+          }
+          .include-label {
+          	font-family: calibri-bold;
+            display: flex;
+            align-items: center;
+            height: 4em;
+            float: left;
+          }
+        }
+      }
+    }
+  }
+  .outline-sidbar {
+  	position: absolute;
+  	top: 0;
+  	transform: translate(0, -17%);
+  	right: 0;
+    .get-started-form {
+      background-color: #dedede;
+      h2 {
+        color: #707070;
+        font-size: 25px !important;
+      }
+    }
+    .related-courses, .client-testimonials {
+      background-color: #f1f2f2;
+      h2 {
+        color: #707070 !important;
+        font-size: 25px !important;
+      }
+      ul li {
+        list-style: none;
+        a {
+          color: #e84d3d;
+        }
+      }
+    }
+  }
+  a {
+  	color: #e84d3d;
+  	font-family: calibri-regular;
+  	font-size: 20px;
   }
 }
