@@ -17,7 +17,11 @@ spec:
         image: jonbaldie/varnish:latest
         volumeMounts:
         - name: template
-          mountPath: /etc/varnish/
+          mountPath: /etc/varnish/default.vcl
+          subPath: default.vcl
+        - name: template
+          mountPath: /etc/varnish/secret
+          subPath: secret
       volumes:
       - name: template
         configMap:
@@ -38,25 +42,21 @@ data:
     }
 
     sub vcl_recv {
+        unset req.http.Cookie;
         if (req.method == "PRI") {
           /* We do not support SPDY or HTTP/2.0 */
           return (synth(405));
-        }
-
-        if (req.method != "GET" &&
-          req.method != "HEAD") {
-            return (pass);
         }
 
         if (req.method != "GET" && req.method != "HEAD") {
             /* We only deal with GET and HEAD by default */
             return (pass);
         }
+
         if (req.http.Authorization || req.http.Cookie) {
             /* Not cacheable by default */
             return (pass);
         }
-        unset req.http.Cookie;
         set req.http.host = "www2.systematix.co.uk";
         return (hash);
     }

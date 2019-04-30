@@ -6,14 +6,10 @@ backend default {
 }
 
 sub vcl_recv {
+    unset req.http.Cookie;
     if (req.method == "PRI") {
       /* We do not support SPDY or HTTP/2.0 */
       return (synth(405));
-    }
-
-    if (req.method != "GET" &&
-      req.method != "HEAD") {
-        return (pass);
     }
 
     if (req.method != "GET" && req.method != "HEAD") {
@@ -24,7 +20,6 @@ sub vcl_recv {
         /* Not cacheable by default */
         return (pass);
     }
-    unset req.http.Cookie;
     set req.http.host = "www2.systematix.co.uk";
     return (hash);
 }
