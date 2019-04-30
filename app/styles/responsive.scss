@@ -60,10 +60,13 @@
       .outline-container-holder {
         .container.outline {
           .export-share-button a {
-	          padding: 7px;
+	          padding: 7px !important;
           }
         }
       }
+    }
+    .outline-sidbar {
+      transform: translate(0, -16%) !important;
     }
   }
 }
@@ -306,59 +309,64 @@
     	flex: none;
     }
   }
-}
-body.outline.course {
-  #outline-header {
-    .outline-container-holder {
-      .container.outline {
-        .export-share-button a {
-          display: block !important;
-          margin-bottom: 15px !important;
-          margin-right: 0 !important;
+  body.outline.course {
+    #outline-header {
+      .outline-container-holder {
+        .container.outline {
+          .export-share-button a {
+            display: block !important;
+            margin-bottom: 15px !important;
+            margin-right: 0 !important;
+          }
         }
       }
     }
-  }
-  section#tabs {
-    > .container > .row > .col-8 {
-      padding-right: 15px !important;
-      .custom-tabs {
-        ul.nav-tabs {
-          li.nav-item {
-            a {
-    	        margin-right: 30px !important;
+    section#tabs {
+      > .container > .row > .col-8 {
+        padding-right: 15px !important;
+        .custom-tabs {
+          ul.nav-tabs {
+            li.nav-item {
+              a {
+      	        margin-right: 30px !important;
+              }
             }
           }
-        }
-        .tab-content {
-          ul.location-lists li, li .location-label {
-            width: 50%;
-          }
-          .training-centres .info-content {
-            width: 50%;
-            margin-left: 15px !important;
-          }
-          .whats-include .row:nth-child(2) {
-          	margin-top: 0 !important;
-          }
-          ul.included-listing {
-            li {
-              .include-label {
-                width: 50%;
+          .tab-content {
+            ul.location-lists li, li .location-label {
+              width: 50%;
+            }
+            .training-centres .info-content {
+              width: 50%;
+              margin-left: 15px !important;
+            }
+            .whats-include .row:nth-child(2) {
+            	margin-top: 0 !important;
+            }
+            ul.included-listing {
+              li {
+                .include-label {
+                  width: 50% !important;
+                }
               }
             }
           }
         }
       }
-    }
-    .outline-sidbar {
-      transform: translate(0, -9%) !important;
-      .get-started-form, .related-courses, .client-testimonials {
-        padding: 15px !important
+      .outline-sidbar {
+        transform: translate(0, -9%) !important;
+        .get-started-form, .related-courses, .client-testimonials {
+          padding: 15px !important
+        }
+        .client-testimonials-listing .info {
+        	position: relative !important;
+        	margin-top: 10px;
+        }
       }
     }
   }
 }
+
 
 /* Mobile Modes */
 @media (max-width: 767px) {
@@ -687,7 +695,7 @@ body.outline.course {
         }
         .export-share-button {
           float: none !important;
-          margin-top: 20px;
+          margin: 20px 0;
           a {
             text-align: center;
           }
@@ -697,6 +705,9 @@ body.outline.course {
     section#tabs {
       .container {
         .row {
+          .col-8 {
+            padding-right: 15px !important;
+          }
           .col-8, .col-4 {
             max-width: 100%;
             flex: none;
@@ -711,6 +722,11 @@ body.outline.course {
 
               }
             }
+            .custom-tabs {
+              ul.nav-tabs li.nav-item a {
+              	margin-right: 40px !important;
+              }
+            }
           }
           .tab-content {
             .tab-pane .container {
@@ -722,6 +738,10 @@ body.outline.course {
               margin-top: 15px;
             }
             .training-centres.container {
+              .info-content {
+                width: 50%;
+                margin-left: 15px !important;
+              }
               padding: 0px 15px !important;
               .col-12:last-child {
                 margin-bottom: 0;
@@ -729,6 +749,9 @@ body.outline.course {
             }
             ul.location-lists {
               margin: 30px 0 !important;
+              li .location-label {
+                width: 50%;
+              }
               li:last-child {
                 margin-bottom: 0;
               }
@@ -736,6 +759,10 @@ body.outline.course {
             .whats-include {
               .row {
                 margin-bottom: 0 !important;
+                ul.included-listing li .include-label {
+                  width: 50% !important;
+                  font-size: 18px;
+                }
               }
             }
           }
@@ -842,15 +869,31 @@ body.outline.course {
         .breadcrumb > li, .breadcrumb > li > a {
           font-size: 16px !important;
         }
+        .container.outline {
+          .export-share-button a {
+            display: block !important;
+            margin-bottom: 15px !important;
+            margin-right: 0 !important;
+          }
+        }
       }
     }
     section#tabs > .container > .row > .col-8 {
       .custom-tabs {
         ul.nav-tabs li.nav-item a {
-        	font-size: 18px !important;
-        	margin-right: 10px !important;
+        	font-size: 16px !important;
+        	margin-right: 30px !important;
+        }
+        ul.nav-tabs li:last-child.nav-item a {
+          margin-right: 0 !important;
         }
         .tab-content {
+          ul.location-lists li {
+            width: 100% !important;
+            .location-label {
+              width: auto !important;
+            }
+          }
           .training-centres {
             .col-12 {
               padding: 15px;
@@ -865,11 +908,8 @@ body.outline.course {
             .place-image img {
             	float: none !important;
             	width: 100%;
+              margin-top: 15px;
             }
-          }
-          ul.included-listing li .include-label {
-            width: 50%;
-            font-size: 16px;
           }
         }
       }
@@ -877,13 +917,5 @@ body.outline.course {
   }
   nav .navbar-header .navbar-brand {
 	  margin-right: 0;
-  }
-  .tab-content {
-    ul.location-lists li {
-      width: 100% !important;
-      .location-label {
-        width: auto !important;
-      }
-    }
   }
 }

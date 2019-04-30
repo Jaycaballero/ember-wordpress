@@ -30,6 +30,7 @@ h2, section#branding h3 {
   font-size: 35px !important;
   color: #005f8b !important;
 }
+a:focuse {outline: none !important;}
 .pre-text p {
   color: #fff;
   font-size: 23px;
@@ -1047,6 +1048,7 @@ body.outline.course {
             align-items: center;
             height: 4em;
             float: left;
+            width: auto !important;
           }
         }
       }
