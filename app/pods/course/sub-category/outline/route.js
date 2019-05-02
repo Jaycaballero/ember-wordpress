@@ -2,12 +2,12 @@ import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
 
 export default Route.extend({
-  /*model({ outline }) {
+  model({ course_slug }) {
     return RSVP.hash({
-      course: this.get('store').findRecord('course', 32)
+      course: this.get('store').queryRecord('course', { slug: course_slug } )
     });
   },
   setupController(controller, model) {
     controller.set('course', model.course);
-  },*/
+  },
 });

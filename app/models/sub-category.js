@@ -8,8 +8,6 @@ const {
 
 export default Model.extend({
   bannerImage: attr('string'),
-  categories: hasMany('category'),
-  courses: hasMany(),
   duration: attr('string'),
   content: attr('string'),
   description: attr('string'),
@@ -23,4 +21,7 @@ export default Model.extend({
   slug: attr('string'),
   title: attr('string'),
   versions: attr('string'),
+
+  categories: hasMany('category'),
+  courses: hasMany('course'),
 });

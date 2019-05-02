@@ -1,57 +1,18 @@
 <div class="container py-5 px-0">
   <h2>Course Information</h2>
-  <p>is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever
-  since the 1500s, when an unknown printer took a galley of type
-  and scrambled it to make a type specimen book.</p>
-
-  <p>It has survived not only five centuries, but also the leap into
-  electronic typesetting, remaining essentially unchanged. It was
-  popularised in the 1960s with the release of Letraset sheets
-  containing Lorem Ipsum passages, and more recently with desktop
-  publishing software like Aldus PageMaker including versions of
-  Lorem Ipsum.</p>
-
+  <div class="course-outline-section">
+    {{html-safe course.fullDescription}}
+  </div>
   <br>
   <h2>Course Outline</h2>
-  <strong>Getting Started with Microsoft Excel</strong>
-  <p>There are many variations of passages of Lorem Ipsum available<br>
-  There are many variations of passages of Lorem Ipsum available<br>
-  There are many variations of passages of Lorem Ipsum available<br>
-  There are many variations of passages of Lorem Ipsum available</p>
-
-  <strong>Create Formulas in a Worksheet</strong>
-  <p>If you are going to use a passage of Lorem Ipsum.<br>
-  If you are going to use a passage of Lorem Ipsum<br>
-  If you are going to use a passage of Lorem Ipsum<br></p>
-
-  <strong>Manipulate Data</strong>
-  <p>All the Lorem Ipsum generators on the Internet<br>
-  All the Lorem Ipsum generators on the Internet<br>
-  All the Lorem Ipsum generators on the Internet<br>
-  All the Lorem Ipsum generators on the Internet</p>
-
-  <strong>Modify Fonts</strong>
-  <p>The standard chunk of Lorem Ipsum<br>
-  The standard chunk of Lorem Ipsum<br>
-  The standard chunk of Lorem Ipsum<br>
-  The standard chunk of Lorem Ipsum<br>
-  The standard chunk of Lorem Ipsum</p>
-
-  <strong>Define the basic Page Layout for a Workbook</strong>
-  <p>Aldus PageMaker including versions<br>
-  Aldus PageMaker including versions</p>
-
-  <strong>Format Worksheet Tabs</strong>
-  <p>Contrary to popular belief<br>
-  Contrary to popular belief<br>
-  Contrary to popular belief<br></p>
-
-  <strong>Customize General and Language Options</strong>
-  <p>Lorem Ipsum comes from sections<br>
-  Lorem Ipsum comes from sections<br>
-  Lorem Ipsum comes from sections<br>
-  Lorem Ipsum comes from sections<br>
-  Lorem Ipsum comes from sections</p>
+  <div class="course-outline-section">
+    {{#each  course.topics as |topicSection|}}
+      <strong>{{topicSection.title}}</strong>
+      <ul>
+        {{#each topicSection.topics as |topic|}}
+          <li>{{topic.title}}</li>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
 </div>
-{{yield}}

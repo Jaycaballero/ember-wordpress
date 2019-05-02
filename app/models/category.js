@@ -12,5 +12,6 @@ export default Model.extend({
   priority: attr('number'),
   slug: attr('string'),
   title: attr('string'),
+
   subCategories: hasMany('sub-category')
 });
