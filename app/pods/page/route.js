@@ -5,7 +5,7 @@ import RSVP from 'rsvp';
 export default Route.extend({
 
  sectionTitle: service(),
-
+  
  model(params) {
    let rsvp;
 

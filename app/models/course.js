@@ -8,16 +8,18 @@ const {
 } = DS;
 
 export default Model.extend({
-  levels: attr('string'),
-  levelNumeric: attr('number'),
-  version: attr('string'),
-  priority: attr('number'),
+  attribute: belongsTo(),
   days: attr('number'),
   description: attr('string'),
+  fullDescription: attr('string'),
+  levels: attr('string'),
+  levelNumeric: attr('number'),
+  priority: attr('number'),
   slug: attr('string'),
   title: attr('string'),
-  attribute: belongsTo(),
-  category: hasMany(),
-  subCategory: hasMany(),
-  fullDescription: attr('string')
+  topics: attr(),
+  version: attr('string'),
+
+  category: hasMany('category'),
+  subCategory: hasMany('sub-category'),
 });

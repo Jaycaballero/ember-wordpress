@@ -35,10 +35,7 @@
         <div class="custom-tabs position-relative">
           {{#bs-tab as |tab|}}
             {{#tab.pane title="Overview"}}
-              {{outline-tabs/overview}}
-            {{/tab.pane}}
-            {{#tab.pane title="Locations"}}
-              {{outline-tabs/locations}}
+              {{outline-tabs/overview course=course}}
             {{/tab.pane}}
             {{#tab.pane title="Whats Included"}}
               {{outline-tabs/whats-include}}

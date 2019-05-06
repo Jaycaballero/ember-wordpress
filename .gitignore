@@ -22,6 +22,7 @@
 /bower.json.ember-try
 /package.json.ember-try
 
+.env
 google.env
 codeship.aes
 jsconfig.json
