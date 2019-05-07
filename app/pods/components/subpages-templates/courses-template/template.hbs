@@ -54,7 +54,9 @@
               <div class="card">
                 <div class="card-body p-4">
                   <div class="course-category-image">
-                    <img src={{category.image}} alt="image">
+                    {{#if category.iconUrl}}
+                      <img src={{category.iconUrl}} alt="image">
+                    {{/if}}
                     {{#link-to
                       "course"
                       category.slug

@@ -6,15 +6,25 @@
         <div class="col-8">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Course</a></li>
-              <li class="breadcrumb-item"><a href="#">Microsoft Office Training</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Excel</li>
+              <li class="breadcrumb-item">
+                {{#link-to "course" course.categories.firstObject.slug}}
+                  {{course.categories.firstObject.title}}
+                {{/link-to}}
+              </li>
+              <li class="breadcrumb-item">
+                {{#link-to "course.sub-category" course.subCategories.firstObject.slug}}
+                  {{course.subCategories.firstObject.title}}
+                {{/link-to}}
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                {{course.title}}
+              </li>
             </ol>
           </nav>
           <h1 class="display-3 text-white mb-2">Excel Introduction</h1>
           <ul class="course-header-info p-0 text-white">
-            <li><strong>Level:</strong> Introduction</li>
-            <li><strong>Duration:</strong> 1 Day</li>
+            <li><strong>Level:</strong> {{course.levels}}</li>
+            <li><strong>Duration:</strong> {{course.days}} Day/s</li>
             <li><strong>Versions:</strong> 2007, 2010, 2013, 2016, Office 35</li>
           </ul>
         </div>
@@ -27,6 +37,22 @@
       </div>
     </div>
   </div>
+  {{#if course.bannerImageUrl}}
+    {{components/courses-background-image
+      class="background-image course-banner-image"
+      imageUrl=course.bannerImageUrl
+    }}
+  {{else if course.subCategories.firstObject.bannerImageUrl}}
+    {{components/courses-background-image
+      class="background-image course-banner-image"
+      imageUrl=course.subCategories.firstObject.bannerImageUrl
+    }}
+  {{else if course.categories.firstObject.bannerImageUrl}}
+    {{components/courses-background-image
+      class="background-image course-banner-image"
+      imageUrl=course.categories.firstObject.bannerImageUrl
+    }}
+  {{/if}}
 </header>
 <section id="tabs">
   <div class="container">

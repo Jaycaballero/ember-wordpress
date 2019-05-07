@@ -14,7 +14,11 @@
                 class="course-sub-category-link"
               }}
                 <div class="cat-title-and-icon">
-                  <img class="cat-ico" src={{subCategory.icon}} alt="image">
+                  {{#if subCategory.iconUrl}}
+                    <img src={{subCategory.iconUrl}} alt="image" class="cat-ico">
+                  {{else if subCategory.categories.firstObject.iconUrl}}
+                    <img src={{subCategory.categories.firstObject.iconUrl}} alt="image" class="cat-ico">
+                  {{/if}}
                   <div class="cat-title">{{subCategory.title}}</div>
                 </div>
               {{/link-to}}
@@ -31,9 +35,15 @@
                 subCategory.slug
                 class="course-sub-category-link"
               }}
-                <div class="card-image">
-                  <img src={{subCategory.image}} alt="image" class="d-table m-auto">
-                </div>
+                {{#if subCategory.iconUrl}}
+                  <div class="card-image">
+                    <img src={{subCategory.iconUrl}} alt="image" class="d-table m-auto">
+                  </div>
+                {{else if subCategory.categories.firstObject.iconUrl}}
+                  <div class="card-image">
+                    <img src={{subCategory.categories.firstObject.iconUrl}} alt="image" class="d-table m-auto">
+                  </div>
+                {{/if}}
                 <div class="card-body">
                   <div class="course-subcategory-title mb-3">
                     {{subCategory.title}}

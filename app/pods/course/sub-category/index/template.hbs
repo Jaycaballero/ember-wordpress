@@ -4,10 +4,17 @@
   headerSubCatTitle=subCategory.title
 }}
 <header class="course-header-banner">
-  {{components/courses-background-image
-    class="background-image course-banner-image"
-    imageUrl=subCategory.bannerImage
-  }}
+  {{#if subCategory.bannerImageUrl}}
+    {{components/courses-background-image
+      class="background-image course-banner-image"
+      imageUrl=subCategory.bannerImageUrl
+    }}
+  {{else if subCategory.categories.firstObject.bannerImageUrl}}
+    {{components/courses-background-image
+      class="background-image course-banner-image"
+      imageUrl=subCategory.categories.firstObject.bannerImageUrl
+    }}
+  {{/if}}
 </header>
 <nav id="scroll-to-section" class="py-3">
   <div class="container">

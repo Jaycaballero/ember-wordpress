@@ -875,8 +875,7 @@ body.sub-category.courses {
 }
 body.outline.course {
   #outline-header {
-    background-image: url("/assets/images/ms-excel-banner.jpg");
-    background: linear-gradient( rgba(0, 95, 139, 0.8), rgba(0, 95, 139, 0.8) ), url("/assets/images/ms-excel-banner.jpg");
+    background: linear-gradient( rgba(0, 95, 139, 0.8), rgba(0, 95, 139, 0.8) );
     height: 300px;
     background-size: cover;
     .outline-container-holder {
