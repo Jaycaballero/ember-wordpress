@@ -17,7 +17,11 @@
                   {{#if subCategory.iconUrl}}
                     <img src={{subCategory.iconUrl}} alt="image" class="cat-ico">
                   {{else if subCategory.categories.firstObject.iconUrl}}
-                    <img src={{subCategory.categories.firstObject.iconUrl}} alt="image" class="cat-ico">
+                    <img
+                      src={{subCategory.categories.firstObject.iconUrl}}
+                      alt="image"
+                      class="cat-ico"
+                    >
                   {{/if}}
                   <div class="cat-title">{{subCategory.title}}</div>
                 </div>
@@ -37,11 +41,19 @@
               }}
                 {{#if subCategory.iconUrl}}
                   <div class="card-image">
-                    <img src={{subCategory.iconUrl}} alt="image" class="d-table m-auto">
+                    <img
+                      src={{subCategory.iconUrl}}
+                      alt="image"
+                      class="d-table m-auto"
+                    >
                   </div>
                 {{else if subCategory.categories.firstObject.iconUrl}}
                   <div class="card-image">
-                    <img src={{subCategory.categories.firstObject.iconUrl}} alt="image" class="d-table m-auto">
+                    <img
+                      src={{subCategory.categories.firstObject.iconUrl}}
+                      alt="image"
+                      class="d-table m-auto"
+                    >
                   </div>
                 {{/if}}
                 <div class="card-body">
