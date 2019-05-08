@@ -9,9 +9,11 @@ const {
 
 export default Model.extend({
   attribute: belongsTo(),
+  bannerImageUrl: attr('string'),
   days: attr('number'),
   description: attr('string'),
   fullDescription: attr('string'),
+  iconUrl: attr('string'),
   levels: attr('string'),
   levelNumeric: attr('number'),
   pdfUrl: attr('string'),
@@ -21,6 +23,6 @@ export default Model.extend({
   topics: attr(),
   version: attr('string'),
 
-  category: hasMany('category'),
-  subCategory: hasMany('sub-category'),
+  categories: hasMany('category'),
+  subCategories: hasMany('sub-category'),
 });
