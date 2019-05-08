@@ -97,6 +97,17 @@ section#top .top-buttons a.btn:hover {
   background-size: cover;
   background-attachment: fixed;
 }
+.ember-power-select-dropdown{
+  ul.ember-power-select-options {
+    li {
+    	font-family: calibri-regular !important;
+    	opacity: 0.8;
+    }
+    li.ember-power-select-option[aria-current="true"] {
+	    background-color: #e84d3d;
+    }
+  }
+}
 .banner-content {
   top: 50%;
   transform: translate(-50%, -50%);
@@ -107,6 +118,46 @@ section#top .top-buttons a.btn:hover {
   justify-content: center;
   align-items: center;
   display: flex;
+  .search-banner {
+    .ember-power-select-trigger {
+	    width: 89%;
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      border-radius: 0;
+      .ember-power-select-status-icon {
+      	display: none;
+      }
+      input[type="search"] {
+        opacity: 1;
+        background: #fff;
+        border-top-left-radius: 33px;
+        border-bottom-left-radius: 33px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border: 1px solid #e84d3d !important;
+        height: 50px;
+        padding: 8px 12px;
+        font-size: 19px !important;
+        color: #999 !important;
+        font-family: calibri-regular !important;
+      }
+      input[type="search"]::placeholder {
+        opacity: 0.8;
+      }
+    }
+    button {
+      background-color: #e84d3d !important;
+      border: 1px solid #e84d3d !important;
+      border-radius: 2px;
+    }
+    .fa.fa-search {
+      color: #fff;
+    }
+    button.btn:hover,  {
+      background-color: #e84d3d !important;
+    }
+  }
 }
 header .call-to-action a.btn {
   font-family: calibri-bold;
@@ -482,27 +533,6 @@ form input[type="text"], form input[type="text"]::placeholder {
   font-family: calibri-regular !important;
   opacity: 0.8 !important;
   height: 45px;
-}
-.search-banner form input[type="text"] {
-  background: #fff;
-  opacity: 1 !important;
-  border-radius: 33px;
-  border: 1px solid #e84d3d !important;
-  height: 50px;
-}
-.search-banner form input[type="text"]:focus {
-  box-shadow: none;
-}
-.search-banner form button {
-  background-color: #e84d3d !important;
-  border: 1px solid #e84d3d !important;
-  border-radius: 2px;
-}
-.search-banner form .fa.fa-search {
-  color: #fff;
-}
-.search-banner form button.btn:hover,  {
-  background-color: #e84d3d !important;
 }
 .btn.submit-button {
   border-radius: 0.25rem;

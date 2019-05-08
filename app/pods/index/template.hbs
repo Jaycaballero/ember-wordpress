@@ -1,4 +1,20 @@
-{{home-page-components/banner-section _banners=banners}}
+{{#home-page-components/banner-section _banners=banners}}
+  <div class="col-5 mx-auto input-group mt-4 mb-2">
+    {{#power-select-multiple
+      placeholder="Search for a course or subject"
+      options=courses
+      loadingMessage="Searching courses"
+      onchange=(action "selectCourse")
+      search=(perform searchCourse)
+      as |course|
+    }}
+      {{course.title}}
+    {{/power-select-multiple}}
+    {{#bs-button class="btn btn-outline-secondary bg-white border-left-0 border" onClick=(action "selectCourse")}}
+      <i class="fa fa-search"></i>
+    {{/bs-button}}
+  </div>
+{{/home-page-components/banner-section}}
 {{home-page-components/services-section _services=services}}
 {{home-page-components/branding-section _branding_Section=brandingSection}}
 {{home-page-components/our-benefit-section
