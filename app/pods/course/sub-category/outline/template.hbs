@@ -38,18 +38,18 @@
     </div>
   </div>
   {{#if course.bannerImageUrl}}
-    {{components/courses-background-image
-      class="background-image course-banner-image"
+    {{components/outline-background-image
+      class="background-image course-banner-image background"
       imageUrl=course.bannerImageUrl
     }}
   {{else if course.subCategories.firstObject.bannerImageUrl}}
-    {{components/courses-background-image
-      class="background-image course-banner-image"
+    {{components/outline-background-image
+      class="background-image course-banner-image background"
       imageUrl=course.subCategories.firstObject.bannerImageUrl
     }}
   {{else if course.categories.firstObject.bannerImageUrl}}
-    {{components/courses-background-image
-      class="background-image course-banner-image"
+    {{components/outline-background-image
+      class="background-image course-banner-image background"
       imageUrl=course.categories.firstObject.bannerImageUrl
     }}
   {{/if}}
