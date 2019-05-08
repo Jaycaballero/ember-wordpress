@@ -7,7 +7,7 @@ const { RESTAdapter, errorsHashToArray } = DS;
 
 export default RESTAdapter.extend({
   namespace: 'api/site',
-  host: ENV.APP.coursesApi.host,
+  // host: ENV.APP.coursesApi.host,
   headers: EmberObject.create({
     Accept: `application/x.systematix.v1+json`
   }),
