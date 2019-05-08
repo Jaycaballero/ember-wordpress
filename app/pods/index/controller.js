@@ -5,18 +5,16 @@ import { task, timeout } from 'ember-concurrency';
 export default Controller.extend({
   searchCourse: task(function* (text) {
     yield timeout(500);
-    return this.get('store').query('course', {q: text, include: 'categories,subCategories'})
-      .then((data) => {
-        set(this, 'courses', data);
+    return this.get('store')
+      .query('course', {q: text, include: 'categories,subCategories'})
+      .then((courses) => {
+        set(this, 'courses', courses);
       });
   }),
   actions: {
-    selectCourse(courses) {
-      if (courses == null || courses.length < 1) {
-        return;
-      }
-      const subCategory = courses.firstObject.subCategory.firstObject;
-      const category = courses.firstObject.category.firstObject;
+    selectCourse([course]) {
+      const subCategory = course.subCategory.firstObject;
+      const category = course.category.firstObject;
       this.transitionToRoute('course.sub-category', category.slug, subCategory.slug);
     }
   }

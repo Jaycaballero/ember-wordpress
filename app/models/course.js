@@ -14,6 +14,7 @@ export default Model.extend({
   fullDescription: attr('string'),
   levels: attr('string'),
   levelNumeric: attr('number'),
+  pdfUrl: attr('string'),
   priority: attr('number'),
   slug: attr('string'),
   title: attr('string'),
