@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { get, set } from '@ember/object';
+import { set } from '@ember/object';
 import { task, timeout } from 'ember-concurrency';
 
 export default Controller.extend({
