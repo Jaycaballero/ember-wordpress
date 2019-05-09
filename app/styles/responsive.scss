@@ -6,6 +6,11 @@
   section#footer ul.info li {
     margin-right: 0;
   }
+  section#subpage-content.courses {
+    .course-category-image img {
+  	  width: 25%;
+    }
+  }
   .navbar-header .navbar-brand {
     height: 66px;
     width: 322px;
@@ -363,6 +368,11 @@
         	margin-top: 10px;
         }
       }
+    }
+  }
+  section#subpage-content.courses {
+    .course-category-image img {
+  	  width: 25%;
     }
   }
 }
@@ -768,6 +778,11 @@
           }
         }
       }
+    }
+  }
+  section#subpage-content.courses {
+    .course-category-image img {
+  	  width: 100%;
     }
   }
 }
