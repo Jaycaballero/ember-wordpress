@@ -50,9 +50,9 @@
       <div class="col-md-8">
         <div class="row equal-heights m-0">
           {{#each _categories as |category|}}
-            <div class="col-md-6 float-left mb-4 p-0">
+            <div class="col-md-6 float-left mb-4 p-4 position-relative">
               <div class="card">
-                <div class="card-body p-4">
+                <div class="card-body p-0">
                   <div class="course-category-image">
                     {{#if category.iconUrl}}
                       <img src={{category.iconUrl}} alt="image">
@@ -79,16 +79,16 @@
                       </li>
                     {{/each}}
                   </ul>
-                  <div class="course-category-button card-footer px-0">
-                    {{#link-to
-                      "course"
-                      category.slug
-                      class="btn btn-primary text-capitalized mb-1"
-                    }}
-                      View more
-                    {{/link-to}}
-                  </div>
                 </div>
+              </div>
+              <div class="course-category-button">
+                {{#link-to
+                  "course"
+                  category.slug
+                  class="btn btn-primary text-capitalized mb-1"
+                }}
+                  View more
+                {{/link-to}}
               </div>
             </div>
           {{/each}}

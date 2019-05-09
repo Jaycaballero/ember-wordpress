@@ -643,7 +643,7 @@ body.courses #subpage-content ul li::before {
 }
 .course-subCategory-title {
 	color: #707070;
-	font-size: 23px;
+	font-size: 20px;
 }
 ul.course-sub-category-listing li {
 	margin-bottom: 20px;
@@ -709,8 +709,14 @@ a.course-cat-button:hover{
 section#subpage-content.courses .col-md-6:nth-child(2n+1) {
 	margin-right: 24px;
 }
-section#subpage-content.courses .col-md-6 {
-	max-width: calc(50% - 12px);
+section#subpage-content.courses {
+  .col-md-6 {
+  	max-width: calc(50% - 12px);
+    background-color: #fff;
+    .card {
+      background-color: transparent;
+    }
+  }
 }
 .course-category-button a.btn {
 	font-size: 16px;
