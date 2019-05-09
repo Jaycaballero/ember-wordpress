@@ -57,14 +57,14 @@
                     {{#if category.iconUrl}}
                       <img src={{category.iconUrl}} alt="image">
                     {{/if}}
-                    {{#link-to
-                      "course"
-                      category.slug
-                      class="course-cat-button d-inline-flex ml-2"
-                    }}
-                      <h3 class="course-category-title mb-4">{{category.title}}</h3>
-                    {{/link-to}}
                   </div>
+                  {{#link-to
+                    "course"
+                    category.slug
+                    class="course-cat-button"
+                  }}
+                    <h3 class="course-category-title mb-3">{{category.title}}</h3>
+                  {{/link-to}}
                   <ul class="course-sub-category-listing">
                     {{#each category.subCategories as |subCategory|}}
                       <li>
