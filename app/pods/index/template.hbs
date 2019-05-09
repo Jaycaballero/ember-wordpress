@@ -1,3 +1,5 @@
+{{scroll-to-top}}
+
 {{#home-page-components/banner-section _banners=banners}}
   <div class="col-5 mx-auto input-group mt-4 mb-2">
     {{#power-select-multiple
@@ -6,11 +8,14 @@
       loadingMessage="Searching courses"
       onchange=(action "selectCourse")
       search=(perform searchCourse)
-      as |course|
+    as |course|
     }}
       {{course.title}}
     {{/power-select-multiple}}
-    {{#bs-button class="btn btn-outline-secondary bg-white border-left-0 border" onClick=(action "selectCourse")}}
+    {{#bs-button
+      class="btn btn-outline-secondary bg-white border-left-0 border"
+      onClick=(action "selectCourse")
+    }}
       <i class="fa fa-search"></i>
     {{/bs-button}}
   </div>
