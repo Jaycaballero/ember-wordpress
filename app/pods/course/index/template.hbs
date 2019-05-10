@@ -43,18 +43,17 @@
               }}
                 {{#if subCategory.iconUrl}}
                   <div class="card-image">
-                    <div style="background-image:url('{{subCategory.iconUrl}}');"
+                    {{courses/listing-card-image
                       class="image d-table m-auto"
-                    >
-                    </div>
+                      iconUrl=subCategory.iconUrl
+                    }}
                   </div>
                 {{else if subCategory.categories.firstObject.iconUrl}}
                   <div class="card-image">
-                    <div
-                      style="background-image:url('{{subCategory.categories.firstObject.iconUrl}}');"
+                    {{courses/listing-card-image
                       class="image d-table m-auto"
-                    >
-                    </div>
+                      iconUrl=subCategory.categories.firstObject.iconUrl
+                    }}
                   </div>
                 {{/if}}
                 <div class="card-body">
