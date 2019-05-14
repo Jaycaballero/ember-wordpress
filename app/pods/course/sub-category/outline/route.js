@@ -4,10 +4,12 @@ import RSVP from 'rsvp';
 export default Route.extend({
   model({ course_slug }) {
     return RSVP.hash({
-      courses: this.get('store').query('course', { slug: course_slug, include: ['relatedCourses'] } )
+      courses: this.get('store').query('course', { slug: course_slug } ),
     });
   },
   setupController(controller, model) {
+    const subCategory = this.modelFor('course.sub-category');
     controller.set('course', model.courses.firstObject);
+    controller.set('subCategory', subCategory.subCategory);
   },
 });

@@ -3,7 +3,13 @@
     <h2>Related Courses</h2>
     <ul class="p-0">
       {{#each courses as |course|}}
-        <li><a href={{$course.slug}}>course.title</a></li>
+        {{#if (not-eq course.id currentCourseId)}}
+          <li>
+            {{#link-to "course.sub-category.outline" course.slug}}
+              {{course.title}}
+            {{/link-to}}
+          </li>
+        {{/if}}
       {{/each}}
     </ul>
   </div>

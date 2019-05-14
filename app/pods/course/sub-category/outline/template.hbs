@@ -71,7 +71,10 @@
       <div class="col-4">
         <div class="outline-sidbar">
           {{forms/get-started-form}}
-          {{outline-sidebar/related-course}}
+          {{outline-sidebar/related-course
+            currentCourseId=course.id
+            courses=subCategory.courses
+          }}
           {{outline-sidebar/testimonials}}
         </div>
       </div>
