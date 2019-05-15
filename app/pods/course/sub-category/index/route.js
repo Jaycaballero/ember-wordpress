@@ -5,7 +5,7 @@ export default Route.extend({
     const category = this.modelFor('course');
     controller.set('coursesOutline', model.courses);
     controller.set('category', category.firstObject);
-    controller.set('subCategory', model.subCategory);
+    controller.set('subCategory', model.subCategories.firstObject);
     controller.set('testimonials', model.testimonials);
   }
 });

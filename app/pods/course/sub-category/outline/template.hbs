@@ -8,7 +8,7 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
                 {{#link-to "course" course.categories.firstObject.slug}}
-                  {{course.categories.firstObject.title}}
+                  {{course.categories.firstObject.title}} Training
                 {{/link-to}}
               </li>
               <li class="breadcrumb-item">
@@ -30,7 +30,6 @@
         <div class="col-4">
           <div class="export-share-button float-right">
             <a href={{course.pdfUrl}} target="_blank" rel="noopener"><i class="fas fa-file-pdf mr-3"></i>Download PDF</a>
-            <a href="#"><i class="fas fa-share-alt mr-3"></i>Share this</a>
           </div>
         </div>
       </div>
@@ -71,7 +70,10 @@
       <div class="col-4">
         <div class="outline-sidbar">
           {{forms/get-started-form}}
-          {{outline-sidebar/related-course}}
+          {{outline-sidebar/related-course
+            currentCourseId=course.id
+            courses=subCategory.courses
+          }}
           {{outline-sidebar/testimonials}}
         </div>
       </div>
