@@ -8,8 +8,8 @@ export default Route.extend({
     });
   },
   setupController(controller, model) {
-    const subCategory = this.modelFor('course.sub-category');
+    const subCategories = this.modelFor('course.sub-category');
     controller.set('course', model.courses.firstObject);
-    controller.set('subCategory', subCategory.subCategory);
+    controller.set('subCategory', subCategories.subCategories.firstObject);
   },
 });
