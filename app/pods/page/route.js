@@ -62,29 +62,6 @@ export default Route.extend({
    return rsvp;
   },
   setupController(controller, model){
-    if (model.categories) {
-      controller.set('categories', model.categories);
-    }
-    if (model.defaultTemplate) {
-      controller.set('defaultTemplate', model.defaultTemplate);
-    }
-    if (model.howWeTrain) {
-      controller.set('howWeTrain', model.howWeTrain);
-    }
-    if (model.testimonials) {
-      controller.set('testimonials', model.testimonials);
-    }
-    if (model.testimonialsCarouselTitle) {
-      controller.set('testimonialsCarouselTitle', model.testimonialsCarouselTitle);
-    }
-    if (model.tipsAndTricks) {
-      controller.set('tipsAndTricks', model.tipsAndTricks);
-    }
-    if (model.tipsAndTricksFeatured) {
-      controller.set('tipsAndTricksFeatured', model.tipsAndTricksFeatured);
-    }
-    if (model.tipsAndTricksCategories) {
-      controller.set('tipsAndTricksCategories', model.tipsAndTricksCategories);
-    }
+    controller.setProperties(model);
   }
 });
