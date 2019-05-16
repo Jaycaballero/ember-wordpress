@@ -1,8 +1,8 @@
 <ul class="float-right footer-social-icons mb-1">
   {{#each socialLinks as |socialLinkItems|}}
     <li class="mb-0">
-      <a class="mb-0" href={{socialLinkItems.url}}>
-        {{socialLinkItems.content}}
+      <a class="mb-0" href={{socialLinkItems.url}} target="_blank">
+        <img src="{{socialLinkItems.socialIcon}}" alt="image"/>
       </a>
     </li>
   {{/each}}
