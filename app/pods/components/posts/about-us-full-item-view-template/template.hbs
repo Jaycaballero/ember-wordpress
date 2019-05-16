@@ -15,13 +15,15 @@
 <section id="full-item-view-content" class="my-5 py-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        {{posts/full-item-view-bg-img
-          class="full-item background-image"
-          imageUrl=fullItemViewContent.image
-        }}
-      </div>
-      <div class="col-md-6">
+      {{#if (not-eq fullItemViewContent.image.string '')}}
+        <div class="col">
+          {{posts/full-item-view-bg-img
+            class="full-item background-image"
+            imageUrl=fullItemViewContent.image
+          }}
+        </div>
+      {{/if}}
+      <div class="col">
         <h2>{{fullItemViewContent.title}}</h2>
         {{fullItemViewContent.content}}
       </div>

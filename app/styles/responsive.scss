@@ -791,9 +791,20 @@
   	  width: 100%;
     }
   }
-}
-.blog-fullwidth-content img {
-	width: calc(50% - 6px) !important;
+  .blog-fullwidth-content img {
+  	width: calc(50% - 6px) !important;
+  }
+  .aboutUs-fullItem-View {
+    section#full-item-view-content {
+      .col {
+        max-width: 100%;
+      	flex: none;
+      }
+      .full-item.background-image {
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
