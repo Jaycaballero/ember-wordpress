@@ -8,7 +8,8 @@ RUN npm install
 
 COPY ./ /usr/src/
 
-RUN touch .env && ember build --environment production
+RUN touch .env
+RUN JOBS=1 ember build --environment production
 RUN cd dist && npm install
 
 EXPOSE 4000
