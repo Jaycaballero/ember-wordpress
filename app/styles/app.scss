@@ -225,10 +225,24 @@ section#benefits {
 section#benefits .rounded-circle.img-fluid {
   width: 23%;
 }
-.lead {
+.lead, .lead p {
   font-family: calibri-bold;
   color: #005f8b;
   font-size: 22px !important;
+}
+.blog-fullwidth-content img {
+	width: 50%;
+	float: left;
+	padding: 0 15px 0 0;
+	margin: 15px 15px 30px 0;
+}
+.blog-fullwidth-content ul > li {
+	list-style: none;
+}
+.blog-fullwidth-content ul > li h4, .blog-fullwidth-content ul > li h4,
+.blog-fullwidth-content ul > li h4, .blog-fullwidth-content ul > li p {
+	float: left;
+	width: 48%;
 }
 section#about-us .col-md-4 a.position-absolute {
   top: 50%;
@@ -354,6 +368,9 @@ b, strong {
   content: "\2022";
   color: #005f8b;
   margin-right: 5px;
+}
+section#subpage-content a {
+	color: #e84d3d;
 }
 ul.client-testimonials-listing {
   margin: 0;
