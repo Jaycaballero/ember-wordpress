@@ -1159,3 +1159,28 @@ body.outline.course {
 .course-banner-image {
   height: 300px;
 }
+#subpage-content {
+  ul.other-pages li {
+    list-style: none;
+    margin-bottom: 5px;
+    &::before {
+      content: none;
+    }
+    a {
+      text-decoration: none;
+      color: #707070;
+      &:hover {
+        color: #005f8b;
+      }
+    }
+  }
+  .right-side-bar.other-pages-bar .rct-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    h2 {
+      background-color: #005f8b;
+    	color: #fff !important;
+    	padding: 12px 25px;
+    }
+  }
+}

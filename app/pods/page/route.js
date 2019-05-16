@@ -48,6 +48,7 @@ export default Route.extend({
        break;
      case 'about-us':
        rsvp = RSVP.hash({
+         otherPages: this.store.query('about', {per_page: 99, order: 'desc'}),
          testimonials: this.store.query('clienttestimonial', {per_page: 6, order: 'desc'}),
          testimonialsCarouselTitle: this.get('sectionTitle').request('types/clienttestimonials'),
          defaultTemplate: this.store.query('page', {slug: params.page}),
