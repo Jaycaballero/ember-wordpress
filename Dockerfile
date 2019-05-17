@@ -1,4 +1,4 @@
-FROM node:6.9.1
+FROM node:8.16.0
 RUN npm install -g ember-cli fastboot-app-server
 
 WORKDIR /usr/src/
