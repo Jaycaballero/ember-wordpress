@@ -805,6 +805,9 @@
       }
     }
   }
+  .aboutUs-fullItem-View #full-item-view-content ul li .full-item.background-image {
+	  width: 100% !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -965,5 +968,8 @@
   .blog-fullwidth-content ul > li h4, .blog-fullwidth-content ul > li p {
 	  float: none !important;
 	  width: 100% !important;
+  }
+  .full-item.background-image {
+	  height: 200px !important;
   }
 }

@@ -14,20 +14,20 @@
 </header>
 <section id="full-item-view-content" class="my-5 py-5">
   <div class="container">
-    <div class="row">
+    <ul>
       {{#if (not-eq fullItemViewContent.image.string '')}}
-        <div class="col">
+        <li>
           {{posts/full-item-view-bg-img
             class="full-item background-image"
             imageUrl=fullItemViewContent.image
           }}
-        </div>
+        </li>
       {{/if}}
-      <div class="col">
+      <li>
         <h2>{{fullItemViewContent.title}}</h2>
         {{fullItemViewContent.content}}
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 {{yield}}

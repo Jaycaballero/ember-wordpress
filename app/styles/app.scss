@@ -1184,3 +1184,11 @@ body.outline.course {
     }
   }
 }
+.aboutUs-fullItem-View #full-item-view-content ul li {
+  list-style: none;
+  .full-item.background-image {
+  	float: left;
+  	width: 50%;
+    margin-right: 25px;
+  }
+}
