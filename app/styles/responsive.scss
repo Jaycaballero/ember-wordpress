@@ -75,6 +75,13 @@
       transform: translate(0, -16%) !important;
     }
   }
+  .tipsTricks-filtering.col-md-4 {
+  	flex: none !important;
+  	max-width: 40%;
+  }
+  section#footer ul li {
+	  margin-right: 32px !important;
+  }
 }
 
 /* Tablet Modes */
@@ -206,15 +213,18 @@
     max-width: 100%;
     flex: none;
   }
-  body.tips-and-tricks #subpage-content .col-md-8 .col-md-6 {
-    max-width: calc(50% - 16px) !important;
+  body.tips-and-tricks #subpage-content .col .col-md-6:nth-child(3n) {
+	  margin-right: 32px !important;
+  }
+  body.tips-and-tricks #subpage-content .col .col-md-6:nth-child(2n) {
+	  margin-right: 0;
+  }
+  body.tips-and-tricks #subpage-content .col .col-md-6 {
+	  max-width: calc(50% - 16px) !important;
   }
   body.tips-and-tricks section#subpage-content .container > .row > .col-md-3 {
     max-width: 50%;
     flex: none;
-  }
-  body.tips-and-tricks section#subpage-content .container .col-md-4 {
-    max-width: 100%;
   }
   section#full-item-view-content h2 {
     font-size: 30px !important;
@@ -379,9 +389,17 @@
   .outline-container-holder h1 {
     font-size: 30px !important;
   }
-}
-.blog-fullwidth-content img {
-	width: calc(50% - 3px) !important;
+  .blog-fullwidth-content img {
+  	width: calc(50% - 3px) !important;
+  }
+  section#footer .menu-footer {
+	  max-width: 70%;
+	  flex: none;
+  }
+  section#footer .social-footer {
+    max-width: 30%;
+    flex: none;
+  }
 }
 
 /* Mobile Modes */
@@ -808,6 +826,28 @@
   .aboutUs-fullItem-View #full-item-view-content ul li .full-item.background-image {
 	  width: 100% !important;
   }
+  body.tips-and-tricks #subpage-content .col .col-md-6 {
+  	max-width: 100% !important;
+  	flex: none !important;
+  	margin: 0 !important;
+  }
+  .select-category .ember-basic-dropdown-trigger {
+	  width: 92% !important;
+  }
+  body.tips-and-tricks .subpage-thumbnails .background-image {
+    height: 310px;
+  }
+  section#footer .menu-footer {
+	  max-width: 100%;
+	  flex: none;
+  }
+  section#footer .social-footer {
+    max-width: 100%;
+    flex: none;
+  }
+  section#footer ul.footer-menu li {
+	  margin-right: 32px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -849,7 +889,8 @@
     font-size: 29px !important;
   }
   section#footer ul.footer-menu > li {
-    margin-right: 24px;
+    width: 100%;
+    margin-bottom: 5px;
   }
   section#benefits .container .row.mt-5 > .col-md-4:last-child {
     margin-bottom: 0 !important;
@@ -971,5 +1012,11 @@
   }
   .full-item.background-image {
 	  height: 200px !important;
+  }
+  .select-category .ember-basic-dropdown-trigger {
+	  width: 87% !important;
+  }
+  body.tips-and-tricks .subpage-thumbnails .background-image {
+	  height: 178px;
   }
 }

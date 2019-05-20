@@ -4,36 +4,36 @@
       <div
         class="carousel slide px-4 py-4 mx-2"
       >
-        <h2 class="my-3">{{_testimonials_Carousel_Title.name}}</h2>
+        <h2 class="my-3">Testimonials</h2>
         <ul class="client-testimonials-listing p-0">
           {{#bs-carousel
             autoPlay=true
             showControls=false
-            interval=2000
+            interval=1000
             pauseOnMouseEnter=true
+            transitionDuration=5000
+            transition=slide
           as |car|
           }}
-            {{#each groupedTestimonials as |group|}}
+            {{#each testimonialsTextContent as |testimonialsItem|}}
               {{#car.slide}}
-                {{#each group as |testimonialsItem|}}
-                  <li>
-                    <i class="fas fa-quote-left mb-2"></i>
-                    {{testimonialsItem.content}}
-                    <div class="gravatar-with-info my-4">
-                      <div class="gravatar d-inline-block mr-3">
-                        <img
-                          class="rounded-circle"
-                          src={{testimonialsItem.image}}
-                          alt="image"
-                        >
-                      </div>
-                      <div class="info d-inline-block position-absolute">
-                        <strong>{{testimonialsItem.name}}</strong><br>
-                        <p>{{testimonialsItem.company}}</p>
-                      </div>
+                <li>
+                  <i class="fas fa-quote-left mb-2"></i>
+                  {{testimonialsItem.content}}
+                  <div class="gravatar-with-info my-4">
+                    <div class="gravatar d-inline-block mr-3">
+                      <img
+                        class="rounded-circle"
+                        src={{testimonialsItem.image}}
+                        alt="image"
+                      >
                     </div>
-                  </li>
-                {{/each}}
+                    <div class="info d-inline-block position-absolute">
+                      <strong>{{testimonialsItem.name}}</strong><br>
+                      <p>{{testimonialsItem.company}}</p>
+                    </div>
+                  </div>
+                </li>
               {{/car.slide}}
             {{/each}}
           {{/bs-carousel}}
