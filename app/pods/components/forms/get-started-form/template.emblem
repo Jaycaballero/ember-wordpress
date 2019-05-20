@@ -1,0 +1,33 @@
+.col
+  .get-started-form.px-4.pt-4.pb-2
+    h2.mb-3 Get Started
+    form.mt-2
+    = bs-form [
+      formLayout="vertical"
+      model=this
+      onSubmit=(action "submit")
+    ] as |form|
+      = form.element [
+        placeholder="Name*"
+        property="name"
+      ]
+      = form.element [
+        placeholder="Phone Number*"
+        property="phone"
+      ]
+      = form.element [
+        controlType="email"
+        placeholder="Email Address*"
+        property="email"
+      ]
+      = form.element [
+        controlType="textarea"
+        placeholder="Your Message"
+        property="message"
+      ]
+      = bs-button [
+        defaultText="Submit"
+        type="primary"
+        buttonType="submit"
+        class="btn-white-hover col submit-button"
+      ]

@@ -62,7 +62,10 @@
       </div>
       <div class="col-4">
         <div class="outline-sidbar">
-          {{forms/get-started-form}}
+          {{forms/get-started-form
+            lead=lead
+            onSubmit=(action "createLead")
+          }}
           {{outline-sidebar/related-course
             currentCourseId=course.id
             courses=subCategory.courses
