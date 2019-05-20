@@ -3,6 +3,7 @@ import { computed } from '@ember/object';
 import { htmlSafe } from '@ember/string';
 
 export default Component.extend({
+  classNames: ['aboutUs-fullItem-View'],
   fullItemViewContent: computed('_about_Full_Item_View', function(){
     return{
       content: htmlSafe(this.get('_about_Full_Item_View.firstObject.content')),

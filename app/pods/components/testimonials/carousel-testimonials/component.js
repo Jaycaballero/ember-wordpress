@@ -5,22 +5,6 @@ import { htmlSafe } from '@ember/string';
 
 
 export default Component.extend({
-
-  groupedTestimonials: computed('testimonialsTextContent', function() {
-    let testimonials = [];
-    let group = [];
-    get(this, 'testimonialsTextContent').forEach((testimonial, index) => {
-      if (index % 2 === 0 && group.length > 0) {
-        testimonials.push(group);
-        group = [];
-      }
-      group.push(testimonial);
-    });
-    testimonials.push(group);
-    return testimonials;
-  }),
-
-
   testimonialsTextContent: map('_client_Testimonials', function(testimonials){
     return {
       company: get(testimonials, 'acf.company'),
@@ -29,5 +13,4 @@ export default Component.extend({
       name: get(testimonials, 'acf.name')
     }
   })
-
 });
