@@ -6,8 +6,6 @@ import moment from 'moment';
 
 export default Component.extend({
 
-  //categories: ['Featured Excel', 'Excel', 'Share Point', 'Project', 'Access', 'SQL Querying', 'Microsoft SQL Server', 'Crystal Reports', 'Web Development', 'Q&A SQL'],
-  //category: 'Featured Excel',
 
   actions: {
     chooseCategory(cat) {
@@ -15,9 +13,13 @@ export default Component.extend({
       get(this, 'filter')(cat.id);
     },
     clear() {
+      set(this, 'isLoading', true);
       get(this, 'clearFilter')()
         .then(() => {
           set(this, 'selectedCategory', "");
+        })
+        .finally(() => {
+          set(this, 'isLoading', false);
         });
     }
   },
