@@ -47,7 +47,11 @@
         </div>
       </div>
       <div class="col-md-4 course-subcategory-sidebar">
-        {{forms/request-a-callback-form}}
+        {{forms/request-a-callback-form
+            subCategoryName=subcategory.title
+            lead=lead
+            onSubmit=(action "createLead")
+        }}
         {{components/testimonials/default-testimonials _testimonials=testimonials}}
       </div>
     </div>

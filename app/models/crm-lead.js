@@ -6,8 +6,10 @@ const {
 } = DS;
 
 export default Model.extend({
+  accountName: attr('string'),
   email: attr('string'),
   message: attr('string'),
   name: attr('string'),
   phone: attr('string'),
+  source: attr('string'),
 });

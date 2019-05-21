@@ -1,7 +1,6 @@
 .col
-  .get-started-form.px-4.pt-4.pb-2
-    h2.mb-3 Get Started
-    form.mt-2
+  .request-a-call-back-form.px-4.pt-4.pb-2
+    h2.mb-3 Request a Callback
     = bs-form [
       formLayout="vertical"
       model=this
@@ -9,25 +8,24 @@
     ] as |form|
       .form-group.mb-2
         = form.element [
-          placeholder="Name*"
-          property="name"
+         id="name"
+         placeholder="Name*"
         ]
       .form-group.mb-2
         = form.element [
-          placeholder="Phone Number*"
-          property="phone"
+         id="phone"
+         placeholder="Phone Number*"
         ]
       .form-group.mb-2
         = form.element [
-          controlType="email"
-          placeholder="Email Address*"
-          property="email"
+         id="email"
+         placeholder="Email Address*"
         ]
       .form-group
         = form.element [
-          controlType="textarea"
-          placeholder="Your Message"
-          property="message"
+         id="message"
+         controlType="textarea"
+         placeholder="Your Message"
         ]
       .form-group
         = bs-button [

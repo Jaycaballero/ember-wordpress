@@ -154,7 +154,7 @@ section#top .top-buttons a.btn:hover {
     .fa.fa-search {
       color: #fff;
     }
-    button.btn:hover,  {
+    button.btn:hover {
       background-color: #e84d3d !important;
     }
   }
@@ -621,11 +621,6 @@ form .ember-power-select-trigger {
 }
 .g-recaptcha {
   transform:scale(0.9);transform-origin:0; -webkit-transform:scale(0.9); transform:scale(0.9); -webkit-transform-origin:0 0; transform-origin:0 0;
-}
-body.contact-us form .btn.submit-button {
-  transform: translate(0, -50%);
-  top: 50%;
-  width: calc(100% - 9px) !important;
 }
 .card {
   overflow: hidden;

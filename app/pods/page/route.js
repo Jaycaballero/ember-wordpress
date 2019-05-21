@@ -1,6 +1,7 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 import RSVP from 'rsvp';
+import { get } from '@ember/object';
 
 export default Route.extend({
   sectionTitle: service(),
@@ -54,6 +55,12 @@ export default Route.extend({
          defaultTemplate: this.store.query('page', {slug: params.page}),
        });
        break;
+     case 'contact-us':
+       rsvp = RSVP.hash({
+         crmLead: get(this, 'store').createRecord('crm-lead', {}),
+         defaultTemplate: this.store.query('page', {slug: params.page}),
+       });
+       break;
      default:
        rsvp = RSVP.hash({
          defaultTemplate: this.store.query('page', {slug: params.page}),
@@ -62,7 +69,14 @@ export default Route.extend({
 
    return rsvp;
   },
+
   setupController(controller, model){
     controller.setProperties(model);
+  },
+
+  actions: {
+    refreshModel() {
+      this.refresh();
+    }
   }
 });

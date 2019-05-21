@@ -18,4 +18,9 @@ export default Route.extend({
     controller.set('lead', model.crmLead);
     controller.set('subCategory', subCategories.subCategories.firstObject);
   },
+  actions: {
+    refreshModel() {
+      this.refresh();
+    }
+  }
 });
