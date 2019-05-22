@@ -1001,6 +1001,9 @@
   body.outline.course {
     #outline-header {
       .outline-container-holder {
+        h1 {
+          font-size: 24px !important;
+        }
         .breadcrumb > li, .breadcrumb > li > a {
           font-size: 20px !important;
         }
@@ -1080,5 +1083,8 @@
     transform: none;
     left: 0;
     margin: 15px auto;
+  }
+  .featured-article-in-the-header h3.article-title-in-the-header {
+	  font-size: 27px;
   }
 }
