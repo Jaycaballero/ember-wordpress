@@ -1,6 +1,13 @@
 {{set-body-class "outline course"}}
 <header id="outline-header" class="position-relative">
-  <div class="outline-container-holder">
+  {{#components/outline-background-image
+    class="outline-container-holder background"
+    imageUrl=(if course.bannerImageUrl course.bannerImageUrl
+    (if course.subCategories.firstObject.bannerImageUrl
+      course.subCategories.firstObject.bannerImageUrl
+      course.categories.firstObject.bannerImageUrl
+    ))
+  }}
     <div class="container outline">
       <div class="row">
         <div class="col-8">
@@ -34,23 +41,7 @@
         </div>
       </div>
     </div>
-  </div>
-  {{#if course.bannerImageUrl}}
-    {{components/outline-background-image
-      class="background-image course-banner-image background"
-      imageUrl=course.bannerImageUrl
-    }}
-  {{else if course.subCategories.firstObject.bannerImageUrl}}
-    {{components/outline-background-image
-      class="background-image course-banner-image background"
-      imageUrl=course.subCategories.firstObject.bannerImageUrl
-    }}
-  {{else if course.categories.firstObject.bannerImageUrl}}
-    {{components/outline-background-image
-      class="background-image course-banner-image background"
-      imageUrl=course.categories.firstObject.bannerImageUrl
-    }}
-  {{/if}}
+  {{/components/outline-background-image}}
 </header>
 <section id="tabs">
   <div class="container">
