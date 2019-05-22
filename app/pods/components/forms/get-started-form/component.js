@@ -4,12 +4,8 @@ import { get, set } from '@ember/object';
 export default Component.extend({
 
   actions: {
-    submit(form) {
-      set(this, 'lead.email', form.email);
-      set(this, 'lead.source', get(this, 'courseName'));
-      set(this, 'lead.message', form.message);
-      set(this, 'lead.name', form.name);
-      set(this, 'lead.phone', form.phone);
+    submit() {
+      set(this, 'lead.source', `Course: ${get(this, 'courseName')}`);
       get(this, 'onSubmit')(get(this, 'lead'));
     }
   }

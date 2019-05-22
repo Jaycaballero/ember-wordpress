@@ -9,5 +9,10 @@ export default Route.extend({
       subCategories: this.get('store').query('sub-category', { slug: sub_category_slug, include: ['courses'] }),
       crmLead: get(this, 'store').createRecord('crm-lead', {}),
     });
+  },
+  actions: {
+    refreshModel() {
+      this.refresh();
+    }
   }
 });

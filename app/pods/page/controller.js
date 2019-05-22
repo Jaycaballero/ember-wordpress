@@ -18,7 +18,6 @@ export default Controller.extend({
     createLead(lead) {
       return lead.save()
         .then(() => {
-          console.log('controller');
           this.send('refreshModel');
         });
     }
