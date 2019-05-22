@@ -30,7 +30,9 @@
           </nav>
           <h1 class="display-3 text-white mb-2">{{course.title}}</h1>
           <ul class="course-header-info p-0 text-white">
+            {{#if course.levels}}
             <li><strong>Level:</strong> {{course.levels}}</li>
+            {{/if}}
             <li><strong>Duration:</strong> {{format-duration course.days}}</li>
           </ul>
         </div>
