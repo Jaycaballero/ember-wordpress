@@ -22,7 +22,10 @@
             {{content}}
           </div>
           <div class="col-md-7 pl-5">
-            {{forms/get-in-touch-form}}
+            {{forms/get-in-touch-form
+              lead=crmLead
+              onSubmit=createLead
+            }}
           </div>
         </div>
       </div>

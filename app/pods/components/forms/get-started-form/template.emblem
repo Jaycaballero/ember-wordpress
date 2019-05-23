@@ -1,0 +1,51 @@
+.col
+  .get-started-form.px-4.pt-4.pb-2
+    h2.mb-3 Request a quote
+    form.mt-2
+    = bs-form [
+      formLayout="vertical"
+      model=lead
+      onSubmit=(action "submit")
+    ] as |form|
+      .form-group.mb-2
+        = form.element [
+          placeholder="Name*"
+          property="name"
+          disabled=(and form.isSubmitted (eq lead.errors.length 0))
+          customError=(map-by "message" lead.errors.name)
+        ]
+      .form-group.mb-2
+        = form.element [
+          placeholder="Phone Number*"
+          property="phone"
+          disabled=(and form.isSubmitted (eq lead.errors.length 0))
+          customError=(map-by "message" lead.errors.phone)
+        ]
+      .form-group.mb-2
+        = form.element [
+          controlType="email"
+          placeholder="Email Address*"
+          property="email"
+          disabled=(and form.isSubmitted (eq lead.errors.length 0))
+          customError=(map-by "message" lead.errors.email)
+        ]
+      .form-group
+        = form.element [
+          controlType="textarea"
+          placeholder="Your Message"
+          property="message"
+          disabled=(and form.isSubmitted (eq lead.errors.length 0))
+        ]
+      .form-group
+        = bs-button [
+          type="primary"
+          buttonType="submit"
+          class="btn-white-hover col submit-button"
+          disabled=(and form.isSubmitted (eq lead.errors.length 0))
+        ]
+          = if (and form.isSubmitted (eq lead.errors.length 0))
+            | Thank You!
+          else if form.isSubmitting
+            = fa-icon "spinner" spin=true
+          else
+            | Submit

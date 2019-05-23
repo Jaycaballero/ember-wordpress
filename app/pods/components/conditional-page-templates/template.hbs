@@ -13,6 +13,8 @@
 {{else if (eq templateType "contact-us.php")}}
   {{subpages-templates/contact-us-template
     _contact_Us_Template = _default_Template
+    crmLead=crmLead
+    createLead=createLead
     get_In_Touch = _get_In_Touch_Form
   }}
 {{else if (eq templateType "tips-and-tricks-template.php")}}

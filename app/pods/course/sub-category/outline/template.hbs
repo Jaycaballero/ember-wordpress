@@ -31,9 +31,11 @@
           <h1 class="display-3 text-white mb-2">{{course.title}}</h1>
           <ul class="course-header-info p-0 text-white">
             {{#if course.levels}}
-            <li><strong>Level:</strong> {{course.levels}}</li>
+              <li><strong>Level:</strong> {{course.levels}}</li>
             {{/if}}
-            <li><strong>Duration:</strong> {{format-duration course.days}}</li>
+            {{#if course.days}}
+              <li><strong>Duration:</strong> {{format-duration course.days}}</li>
+            {{/if}}
           </ul>
         </div>
         <div class="col-4">
@@ -62,7 +64,11 @@
       </div>
       <div class="col-4">
         <div class="outline-sidbar">
-          {{forms/get-started-form}}
+          {{forms/get-started-form
+            courseName=course.title
+            lead=lead
+            onSubmit=(action "createLead")
+          }}
           {{outline-sidebar/related-course
             currentCourseId=course.id
             courses=subCategory.courses
