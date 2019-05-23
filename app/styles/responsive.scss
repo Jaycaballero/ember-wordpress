@@ -88,6 +88,9 @@
   section#footer ul.info li {
     margin-right: 0 !important;
   }
+  h3.course-category-title {
+	  font-size: 19px;
+  }
 }
 
 /* Tablet Modes */
@@ -431,6 +434,20 @@
       > a {
         font-size: 18px !important;
       }
+    }
+  }
+  section#subpage-content.courses {
+    .col-md-4 {
+  	  max-width: calc(50% - 12px) !important;
+    }
+    .col-md-4:nth-child(2n) {
+  	  margin-right: 0 !important;
+    }
+    .col-md-4:nth-child(n) {
+  	  margin-right: 24px;
+    }
+    h3.course-category-title {
+      font-size: 22px;
     }
   }
 }
@@ -904,6 +921,16 @@
       }
     }
   }
+  section#subpage-content.courses {
+    .col-md-4 {
+  	  max-width: 100% !important;
+      margin-right: 0 !important;
+      margin-bottom: 25px !important;
+      ul.course-sub-category-listing li .course-subCategory-title {
+      	margin-left: 50px;
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -1086,5 +1113,16 @@
   }
   .featured-article-in-the-header h3.article-title-in-the-header {
 	  font-size: 27px;
+  }
+  section#subpage-content.courses {
+    .col-md-4 {
+      margin-bottom: 15px !important;
+      ul.course-sub-category-listing li .course-subCategory-title {
+      	margin-left: 30px;
+      }
+    }
+    h3.course-category-title {
+      font-size: 18px;
+    }
   }
 }
