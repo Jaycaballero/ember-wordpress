@@ -15,7 +15,7 @@
 <section id="full-item-view-content" class="my-5 py-5">
   <div class="container">
     <ul>
-      {{#if (not-eq fullItemViewContent.image.string '')}}
+      {{#if (not-eq fullItemViewContent.image.string "")}}
         <li>
           {{posts/full-item-view-bg-img
             class="full-item background-image"
