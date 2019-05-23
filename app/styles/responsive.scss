@@ -71,9 +71,6 @@
         }
       }
     }
-    .outline-sidbar {
-      transform: translate(0, -16%) !important;
-    }
   }
   .tipsTricks-filtering.col-md-4 {
   	flex: none !important;
@@ -90,6 +87,9 @@
   }
   h3.course-category-title {
 	  font-size: 19px;
+  }
+  body.outline.course .outline-sidbar .related-course {
+	  margin-top: 295px !important;
   }
 }
 
@@ -380,7 +380,6 @@
         }
       }
       .outline-sidbar {
-        transform: translate(0, -8%) !important;
         .get-started-form, .related-courses, .client-testimonials {
           padding: 15px !important
         }
@@ -448,6 +447,30 @@
     }
     h3.course-category-title {
       font-size: 22px;
+    }
+  }
+  body.outline.course .outline-sidbar {
+	  margin-top: 50px;
+    .get-started-form {
+      position: relative !important;
+      transform: none !important;
+    }
+    .related-course {
+  	  margin-top: 0 !important;
+      .related-courses ul li a {
+      	font-size: 17px;
+      }
+    }
+    .related-course > .col, .client-testimonial > .col {
+	    padding: 0;
+    }
+  }
+  header#outline-header {
+    .export-share-button {
+    	position: absolute;
+    	top: 50%;
+    	transform: translate(0, -50%);
+    	right: 13px;
     }
   }
 }
@@ -799,12 +822,16 @@
             .outline-sidbar {
             	position: relative !important;
             	transform: none !important;
-              .col {
-                padding: 0 !important;
-              }
               .related-courses, .client-testimonials {
                 margin-top: 15px !important;
 
+              }
+              .get-started-form {
+              	position: relative !important;
+              	transform: none !important;
+              }
+              .related-course {
+              	margin-top: 0;
               }
             }
             .custom-tabs {
