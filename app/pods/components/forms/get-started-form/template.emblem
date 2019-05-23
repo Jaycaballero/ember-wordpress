@@ -1,6 +1,6 @@
 .col
   .get-started-form.px-4.pt-4.pb-2
-    h2.mb-3 Get Started
+    h2.mb-3 Request a quote
     form.mt-2
     = bs-form [
       formLayout="vertical"
