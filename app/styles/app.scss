@@ -521,10 +521,15 @@ body.full-item-view .subpage-inner-content {
   }
   background: #005f8b;
 }
-body.contact-us #subpage-content a {
-  color: #e84d3d;
-  font-family: calibri-bold;
-  text-decoration: none;
+body.contact-us {
+  #subpage-content a {
+    color: #e84d3d;
+    font-family: calibri-bold;
+    text-decoration: none;
+  }
+  .get-in-touch-form .form-group {
+	  margin-bottom: 11px;
+  }
 }
 .far.fa-clock, #subpage-content .fas.fa-phone, #subpage-content .fas.fa-envelope, .fas.fa-building {
   color: #005f8b;
@@ -1179,7 +1184,7 @@ body.outline.course {
   }
   .outline-sidbar {
     .related-course {
-      margin-top: 266px;
+      margin-top: 383px;
       background-color: #f1f2f2;
     }
     .client-testimonial {
@@ -1189,7 +1194,7 @@ body.outline.course {
     	position: absolute;
     	top: 0;
     	z-index: 1;
-    	transform: translate(0, -43%);
+    	transform: translate(0, -33%);
     	background-color: #dedede;
       width: 92%;
       h2 {

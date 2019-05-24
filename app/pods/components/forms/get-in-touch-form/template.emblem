@@ -11,7 +11,7 @@
       onSubmit=(action "submit")
     ] as |form|
       .form-row
-        .form-group.col-md-6.pr-1.mb-2
+        .form-group.col-md-6.pr-1.mb-0
           = form.element [
             id="name"
             placeholder="Name*"
@@ -19,7 +19,7 @@
             disabled=(and form.isSubmitted (eq lead.errors.length 0))
             customError=(map-by "message" lead.errors.name)
           ]
-        .form-group.col-md-6.pr-1.mb-2
+        .form-group.col-md-6.pr-1.mb-0
           = form.element [
             id="phone"
             placeholder="Phone Number*"
@@ -28,7 +28,7 @@
             customError=(map-by "message" lead.errors.phone)
           ]
       .form-row
-        .form-group.col-md-6.pr-1.mb-2
+        .form-group.col-md-6.pr-1.mb-0
           = form.element [
             id="email"
             placeholder="Email Address*"
@@ -36,7 +36,7 @@
             disabled=(and form.isSubmitted (eq lead.errors.length 0))
             customError=(map-by "message" lead.errors.email)
           ]
-        .form-group.col-md-6.pr-1.mb-2
+        .form-group.col-md-6.pr-1.mb-0
           = form.element [
             id="company"
             placeholder="Company"
@@ -46,6 +46,7 @@
       .form-group
         = form.element [
           id="message"
+          rows="6"
           controlType="textarea"
           placeholder="Your Message"
           property="message"
@@ -54,7 +55,7 @@
       = bs-button [
         type="primary"
         buttonType="submit"
-        class="btn-white-hover col submit-button mb-2"
+        class="btn-white-hover col submit-button mb-4"
         disabled=(and form.isSubmitted (eq lead.errors.length 0))
       ]
         = if (and form.isSubmitted (eq lead.errors.length 0))
@@ -63,4 +64,3 @@
           = fa-icon "spinner" spin=true
         else
           | Get in Touch
-
