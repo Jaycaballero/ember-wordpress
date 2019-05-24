@@ -31,7 +31,6 @@
         ]
       .form-group
         = form.element [
-          rows="6"
           controlType="textarea"
           placeholder="Your Message"
           property="message"
