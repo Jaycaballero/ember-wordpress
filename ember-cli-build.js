@@ -4,36 +4,13 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-      'ember-bootstrap': {
+    'ember-bootstrap': {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false
     },
     dotEnv: {
       fastbootAllowedKeys: ['COURSES_API_URL']
-    },
-    'ember-cli-favicon': {
-      enabled: env != 'test',
-      onSuccess() {},
-      iconPath: '/favicon.ico',
-      faviconsConfig: {
-          path: projectConfig.rootUrl,
-          appName: package.name,
-          appShortName: package.name,
-          appDescription: package.description,
-          developerName: package.author,
-          version: package.version,
-          icons: {
-            favicons: true,
-            android: isProductionEnv,
-            appleIcon: isProductionEnv,
-            appleStartup: isProductionEnv,
-            coast: isProductionEnv,
-            firefox: isProductionEnv,
-            windows: isProductionEnv,
-            yandex: isProductionEnv
-        }
-      }
     }
   });
 
