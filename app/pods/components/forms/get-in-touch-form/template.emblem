@@ -40,7 +40,7 @@
           = form.element [
             id="company"
             placeholder="Company"
-            property="company"
+            property="accountName"
             disabled=(and form.isSubmitted (eq lead.errors.length 0))
           ]
       .form-group
