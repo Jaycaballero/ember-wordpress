@@ -35,7 +35,7 @@ export default Route.extend({
        break;
      case 'courses':
        rsvp = RSVP.hash({
-         categories: this.store.query('category', {'include': ['subCategories']}),
+         categories: this.store.query('category', {'include': ['subCategories'], 'published': 1}),
          defaultTemplate: this.store.query('page', {slug: params.page}),
        });
        break;
