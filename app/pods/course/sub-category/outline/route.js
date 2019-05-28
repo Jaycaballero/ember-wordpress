@@ -4,19 +4,26 @@ import { get } from '@ember/object';
 
 export default Route.extend({
   titleToken: function(model) {
-    return model.courses.firstObject.title;
+    const subCategoryModel = this.modelFor('course.sub-category');
+    const category = this.modelFor('course');
+    const subCategory = category.firstObject.get('subCategories').findBy('slug', subCategoryModel.subCategorySlug);
+    const course = subCategory.courses.findBy('slug', model.courseSlug);
+    return course.title;
   },
   model({ course_slug }) {
     return RSVP.hash({
-      courses: this.get('store').query('course', { slug: course_slug, published: 1 } ),
+      courseSlug: course_slug,
       crmLead: get(this, 'store').createRecord('crm-lead', {}),
     });
   },
   setupController(controller, model) {
-    const subCategories = this.modelFor('course.sub-category');
-    controller.set('course', model.courses.firstObject);
+    const subCategoryModel = this.modelFor('course.sub-category');
+    const category = this.modelFor('course');
+    const subCategory = category.firstObject.get('subCategories').findBy('slug', subCategoryModel.subCategorySlug);
+    const course = subCategory.courses.findBy('slug', model.courseSlug);
+    controller.set('course', course);
     controller.set('lead', model.crmLead);
-    controller.set('subCategory', subCategories.subCategories.firstObject);
+    controller.set('subCategory', subCategory);
   },
   actions: {
     refreshModel() {
