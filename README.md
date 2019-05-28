@@ -24,6 +24,13 @@ You will need the following things properly installed on your computer.
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
+_If you ever run into a situation where you get a SIGSEGV error due to broccoli-babel-transpiler, try the ff:_
+```
+JOBS=1 ember serve
+```
+_This will force broccoli-babel-transpiler to run on a single thread._
+
+
 ### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details

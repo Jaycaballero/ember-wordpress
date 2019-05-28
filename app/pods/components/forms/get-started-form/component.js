@@ -5,7 +5,8 @@ export default Component.extend({
   classNames: ['getStarted-form'],
   actions: {
     submit() {
-      set(this, 'lead.source', `Course: ${get(this, 'courseName')}`);
+      set(this, 'lead.source', 'Request a Quote');
+      set(this, 'lead.sourceDescription', `Course: ${get(this, 'courseName')}`);
       get(this, 'onSubmit')(get(this, 'lead'));
     }
   }

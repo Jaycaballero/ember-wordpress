@@ -12,4 +12,5 @@ export default Model.extend({
   name: attr('string'),
   phone: attr('string'),
   source: attr('string'),
+  sourceDescription: attr('string'),
 });
