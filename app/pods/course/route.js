@@ -5,6 +5,6 @@ export default Route.extend({
     return model.firstObject.title;
   },
   model({ course }) {
-    return this.get('store').query('category', { slug: course, include: ['subCategories']});
+    return this.get('store').query('category', { slug: course, include: ['subCategories', 'courses']});
   }
 });
