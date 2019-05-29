@@ -1,0 +1,100 @@
+.col.px-0
+  .booking-form.bg-white
+    = bs-tab as |tab|
+      = tab.pane title="Reading"
+        table.table
+          tbody
+            tr
+              td
+                span Thu 13 Jun 2019
+              td
+                span.font-weight-bold £595
+                span  for 2 Days (ex vat)
+              td
+                = bs-button [
+                    class="btn btn-primary btn-large w-100"
+                    role="button"
+                ]
+                  |Book Now
+            tr
+              td
+                span Tue 16 Jul 2019
+              td
+                span.font-weight-bold £595
+                span  for 2 Days (ex vat)
+              td
+                = bs-button [
+                  class="btn btn-primary btn-large w-100"
+                  role="button"
+                ]
+                  |Book Now
+            tr
+              td
+                span Wed 21 Aug 2019
+              td
+                span.font-weight-bold £595
+                span  for 2 Days (ex vat)
+              td
+                = bs-button [
+                  class="btn btn-primary btn-large w-100"
+                  role="button"
+                ]
+                  |Book Now
+            tr
+              td
+                span Wed 18 Sep 2019
+              td
+                span.font-weight-bold £595
+                span  for 2 Days (ex vat)
+              td
+                = bs-button [
+                  class="btn btn-primary btn-large w-100"
+                  role="button"
+                ]
+                  |Book Now
+            tr
+              td
+                span Mon 21 Oct 2019
+              td
+                span.font-weight-bold £595
+                span  for 2 Days (ex vat)
+              td
+                = bs-button [
+                  class="btn btn-primary btn-large w-100"
+                  role="button"
+                ]
+                  |Book Now
+            tr
+              td
+                span Mon 18 Nov 2019
+              td
+                span.font-weight-bold £595
+                span  for 2 Days (ex vat)
+              td
+                = bs-button [
+                  class="btn btn-primary btn-large w-100"
+                  role="button"
+                ]
+                  |Book Now
+            tr
+              td
+                span Mon 16 Dec 2019
+              td
+                span.font-weight-bold £595
+                span  for 2 Days (ex vat)
+              td
+                = bs-button [
+                  class="btn btn-primary btn-large w-100"
+                  role="button"
+                ]
+                  |Book Now
+    .bookingForm-footer
+      ul.p-0
+        li
+          span.formFotter-text Need something more custom ?
+        li
+          = bs-button [
+            class="btn btn-primary btn-large w-100"
+            role="button"
+          ]
+            |Enquire
