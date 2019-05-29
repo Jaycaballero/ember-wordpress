@@ -61,6 +61,13 @@ export default Route.extend({
          defaultTemplate: this.store.query('page', {slug: params.page}),
        });
        break;
+     case 'public-sql-course':
+       rsvp = RSVP.hash({
+         categories: this.store.query('category', {'include': ['courses','subCategories'], 'published': 1}),
+         publicSqlCourse:this.store.query('page', {per_page: 99, order: 'asc', slug: 'public-sql-course'}),
+         defaultTemplate: this.store.query('page', {slug: params.page}),
+       });
+       break;
      default:
        rsvp = RSVP.hash({
          defaultTemplate: this.store.query('page', {slug: params.page}),
