@@ -17,8 +17,8 @@ spec:
         image: nginx:1.16.0
         volumeMounts:
         - name: config
-          mountPath: /etc/nginx/nginx.conf
-          subPath: nginx.conf
+          mountPath: /etc/nginx/conf.d/ember-nginx.conf
+          subPath: ember-nginx.conf
       volumes:
       - name: config
         configMap:
