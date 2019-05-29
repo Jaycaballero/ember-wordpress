@@ -1258,3 +1258,162 @@ body.outline.course {
 .get-in-touch-form .form-row > .form-group > .form-group {
 	margin-bottom: 10px;
 }
+.public-sql-course {
+  .public-sql-course-banner {
+  	background-color: #005f8b;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+    ul li, p, strong, h1 {
+    	padding: 0;
+    	color: #fff;
+    }
+    h1 {
+    	font-size: 40px !important;
+    }
+    table.table {
+    	background-color: #fff;
+      tbody {
+        border-bottom: 1px solid #dee2e6;
+      }
+    }
+    .booking-form ul.nav-tabs {
+      background-color: #f7f7f7;
+      border-bottom: 0;
+      li {
+      	width: 50%;
+        border-bottom: 1px solid #dee2e6;
+        a {
+          border-radius: 0;
+          text-align: center;
+        }
+      }
+    }
+    .bookingForm-footer {
+      padding: 12px 12px;
+      .formFotter-text {
+        color: #707070;
+        font-size: 19px;
+      }
+      ul li {
+      	display: inline-block;
+        list-style: none;
+        width: 50%;
+        button {
+        	background-color: transparent;
+        	color: #e84d3d;
+        	border-color: #e84d3d;
+        	font-size: 20px;
+        }
+      }
+    }
+    .bookingForm-container {
+    	position: absolute;
+    	width: 50%;
+    	top: 50%;
+    	transform: translate(0, -50%);
+    	right: 0;
+    	margin-top: 100px;
+    	z-index: 1;
+      .bookingForm {
+      	box-shadow: -3px 13px 18px rgba(0,0,0,.1);
+      	-moz-box-shadow: -3px 13px 18px rgba(0,0,0,.1);
+      	-webkit-box-shadow: -3px 13px 18px rgba(0,0,0,.1);
+      	-o-box-shadow: -3px 13px 18px rgba(0,0,0,.1);
+      }
+    }
+  }
+  #courseOutline-link {
+	  background-color: #f7f7f7;
+  }
+}
+section#branding-logo {
+  .branding-logos {
+    ul li {
+      list-style: none;
+      width: calc(33.33% - 14px);
+      float: left;
+      border: 1px solid #dee2e6;
+      padding: 15px;
+      background-color: #f7f7f7;
+      margin: 10px 20px 10px 0;
+      margin-right: 20px;
+      img {
+        margin: auto;
+        display: table;
+      }
+      &:nth-child(3n+0) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+section#our-course-benefits {
+	background-color: #005f8b;
+  h2 {
+    color: #70d1ef !important;
+  }
+  .course-benefits {
+    ul {
+      display: table;
+      width: 100%;
+      li {
+        list-style: none;
+        width: 25%;
+        float: left;
+        img {
+          width: 30%;
+          display: table;
+          margin: 0 auto;
+        }
+      }
+      h4 {
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+}
+#our-training-centres {
+	background-color: #f1f2f2;
+  .reading-training-center {
+    ul li {
+  	  list-style: none;
+      margin-bottom: 10px;
+    }
+    i {
+      color: #005f8b;
+      margin-right: 15px;
+    }
+    a {
+      color: #e84d3d;
+      text-decoration: underline;
+    }
+  }
+}
+section#gallery {
+  .gallery ul {
+    display: table;
+    margin-bottom: 0;
+    li {
+      list-style: none;
+      float: left;
+      width: calc(33.33% - 17px);
+      margin: 0 25px 0 0;
+      margin-right: 25px;
+      border: 1px solid #dee2e6;
+      padding: 15px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+section#course-outline {
+	background-color: #f1f2f2;
+  .course-outline {
+    .col-10, .col-2 {
+	    float: left;
+    }
+  }
+}

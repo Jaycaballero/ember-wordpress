@@ -12,7 +12,9 @@ Router.map(function() {
   this.route('tipsandtrick', {path: "tips-tricks/:tipsandtrick"});
   this.route('course', {path: "courses/:course"}, function() {
     this.route('sub-category', { path: "/:sub_category_slug"}, function() {
-        this.route('outline', { path: '/:course_slug' });
+      this.route('outline', { path: '/:course_slug' }, function() {
+      });
+      this.route('public', { path: '/:public-sql-course' }, function(){});
     });
   });
   this.route('page', {path: "/:page"});
