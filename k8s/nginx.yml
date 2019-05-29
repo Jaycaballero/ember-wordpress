@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sx-ember-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: sx-ember-nginx
+  template:
+    metadata:
+      labels:
+        name: sx-ember-nginx
+    spec:
+      containers:
+      - name: cache
+        image: nginx:1.16.0
+        volumeMounts:
+        - name: config
+          mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.conf
+      volumes:
+      - name: config
+        configMap:
+          name: sx-ember-nginx-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sx-ember-nginx
+  labels:
+    name: sx-ember-nginx
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    name: sx-ember-nginx
+  type: NodePort
