@@ -13,7 +13,10 @@ fi
 kubectl -n $NAMESPACE apply -f k8s/deployment.yml
 kubectl -n $NAMESPACE apply -f k8s/service.yml
 kubectl -n $NAMESPACE apply -f k8s/varnish.yml
+kubectl -n $NAMESPACE create configmap sx-ember-nginx-config --from-file=nginx.conf --dry-run -o yaml | kubectl -n $NAMESPACE apply -f -
+kubectl -n $NAMESPACE apply -f k8s/nginx.yml
 kubectl -n $NAMESPACE apply -f k8s/config/$NAMESPACE
+
 
 echo "$NAMESPACE: Updating $APP_NAME service to $IMAGE_NAME:$TAG"
 kubectl -n $NAMESPACE set image deployment/$APP_NAME $APP_NAME="$IMAGE_NAME:$TAG"
