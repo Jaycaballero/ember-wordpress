@@ -94,6 +94,16 @@
   body.outline.course .outline-sidbar .getStarted-form {
 	  width: 91%;
   }
+  .public-sql-course {
+    .public-sql-course-banner {
+      h1 {
+        font-size: 35px !important;
+      }
+      table.table tr td span {
+	      font-size: 16px;
+      }
+    }
+  }
 }
 
 /* Tablet Modes */
@@ -474,6 +484,34 @@
     	top: 50%;
     	transform: translate(0, -50%);
     	right: 13px;
+    }
+  }
+  .public-sql-course {
+    .public-sql-course-banner {
+      h1 {
+        font-size: 35px !important;
+      }
+      table.table tr td span {
+	      font-size: 16px;
+      }
+    }
+  }
+  section#our-course-benefits .course-benefits ul h4 {
+    width: 70%;
+    margin: auto;
+    display: table;
+  }
+  section#course-outline {
+    .course-outline {
+      .col-10 {
+      max-width: 70%;
+      }
+      .col-2 {
+	      max-width: 30%;
+        .course-outline {
+          float: right;
+        }
+      }
     }
   }
 }
@@ -962,6 +1000,88 @@
       }
     }
   }
+  .public-sql-course {
+    .public-sql-course-banner {
+      .col-6 {
+        max-width: 100%;
+        flex: none;
+        h1 {
+          font-size: 35px !important;
+        }
+      }
+      .bookingForm-container {
+        position: relative !important;
+        width: 100% !important;
+        top: 0 !important;
+        transform: none !important;
+        margin-top: 0 !important;
+        h4 {
+        	text-align: left !important;
+        }
+      }
+      table.table tbody tr td span {
+        font-size: 16px;
+      }
+    }
+    section#courseOutline-link .course-outline {
+  	  width: 100% !important;
+    }
+  }
+  section#branding-logo {
+	  padding-top: 30px !important;
+    .branding-logos {
+    	margin: 0 !important;
+    }
+    .branding-logos ul li {
+  	  width: calc(50% - 10px) !important;
+      margin-right: 20px !important;
+      &:nth-child(2n) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+  section#our-course-benefits {
+    .course-benefits {
+      ul li {
+      	width: 50% !important;
+      	margin-bottom: 15px;
+        h4 {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .reading-training-center {
+    h2 {
+	    margin-bottom: 25px !important;
+    }
+  }
+  section#map-section {
+    #map iframe {
+	    height: 300px !important;
+    }
+  }
+  section#gallery .gallery ul li {
+  	width: 100% !important;
+  	margin-right: 0 !important;
+  	margin-bottom: 15px !important;
+  }
+  section#course-outline {
+    .course-outline {
+      h2 {
+        margin-bottom: 20px !important
+      }
+      .col-10, .col-2 {
+      	max-width: 100%;
+      	flex: none;
+      	float: none;
+      }
+      a.course-outline {
+      	width: 100%;
+      	margin-top: 20px;
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -1145,6 +1265,10 @@
   .featured-article-in-the-header h3.article-title-in-the-header {
 	  font-size: 27px;
   }
+  .booking-form table.table tr td {
+  	width: 100%;
+  	display: flex;
+  }
   section#subpage-content.courses {
     .col-md-4 {
       margin-bottom: 15px !important;
@@ -1155,5 +1279,12 @@
     h3.course-category-title {
       font-size: 18px;
     }
+  }
+  section#branding-logo .branding-logos ul li {
+  	width: 100% !important;
+  	margin: 0 0 20px 0 !important;
+  }
+  section#our-course-benefits .course-benefits ul li {
+	  width: 100% !important;
   }
 }
