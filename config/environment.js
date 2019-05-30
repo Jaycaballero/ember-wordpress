@@ -7,7 +7,8 @@ module.exports = function(environment) {
     podModulePrefix: 'systematix/pods',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'router-scroll',
+    historySupportMiddleware: true,
     'ember-cli-google': {
       recaptcha: {
         siteKey: '6Lfu5ogUAAAAAD0n-fJta20GLvMoWEtacLCSgjW7'
