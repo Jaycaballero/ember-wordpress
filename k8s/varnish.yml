@@ -37,8 +37,8 @@ data:
     vcl 4.0;
 
     backend default {
-        .host = "sx-ember-wordpress";
-        .port = "4000";
+        .host = "sx-ember-nginx";
+        .port = "80";
     }
 
     sub vcl_recv {
@@ -57,7 +57,7 @@ data:
             /* Not cacheable by default */
             return (pass);
         }
-        set req.http.host = "www2.systematix.co.uk";
+        set req.http.host = "www.systematix.co.uk";
         return (hash);
     }
 
