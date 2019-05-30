@@ -5,3 +5,4 @@ metadata:
   namespace: development
 data:
   courses-api-url: https://www3.systematix.co.uk
+  site-host: https://www.systematix.co.uk

@@ -4,4 +4,5 @@ metadata:
   name: sx-ember-wordpress-config
   namespace: production
 data:
-  courses-api-url: https://www2.systematix.co.uk
+  courses-api-url: https://www.systematix.co.uk
+  site-host: https://www.systematix.co.uk
