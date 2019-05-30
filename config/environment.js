@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    wordpressHost: 'https://newdev.systematix.co.uk/',
+    wordpressHost: process.env.SITE_HOST,
     modulePrefix: 'systematix',
     podModulePrefix: 'systematix/pods',
     environment,
