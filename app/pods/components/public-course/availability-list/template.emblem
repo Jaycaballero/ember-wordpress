@@ -1,0 +1,30 @@
+.col.px-0
+  .availability-list.bg-white
+    = bs-tab as |tab|
+      = tab.pane title="Reading"
+        table.table
+          tbody
+            = each courseDates as |date|
+              tr
+                td
+                  span
+                    = date
+                td
+                  span.font-weight-bold £595
+                  span  for 2 Days (ex vat)
+                td
+                  = bs-button [
+                    class="btn btn-primary btn-large w-100"
+                    role="button"
+                    onClick=(action "book" date)
+                  ]
+                    |Book Now
+    .availabilityList-footer
+      ul.p-0
+        li: span.formFooter-text Need something more custom ?
+        li
+          = bs-button [
+            class="btn btn-primary btn-large w-100"
+            role="button"
+          ]
+            |Enquire

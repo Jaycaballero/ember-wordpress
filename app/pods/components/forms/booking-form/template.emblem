@@ -1,100 +1,78 @@
-.col.px-0
-  .booking-form.bg-white
-    = bs-tab as |tab|
-      = tab.pane title="Reading"
-        table.table
-          tbody
-            tr
-              td
-                span Thu 13 Jun 2019
-              td
-                span.font-weight-bold £595
-                span  for 2 Days (ex vat)
-              td
-                = bs-button [
-                    class="btn btn-primary btn-large w-100"
-                    role="button"
-                ]
-                  |Book Now
-            tr
-              td
-                span Tue 16 Jul 2019
-              td
-                span.font-weight-bold £595
-                span  for 2 Days (ex vat)
-              td
-                = bs-button [
-                  class="btn btn-primary btn-large w-100"
-                  role="button"
-                ]
-                  |Book Now
-            tr
-              td
-                span Wed 21 Aug 2019
-              td
-                span.font-weight-bold £595
-                span  for 2 Days (ex vat)
-              td
-                = bs-button [
-                  class="btn btn-primary btn-large w-100"
-                  role="button"
-                ]
-                  |Book Now
-            tr
-              td
-                span Wed 18 Sep 2019
-              td
-                span.font-weight-bold £595
-                span  for 2 Days (ex vat)
-              td
-                = bs-button [
-                  class="btn btn-primary btn-large w-100"
-                  role="button"
-                ]
-                  |Book Now
-            tr
-              td
-                span Mon 21 Oct 2019
-              td
-                span.font-weight-bold £595
-                span  for 2 Days (ex vat)
-              td
-                = bs-button [
-                  class="btn btn-primary btn-large w-100"
-                  role="button"
-                ]
-                  |Book Now
-            tr
-              td
-                span Mon 18 Nov 2019
-              td
-                span.font-weight-bold £595
-                span  for 2 Days (ex vat)
-              td
-                = bs-button [
-                  class="btn btn-primary btn-large w-100"
-                  role="button"
-                ]
-                  |Book Now
-            tr
-              td
-                span Mon 16 Dec 2019
-              td
-                span.font-weight-bold £595
-                span  for 2 Days (ex vat)
-              td
-                = bs-button [
-                  class="btn btn-primary btn-large w-100"
-                  role="button"
-                ]
-                  |Book Now
-    .bookingForm-footer
-      ul.p-0
-        li
-          span.formFotter-text Need something more custom ?
-        li
-          = bs-button [
-            class="btn btn-primary btn-large w-100"
-            role="button"
+= bs-modal [
+  open=open
+  size="lg"
+  onHidden=onHidden
+] as |modal|
+  = modal.header
+    div
+      h2.modal-title SQL Introduction Course
+      p Please complete the booking form with your requirements. We will get back to you to confirm your booking.
+  = modal.body
+    = bs-form [
+      formLayout="vertical"
+      model=lead
+      onSubmit=(action "submit")
+    ] as |form|
+      .form-row
+        .from-group.col-md-6
+          = form.element [
+            placeholder="Your Name*"
+            property="name"
+            customError=(map-by "message" lead.errors.name)
           ]
-            |Enquire
+        .from-group.col-md-6
+          = form.element [
+            placeholder="Number of Delegates"
+            property="bookingDelegateAmount"
+            customError=(map-by "message" lead.errors.bookingDelegateAmount)
+          ]
+      .form-row
+        .from-group.col-md-6
+          = form.element [
+            placeholder="Email*"
+            property="email"
+            customError=(map-by "message" lead.errors.email)
+          ]
+        .from-group.col-md-6
+          = form.element [
+            placeholder="Delegate Names"
+            property="bookingDelegateNames"
+          ]
+      .form-row
+        .from-group.col-md-6
+          = form.element [
+            placeholder="Company"
+            property="accountName"
+          ]
+        .from-group.col-md-6
+          = form.element [
+            disabled="true"
+            placeholder=dateVenue
+            property="bookingDateVenue"
+          ]
+      .form-row
+        .from-group.col-md-6
+          = form.element [
+            placeholder="Phone*"
+            property="phone"
+            customError=(map-by "message" lead.errors.phone)
+          ]
+        .from-group.col-md-6
+          = form.element [
+            disabled="true"
+            placeholder="£ 595.00 - Price (ex VAT)"
+            property="bookingPrice"
+          ]
+      .form-row
+        .from-group.col-md-12
+          = form.element [
+            placeholder="Message"
+            property="message"
+            controlType="textarea"
+          ]
+      bs-button [
+        defaultText="Submit to Systematix"
+        type="primary"
+        class="btn-white-hover btn-orange float-right"
+        buttonType="submit"
+      ]
