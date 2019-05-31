@@ -104,6 +104,14 @@
       }
     }
   }
+  .case-card-listing {
+    .custom-card {
+      height: 850px;
+      .card-content h3 {
+  	    font-size: 24px;
+      }
+    }
+  }
 }
 
 /* Tablet Modes */
@@ -510,6 +518,22 @@
 	      max-width: 30%;
         .course-outline {
           float: right;
+        }
+      }
+    }
+  }
+  .aboutUs-fullItem-View {
+    #full-item-view-content {
+      ul li .case-card-listing {
+        div.custom-card {
+          width: calc(50% - 13px) !important;
+          margin-right: 25px !important;
+          &:nth-child(2n) {
+            margin-right: 0 !important;
+          }
+          .card-content h3 {
+            font-size: 22px;
+          }
         }
       }
     }
@@ -1082,6 +1106,16 @@
       }
     }
   }
+  .case-card-listing div.custom-card {
+  	width: 100% !important;
+  	margin-right: 0 !important;
+  	margin-bottom: 15px !important;
+    height: auto !important;
+    .button-wrapper {
+      position: relative !important;
+      margin-top: 25px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -1286,5 +1320,8 @@
   }
   section#our-course-benefits .course-benefits ul li {
 	  width: 100% !important;
+  }
+  .custom-card h3 {
+	  font-size: 24px;
   }
 }
