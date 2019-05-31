@@ -3,12 +3,14 @@
 @import "ember-power-select";
 
 @font-face {
-    font-family: calibri-regular;
-    src: url(../fonts/calibri.ttf);
+    font-family: 'calibri-regular';
+    font-display: auto;
+    src: local('calibri-regular'), url(../fonts/calibri-regular.woff2) format('woff2');
 }
 @font-face {
-    font-family: calibri-bold;
-    src: url(../fonts/calibrib.ttf);
+    font-family: 'calibri-bold';
+    font-display: auto;
+    src: local('calibri-bold'), url(../fonts/calibri-bold.woff2) format('woff2');
 }
 button:focus {
   outline: none !important;
