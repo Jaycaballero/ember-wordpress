@@ -1,15 +1,28 @@
+{{set-body-class "outline course"}}
 <header class="subpage-header item-header-title position-relative">
   <div class="subpage-header py-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <div class="back-to-link">
-            {{#link-to
-              "course"
-            }}
-              {{ catTitle }} Training
-            {{/link-to}}
-          </div>
+
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/courses">
+                  Course
+                </a>
+              </li>
+              <li class="breadcrumb-item">
+                {{#link-to "course"}}
+                  {{catTitle}}
+                {{/link-to}}
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                {{headerSubCatTitle}}
+              </li>
+            </ol>
+          </nav>
+
           <h1 class="display-3 text-white mb-0">{{ headerSubCatTitle }} Training Courses</h1>
         </div>
         <div class="col-lg-6">

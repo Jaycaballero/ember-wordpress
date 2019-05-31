@@ -1177,8 +1177,8 @@
     }
   }
   body.outline.course {
-    #outline-header {
-      .outline-container-holder {
+    #outline-header, .subpage-header {
+      .outline-container-holder, .container {
         h1 {
           font-size: 24px !important;
         }
