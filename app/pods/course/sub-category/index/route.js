@@ -16,7 +16,7 @@ export default Route.extend({
     const subCategory = category.get('subCategories').findBy('slug', model.subCategorySlug);
     controller.set('coursesOutline', model.courses);
     controller.set('lead', model.crmLead);
-    controller.set('category', category.firstObject);
+    controller.set('category', category);
     controller.set('subCategory', subCategory);
     controller.set('testimonials', model.testimonials);
   }
