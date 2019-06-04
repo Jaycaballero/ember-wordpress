@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { get, set } from '@ember/object';
+import { get } from '@ember/object';
 import { A } from '@ember/array';
 
 export default Component.extend({

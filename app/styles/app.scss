@@ -1352,10 +1352,16 @@ body.outline.course {
         list-style: none;
         width: 50%;
         button {
-        	background-color: transparent;
-        	color: #e84d3d;
-        	border-color: #e84d3d;
-        	font-size: 20px;
+          background-color: transparent;
+          color: #e84d3d;
+          border-color: #e84d3d;
+          font-size: 20px;
+        }
+        a {
+          background-color: transparent !important;
+          color: #e84d3d !important;
+          border-color: #e84d3d !important;
+          font-size: 20px;
         }
       }
     }
