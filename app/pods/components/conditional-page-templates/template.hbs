@@ -34,6 +34,8 @@
 {{else if (eq templateType "public-sql-course.php")}}
   {{subpages-templates/public-sql-course
     _courses_Template = _default_Template
+    crmLead=crmLead
+    createLead=createLead
     publicSqlCourse = _publicSqlCourse
   }}
 {{else}}

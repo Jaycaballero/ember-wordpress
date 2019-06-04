@@ -7,9 +7,11 @@
           <div class="col-6 header-text-content">
             {{contentItems.defaultEditor}}
           </div>
-          <div class="col-6 bookingForm-container">
+          <div class="col-6 availabilityList-container">
             <h4 class="text-right text-white mb-3">2 Day Course</h4>
-            {{forms/booking-form}}
+            {{public-course/availability-list
+              onToggleFormVisibility=(pipe (action "setDate") (toggle-action "bookingFormVisible" this))
+            }}
           </div>
         </div>
       </div>
@@ -92,3 +94,12 @@
     </div>
   </section>
 {{/each}}
+
+{{forms/booking-form
+  dateVenue=dateVenue
+  lead=crmLead
+  open=bookingFormVisible
+  onHidden=(action "hideForm")
+  onSubmit=(action "submit")
+  onToggleFormVisibility=(toggle-action "bookingFormVisible" this)
+}}
