@@ -1261,6 +1261,48 @@ body.outline.course {
   	width: 50%;
     margin-right: 25px;
   }
+  .case-card-listing {
+	  display: table;
+    margin-top: 50px;
+    div.custom-card {
+      float: left;
+      width: calc(33.33% - 17px);
+      border: 1px solid #005f8b;
+      height: 750px;
+      margin-bottom: 25px;
+      margin-right: 25px;
+      position: relative;
+      box-shadow: 10px 10px 15px rgba(0,95,139, 0.1);
+      -webkit-box-shadow: 10px 10px 15px rgba(0,95,139, 0.1);
+      -moz-box-shadow: 10px 10px 15px rgba(0,95,139, 0.1);
+      -o-box-shadow: 10px 10px 15px rgba(0,95,139, 0.1);
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      .card-content {
+      	padding: 0 25px;
+      }
+      .button-wrapper {
+      	width: 100%;
+      	position: absolute;
+      	bottom: 0;
+      	padding: 20px 25px;
+      	background-color: #005f8b;
+        a.read-more {
+          background-color: #e84d3d;
+          color: #fff;
+          padding: 10px 15px;
+          border-radius: 3px;
+        }
+      }
+      p {
+        margin: 0;
+      }
+      img {
+          margin-bottom: 25px;
+      }
+    }
+  }
 }
 .carousel-item.active, .carousel-item-next, .carousel-item-prev {
 	transition: transform 1s ease;
