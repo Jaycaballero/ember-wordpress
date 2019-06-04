@@ -1,18 +1,16 @@
-{{#if (gt courses.length 1)}}
-  <div class="col">
-    <div class="related-courses py-4 px-2 mt-4">
-      <h2>Related Courses</h2>
-      <ul class="p-0">
-        {{#each courses as |course|}}
-          {{#if (not-eq course.id currentCourseId)}}
-            <li>
-              {{#link-to "course.sub-category.outline" course.slug}}
-                {{course.title}}
-              {{/link-to}}
-            </li>
-          {{/if}}
-        {{/each}}
-      </ul>
-    </div>
+<div class="col">
+  <div class="related-courses py-4 px-2 mt-4">
+    <h2>Related Courses</h2>
+    <ul class="p-0">
+      {{#each courses as |course|}}
+        {{#if (not-eq course.id currentCourseId)}}
+          <li>
+            {{#link-to "course.sub-category.outline" course.slug}}
+              {{course.title}}
+            {{/link-to}}
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
   </div>
-{{/if}}
+</div>
