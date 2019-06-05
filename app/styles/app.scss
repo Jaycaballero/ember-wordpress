@@ -403,7 +403,7 @@ button.clear {
   font-size: 25px !important;
 }
 b, strong {
-  font-family: calibri-regular;
+  font-family: calibri-bold;
   font-size: 20px;
   color: #707070;
 }
@@ -1472,6 +1472,27 @@ section#course-outline {
   .course-outline {
     .col-10, .col-2 {
 	    float: left;
+    }
+  }
+}
+#full-item-view-content {
+  table {
+    border: 1px solid #005f8b;
+    th {
+      padding: 5px 15px;
+    }
+    tbody {
+      tr {
+        &:nth-of-type(2n+1) {
+      	  background-color: #005f8b;
+          td {
+            color: #fff;
+          }
+        }
+        td {
+          padding: 5px 15px;
+        }
+      }
     }
   }
 }
