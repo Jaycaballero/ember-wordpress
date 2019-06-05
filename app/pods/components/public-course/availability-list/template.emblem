@@ -23,8 +23,6 @@
       ul.p-0
         li: span.formFooter-text Need something more custom ?
         li
-          = bs-button [
-            class="btn btn-primary btn-large w-100"
-            role="button"
-          ]
-            |Enquire
+          = link-to class="btn btn-primary btn-large w-100" "page" "contact-us"
+            | Enquire
+
