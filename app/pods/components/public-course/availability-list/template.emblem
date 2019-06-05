@@ -2,6 +2,16 @@
   .availability-list.bg-white
     = bs-tab as |tab|
       = tab.pane title="Reading"
+        = bs-alert [
+          class="availability-list-alert"
+          visible=booked
+          fade=true
+          type="success"
+          dismissible=true
+          onDismiss=(toggle-action "booked" this)
+        ]
+          strong Thank you!
+          |  Your booking has been recorded!
         table.table
           tbody
             = each courseDates as |date|
