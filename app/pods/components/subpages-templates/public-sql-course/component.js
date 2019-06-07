@@ -1,9 +1,18 @@
 import Component from '@ember/component';
-import { get, set } from '@ember/object';
+import { computed, get, set } from '@ember/object';
 import { map } from '@ember/object/computed';
 import { htmlSafe } from '@ember/string';
+import PublicSql from 'systematix/constants/public-sql';
 
 export default Component.extend({
+  sqlCourse: computed('categories', function() {
+    if (get(this, 'categories')) {
+      let category = get(this, 'categories').findBy('slug', PublicSql.CATEGORY);
+      let subCategory = category.subCategories.findBy('slug', PublicSql.SUB_CATEGORY);
+      return subCategory.courses.findBy('slug', PublicSql.COURSE);
+    }
+  }),
+
   newLink: map('_courses_Template', function(callToAction){
     return {
       linkTitle: get(callToAction, 'acf.call_to_action_link.title'),
@@ -33,10 +42,7 @@ export default Component.extend({
       get(this, 'crmLead').set('source', 'SQL');
       get(this, 'crmLead').set('sourceDescription', 'Public Booking');
 
-      get(this, 'createLead')(get(this,'crmLead'))
-        .then(() => {
-          set(this, 'bookingFormVisible', false);
-        });
+      get(this, 'createLead')(get(this,'crmLead'));
     },
     hideForm() {
       set(this, 'bookingFormVisible', false);

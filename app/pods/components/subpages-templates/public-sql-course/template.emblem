@@ -1,0 +1,81 @@
+= set-body-class "public-sql-course"
+= each publicSqlCourseContent as |contentItems|
+  header.public-sql-course-banner
+    .py-5
+      .container.position-relative
+        .row
+          .col-6.header-text-content
+            = contentItems.defaultEditor
+          .col-6.availabilityList-container
+            h4.text-right.text-white.mb-3 2 Day Course
+            = public-course/availability-list [
+              booked=booked
+              onToggleFormVisibility=(pipe (action "setDate") (toggle-action "bookingFormVisible" this))
+            ]
+  section#courseOutline-link
+    .container.py-4
+      .row
+        .col
+          a [
+            class="btn btn-primary btn-large course-outline w-25"
+            href="#course-outline"
+            role="button"
+          ]
+            | Course Outline
+  section#branding-logo.py-5
+    .container
+      .row
+        .col
+          .branding-logos.my-5.d-table
+            = contentItems.sliderBranding
+  section#our-course-benefits.py-5
+    .container
+      .row
+        .col
+          .course-benefits.d-table.w-100
+            h2.text-center.mb-5
+              | Our Course Benefits
+            = contentItems.courseBenefits
+  section#our-training-centres.py-5
+    .container
+      .row
+        .col
+          .reading-training-center.d-table.m-auto
+            h2.text-center.mb-5
+              | Our Reading Training Center
+            = contentItems.trainingCenter
+  section#map-section
+    contentItems.map
+  section#gallery.py-5
+    .container
+      .row
+        .col
+          .gallery
+            contentItems.gallery
+  section#course-outline.py-5
+    .container
+      .row
+        .course-outline
+          .col-10
+            h2.mb-5
+              | Course Outline
+            contentItems.courseOutline
+          = if sqlCourse
+            .col-2
+            a [
+              class="btn btn-primary btn-large course-outline"
+              href={sqlCourse.pdfUrl}
+              target="_blank"
+              rel="noopener"
+            ]
+              i.fas.fa-file-pdf
+              | PDF Outline
+
+= forms/booking-form [
+  dateVenue=dateVenue
+  lead=crmLead
+  open=bookingFormVisible
+  onHidden=(action "hideForm")
+  onSubmit=(pipe (action "submit") (action "hideForm") (toggle-action "booked" this))
+  onToggleFormVisibility=(toggle-action "bookingFormVisible" this)
+]

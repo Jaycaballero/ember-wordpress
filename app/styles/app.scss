@@ -1033,6 +1033,7 @@ body.outline.course {
           font-weight: 900;
           font-family: "Font Awesome 5 Free";
           color: #70d1ef;
+          margin-top: -3px;
         }
         li:nth-child(1)::before {
           content: none;
@@ -1495,4 +1496,11 @@ section#course-outline {
       }
     }
   }
+}
+.availability-list-alert {
+  background-color: #e84d3d !important;
+  border-color: #e84d3d !important;
+  border-radius: 0 !important;
+  color: #ffffff;
+  margin-bottom: 0;
 }
