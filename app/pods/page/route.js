@@ -64,6 +64,7 @@ export default Route.extend({
         rsvp = RSVP.hash({
           categories: this.store.query('category', {'include': ['courses','subCategories'], 'published': 1}),
           crmLead: get(this, 'store').createRecord('crm-lead', {}),
+          locations: this.store.query('location', {per_page: 99, order: 'asc'}),
           publicSqlCourse:this.store.query('page', {per_page: 99, order: 'asc', slug: 'public-sql-course'}),
           defaultTemplate: this.store.query('page', {slug: params.page}),
         });

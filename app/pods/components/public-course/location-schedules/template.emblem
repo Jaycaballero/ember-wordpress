@@ -1,0 +1,49 @@
+.container.my-4
+  .row: .col.px-0.mb-3
+    .close-button.d-table.ml-auto
+      a{action onClose} href="#"
+        i.fas.fa-times
+  .row
+    .col-8.booking-table
+      = if location.acf.details
+        table.table
+          tr.legend
+            td  Dates
+            td  Price
+            td  Availability
+            td
+
+          = each location.acf.details as |bookingInfo|
+            tr
+              td.date
+                .data
+                  = bookingInfo.date
+              td
+                .data.price
+                  = bookingInfo.price
+              td
+                .data
+                  = bookingInfo.availability
+              td
+                a [
+                  class="btn btn-primary book-now w-100"
+                  href="#"
+                ]
+                  | Book Now
+
+    .col-4.trainingCentre-info.p-5
+      = if location.acf.training_centre
+        = each location.acf.training_centre as |Centre|
+          .reading-training.mb-5
+            = if Centre.our_reading_training_centre
+              h5 Our Reading Training Center
+              = html-safe Centre.our_reading_training_centre
+          .cheapside-training
+            = if Centre.our_cheapside_training_centre
+              h5 Our Cheapside Training Center
+              = html-safe Centre.our_cheapside_training_centre
+      a [
+        class="btn btn-primary book-now w-75"
+        href="#"
+      ]
+        | Book Now

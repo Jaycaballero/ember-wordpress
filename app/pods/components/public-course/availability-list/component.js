@@ -4,6 +4,18 @@ import { A } from '@ember/array';
 
 export default Component.extend({
   classNames: ['availabilityList'],
+  locations: [
+    'Location 1',
+    'Location 2',
+    'Location 3',
+    'Location 4'
+  ],
+  months: [
+    'January',
+    'Febuary',
+    'March',
+    'April'
+  ],
   courseDates: A([
     'Thu 13 Jun 2019',
     'Tue 16 Jul 2019',
