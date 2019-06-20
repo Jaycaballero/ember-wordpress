@@ -16,7 +16,8 @@ export default Route.extend({
       menu: this.get('mainMenu').request('menus/2'),
       footerMenu: this.get('mainMenu').request('menus/7'),
       socialLink: this.store.query('sociallink', {order: 'asc'}),
-      contactDetails: this.store.query('contactinfo', {order: 'asc'})
+      contactDetails: this.store.query('contactinfo', {order: 'asc'}),
+      copyrightFooter: this.store.query('copyright', {order: 'asc'}),
     });
   },
 
@@ -25,6 +26,7 @@ export default Route.extend({
     controller.set('footerMenu', model.footerMenu);
     controller.set('socialLink', model.socialLink);
     controller.set('contactDetails', model.contactDetails);
+    controller.set('copyrightFooter', model.copyrightFooter);
   }
 
 });

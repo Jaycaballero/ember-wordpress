@@ -321,44 +321,69 @@ section#about-us .card:hover h3.card-title {
 }
 section#footer {
   background: #4d4d4f;
+  hr {
+    border-top: 1px solid #e84d3d;
+  }
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 35px;
+      a {
+        color: #d1d3d4;
+        transition: color 0.2s ease-out;
+      }
+      &:hover a {
+        color: #e84d3d !important;
+        text-decoration: none;
+      }
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+  ul.footer-social-icons {
+    li {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+  .navbar-brand.footer {
+    height: 55px;
+    width: 268px;
+    background-image: url("../images/logo-footer.svg") !important;
+  }
+  ul.info {
+    li {
+      a, p {
+        font-size: 23px;
+        color: #d1d3d4;
+        transition: color 0.2s ease-out;
+      }
+    }
+  }
+  .copyright-text {
+    p {
+      margin-bottom: 0;
+      color: #d1d3d4;
+    }
+    .copyright-p {
+      display: inline-block;
+    }
+    .copyright-p.year {
+      font-size: 20px;
+      color: #d1d3d4;
+      position: absolute;
+      text-indent: 57px;
+    }
+  }
 }
-section#footer ul {
-  list-style: none;
-}
-section#footer ul li {
-  display: inline-block;
-  margin-right: 35px;
-}
-section#footer ul li i, section#footer ul li a{
-  color: #d1d3d4;
-  transition: color 0.2s ease-out;
-}
-section#footer ul li:hover a, section#footer ul li:hover i {
-  color: #e84d3d !important;
-  text-decoration: none;
-}
-section#footer hr {
-  border-top: 1px solid #e84d3d;
-}
-.navbar-brand.footer {
-  height: 55px;
-  width: 268px;
-  background-image: url("../images/logo-footer.svg") !important;
-}
-section#footer ul.footer-social-icons li {
-  margin-right: 20px;
-}
-section#footer ul.footer-social-icons li p {
-  margin-bottom: 0;
-}
-section#footer ul li:last-child {
-  margin-right: 0 !important;
-}
-section#footer ul.info li a, section#footer ul.info li p {
-  font-size: 23px;
-  color: #d1d3d4;
-  transition: color 0.2s ease-out;
-}
+// section#footer ul li:hover a, section#footer ul li:hover i {
+//   color: #e84d3d !important;
+//   text-decoration: none;
+// }
 /* subpage */
 .ember-basic-dropdown-trigger, button.clear {
 	float: left;

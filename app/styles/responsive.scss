@@ -1116,6 +1116,18 @@
       margin-top: 25px;
     }
   }
+  section#footer {
+    .copyright-text .copyright-p {
+      position: relative !important;
+      text-indent: 0 !important;
+    }
+    .navbar-brand.footer {
+      margin: auto;
+      margin-top: auto;
+      text-align: center;
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 480px) {
