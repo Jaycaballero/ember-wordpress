@@ -1117,9 +1117,14 @@
     }
   }
   section#footer {
-    .copyright-text .copyright-p {
-      position: relative !important;
-      text-indent: 0 !important;
+    .copyright-text {
+      .copyright-p {
+        position: relative !important;
+        text-indent: 0 !important;
+        p:nth-child(1) {
+          text-indent: 0 !important;
+        }
+      }
     }
     .navbar-brand.footer {
       margin: auto;

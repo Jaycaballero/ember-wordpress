@@ -371,12 +371,15 @@ section#footer {
     }
     .copyright-p {
       display: inline-block;
+      p:nth-child(1) {
+        text-indent: 60px;
+      }
     }
     .copyright-p.year {
       font-size: 20px;
       color: #d1d3d4;
       position: absolute;
-      text-indent: 57px;
+      text-indent: 89px;
     }
   }
 }
