@@ -22,6 +22,7 @@ Router.map(function() {
       this.route('outline', { path: '/:course_slug' });
     });
   });
+  this.route('public-sql-course');
   this.route('page', {path: "/:page"});
 });
 

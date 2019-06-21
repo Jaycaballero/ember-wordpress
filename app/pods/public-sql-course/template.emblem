@@ -1,0 +1,103 @@
+= set-body-class "public-sql-course"
+
+header.public-sql-course-banner.py-4
+  .py-5
+    .container.position-relative
+      .row
+        .col-7.header-text-content
+          = sqlCourse.defaultEditor
+        .col-5.availabilityList-container
+          = public-course/availability-list [
+            booked=booked
+            onToggleFormVisibility=(pipe (action "setDate") (toggle-action "bookingFormVisible" this))
+          ]
+
+section#two-day-training.py-5
+  .container
+    .row
+      .col
+        .training-container.d-table
+          = sqlCourse.sqlTrainingCourse
+
+section#branding-logo.py-5
+  .container
+    .row
+      .col
+        .branding-logos.my-5.d-table.w-100
+          = sqlCourse.sliderBranding
+
+section#sql-course
+  .sqlCourse.d-table.w-100
+    = sqlCourse.sqlCourse
+
+section#sqlCrash-course.py-5
+  .container.my-4
+    .row
+      .col
+        .sql-crash-course.d-table.m-auto
+          = sqlCourse.sqlCrashCourse
+
+section#learn-more.position-relative.py-4
+  .container
+    .row
+      .col-9
+        = sqlCourse.learnMore
+      .col-3
+        a.download-now.d-table.w-100 href="#" Dowload Now
+section#sign-up.py-5
+  .container.my-4
+    .row
+      .col
+        = sqlCourse.signUp
+        a.book-now.d-table.w-25.mx-auto.my-4 href="#" Book Now
+
+section#map-section
+  ul.locations-map.d-table.p-0.w-100.mb-0
+    li.locations
+      h2 Locations
+      ul.location-listing.mt-5.d-table
+        = each locations as |location|
+          li.location-image
+            img src=location.better_featured_image.source_url
+          li.location-title{action (mut selectedLocation) location} class="#{if (eq selectedLocation.id location.id) 'active'}"
+            = location.title
+    li.map
+      = html-safe selectedLocation.acf.map
+
+= if selectedLocation
+  = public-course/location-schedules [
+    location=selectedLocation
+    onClose=(action (mut selectedLocation) null)
+  ]
+
+section#course-outline.py-5
+  .container.my-4
+    .row
+      .col
+        .course-outline
+          = sqlCourse.courseOutline
+        = if sqlCourse
+          .col
+          a [
+            class="btn btn-primary btn-large d-table mx-auto my-5 course-outline"
+            href={sqlCourse.pdfUrl}
+            target="_blank"
+            rel="noopener"
+          ]
+            i.fas.fa-file-pdf
+            | PDF Outline
+section#course-content.py-5
+  .container-fluid.my-4
+    .row-fluid
+      .col
+        .course-content
+          = sqlCourse.courseContent
+
+= forms/booking-form [
+  dateVenue=dateVenue
+  lead=crmLead
+  open=bookingFormVisible
+  onHidden=(action "hideForm")
+  onSubmit=(pipe (action "submit") (action "hideForm") (toggle-action "booked" this))
+  onToggleFormVisibility=(toggle-action "bookingFormVisible" this)
+]
