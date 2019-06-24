@@ -7,7 +7,6 @@ export default Route.extend({
   model(params) {
     return hash({
       categories: this.store.query('category', {'include': ['courses','subCategories'], 'published': 1}),
-      crmLead: this.store.createRecord('crm-lead', {}),
       locations: this.store.query('location', {per_page: 99, order: 'asc'}),
       pages: this.store.query('page', {per_page: 99, order: 'asc', slug: 'public-sql-course'}),
       defaultTemplate: this.store.query('page', {slug: params.page}),

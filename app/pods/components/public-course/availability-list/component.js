@@ -1,33 +1,21 @@
 import Component from '@ember/component';
-import { get } from '@ember/object';
+import { get, computed } from '@ember/object';
+import { map } from '@ember/object/computed';
 import { A } from '@ember/array';
+import { copy } from '@ember/object/internals';
 
 export default Component.extend({
   classNames: ['availabilityList'],
-  locations: [
-    'Location 1',
-    'Location 2',
-    'Location 3',
-    'Location 4'
-  ],
-  months: [
-    'January',
-    'Febuary',
-    'March',
-    'April'
-  ],
-  courseDates: A([
-    'Thu 13 Jun 2019',
-    'Tue 16 Jul 2019',
-    'Wed 21 Aug 2019',
-    'Wed 18 Sep 2019',
-    'Mon 21 Oct 2019',
-    'Mon 18 Nov 2019',
-    'Mon 16 Dec 2019',
-  ]),
-  actions: {
-    book(date) {
-      get(this, 'onToggleFormVisibility')(date);
+
+  _bookings: computed('locations.[]', 'location', function() {
+    const location = this.get('location');
+    if (location) {
+      return copy(location.get('acf.details')).splice(0, 5);
     }
-  }
+
+    return this.get('locations').reduce((bookings, location) => {
+      bookings.pushObjects(location.get('acf.details'));
+      return bookings;
+    }, []).splice(0, 5);
+  })
 });

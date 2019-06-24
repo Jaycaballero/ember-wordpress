@@ -38,19 +38,21 @@ export default Controller.extend({
   }),
 
   actions: {
-    setDate(date) {
-      set(this, 'dateVenue', date);
+    cancelBooking() {
+      this.crmLead.rollbackAttributes();
+      this.set('bookingFormVisible', false);
+    },
+    selectBooking(booking) {
+      const crmLead = this.store.createRecord('crm-lead', {
+        bookingDateVenue: booking.date,
+        bookingPrice: booking.price,
+        source: 'SQL',
+        sourceDescription: 'Public Booking'
+      });
+      this.setProperties({ crmLead, bookingFormVisible: true });
     },
     submit() {
-      get(this, 'crmLead').set('bookingDateVenue', get(this, 'dateVenue'));
-      get(this, 'crmLead').set('bookingPrice', '595.00');
-      get(this, 'crmLead').set('source', 'SQL');
-      get(this, 'crmLead').set('sourceDescription', 'Public Booking');
-
-      get(this, 'createLead')(get(this,'crmLead'));
-    },
-    hideForm() {
-      set(this, 'bookingFormVisible', false);
+      this.crmLead.save();
     }
   }
 });

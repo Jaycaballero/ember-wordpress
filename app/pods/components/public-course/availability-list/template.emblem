@@ -3,18 +3,18 @@
     .choose-option
       .select-label Choose a Location
       = power-select [
-        placeholder="Select a Location"
-        options=locations
-        selected=location
-        searchEnabled=false
         allowClear=true
+        options=locations
+        placeholder="All locations"
+        searchEnabled=false
+        selected=location
         onchange=(action (mut location))
       ] as |location|
-        location
+        = location.title
     .choose-option
       .select-label Choose a Month
       = power-select [
-        placeholder="Select a Month"
+        placeholder="All Months"
         options=months
         selected=month
         searchEnabled=false
@@ -31,23 +31,22 @@
       onDismiss=(toggle-action "booked" this)
     ]
       strong Thank you!
-      |  Your booking has been recorded!
+      | Your booking has been recorded!
     .bookingForm-container
       ul.data-listing.p-0
-        = each courseDates as |date|
+        = each _bookings as |booking|
           .list-wrapper.position-relative.d-table.w-100.p-2
             li
-              span.date
-                = date
+              span.date = booking.date
             li
-              span.price.font-weight-bold £595
+              span.price.font-weight-bold = booking.price
             li
               = bs-button [
                 class="booking btn btn-primary btn-large w-100"
                 role="button"
-                onClick=(action "book" date)
+                onClick=(action onSelectBooking booking)
               ]
-                |Book Now
+                | Book Now
     .availabilityList-footer
       ul.p-0.d-table.m-auto
         li: span.formFooter-text Need something more custom ?
