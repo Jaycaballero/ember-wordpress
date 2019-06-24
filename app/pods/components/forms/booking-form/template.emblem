@@ -11,7 +11,7 @@
     = bs-form [
       formLayout="vertical"
       model=lead
-      onSubmit=(action "submit")
+      onSubmit=(action onSubmit)
     ] as |form|
       .form-row
         .from-group.col-md-6
@@ -60,7 +60,6 @@
         .from-group.col-md-6
           = form.element [
             disabled="true"
-            placeholder="£ 595.00 - Price (ex VAT)"
             property="bookingPrice"
           ]
       .form-row

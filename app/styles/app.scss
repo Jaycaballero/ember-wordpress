@@ -1728,12 +1728,14 @@ body.outline.course {
         color: #006400;
         font-weight: bold;
       }
-      a.book-now {
+      .book-now {
         border-radius: 0 !important;
         padding: 3px 0;
         font-weight: bold;
         font-size: 18px;
         font-weight: bold;
+        background-color: #e84d3d;
+        border-color: #e84d3d;
       }
     }
     .trainingCentre-info {

@@ -25,9 +25,10 @@
                 .data
                   = bookingInfo.availability
               td
-                a [
+                = bs-button [
                   class="btn btn-primary book-now w-100"
-                  href="#"
+                  role="button"
+                  onClick=(action onSelectBooking bookingInfo)
                 ]
                   | Book Now
 

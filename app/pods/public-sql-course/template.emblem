@@ -1,5 +1,4 @@
 = set-body-class "public-sql-course"
-
 header.public-sql-course-banner.py-4
   .py-5
     .container.position-relative
@@ -8,8 +7,9 @@ header.public-sql-course-banner.py-4
           = sqlCourse.defaultEditor
         .col-5.availabilityList-container
           = public-course/availability-list [
+            locations=locations
             booked=booked
-            onToggleFormVisibility=(pipe (action "setDate") (toggle-action "bookingFormVisible" this))
+            onSelectBooking=(action "selectBooking")
           ]
 
 section#two-day-training.py-5
@@ -68,6 +68,7 @@ section#map-section
   = public-course/location-schedules [
     location=selectedLocation
     onClose=(action (mut selectedLocation) null)
+    onSelectBooking=(action "selectBooking")
   ]
 
 section#course-outline.py-5
@@ -94,10 +95,8 @@ section#course-content.py-5
           = sqlCourse.courseContent
 
 = forms/booking-form [
-  dateVenue=dateVenue
   lead=crmLead
   open=bookingFormVisible
-  onHidden=(action "hideForm")
-  onSubmit=(pipe (action "submit") (action "hideForm") (toggle-action "booked" this))
-  onToggleFormVisibility=(toggle-action "bookingFormVisible" this)
+  onHidden=(action "cancelBooking")
+  onSubmit=(pipe (action "submit") (toggle-action "booked" this))
 ]
