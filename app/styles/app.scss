@@ -1555,6 +1555,13 @@ body.outline.course {
             transform: translate(0, -50%);
             width: 50%;
             padding: 0 70px;
+            ul > li::before {
+              content: "\f00c";
+              font-family: "Font Awesome 5 Free";
+              color: #008000;
+              font-weight: 900;
+              margin-right: 10px;
+            }
           }
           h2::after {
             content: "";
