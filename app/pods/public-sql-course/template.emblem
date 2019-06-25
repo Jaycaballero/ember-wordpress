@@ -43,7 +43,12 @@ section#learn-more.position-relative.py-4
       .col-9
         = sqlCourse.learnMore
       .col-3
-        a.download-now.d-table.w-100 href="#" Dowload Now
+        a [
+          class="download-now d-table w-100"
+          href={sqlCourse.pdfOutline}
+          target="_blank"
+        ]
+          | Dowload Now
 section#sign-up.py-5
   .container.my-4
     .row
@@ -57,9 +62,8 @@ section#map-section
       h2 Locations
       ul.location-listing.mt-5.d-table
         = each locations as |location|
-          li.location-image
-            img src=location.better_featured_image.source_url
           li.location-title{action (mut selectedLocation) location} class="#{if (eq selectedLocation.id location.id) 'active'}"
+            img class="location-image" src=location.better_featured_image.source_url
             = location.title
     li.map
       = html-safe selectedLocation.acf.map
@@ -81,7 +85,7 @@ section#course-outline.py-5
           .col
           a [
             class="btn btn-primary btn-large d-table mx-auto my-5 course-outline"
-            href={sqlCourse.pdfUrl}
+            href={sqlCourse.pdfOutline}
             target="_blank"
             rel="noopener"
           ]

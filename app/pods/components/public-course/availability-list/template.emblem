@@ -14,11 +14,11 @@
     .choose-option
       .select-label Choose a Month
       = power-select [
+        allowClear=true
         placeholder="All Months"
         options=months
         selected=month
         searchEnabled=false
-        allowClear=true
         onchange=(action (mut month))
       ] as |months|
         months
@@ -34,21 +34,25 @@
       | Your booking has been recorded!
     .bookingForm-container
       ul.data-listing.p-0
-        = each _bookings as |booking|
+        = each bookings as |booking|
           .list-wrapper.position-relative.d-table.w-100.p-2
             li
               span.date = booking.date
+              div.location = booking.location.title
             li
-              span.price.font-weight-bold = booking.price
+              div.price.font-weight-bold = booking.price
             li
               = bs-button [
                 class="booking btn btn-primary btn-large w-100"
                 role="button"
-                onClick=(action onSelectBooking booking)
+                onClick=(action onSelectBooking booking booking.location)
               ]
                 | Book Now
     .availabilityList-footer
       ul.p-0.d-table.m-auto
+        li
+          = scroll-to href="#booking-datas" class="view-all-dates" duration=1200
+            | View all training dates
         li: span.formFooter-text Need something more custom ?
         li
           = link-to class="btn btn-primary btn-large w-75 d-table mx-auto mt-4" "page" "contact-us"

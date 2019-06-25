@@ -1397,12 +1397,17 @@ body.outline.course {
           li {
             float: left;
             width: 33.33%;
+            list-style: none;
             .booking {
               background-color: #005f8b;
               border-color: #005f8b;
               font-weight: bold;
               border-radius: 0;
               padding: 5px 12px;
+              position: absolute;
+              top: 50%;
+              transform: translate(0, -50%);
+              width: 32% !important;
             }
             button.booking:hover {
               border-color: #005f8b !important;
@@ -1412,14 +1417,22 @@ body.outline.course {
         }
         span {
           color: #707070;
-          position: absolute;
-          top: 50%;
-          transform: translate(0, -50%);
         }
-        span.price {
-          color: #006400 !important;
-          transform: translate(-50%, -50%);
-          left: 50%;
+        span.date {
+        	font-size: 15px;
+        	font-weight: bold;
+        }
+        div.price {
+          color: #008b2c;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+        div.location {
+        	color: #005f8b !important;
+        	font-weight: bold;
+          margin-top: -10px;
         }
       }
     }
@@ -1452,6 +1465,13 @@ body.outline.course {
             color: #e84d3d !important;
           }
         }
+        a.view-all-dates {
+          background-color: transparent !important;
+          color: #005f8b !important;
+          margin: 0 auto;
+          display: table;
+          text-decoration: none;
+        }
       }
     }
     .availabilityList-container {
@@ -1478,6 +1498,13 @@ body.outline.course {
           font-weight: 900;
           margin-right: 10px;
         }
+      }
+      .text-inner ul li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 10px;
+        color: #008b2c;
       }
     }
   }
@@ -1662,15 +1689,13 @@ body.outline.course {
           li {
             margin-bottom: 5px;
             float: left;
-          }
-          li.location-image {
-            width: 10%;
-            img {
-              width: 100%;
+            img.location-image {
+              width: 15%;
+              margin-right: 10px;
             }
+            margin-bottom: 10px;
           }
           li.location-title {
-            width: 80%;
             margin-left: 15px;
             cursor: pointer;
             &.active {
@@ -1707,6 +1732,11 @@ body.outline.course {
     }
     .booking-table {
     	background-color: #f5f9fb;
+      h3.location-title {
+      	padding: 25px 12px 0 12px;
+      	color: #005f8b;
+      	font-weight: bold;
+      }
       tr.legend > td {
         font-weight: bold;
         color: #005f8b;
@@ -1725,7 +1755,7 @@ body.outline.course {
         width: 30%;
       }
       .price {
-        color: #006400;
+        color: #008b2c;
         font-weight: bold;
       }
       .book-now {
@@ -1734,8 +1764,13 @@ body.outline.course {
         font-weight: bold;
         font-size: 18px;
         font-weight: bold;
-        background-color: #e84d3d;
-        border-color: #e84d3d;
+        background-color: #008b2c;
+        border-color: #008b2c;
+        &:hover {
+          background-color: transparent;
+          border-color: #008b2c !important;
+          color: #008b2c !important;
+        }
       }
     }
     .trainingCentre-info {
@@ -1764,6 +1799,10 @@ body.outline.course {
           background-color: #005f8b !important;
           color: #fff !important;
         }
+      }
+      a {
+        color: #e84d3d;
+        text-decoration: underline;
       }
     }
   }

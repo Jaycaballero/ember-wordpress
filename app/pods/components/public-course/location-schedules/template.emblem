@@ -6,11 +6,12 @@
   .row
     .col-8.booking-table
       = if location.acf.details
+        h3.location-title
+          location.title
         table.table
           tr.legend
             td  Dates
             td  Price
-            td  Availability
             td
 
           = each location.acf.details as |bookingInfo|
@@ -22,13 +23,10 @@
                 .data.price
                   = bookingInfo.price
               td
-                .data
-                  = bookingInfo.availability
-              td
                 = bs-button [
                   class="btn btn-primary book-now w-100"
                   role="button"
-                  onClick=(action onSelectBooking bookingInfo)
+                  onClick=(action onSelectBooking bookingInfo location)
                 ]
                   | Book Now
 
@@ -43,8 +41,3 @@
             = if Centre.our_cheapside_training_centre
               h5 Our Cheapside Training Center
               = html-safe Centre.our_cheapside_training_centre
-      a [
-        class="btn btn-primary book-now w-75"
-        href="#"
-      ]
-        | Book Now

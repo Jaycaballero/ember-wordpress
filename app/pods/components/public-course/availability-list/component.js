@@ -7,15 +7,39 @@ import { copy } from '@ember/object/internals';
 export default Component.extend({
   classNames: ['availabilityList'],
 
-  _bookings: computed('locations.[]', 'location', function() {
-    const location = this.get('location');
-    if (location) {
-      return copy(location.get('acf.details')).splice(0, 5);
-    }
+  classNames: ['availabilityList'],
 
+  allBookings: computed('locations.[]', function() {
     return this.get('locations').reduce((bookings, location) => {
-      bookings.pushObjects(location.get('acf.details'));
+      const bookingList = location.get('acf.details').map((booking) => {
+        booking.location = location;
+        return booking;
+      });
+      bookings.pushObjects(bookingList);
       return bookings;
-    }, []).splice(0, 5);
-  })
+    }, []);
+  }),
+
+  bookings: computed('allBookings.[]', 'location', function() {
+    const title = this.get('location.title');
+    if (title) {
+      return copy(this.get('allBookings').filterBy('location.title', this.get('location.title'))).splice(0, 5);
+    }
+    return copy(this.get('allBookings')).splice(0, 5);
+  }),
+
+  months: [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ]
 });

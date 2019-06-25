@@ -7,7 +7,7 @@ export default Route.extend({
   model(params) {
     return hash({
       categories: this.store.query('category', {'include': ['courses','subCategories'], 'published': 1}),
-      locations: this.store.query('location', {per_page: 99, order: 'asc'}),
+      locations: this.store.query('location', {per_page: 99, order: 'desc'}),
       pages: this.store.query('page', {per_page: 99, order: 'asc', slug: 'public-sql-course'}),
       defaultTemplate: this.store.query('page', {slug: params.page}),
     });

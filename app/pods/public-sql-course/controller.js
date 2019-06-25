@@ -32,6 +32,7 @@ export default Controller.extend({
       signUp: htmlSafe(sqlCourse.get('acf.sign_up_for_our_sql')),
       map: htmlSafe(sqlCourse.get('acf.map')),
       courseOutline: htmlSafe(sqlCourse.get('acf.course_outline')),
+      pdfOutline: htmlSafe(sqlCourse.get('acf.pdf_outline')),
       courseContent: htmlSafe(sqlCourse.get('acf.course_content')),
       sqlTrainingCourse: htmlSafe(sqlCourse.get('acf.two_day_sql_training_course'))
     };
@@ -42,10 +43,11 @@ export default Controller.extend({
       this.crmLead.rollbackAttributes();
       this.set('bookingFormVisible', false);
     },
-    selectBooking(booking) {
+    selectBooking(booking, location) {
       const crmLead = this.store.createRecord('crm-lead', {
         bookingDateVenue: booking.date,
         bookingPrice: booking.price,
+        bookingLocation: location.title,
         source: 'SQL',
         sourceDescription: 'Public Booking'
       });
