@@ -1575,6 +1575,11 @@ body.outline.course {
         img {
           width: 100%;
         }
+        .image-wrapper .image {
+          height: 600px;
+          background-position: center center;
+          background-size: cover;
+        }
         &:nth-child(2n+1) {
           .image-wrapper {
             float: right;
