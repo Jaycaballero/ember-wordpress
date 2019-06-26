@@ -45,10 +45,10 @@
             property="accountName"
           ]
         .from-group.col-md-6
-          = form.element [
-            disabled="true"
-            placeholder=dateVenue
-            property="bookingDateVenue"
+          = input [
+            class="form-control"
+            disabled=true
+            value=locationDetail
           ]
       .form-row
         .from-group.col-md-6

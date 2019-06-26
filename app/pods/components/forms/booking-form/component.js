@@ -1,8 +1,10 @@
 import Component from '@ember/component';
-import { get, computed } from '@ember/object';
-import { map } from '@ember/object/computed';
-import { A } from '@ember/array';
+import { computed } from '@ember/object';
 
 export default Component.extend({
-  classNames: ['bookingForm']
+  classNames: ['bookingForm'],
+
+  locationDetail: computed('lead.{bookingDateVenue,bookingLocation}', function() {
+    return `${this.lead.get('bookingDateVenue')} (${this.lead.get('bookingLocation')})`;
+  })
 });

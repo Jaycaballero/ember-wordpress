@@ -14,8 +14,9 @@ export default Model.extend({
   source: attr('string'),
   sourceDescription: attr('string'),
 
-  bookingDelegateAmount: attr(),
+  bookingDelegateAmount: attr('string'),
   bookingDelegateNames: attr(),
-  bookingDateVenue: attr(),
-  bookingPrice: attr()
+  bookingDateVenue: attr('string'),
+  bookingLocation: attr('string'),
+  bookingPrice: attr('string')
 });
