@@ -31,6 +31,7 @@ export default Controller.extend({
       learnMore: htmlSafe(sqlCourse.get('acf.learn_more')),
       signUp: htmlSafe(sqlCourse.get('acf.sign_up_for_our_sql')),
       map: htmlSafe(sqlCourse.get('acf.map')),
+      privateSqlTraining: htmlSafe(sqlCourse.get('acf.private_sql_training')),
       courseOutline: htmlSafe(sqlCourse.get('acf.course_outline')),
       pdfOutline: htmlSafe(sqlCourse.get('acf.pdf_outline')),
       courseContent: htmlSafe(sqlCourse.get('acf.course_content')),

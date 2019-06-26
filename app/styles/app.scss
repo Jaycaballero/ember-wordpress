@@ -1367,6 +1367,13 @@ body.outline.course {
       a { color: #e84d3d; text-decoration: underline; }
     }
   }
+  section#private-sql-training {
+	  background-color: #ddf0f8;
+    border-bottom: 4px solid #005f8b;
+    a.contact-button {
+	    border-radius: 0;
+    }
+  }
   section#course-outline {
   	background-color: #fff;
     .course-outline {
