@@ -54,7 +54,8 @@ section#sign-up.py-5
     .row
       .col
         = sqlCourse.signUp
-        a.book-now.d-table.w-25.mx-auto.my-4 href="#" Book Now
+        = scroll-to href="#booking-datas" class="book-now d-table w-25 mx-auto my-4" duration=1000
+          | View all dates
 
 section#map-section
   ul.locations-map.d-table.p-0.w-100.mb-0
@@ -71,7 +72,6 @@ section#map-section
 = if selectedLocation
   = public-course/location-schedules [
     location=selectedLocation
-    onClose=(action (mut selectedLocation) null)
     onSelectBooking=(action "selectBooking")
   ]
 
