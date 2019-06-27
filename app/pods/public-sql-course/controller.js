@@ -1,19 +1,9 @@
 import Controller from '@ember/controller';
-import { computed, get, set } from '@ember/object';
+import { computed, get } from '@ember/object';
 import { map } from '@ember/object/computed';
 import { htmlSafe } from '@ember/string';
-import PublicSql from 'systematix/constants/public-sql';
 
 export default Controller.extend({
-
-  sqlCourse: computed('categories', function() {
-    if (get(this, 'categories')) {
-      let category = get(this, 'categories').findBy('slug', PublicSql.CATEGORY);
-      let subCategory = category.subCategories.findBy('slug', PublicSql.SUB_CATEGORY);
-      return subCategory.courses.findBy('slug', PublicSql.COURSE);
-    }
-  }),
-
   newLink: map('_courses_Template', function(callToAction){
     return {
       linkTitle: get(callToAction, 'acf.call_to_action_link.title'),
