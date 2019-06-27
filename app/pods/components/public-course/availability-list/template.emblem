@@ -8,20 +8,9 @@
         placeholder="All locations"
         searchEnabled=false
         selected=location
-        onchange=(action (mut location))
+        onchange=(pipe (action "setLocation"))
       ] as |location|
         = location.title
-    .choose-option
-      .select-label Choose a Month
-      = power-select [
-        allowClear=true
-        placeholder="All Months"
-        options=months
-        selected=month
-        searchEnabled=false
-        onchange=(action (mut month))
-      ] as |months|
-        months
     = bs-alert [
       class="availability-list-alert"
       visible=booked

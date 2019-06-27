@@ -7,8 +7,10 @@ header.public-sql-course-banner.py-4
           = sqlCourse.defaultEditor
         .col-5.availabilityList-container
           = public-course/availability-list [
-            locations=locations
             booked=booked
+            locations=locations
+            mapLocation=listLocation
+            onSetLocation=(action (mut selectedLocation))
             onSelectBooking=(action "selectBooking")
           ]
 
@@ -63,15 +65,15 @@ section#map-section
       h2 Locations
       ul.location-listing.mt-5.d-table
         = each locations as |location|
-          li.location-title{action (mut selectedLocation) location} class="#{if (eq selectedLocation.id location.id) 'active'}"
-            img class="location-image" src=location.better_featured_image.source_url
-            = location.title
+            li.location-title{action  "setLocation" location} class="#{if (eq mapLocation.id location.id) 'active'}"
+              img class="location-image" src=location.better_featured_image.source_url
+              = location.title
     li.map
-      = html-safe selectedLocation.acf.map
+      = html-safe mapLocation.acf.map
 
-= if selectedLocation
+= if mapLocation
   = public-course/location-schedules [
-    location=selectedLocation
+    location=mapLocation
     onSelectBooking=(action "selectBooking")
   ]
 

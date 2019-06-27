@@ -1008,7 +1008,7 @@ body.outline.course {
     .availability-list {
       padding: 20px 10px; border: 1px solid #005f8b;
       .choose-option {
-        width: calc(50% - 8px); float: left;
+        width: 100%; float: left;
         .ember-basic-dropdown-trigger {
           width: 100%;
           margin: 10px 0 15px 0;
