@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { computed, get } from '@ember/object';
+import { computed, get, set } from '@ember/object';
 import { map } from '@ember/object/computed';
 import { htmlSafe } from '@ember/string';
 
@@ -29,6 +29,15 @@ export default Controller.extend({
     };
   }),
 
+  mapLocation: computed('selectedLocation', function() {
+    const location = get(this, 'selectedLocation');
+    if (location) {
+      return location;
+    }
+
+    return get(this, 'locations').firstObject;
+  }),
+
   actions: {
     cancelBooking() {
       this.crmLead.rollbackAttributes();
@@ -44,8 +53,12 @@ export default Controller.extend({
       });
       this.setProperties({ crmLead, bookingFormVisible: true });
     },
+    setLocation(location) {
+      set(this, 'selectedLocation', location);
+      set(this, 'listLocation', location);
+    },
     submit() {
       this.crmLead.save();
-    }
+    },
   }
 });

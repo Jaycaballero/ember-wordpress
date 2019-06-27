@@ -1,7 +1,7 @@
 import Component from '@ember/component';
-import { computed } from '@ember/object';
+import { computed, get, set } from '@ember/object';
 import { A } from '@ember/array';
-import { copy } from '@ember/object/internals';
+import { copy } from 'ember-copy';
 import moment from 'moment';
 
 export default Component.extend({
@@ -17,8 +17,8 @@ export default Component.extend({
       return bookings;
     }, []);
     return reduced.sort(function(booking1, booking2) {
-      const date1 = moment(booking1.date);
-      const date2 = moment(booking2.date);
+      const date1 = moment(booking1.date, 'DD MMM YYYY');
+      const date2 = moment(booking2.date, 'DD MMM YYYY');
       if (date1.isAfter(date2)) {
         return 1;
       } else if (date1.isBefore(date2)) {
@@ -29,10 +29,10 @@ export default Component.extend({
     });
   }),
 
-  bookings: computed('allBookings.[]', 'location', function() {
-    const title = this.get('location.title');
+  bookings: computed('allBookings.[]', 'location', 'mapLocation', function() {
+    const title = (this.get('mapLocation')) ? this.get('mapLocation.title') : this.get('location.title');
     if (title) {
-      return copy(this.get('allBookings').filterBy('location.title', this.get('location.title'))).splice(0, 5);
+      return copy(this.get('allBookings').filterBy('location.title', title)).splice(0, 5);
     }
     return copy(this.get('allBookings')).splice(0, 5);
   }),
@@ -50,5 +50,18 @@ export default Component.extend({
     'October',
     'November',
     'December'
-  ])
+  ]),
+
+  location: computed('mapLocation', function() {
+    if (this.get('mapLocation')) {
+      return this.get('mapLocation');
+    }
+  }),
+
+  actions: {
+    setLocation(location) {
+      set(this, 'mapLocation', location);
+      get(this, 'onSetLocation')(location);
+    }
+  }
 });
