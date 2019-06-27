@@ -1342,10 +1342,9 @@ body.outline.course {
     }
     .trainingCentre-info {
       background-color: #ddf0f8;
-      .address { margin-bottom: 20px; font-weight: bold; color: #707070; }
-      p {
-      	margin-bottom: 0; color: #005f8b;
-      }
+      padding: 35px;
+      i { line-height: 1.7em; margin-right: 13px; }
+      p { margin-bottom: 0; color: #005f8b; display: flex; }
       h5 {
       	font-weight: bold;
       	color: #005f8b;
@@ -1365,6 +1364,7 @@ body.outline.course {
         &:hover { background-color: #005f8b !important; color: #fff !important; }
       }
       a { color: #e84d3d; text-decoration: underline; }
+      ul.benefits-listing li { list-style: none; color: #005f8b !important;}
     }
   }
   section#private-sql-training {
