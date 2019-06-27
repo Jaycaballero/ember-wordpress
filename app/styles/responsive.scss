@@ -378,10 +378,13 @@
         .bookingForm-container {
           ul.data-listing .list-wrapper li {
             float: none; width: 100%;
+            span.date, div.location { display: table; margin: auto; }
             div.price {
               text-align: left !important;
               justify-content: normal;
               align-items: normal;
+              display: table;
+              margin: auto;
             }
             .booking {
               position: relative;
@@ -400,13 +403,14 @@
 	    margin: 0 !important;
       ul {
         margin-top: 16px !important; margin-bottom: 0;
-        li img {
-          width: 100%; height: auto !important;
-        }
+        li img { width: 100%; height: auto !important; }
       }
     }
     section#sql-course {
       .sqlCourse ul li {
+        .image-wrapper {
+          .image { height: 530px !important; }
+        }
         .textContent-container .text-inner {
           padding: 0 25px;
           h2 { font-size: 25px !important; }
@@ -415,16 +419,47 @@
         }
       }
     }
-  }
-  section#our-course-benefits .course-benefits ul h4 {
-    width: 70%; margin: auto; display: table;
-  }
-  section#course-outline {
-    .course-outline {
-      .col-10 { max-width: 70%; }
-      .col-2 {
-	      max-width: 30%;
-        .course-outline { float: right;}
+    section#sqlCrash-course {
+      .sql-crash-course {
+        ul li {
+          width: calc(33.33% - 10px) !important;
+          &:nth-child(3n) { margin-right: 0 !important; }
+          &:nth-child(5n) { margin-right: 15px !important; }
+        }
+      }
+    }
+    section#sign-up {
+      > .container {
+        margin-top: 0 !important; margin-bottom: 0 !important;
+      }
+    }
+    section#course-outline {
+      .course-outline {
+        ul li { height: 300px !important; }
+      }
+    }
+    section#map-section {
+      ul.locations-map li.locations {
+        h2 { font-size: 25px !important; padding: 20px !important; }
+        ul.location-listing {
+          padding: 0 20px !important;
+          li.location-title { margin-left: 0 !important; }
+        }
+      }
+    }
+    section#booking-datas {
+      .booking-table td.date { width: 45% !important; }
+      .trainingCentre-info { padding: 20px !important; }
+    }
+    section#course-content {
+      .course-content > ul > li {
+        padding: 0;
+        margin-right: 20px;
+        width: calc(25% - 15px);
+        height: 225px;
+        &:nth-child(4n) { margin-right: 0; }
+        ul > li { font-size: 17px; }
+        strong { font-size: 16px !important; }
       }
     }
   }
@@ -759,11 +794,21 @@
       }
     }
   }
-  .public-sql-course {
+  body.public-sql-course {
     .public-sql-course-banner {
-      .col-6 {
+      padding: 0 !important;
+      .col-7 {
         max-width: 100%; flex: none;
-        h1 { font-size: 35px !important; }
+        h1 { font-size: 31px !important; }
+      }
+      .col-5.availabilityList-container {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        .availabilityList { margin-top: 25px; }
       }
       .bookingForm-container {
         position: relative !important;
@@ -771,46 +816,112 @@
         top: 0 !important;
         transform: none !important;
         margin-top: 0 !important;
+        display: table;
         h4 { text-align: left !important; }
       }
       table.table tbody tr td span { font-size: 16px; }
     }
-    section#courseOutline-link .course-outline { width: 100% !important; }
-  }
-  section#branding-logo {
-	  padding-top: 30px !important;
-    .branding-logos { margin: 0 !important; }
-    .branding-logos ul li {
-  	  width: calc(50% - 10px) !important; margin-right: 20px !important;
-      &:nth-child(2n) { margin-right: 0 !important; }
+    section#two-day-training {
+      .training-container { width: 100%; }
     }
-  }
-  section#our-course-benefits {
-    .course-benefits {
-      ul li {
-      	width: 50% !important; margin-bottom: 15px;
-        h4 { font-size: 22px; }
+    section#branding-logo {
+      .branding-logos {
+        margin: 0 !important;
+        ul {
+          margin-bottom: 0px !important; margin-top: 30px !important;
+          li {
+        	  width: calc(50% - 10px) !important; margin-right: 20px !important;
+            &:nth-child(2n) { margin-right: 0 !important; }
+          }
+        }
       }
     }
-  }
-  .reading-training-center {
-    h2 { margin-bottom: 25px !important; }
-  }
-  section#map-section {
-    #map iframe { height: 300px !important; }
-  }
-  section#gallery .gallery ul li {
-  	width: 100% !important;
-  	margin-right: 0 !important;
-  	margin-bottom: 15px !important;
-  }
-  section#course-outline {
-    .course-outline {
-      h2 { margin-bottom: 20px !important }
-      .col-10, .col-2 {
-      	max-width: 100%; flex: none; float: none;
+    section#sql-course {
+      .sqlCourse ul li {
+        .image-wrapper {
+          float: none !important; width: 100% !important;
+          .image { height: 300px; }
+        }
+        .textContent-container {
+          float: none !important; width: 100% !important;
+          .text-inner {
+            position: relative;
+            top: 0;
+            transform: none;
+            width: 100%;
+            padding: 30px 15px;
+          }
+        }
       }
-      a.course-outline { width: 100%; margin-top: 20px; }
+    }
+    section#sqlCrash-course {
+      > .container { display: table; margin: 0 auto !important; }
+      .sql-crash-course {
+        ul li {
+          width: calc(50% - 8px);
+          &:nth-child(2n) { margin-right: 0; }
+          &:nth-child(5n) { margin-right: 15px !important; }
+          &:last-child { margin-right: 0 !important; }
+        }
+      }
+    }
+    section#learn-more {
+      .container .row {
+        .col-8, .col-4 {
+          max-width: 100%;
+          flex: none;
+        }
+        p { position: relative; top: 0; transform: none; margin-bottom: 15px; }
+      }
+    }
+    section#sign-up {
+      > .container { display: table; margin: 0 auto !important; }
+      a.book-now { width: 100% !important; }
+    }
+    section#map-section {
+      #map iframe { height: 300px !important; }
+      ul.locations-map {
+        li.locations, li.map { width: 100%; height: auto; }
+        ul.location-listing {
+          margin-bottom: 48px;
+          li { margin-left: 0 !important; }
+        }
+        div#map {
+          height: auto !important; display: table; width: 100%;
+          p { margin: 0; }
+          frame { height: 500px !important; }
+        }
+      }
+    }
+    section#booking-datas {
+      padding: 0 !important;
+      > .container { max-width: 100%; margin: 0 !important; }
+      .col-8.booking-table, .col-4.trainingCentre-info {
+        max-width: 100%; flex: none !important; z-index: 2;
+      }
+      .col-4.trainingCentre-info { padding: 30px 25px !important; }
+      .booking-table td.date { width: 45%; }
+    }
+    section#private-sql-training {
+      border-top: 4px solid #005f8b;
+      a.contact-button { width: 100% !important; }
+    }
+    section#course-outline {
+      > .container { display: table ; margin: 0 auto !important; }
+      .course-outline {
+        h2 { margin-bottom: 20px !important }
+        .col-10, .col-2 { max-width: 100%; flex: none; float: none; }
+        a.course-outline { width: 100%; margin-top: 20px; }
+        ul li { width: 100%; margin-right: 0 !important; height: auto; }
+      }
+    }
+    section#course-content {
+      .course-content > ul > li {
+        padding: 0 !important;
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+      }
     }
   }
   .case-card-listing div.custom-card {
@@ -964,4 +1075,41 @@
   }
   section#our-course-benefits .course-benefits ul li { width: 100% !important; }
   .custom-card h3 { font-size: 24px;}
+  body.public-sql-course {
+    header.public-sql-course-banner {
+      .col-7 { h1 { font-size: 20px !important; } }
+      .availability-list {
+        .choose-option { width: 100% !important; float: none !important; }
+        .bookingForm-container {
+          span.date, div.location { display: table; margin: auto; }
+          ul.data-listing .list-wrapper li {
+            width: 100% !important;
+            .booking { position: relative !important; transform: none !important; width: 100% !important; }
+          }
+        }
+      }
+      .availabilityList-footer .formFooter-text { font-size: 18px; }
+    }
+    section#sqlCrash-course {
+      .sql-crash-course ul li {
+        width: 100%; margin-right: 0;
+      }
+    }
+    section#booking-datas {
+      .booking-table {
+        tr > td {
+          display: flex; width: 100% !important;
+          .data {
+          	position: relative !important;
+          	top: 0 !important;
+          	transform: none !important;
+            .mobile-label-block {
+            	display: block !important; color: #005f8b; font-weight: bold;
+            }
+          }
+        }
+        tr.legend > td { display: none; }
+      }
+    }
+  }
 }

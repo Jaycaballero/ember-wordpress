@@ -1030,8 +1030,8 @@ body.outline.course {
           li {
             float: left; width: 33.33%; list-style: none;
             .booking {
-              background-color: #005f8b;
-              border-color: #005f8b;
+              background-color: #008b2c;
+              border-color: #008b2c;
               font-weight: bold;
               border-radius: 0;
               padding: 5px 12px;
@@ -1041,7 +1041,7 @@ body.outline.course {
               width: 32% !important;
             }
             button.booking:hover {
-              border-color: #005f8b !important; color: #005f8b !important;
+              border-color: #008b2c !important; color: #008b2c !important;
             }
           }
         }
@@ -1430,14 +1430,14 @@ body.outline.course {
           list-style: none;
           float: left;
           width: 25%;
-          height: 180px;
+          height: 230px;
           padding: 0 50px;
           strong { color: #70d1ef; }
           p { margin: 0; }
           > ul {
             padding: 0;
             > li {
-              list-style: none; color: #fff;
+              list-style: none; color: #fff; display: flex;
               &::before {
                 content: "\f00c";
                 font-family: "Font Awesome 5 Free";

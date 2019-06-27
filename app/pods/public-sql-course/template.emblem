@@ -42,9 +42,9 @@ section#sqlCrash-course.py-5
 section#learn-more.position-relative.py-4
   .container
     .row
-      .col-9
+      .col-8
         = sqlCourse.learnMore
-      .col-3
+      .col-4
         a [
           class="download-now d-table w-100"
           href={sqlCourse.pdfOutline}

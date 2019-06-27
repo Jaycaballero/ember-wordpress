@@ -14,9 +14,13 @@
             tr
               td.date
                 .data
+                  .d-none.mobile-label-block
+                    | Date:
                   = bookingInfo.date
               td
                 .data.price
+                  .d-none.mobile-label-block
+                    | Price:
                   = bookingInfo.price
               td
                 = bs-button [
