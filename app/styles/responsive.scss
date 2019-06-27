@@ -3,47 +3,28 @@
   #navbarSupportedContent ul.navbar-nav > li:not(:last-child) > a {
     margin-right: 12px;
   }
-  section#footer ul.info li {
-    margin-right: 0;
-  }
+  section#footer ul.info li { margin-right: 0; }
   section#subpage-content.courses {
-    .course-category-image img {
-  	  width: 25%;
-    }
+    .course-category-image img { width: 25%; }
   }
-  .navbar-header .navbar-brand {
-    height: 66px;
-    width: 322px;
-  }
+  .navbar-header .navbar-brand { height: 66px; width: 322px; }
   section#branding .col-md-6.pr-5 {
     padding-right: 0 !important;
   }
+  header .subpage-header .background-image.banner-image { height: 415px; }
+  header .subpage-header .call-to-action a.btn { margin-bottom: 24px; }
   header .subpage-header .background-image.banner-image {
-    height: 415px;
+    height: 415px; margin-top: 50px;
   }
-  header .subpage-header .call-to-action a.btn {
-    margin-bottom: 24px;
-  }
-  header .subpage-header .background-image.banner-image {
-    height: 415px;
-    margin-top: 50px;
-  }
-  .services-content p {
-    font-size: 20px;
-  }
-  section#subpage-content.how-we-train .custom-card-holder {
-    height: 435px;
-  }
-  body.tips-and-tricks .card .custom-card-holder {
-    height: 347px !important;
-  }
-  section#subpage-content form input[type="text"], section#subpage-content form input[type="text"]::placeholder,
-  section#subpage-content form .ember-power-select-trigger, section#subpage-content form textarea, section#subpage-content form textarea::placeholder {
-    font-size: 16px !important;
-  }
-  section#subpage-content form .ember-power-select-trigger {
-    padding: 0.475rem 0.75rem;
-  }
+  .services-content p { font-size: 20px; }
+  section#subpage-content.how-we-train .custom-card-holder { height: 435px; }
+  body.tips-and-tricks .card .custom-card-holder { height: 347px !important; }
+  section#subpage-content form input[type="text"],
+  section#subpage-content form input[type="text"]::placeholder,
+  section#subpage-content form .ember-power-select-trigger,
+  section#subpage-content form textarea,
+  section#subpage-content form textarea::placeholder { font-size: 16px !important; }
+  section#subpage-content form .ember-power-select-trigger { padding: 0.475rem 0.75rem; }
   form .g-recaptcha iframe {
     transform: scale(0.8);
     -webkit-transform: scale(0.8);
@@ -51,14 +32,10 @@
     -webkit-transform-origin: 0 0;
   }
   section#course-parent-category {
-    ul.sub-category-listing li {
-      width: calc(33% - 9px);
-    }
+    ul.sub-category-listing li { width: calc(33% - 9px); }
   }
   body.sub-category.courses {
-    .course-banner-image {
-	    height: 155px !important;
-    }
+    .course-banner-image { height: 155px !important; }
   }
   body.outline.course {
     #outline-header {
@@ -72,80 +49,103 @@
       }
     }
   }
-  .tipsTricks-filtering.col-md-4 {
-  	flex: none !important;
-  	max-width: 40%;
-  }
-  section#footer ul.footer-menu li {
-	  margin-right: 32px !important;
-  }
+  .tipsTricks-filtering.col-md-4 { flex: none !important; max-width: 40%; }
+  section#footer ul.footer-menu li { margin-right: 32px !important; }
   .banner-content .search-banner .ember-power-select-trigger {
 	  width: 87% !important;
   }
-  section#footer ul.info li {
-    margin-right: 0 !important;
-  }
-  h3.course-category-title {
-	  font-size: 19px;
-  }
+  section#footer ul.info li { margin-right: 0 !important; }
+  h3.course-category-title { font-size: 19px; }
   body.outline.course .outline-sidbar .related-course {
 	  margin-top: 385px !important;
   }
-  body.outline.course .outline-sidbar .getStarted-form {
-	  width: 91%;
-  }
+  body.outline.course .outline-sidbar .getStarted-form { width: 91%; }
   .public-sql-course {
-    .public-sql-course-banner {
-      h1 {
-        font-size: 35px !important;
+    header.public-sql-course-banner {
+      h1 { font-size: 35px !important; }
+      table.table tr td span { font-size: 16px; }
+      .availability-list {
+        .bookingForm-container {
+          ul.data-listing li {
+            &:nth-child(1) { width: 40% !important; }
+            &:nth-child(2) { width: 26% !important; }
+            &:nth-child(3) { width: 34% !important; }
+          }
+        }
       }
-      table.table tr td span {
-	      font-size: 16px;
+    }
+    section#branding-logo {
+      .branding-logos {
+  	    margin: 0 !important;
+        ul { margin-top: 30px !important; }
+      }
+    }
+    section#sql-course {
+      .sqlCourse {
+        ul li {
+          .textContent-container {
+            .text-inner {
+              padding: 0 25px !important;
+              h2 { font-size: 30px !important; }
+              ul > li, p { font-size: 18px; }
+            }
+          }
+          .image-wrapper .image { height: 420px !important; }
+        }
+      }
+    }
+    section#sign-up > .container { margin: 0 15px !important; }
+    section#map-section {
+      ul.locations-map {
+        li.locations {
+          h2 { padding: 20px !important; }
+          ul.location-listing {
+            padding: 0 20px !important; margin-top: 20px !important;
+            li.location-title { margin-left: 0 !important; }
+          }
+        }
+      }
+    }
+    section#booking-datas {
+      .trainingCentre-info { padding: 30px !important; }
+    }
+    section#course-outline {
+      .course-outline ul li { height: 230px !important; }
+    }
+    section#course-content {
+      .course-content > ul > li {
+        padding: 0 !important;
+        height: 240px !important;
+        margin-right: 20px;
+        width: calc(25% - 15px) !important;
+        &:nth-child(4n) { margin-right: 0; }
       }
     }
   }
   .case-card-listing {
     .custom-card {
       height: 850px;
-      .card-content h3 {
-  	    font-size: 24px;
-      }
+      .card-content h3 { font-size: 24px; }
     }
   }
 }
 
 /* Tablet Modes */
 @media (min-width: 768px) and (max-width: 991px) {
-  .top-buttons a.btn:not(:nth-child(2)) {
-	  margin-right: 0 !important;
-  }
-  nav .navbar-header, nav .top-info-wrapper {
-    width: 100%;
-  }
+  .top-buttons a.btn:not(:nth-child(2)) { margin-right: 0 !important; }
+  nav .navbar-header, nav .top-info-wrapper { width: 100%; }
   nav .navbar-header{
-    margin: 0 auto 25px;
-    position: relative;
-    padding: 0 38px;
+    margin: 0 auto 25px; position: relative; padding: 0 38px;
     button.navbar-toggler {
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
+      position: absolute; top: 50%; transform: translate(0, -50%);
     }
-    .navbar-brand {
-      margin: 0 auto;
-      display: table;
-    }
+    .navbar-brand { margin: 0 auto; display: table; }
   }
   .top-info ul.info {
-    text-align: center !important;
-    margin-bottom: 10px !important;
+    text-align: center !important; margin-bottom: 10px !important;
   }
-  .pre-text p {
-    font-size: 21px;
-  }
-  section#services ul.services-contentItems li {
-    width: 100%;
-  }
+  .pre-text p { font-size: 21px; }
+  section#services ul.services-contentItems li { width: 100%; }
   section#services ul.services-contentItems li img {
     position: relative;
     top: 0;
@@ -154,22 +154,14 @@
     display: table;
     margin: 10px auto;
   }
-  section#services .col-md-4:not(:nth-child(3)) {
-    margin-right: 61px !important;
-  }
-  section#services .col-md-4 {
-    max-width: calc(30.33% - 20px) !important;
-  }
+  section#services .col-md-4:not(:nth-child(3)) { margin-right: 61px !important; }
+  section#services .col-md-4 { max-width: calc(30.33% - 20px) !important; }
   #navbarSupportedContent {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0 !important;
+    padding-left: 0; padding-right: 0; padding-bottom: 0 !important;
     ul.navbar-nav > li > a {
-      margin-right: 0;
-      color: #70d1ef !important;
-      transition: color 0.3s ease-in-out;
+      margin-right: 0; color: #70d1ef !important; transition: color 0.3s ease-in-out;
     }
-    ul.navbar-nav > li:hover > a, ul.navbar-nav > li.nav-item.active > a{
+    ul.navbar-nav > li:hover > a, ul.navbar-nav > li.nav-item.active > a {
       color: #fff !important;
     }
     > .container {
@@ -177,8 +169,7 @@
       .row.top-info-wrapper {
         margin: 0;
         .col {
-          padding-left: 0;
-          padding-right: 0;
+          padding-left: 0; padding-right: 0;
         }
       }
     }
@@ -187,62 +178,32 @@
       box-shadow: inset 0 0 5px #000;
       background-image: url("/images/noise.png");
     }
-    .navbar-collapse .nav.navbar-nav {
-      padding: 25px 39px;
-    }
-    nav .navbar-header {
-      padding: 0 39px;
-    }
+    .navbar-collapse .nav.navbar-nav { padding: 25px 39px; }
+    nav .navbar-header { padding: 0 39px; }
   }
-  .banner-content .pre-text p {
-    font-size: 22px;
-  }
-  .banner-content h1, section#benefits h1 {
-    font-size: 45px !important;
-  }
-  section#branding .col-md-6.pl-5 {
-    padding-left: 0 !important;
-  }
-  section#branding .col-md-6.pr-5 {
-    padding-right: 0 !important;
-  }
-  h2, section#branding .container h3 {
-    font-size: 30px !important;
-  }
-  section#about-us h3.card-title {
-    font-size: 25px;
-  }
-  section#footer ul.info li {
-    margin-right: 0 !important;
-  }
+  .banner-content .pre-text p { font-size: 22px; }
+  .banner-content h1, section#benefits h1 { font-size: 45px !important; }
+  section#branding .col-md-6.pl-5 { padding-left: 0 !important; }
+  section#branding .col-md-6.pr-5 { padding-right: 0 !important; }
+  h2, section#branding .container h3 { font-size: 30px !important; }
+  section#about-us h3.card-title { font-size: 25px; }
+  section#footer ul.info li { margin-right: 0 !important; }
   header .subpage-header .subpage-banner-content {
     top: 0;
     transform: none;
     position: relative !important;
     padding-right: 0 !important;
   }
-  header .subpage-header .background-image.banner-image {
-    display: none;
-  }
+  header .subpage-header .background-image.banner-image { display: none; }
   header .subpage-header .container .col-lg-6:first-child {
     padding: 0 15px 25px 15px;
   }
-  header .subpage-header .call-to-action a.btn {
-    margin-bottom: 24px;
-  }
-  section#subpage-content .container .col-md-4 {
-    max-width: 50%;
-    flex: none;
-  }
-  .subpage-header .featured.background-image {
-    display: none;
-  }
-  h3.article-title-in-the-header {
-    margin-top: 10px;
-  }
+  header .subpage-header .call-to-action a.btn { margin-bottom: 24px; }
+  section#subpage-content .container .col-md-4 { max-width: 50%; flex: none; }
+  .subpage-header .featured.background-image { display: none; }
+  h3.article-title-in-the-header { margin-top: 10px; }
   body.tips-and-tricks #subpage-content .col-md-8 {
-    max-width: 100%;
-    flex: none;
+    max-width: 100%; flex: none;
   }
   body.tips-and-tricks #subpage-content .col .col-md-6:nth-child(3n) {
 	  margin-right: 32px !important;
@@ -254,21 +215,14 @@
 	  max-width: calc(50% - 16px) !important;
   }
   body.tips-and-tricks section#subpage-content .container > .row > .col-md-3 {
-    max-width: 50%;
-    flex: none;
+    max-width: 50%; flex: none;
   }
-  section#full-item-view-content h2 {
-    font-size: 30px !important;
-  }
-  body.about-us header.subpage-header .container .col-lg-6 {
-    padding-top: 0;
-  }
+  section#full-item-view-content h2 { font-size: 30px !important; }
+  body.about-us header.subpage-header .container .col-lg-6 { padding-top: 0; }
   body.about-us section#subpage-content .col-md-8.pr-5 {
     padding-right: 15px !important;
   }
-  body.about-us section#subpage-content .pr-5 {
-    padding-right: 0 !important;
-  }
+  body.about-us section#subpage-content .pr-5 { padding-right: 0 !important; }
   body.about-us header.subpage-header .header-call-to-action,
   body.courses .header-call-to-action {
     top: 0;
@@ -276,33 +230,18 @@
     right: 0;
     position: relative !important;
   }
-  body.about-us section#subpage-content .col-md-8 {
-    max-width: 100%;
-    flex: none;
-  }
-  body.about-us section#subpage-content .col-md-4 {
-    max-width: 100%;
-  }
-  section#subpage-content .container .col-md-4 {
-    max-width: 50%;
-    flex: none;
-  }
-  section#subpage-content .rct-container {
-    margin-top: 30px;
-  }
-  form .form-group.col-md-6 {
-    max-width: 100%;
-    flex: none;
-  }
+  body.about-us section#subpage-content .col-md-8 { max-width: 100%; flex: none; }
+  body.about-us section#subpage-content .col-md-4 { max-width: 100%; }
+  section#subpage-content .container .col-md-4 { max-width: 50%; flex: none; }
+  section#subpage-content .rct-container { margin-top: 30px; }
+  form .form-group.col-md-6 { max-width: 100%; flex: none; }
   form .g-recaptcha iframe {
     transform: scale(1.14);
     -webkit-transform: scale(1.14);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
   }
-  .get-in-touch-form form .btn.submit-button {
-    margin-top: 30px;
-  }
+  .get-in-touch-form form .btn.submit-button { margin-top: 30px; }
   .get-in-touch-form form .form-group .btn.submit-button {
     margin-top: 8px;
     transform: none;
@@ -311,50 +250,27 @@
     width: 100% !important;
   }
   #subpage-content.courses  {
-    .col-md-4, .col-md-8 {
-  	  max-width: 100%;
-  	  flex: none;
-    }
-    .col-md-8 {
-      margin-top: 30px;
-    }
+    .col-md-4, .col-md-8 { max-width: 100%; flex: none; }
+    .col-md-8 { margin-top: 30px; }
   }
   section#course-parent-category {
     ul.sidebar-category-lists {
-      > li .cat-title-and-icon .cat-title {
-      	margin-left: 18px;
-      	font-size: 19px;
-      }
+      > li .cat-title-and-icon .cat-title { margin-left: 18px; font-size: 19px;}
     }
     ul.sub-category-listing {
-      li {
-        width: calc(50% - 8px);
-        margin-right: 15px !important;
-      }
-      li:nth-child(2n) {
-        margin-right: 0 !important;
-      }
+      li { width: calc(50% - 8px); margin-right: 15px !important; }
+      li:nth-child(2n) { margin-right: 0 !important; }
     }
   }
   body.sub-category.courses {
-    .course-banner-image {
-      height: 155px !important;
-    }
+    .course-banner-image { height: 155px !important; }
     nav#scroll-to-section {
-      ul.child-items-navigation li {
-        margin-right: 19px !important;
-      }
+      ul.child-items-navigation li { margin-right: 19px !important; }
     }
   }
   section#course-sub-category {
-    .course-subcategory-content {
-    	padding-right: 15px !important;
-    	max-width: 50%;
-    }
-    .course-subcategory-sidebar {
-    	max-width: 50%;
-    	flex: none;
-    }
+    .course-subcategory-content { padding-right: 15px !important; max-width: 50%; }
+    .course-subcategory-sidebar { max-width: 50%; flex: none; }
   }
   body.outline.course {
     #outline-header {
@@ -374,27 +290,18 @@
         .custom-tabs {
           ul.nav-tabs {
             li.nav-item {
-              a {
-      	        margin-right: 30px !important;
-              }
+              a { margin-right: 30px !important; }
             }
           }
           .tab-content {
-            ul.location-lists li, li .location-label {
-              width: 50%;
-            }
+            ul.location-lists li, li .location-label { width: 50%; }
             .training-centres .info-content {
-              width: 50%;
-              margin-left: 15px !important;
+              width: 50%; margin-left: 15px !important;
             }
-            .whats-include .row:nth-child(2) {
-            	margin-top: 0 !important;
-            }
+            .whats-include .row:nth-child(2) { margin-top: 0 !important; }
             ul.included-listing {
               li {
-                .include-label {
-                  width: 50% !important;
-                }
+                .include-label { width: 50% !important; }
               }
             }
           }
@@ -405,86 +312,49 @@
           padding: 15px !important
         }
         .client-testimonials-listing .info {
-        	position: relative !important;
-        	margin-top: 10px;
+        	position: relative !important; margin-top: 10px;
         }
       }
     }
   }
   section#subpage-content.courses {
-    .course-category-image img {
-  	  width: 25%;
-    }
+    .course-category-image img { width: 25%; }
   }
-  .outline-container-holder h1 {
-    font-size: 30px !important;
-  }
-  .blog-fullwidth-content img {
-  	width: calc(50% - 3px) !important;
-  }
-  section#footer .menu-footer {
-	  max-width: 70%;
-	  flex: none;
-  }
-  section#footer .social-footer {
-    max-width: 30%;
-    flex: none;
-  }
+  .outline-container-holder h1 { font-size: 30px !important; }
+  .blog-fullwidth-content img { width: calc(50% - 3px) !important; }
+  section#footer .menu-footer { max-width: 70%; flex: none; }
+  section#footer .social-footer { max-width: 30%; flex: none; }
   .banner-content .search-banner .ember-power-select-trigger {
 	  width: 82% !important;
   }
-  h4.services-title {
-	  font-size: 21px;
-  }
+  h4.services-title { font-size: 21px; }
   section#subpage-content.courses {
-    .col-md-4.courseCategories-container {
-	    max-width: 100%;
-    }
-    .categories-selection .form-row {
-      float: left;
-      width: 50%;
-    }
+    .col-md-4.courseCategories-container { max-width: 100%; }
+    .categories-selection .form-row { float: left; width: 50%; }
   }
   body.outline.course #outline-header .outline-container-holder {
-    .container.outline {
-  	  padding: 40px 15px !important;
-    }
+    .container.outline { padding: 40px 15px !important; }
     .breadcrumb > li {
   	  font-size: 18px !important;
-      > a {
-        font-size: 18px !important;
-      }
+      > a { font-size: 18px !important; }
     }
   }
   section#subpage-content.courses {
-    .col-md-4 {
-  	  max-width: calc(50% - 12px) !important;
-    }
-    .col-md-4:nth-child(2n) {
-  	  margin-right: 0 !important;
-    }
-    .col-md-4:nth-child(n) {
-  	  margin-right: 24px;
-    }
-    h3.course-category-title {
-      font-size: 22px;
-    }
+    .col-md-4 { max-width: calc(50% - 12px) !important; }
+    .col-md-4:nth-child(2n) { margin-right: 0 !important; }
+    .col-md-4:nth-child(n) { margin-right: 24px; }
+    h3.course-category-title { font-size: 22px; }
   }
   body.outline.course .outline-sidbar {
 	  margin-top: 50px;
     .getStarted-form {
-  	  width: 88% !important;
-      transform: translate(0, -13%) !important;
+  	  width: 88% !important; transform: translate(0, -13%) !important;
     }
     .related-course {
   	  margin-top: 472px !important;
-      .related-courses ul li a {
-      	font-size: 17px;
-      }
+      .related-courses ul li a { font-size: 17px; }
     }
-    .related-course > .col, .client-testimonial > .col {
-	    padding: 0;
-    }
+    .related-course > .col, .client-testimonial > .col { padding: 0; }
   }
   header#outline-header {
     .export-share-button {
@@ -494,31 +364,67 @@
     	right: 13px;
     }
   }
-  .public-sql-course {
-    .public-sql-course-banner {
-      h1 {
-        font-size: 35px !important;
+  body.public-sql-course {
+    header.public-sql-course-banner {
+      .header-text-content {
+        h1 { font-size: 28px !important; }
       }
-      table.table tr td span {
-	      font-size: 16px;
+      table.table tr td span { font-size: 16px; }
+      .availability-list {
+        .choose-option {
+          width: 100%;
+          .ember-basic-dropdown-trigger { margin-bottom: 10px; }
+        }
+        .bookingForm-container {
+          ul.data-listing .list-wrapper li {
+            float: none; width: 100%;
+            div.price {
+              text-align: left !important;
+              justify-content: normal;
+              align-items: normal;
+            }
+            .booking {
+              position: relative;
+              top: 0;
+              transform: none;
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+    section#two-day-training {
+      h2 { font-size: 26px !important; }
+    }
+    section#branding-logo .branding-logos {
+	    margin: 0 !important;
+      ul {
+        margin-top: 16px !important; margin-bottom: 0;
+        li img {
+          width: 100%; height: auto !important;
+        }
+      }
+    }
+    section#sql-course {
+      .sqlCourse ul li {
+        .textContent-container .text-inner {
+          padding: 0 25px;
+          h2 { font-size: 25px !important; }
+          ul > li { font-size: 18px; }
+          p { font-size: 18px; }
+        }
       }
     }
   }
   section#our-course-benefits .course-benefits ul h4 {
-    width: 70%;
-    margin: auto;
-    display: table;
+    width: 70%; margin: auto; display: table;
   }
   section#course-outline {
     .course-outline {
-      .col-10 {
-      max-width: 70%;
-      }
+      .col-10 { max-width: 70%; }
       .col-2 {
 	      max-width: 30%;
-        .course-outline {
-          float: right;
-        }
+        .course-outline { float: right;}
       }
     }
   }
@@ -526,14 +432,9 @@
     #full-item-view-content {
       ul li .case-card-listing {
         div.custom-card {
-          width: calc(50% - 13px) !important;
-          margin-right: 25px !important;
-          &:nth-child(2n) {
-            margin-right: 0 !important;
-          }
-          .card-content h3 {
-            font-size: 22px;
-          }
+          width: calc(50% - 13px) !important; margin-right: 25px !important;
+          &:nth-child(2n) { margin-right: 0 !important; }
+          .card-content h3 { font-size: 22px; }
         }
       }
     }
@@ -543,199 +444,113 @@
 /* Mobile Modes */
 @media (max-width: 767px) {
   body {
-    h1 {
-  	  font-size: 35px !important;
-    }
-    h2, section#branding h3 {
-      font-size: 25px !important
-    }
+    h1 { font-size: 35px !important; }
+    h2, section#branding h3 { font-size: 25px !important }
     overflow-x: hidden;
   }
-  section#top .top-contact {
-    display: table;
-    margin: 10px auto;
-  }
+  section#top .top-contact { display: table; margin: 10px auto; }
   section#top .col-md-6.top-buttons {
-    text-align: center !important;
-    margin-bottom: 20px;
+    text-align: center !important; margin-bottom: 20px;
   }
+  nav .navbar-header .navbar-brand { height: 57px; width: 280px; }
+  nav .navbar-header, nav .top-info-wrapper { width: 100%; }
+  .navbar-header button.navbar-toggler { position: absolute; }
   nav .navbar-header .navbar-brand {
-    height: 57px;
-    width: 280px;
+    margin: 0 auto 25px; display: table;
   }
-  nav .navbar-header, nav .top-info-wrapper {
-    width: 100%;
-  }
-  .navbar-header button.navbar-toggler {
-    position: absolute;
-  }
-  nav .navbar-header .navbar-brand {
-    margin: 0 auto 25px;
-    display: table;
-  }
-  #navbarSupportedContent ul.navbar-nav > li:hover > a, #navbarSupportedContent ul.navbar-nav > li.nav-item.active > a {
+  #navbarSupportedContent ul.navbar-nav > li:hover > a,
+  #navbarSupportedContent ul.navbar-nav > li.nav-item.active > a {
     color: #fff !important;
   }
   .top-info ul.info {
-    text-align: center !important;
-    margin-bottom: 10px !important;
+    text-align: center !important; margin-bottom: 10px !important;
   }
-  #navbarSupportedContent ul.navbar-nav > li > a {
-    margin-right: 0;
-  }
+  #navbarSupportedContent ul.navbar-nav > li > a { margin-right: 0; }
   #navbarSupportedContent {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0 !important;
+    padding-left: 0; padding-right: 0; padding-bottom: 0 !important;
   }
   #navbarSupportedContent > .container {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
+    margin-left: 0; margin-right: 0; max-width: 100%;
   }
-  #navbarSupportedContent > .container .row.top-info-wrapper {
-    margin: 0;
-  }
+  #navbarSupportedContent > .container .row.top-info-wrapper { margin: 0; }
   #navbarSupportedContent > .container .row.top-info-wrapper .col {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0; padding-right: 0;
   }
   .navbar-collapse {
     background: #176D95;
     box-shadow: inset 0 0 5px #000;
     background-image: url("/images/noise.png");
   }
-  .navbar-collapse .nav.navbar-nav {
-    padding: 25px 15px;
-  }
+  .navbar-collapse .nav.navbar-nav { padding: 25px 15px; }
   #navbarSupportedContent ul.navbar-nav > li > a {
-    color: #70d1ef !important;
-    transition: color 0.3s ease-in-out;
+    color: #70d1ef !important; transition: color 0.3s ease-in-out;
   }
-  #navbarSupportedContent ul.navbar-nav > li:hover > a {
-    color: #fff !important;
-  }
-  nav .navbar-header {
-    padding: 0 15px;
-  }
-  .top-info-wrapper .top-info ul.info .col-md-2 {
-    width: auto;
-  }
-  .top-info ul.info > li > .row {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .top-info-wrapper .top-info ul.info li {
-    margin-right: 35px;
-  }
-  .top-info-wrapper .top-info ul.info .col-md-2:nth-child(1) {
-    padding-left: 0;
-  }
-  header .business-header {
-    height: 450px;
-  }
-  .banner-content h1, section#benefits h1 {
-    font-size: 42px !important;
-  }
-  .pre-text p {
-    font-size: 20px !important;
-  }
+  #navbarSupportedContent ul.navbar-nav > li:hover > a { color: #fff !important; }
+  nav .navbar-header { padding: 0 15px; }
+  .top-info-wrapper .top-info ul.info .col-md-2 { width: auto; }
+  .top-info ul.info > li > .row { margin-right: 0; margin-left: 0; }
+  .top-info-wrapper .top-info ul.info li { margin-right: 35px; }
+  .top-info-wrapper .top-info ul.info .col-md-2:nth-child(1) { padding-left: 0; }
+  header .business-header { height: 450px; }
+  .banner-content h1, section#benefits h1 { font-size: 42px !important; }
+  .pre-text p { font-size: 20px !important; }
   section#services .container .row .col .col-md-4 {
     max-width: 100%;
     display: table;
     margin-right: 0;
     margin-bottom: 20px;
   }
-  section#branding > .my-5 {
-    margin: 0 !important;
-  }
-  section#branding .container > .row > .col-md-6.pr-5, section#branding .container > .row > .col-md-6.pl-5 {
+  section#branding > .my-5 { margin: 0 !important; }
+  section#branding .container > .row > .col-md-6.pr-5,
+  section#branding .container > .row > .col-md-6.pl-5 {
     padding: 0 15px !important;
   }
   section#branding .container > .row > .col-md-6.pl-5 > .ml-2 {
     margin: 0 !important;
   }
-  section#branding .container > .row > .col-md-6.pl-5 img {
-    margin-top: 50px;
-  }
-  section#branding h3, section#branding p {
-    text-align: center;
-  }
+  section#branding .container > .row > .col-md-6.pl-5 img { margin-top: 50px; }
+  section#branding h3, section#branding p { text-align: center; }
   section#branding a.btn {
-    text-align: center;
-    display: table;
-    margin: 24px auto 0;
+    text-align: center; display: table; margin: 24px auto 0;
   }
   section#about-us > .my-5, section#about-us .container.my-5 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin-top: 0 !important; margin-bottom: 0 !important;
   }
-  section#about-us .container .row > .col-md-4 {
-    padding-bottom: 15px;
-  }
-  section#footer ul.info {
-    text-align: left !important;
-  }
-  section#footer ul.info li .row .col-md-2 {
-    width: auto;
-  }
+  section#about-us .container .row > .col-md-4 { padding-bottom: 15px; }
+  section#footer ul.info { text-align: left !important; }
+  section#footer ul.info li .row .col-md-2 { width: auto; }
   section#footer ul.footer-social-icons {
-    float: left !important;
-    padding-left: 0;
-    margin-top: 20px;
+    float: left !important; padding-left: 0; margin-top: 20px;
   }
   section#footer ul.info li a, section#footer ul.info li p {
     font-size: 20px !important;
   }
   body.tips-and-tricks #full-item-view-content .post-full-item-image {
-    width: 100% !important;
-    margin-bottom: 15px;
+    width: 100% !important; margin-bottom: 15px;
   }
   header .subpage-header .subpage-banner-content,  {
-    top: 0;
-    transform: none;
-    position: relative !important;
+    top: 0; transform: none; position: relative !important;
   }
-  header .subpage-header .background-image.banner-image {
-    display: none;
-  }
+  header .subpage-header .background-image.banner-image { display: none; }
   header .subpage-header .container .col-lg-6:first-child {
     padding: 0 15px 25px 15px;
   }
-  header .subpage-header .call-to-action a.btn {
-    margin-bottom: 24px;
-  }
+  header .subpage-header .call-to-action a.btn { margin-bottom: 24px; }
   section#subpage-content .container .col-md-4 {
-    padding-bottom: 15px !important;
-    margin: 0 !important;
+    padding-bottom: 15px !important; margin: 0 !important;
   }
-  section#subpage-content .my-5 {
-    margin: 0 !important;
-  }
-  section#subpage-content .card .custom-card-holder {
-    height: auto;
-  }
-  section#subpage-content .card-footer {
-    position: inherit;
-  }
-  .subpage-banner-content h1 {
-    font-size: 42px !important;
-  }
+  section#subpage-content .my-5 { margin: 0 !important; }
+  section#subpage-content .card .custom-card-holder { height: auto; }
+  section#subpage-content .card-footer { position: inherit; }
+  .subpage-banner-content h1 { font-size: 42px !important; }
   body.full-item-view #full-item-view-content .col-md-6 > h2 {
-    margin-top: 15px;
-    font-size: 26px !important;
+    margin-top: 15px; font-size: 26px !important;
   }
-  section#full-item-view-content {
-    padding: 0 !important;
-  }
+  section#full-item-view-content { padding: 0 !important; }
   body.tips-and-tricks #subpage-content .container .col-md-8 > .col-md-6 {
-    max-width: 100%;
-    padding-bottom: 15px !important;
-    padding-top: 0 !important;
+    max-width: 100%; padding-bottom: 15px !important; padding-top: 0 !important;
   }
-  .featured.background-image {
-    display: none;
-  }
+  .featured.background-image { display: none; }
   body.tips-and-tricks section#subpage-content .custom-card-holder .card-title {
     font-size: 23px !important;
   }
@@ -751,15 +566,11 @@
   .featured-article-in-the-header h3.article-title-in-the-header {
     font-size: 30px;
   }
-  body.about-us header.subpage-header .container .col-lg-6 {
-    padding-top: 0;
-  }
+  body.about-us header.subpage-header .container .col-lg-6 { padding-top: 0; }
   body.about-us section#subpage-content .col-md-8.pr-5 {
     padding-right: 15px !important;
   }
-  body.about-us section#subpage-content .pr-5 {
-    padding-right: 0 !important;
-  }
+  body.about-us section#subpage-content .pr-5 { padding-right: 0 !important; }
   body.about-us header.subpage-header .header-call-to-action, body.courses header.subpage-header .header-call-to-action {
     top: 0;
     transform: none;
@@ -767,31 +578,19 @@
     position: relative !important;
   }
   body.about-us section#subpage-content .col-md-8 {
-    max-width: 100%;
-    flex: none;
+    max-width: 100%; flex: none;
   }
-  body.about-us section#subpage-content .col-md-4 {
-    max-width: 100%;
-  }
+  body.about-us section#subpage-content .col-md-4 { max-width: 100%; }
   body.about-us section#subpage-content .container .col-md-4 {
-    max-width: 100%;
-    flex: none;
+    max-width: 100%; flex: none;
   }
-  section#subpage-content .rct-container {
-    margin-top: 30px;
-  }
-  body.about-us header.subpage-header h1 {
-    font-size: 42px !important;
-  }
-  section#subpage-content h2 {
-    font-size: 25px !important;
-  }
+  section#subpage-content .rct-container { margin-top: 30px; }
+  body.about-us header.subpage-header h1 { font-size: 42px !important; }
+  section#subpage-content h2 { font-size: 25px !important; }
   body.contact-us section#subpage-content .container .col-md-7 {
     padding-left: 15px !important;
   }
-  .get-in-touch-form {
-    margin-top: 20px;
-  }
+  .get-in-touch-form { margin-top: 20px; }
   form .g-recaptcha iframe {
     transform: scale(1.48);
     -webkit-transform: scale(1.48);
@@ -808,9 +607,7 @@
   section#course-parent-category {
     ul.sidebar-category-lists {
       > li {
-        .cat-title {
-        	margin-left: 40px;
-        }
+        .cat-title { margin-left: 40px; }
       }
     }
     ul.sub-category-listing {
@@ -820,9 +617,7 @@
         margin-right: 15px !important;
         height: auto;
       }
-      li:nth-child(2n) {
-        margin-right: 0 !important;
-      }
+      li:nth-child(2n) { margin-right: 0 !important; }
     }
   }
   section#course-sub-category {
@@ -833,22 +628,14 @@
     }
     .course-subcategory-sidebar {
 	    margin-top: 25px;
-      .col {
-        padding: 0;
-      }
-      .rct-container {
-        margin-top: 25px !important;
-      }
+      .col { padding: 0; }
+      .rct-container { margin-top: 25px !important; }
     }
   }
   body.sub-category.courses {
-    .course-banner-image {
-      height: 155px !important;
-    }
+    .course-banner-image { height: 155px !important; }
     nav#scroll-to-section {
-      ul.child-items-navigation li {
-        margin-right: 19px !important;
-      }
+      ul.child-items-navigation li { margin-right: 19px !important; }
     }
   }
   body.outline.course {
@@ -862,84 +649,61 @@
           left: 0 !important;
           padding: 15px;
           .col-8, .col-4 {
-            max-width: 100% !important;
-            flex: none !important;
+            max-width: 100% !important; flex: none !important;
           }
         }
         .export-share-button {
-          float: none !important;
-          margin: 20px 0;
-          a {
-            text-align: center;
-          }
+          float: none !important; margin: 20px 0;
+          a { text-align: center; }
         }
       }
     }
     section#tabs {
       .container {
         .row {
-          .col-8 {
-            padding-right: 15px !important;
-          }
+          .col-8 { padding-right: 15px !important; }
           .col-8, .col-4 {
-            max-width: 100%;
-            flex: none;
+            max-width: 100%; flex: none;
             .outline-sidbar {
-            	position: relative !important;
-            	transform: none !important;
+            	position: relative !important; transform: none !important;
               .related-courses, .client-testimonials {
                 margin-top: 15px !important;
-
               }
               .getStarted-form {
               	position: relative !important;
               	transform: none !important;
                 width: 100%;
               }
-              .related-course {
-              	margin-top: 0;
-              }
+              .related-course { margin-top: 0; }
             }
             .custom-tabs {
-              ul.nav-tabs li.nav-item a {
-              	margin-right: 40px !important;
-              }
+              ul.nav-tabs li.nav-item a { margin-right: 40px !important; }
             }
           }
           .tab-content {
             .tab-pane .container {
-          	  padding: 30px 0 !important;
-              margin: 0 !important;
+          	  padding: 30px 0 !important; margin: 0 !important;
             }
             .search-centre .form-group .col-4 {
-              padding-left: 15px !important;
-              margin-top: 15px;
+              padding-left: 15px !important; margin-top: 15px;
             }
             .training-centres.container {
               .info-content {
-                width: 50%;
-                margin-left: 15px !important;
+                width: 50%; margin-left: 15px !important;
               }
               padding: 0px 15px !important;
-              .col-12:last-child {
-                margin-bottom: 0;
-              }
+              .col-12:last-child { margin-bottom: 0; }
             }
             ul.location-lists {
               margin: 30px 0 !important;
-              li .location-label {
-                width: 50%;
-              }
-              li:last-child {
-                margin-bottom: 0;
-              }
+              li .location-label { width: 50%; }
+              li:last-child { margin-bottom: 0; }
             }
             .whats-include {
               .row {
                 margin-bottom: 0 !important;
                 ul.included-listing li .include-label {
-                  width: 50% !important;
-                  font-size: 18px;
+                  width: 50% !important; font-size: 18px;
                 }
               }
             }
@@ -949,22 +713,13 @@
     }
   }
   section#subpage-content.courses {
-    .course-category-image img {
-  	  width: 100%;
-    }
+    .course-category-image img { width: 100%; }
   }
-  .blog-fullwidth-content img {
-  	width: calc(50% - 6px) !important;
-  }
+  .blog-fullwidth-content img { width: calc(50% - 6px) !important; }
   .aboutUs-fullItem-View {
     section#full-item-view-content {
-      .col {
-        max-width: 100%;
-      	flex: none;
-      }
-      .full-item.background-image {
-        margin-bottom: 15px;
-      }
+      .col { max-width: 100%; flex: none; }
+      .full-item.background-image { margin-bottom: 15px; }
     }
   }
   .aboutUs-fullItem-View #full-item-view-content ul li .full-item.background-image {
@@ -975,43 +730,23 @@
   	flex: none !important;
   	margin: 0 !important;
   }
-  .select-category .ember-basic-dropdown-trigger {
-	  width: 92% !important;
-  }
-  body.tips-and-tricks .subpage-thumbnails .background-image {
-    height: 310px;
-  }
-  section#footer .menu-footer {
-	  max-width: 100%;
-	  flex: none;
-  }
-  section#footer .social-footer {
-    max-width: 100%;
-    flex: none;
-  }
-  section#footer ul.footer-menu li {
-	  margin-right: 32px;
-  }
-  .business-header .search-banner .input-group {
-	  max-width: 100%;
-  }
+  .select-category .ember-basic-dropdown-trigger { width: 92% !important; }
+  body.tips-and-tricks .subpage-thumbnails .background-image { height: 310px; }
+  section#footer .menu-footer { max-width: 100%; flex: none; }
+  section#footer .social-footer { max-width: 100%; flex: none; }
+  section#footer ul.footer-menu li { margin-right: 32px; }
+  .business-header .search-banner .input-group { max-width: 100%; }
   .banner-content .search-banner .ember-power-select-trigger {
 	  width: 82% !important;
   }
   section#subpage-content.courses {
-    .col-md-4.courseCategories-container {
-	    max-width: 100%;
-    }
+    .col-md-4.courseCategories-container { max-width: 100%; }
   }
   body.outline.course #outline-header .outline-container-holder {
-    .container.outline {
-      padding: 40px 15px !important;
-    }
+    .container.outline { padding: 40px 15px !important; }
     .breadcrumb > li {
       font-size: 18px !important;
-      > a {
-        font-size: 18px !important;
-      }
+      > a { font-size: 18px !important; }
     }
   }
   section#subpage-content.courses {
@@ -1027,11 +762,8 @@
   .public-sql-course {
     .public-sql-course-banner {
       .col-6 {
-        max-width: 100%;
-        flex: none;
-        h1 {
-          font-size: 35px !important;
-        }
+        max-width: 100%; flex: none;
+        h1 { font-size: 35px !important; }
       }
       .bookingForm-container {
         position: relative !important;
@@ -1039,51 +771,33 @@
         top: 0 !important;
         transform: none !important;
         margin-top: 0 !important;
-        h4 {
-        	text-align: left !important;
-        }
+        h4 { text-align: left !important; }
       }
-      table.table tbody tr td span {
-        font-size: 16px;
-      }
+      table.table tbody tr td span { font-size: 16px; }
     }
-    section#courseOutline-link .course-outline {
-  	  width: 100% !important;
-    }
+    section#courseOutline-link .course-outline { width: 100% !important; }
   }
   section#branding-logo {
 	  padding-top: 30px !important;
-    .branding-logos {
-    	margin: 0 !important;
-    }
+    .branding-logos { margin: 0 !important; }
     .branding-logos ul li {
-  	  width: calc(50% - 10px) !important;
-      margin-right: 20px !important;
-      &:nth-child(2n) {
-        margin-right: 0 !important;
-      }
+  	  width: calc(50% - 10px) !important; margin-right: 20px !important;
+      &:nth-child(2n) { margin-right: 0 !important; }
     }
   }
   section#our-course-benefits {
     .course-benefits {
       ul li {
-      	width: 50% !important;
-      	margin-bottom: 15px;
-        h4 {
-          font-size: 22px;
-        }
+      	width: 50% !important; margin-bottom: 15px;
+        h4 { font-size: 22px; }
       }
     }
   }
   .reading-training-center {
-    h2 {
-	    margin-bottom: 25px !important;
-    }
+    h2 { margin-bottom: 25px !important; }
   }
   section#map-section {
-    #map iframe {
-	    height: 300px !important;
-    }
+    #map iframe { height: 300px !important; }
   }
   section#gallery .gallery ul li {
   	width: 100% !important;
@@ -1092,18 +806,11 @@
   }
   section#course-outline {
     .course-outline {
-      h2 {
-        margin-bottom: 20px !important
-      }
+      h2 { margin-bottom: 20px !important }
       .col-10, .col-2 {
-      	max-width: 100%;
-      	flex: none;
-      	float: none;
+      	max-width: 100%; flex: none; float: none;
       }
-      a.course-outline {
-      	width: 100%;
-      	margin-top: 20px;
-      }
+      a.course-outline { width: 100%; margin-top: 20px; }
     }
   }
   .case-card-listing div.custom-card {
@@ -1111,19 +818,13 @@
   	margin-right: 0 !important;
   	margin-bottom: 15px !important;
     height: auto !important;
-    .button-wrapper {
-      position: relative !important;
-      margin-top: 25px;
-    }
+    .button-wrapper { position: relative !important; margin-top: 25px; }
   }
   section#footer {
     .copyright-text {
       .copyright-p {
-        position: relative !important;
-        text-indent: 0 !important;
-        p:nth-child(1) {
-          text-indent: 0 !important;
-        }
+        position: relative !important; text-indent: 0 !important;
+        p:nth-child(1) { text-indent: 0 !important; }
       }
     }
     .navbar-brand.footer {
@@ -1138,104 +839,63 @@
 @media (max-width: 480px) {
   section#top {
     .top-buttons {
-      a.btn {
-        width: 100%;
-        margin-top: 10px;
-      }
+      a.btn { width: 100%; margin-top: 10px; }
     }
   }
-  nav .navbar-header .navbar-brand {
-    height: 45px;
-    width: 219px;
-  }
-  .top-info-wrapper .top-info ul.info .col-md-2 {
-    width: auto;
-  }
-  .top-info-wrapper .top-info ul.info li {
-    margin-right: 0;
-  }
+  nav .navbar-header .navbar-brand { height: 45px; width: 219px; }
+  .top-info-wrapper .top-info ul.info .col-md-2 { width: auto; }
+  .top-info-wrapper .top-info ul.info li { margin-right: 0; }
+  .top-info-wrapper .top-info ul.info { text-align: left !important; }
   .top-info-wrapper .top-info ul.info {
-    text-align: left !important;
+    text-align: left !important; padding: 0 15px !important;
   }
-  .top-info-wrapper .top-info ul.info {
-    text-align: left !important;
-    padding: 0 15px !important;
-  }
-  .banner-content h1, section#benefits h1 {
-    font-size: 37px !important;
-  }
-  .banner-content .pre-text p {
-    font-size: 18px !important;
-  }
-  section#branding .container h3 {
-    font-size: 29px !important;
-  }
-  section#footer ul.footer-menu > li {
-    width: 100%;
-    margin-bottom: 5px;
-  }
+  .banner-content h1, section#benefits h1 { font-size: 37px !important; }
+  .banner-content .pre-text p { font-size: 18px !important; }
+  section#branding .container h3 { font-size: 29px !important; }
+  section#footer ul.footer-menu > li { width: 100%; margin-bottom: 5px; }
   section#benefits .container .row.mt-5 > .col-md-4:last-child {
     margin-bottom: 0 !important;
   }
-  section#footer ul.info li {
-    margin-right: 0;
-  }
+  section#footer ul.info li { margin-right: 0; }
   body.tips-and-tricks .custom-card-holder .card-title {
     font-size: 20px !important;
   }
   body.full-item-view header.item-header-title h1 {
-    text-align: center;
-    font-size: 40px !important;
+    text-align: center; font-size: 40px !important;
   }
   form .g-recaptcha iframe {
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9);
+    transform: scale(0.9); -webkit-transform: scale(0.9);
   }
-  .get-in-touch-form form .form-group .btn.submit-button {
-    margin-top: 0;
-  }
+  .get-in-touch-form form .form-group .btn.submit-button { margin-top: 0; }
   body.contact-us form .form-row:nth-child(5) .form-group {
     margin-bottom: 0 !important;
   }
   body.contact-us form .form-row:nth-child(4) .form-group {
     margin-bottom: 9px !important;
   }
-  div.g-recaptcha > div {
-    height: 71px !important;
-  }
-  .get-in-touch-form {
-    padding-bottom: 24px !important;
-  }
-  section#subpage-content form input[type="text"], section#subpage-content form input[type="text"]::placeholder,
-  section#subpage-content form .ember-power-select-trigger, section#subpage-content form textarea, section#subpage-content form textarea::placeholder {
-    font-size: 16px !important;
-  }
+  div.g-recaptcha > div { height: 71px !important; }
+  .get-in-touch-form { padding-bottom: 24px !important; }
+  section#subpage-content form input[type="text"],
+  section#subpage-content form input[type="text"]::placeholder,
+  section#subpage-content form .ember-power-select-trigger,
+  section#subpage-content form textarea,
+  section#subpage-content form textarea::placeholder { font-size: 16px !important; }
   section#subpage-content form .ember-power-select-trigger {
     padding: 0.475rem 0.75rem;
   }
   section#subpage-content.courses {
-    .col-md-6 {
-    	max-width: 100% !important;
-    	margin-right: 0 !important;
-    }
+    .col-md-6 { max-width: 100% !important; margin-right: 0 !important; }
   }
   section#course-parent-category {
     ul.sub-category-listing {
-      li {
-      	width: 100%;
-      	margin-right: 0 !important;
-      }
+      li { width: 100%; margin-right: 0 !important; }
     }
   }
   body.outline.course {
     #outline-header, .subpage-header {
       .outline-container-holder, .container {
-        h1 {
-          font-size: 24px !important;
-        }
-        .breadcrumb > li, .breadcrumb > li > a {
-          font-size: 20px !important;
-        }
+        h1 { font-size: 24px !important; }
+        .breadcrumb > li, .breadcrumb > li > a { font-size: 20px !important; }
         .container.outline {
           .export-share-button a {
             display: block !important;
@@ -1248,23 +908,16 @@
     section#tabs > .container > .row > .col-8 {
       .custom-tabs {
         ul.nav-tabs li.nav-item a {
-        	font-size: 16px !important;
-        	margin-right: 30px !important;
+        	font-size: 16px !important; margin-right: 30px !important;
         }
-        ul.nav-tabs li:last-child.nav-item a {
-          margin-right: 0 !important;
-        }
+        ul.nav-tabs li:last-child.nav-item a { margin-right: 0 !important; }
         .tab-content {
           ul.location-lists li {
             width: 100% !important;
-            .location-label {
-              width: auto !important;
-            }
+            .location-label { width: auto !important; }
           }
           .training-centres {
-            .col-12 {
-              padding: 15px;
-            }
+            .col-12 { padding: 15px; }
             .info-content {
               position: relative;
               top: 0;
@@ -1273,18 +926,14 @@
               margin-left: 0 !important;
             }
             .place-image img {
-            	float: none !important;
-            	width: 100%;
-              margin-top: 15px;
+            	float: none !important; width: 100%; margin-top: 15px;
             }
           }
         }
       }
     }
   }
-  nav .navbar-header .navbar-brand {
-	  margin-right: 0;
-  }
+  nav .navbar-header .navbar-brand { margin-right: 0; }
   .blog-fullwidth-content img {
 	  width: 100% !important;
 	  margin: 15px 0 30px 0 !important;
@@ -1292,53 +941,27 @@
   }
   .blog-fullwidth-content ul > li h4, .blog-fullwidth-content ul > li h4,
   .blog-fullwidth-content ul > li h4, .blog-fullwidth-content ul > li p {
-	  float: none !important;
-	  width: 100% !important;
+	  float: none !important; width: 100% !important;
   }
-  .full-item.background-image {
-	  height: 200px !important;
-  }
-  .select-category .ember-basic-dropdown-trigger {
-	  width: 87% !important;
-  }
-  body.tips-and-tricks .subpage-thumbnails .background-image {
-	  height: 178px;
-  }
-  .banner-content .search-banner .ember-power-select-trigger {
-	  width: 82% !important;
-  }
+  .full-item.background-image { height: 200px !important; }
+  .select-category .ember-basic-dropdown-trigger { width: 87% !important; }
+  body.tips-and-tricks .subpage-thumbnails .background-image { height: 178px; }
+  .banner-content .search-banner .ember-power-select-trigger { width: 82% !important; }
   .blog-fullwidth-content ol.steps-process li .step-count {
-    position: relative;
-    transform: none;
-    left: 0;
-    margin: 15px auto;
+    position: relative; transform: none; left: 0; margin: 15px auto;
   }
-  .featured-article-in-the-header h3.article-title-in-the-header {
-	  font-size: 27px;
-  }
-  .booking-form table.table tr td {
-  	width: 100%;
-  	display: flex;
-  }
+  .featured-article-in-the-header h3.article-title-in-the-header { font-size: 27px; }
+  .booking-form table.table tr td { width: 100%; display: flex; }
   section#subpage-content.courses {
     .col-md-4 {
       margin-bottom: 15px !important;
-      ul.course-sub-category-listing li .course-subCategory-title {
-      	margin-left: 30px;
-      }
+      ul.course-sub-category-listing li .course-subCategory-title { margin-left: 30px;}
     }
-    h3.course-category-title {
-      font-size: 18px;
-    }
+    h3.course-category-title { font-size: 18px; }
   }
   section#branding-logo .branding-logos ul li {
-  	width: 100% !important;
-  	margin: 0 0 20px 0 !important;
+  	width: 100% !important; margin: 0 0 20px 0 !important;
   }
-  section#our-course-benefits .course-benefits ul li {
-	  width: 100% !important;
-  }
-  .custom-card h3 {
-	  font-size: 24px;
-  }
+  section#our-course-benefits .course-benefits ul li { width: 100% !important; }
+  .custom-card h3 { font-size: 24px;}
 }
