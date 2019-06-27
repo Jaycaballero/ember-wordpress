@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 import { hash } from 'rsvp';
 
 export default Route.extend({
-  titleToken: 'Public SQL Course',
+  titleToken: 'SQL Training Course | SQL Query Structure',
 
   model(params) {
     return hash({
