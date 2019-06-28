@@ -385,12 +385,17 @@
               align-items: normal;
               display: table;
               margin: auto;
+              position: relative;
+              top: 0;
+              transform: none;
+              left: 0;
             }
             .booking {
               position: relative;
               top: 0;
               transform: none;
               width: 100% !important;
+              right: 0;
             }
           }
         }
@@ -1084,7 +1089,8 @@
           span.date, div.location { display: table; margin: auto; }
           ul.data-listing .list-wrapper li {
             width: 100% !important;
-            .booking { position: relative !important; transform: none !important; width: 100% !important; }
+            div.price { position: relative; top: 0; transform: none; left: 0; }
+            .booking { position: relative !important; transform: none !important; width: 100% !important; right: 0; }
           }
         }
       }
