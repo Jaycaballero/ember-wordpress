@@ -25,7 +25,7 @@ section#branding-logo.py-5
   .container
     .row
       .col
-        .branding-logos.my-5.d-table.w-100
+        .branding-logos.d-table.w-100
           = sqlCourse.sliderBranding
 
 section#sql-course
@@ -75,6 +75,7 @@ section#map-section
   = public-course/location-schedules [
     location=mapLocation
     onSelectBooking=(action "selectBooking")
+    ourCourseBenefits=ourCourseBenefits
   ]
 
 section#private-sql-training.py-3

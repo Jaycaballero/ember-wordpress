@@ -1,3 +1,4 @@
+= log ourCourseBenefits
 .container.my-4
   .row
     .col-8.booking-table
@@ -39,15 +40,7 @@
       .ourCourse-benefits
         h5 Our Course Benefits
         ul.benefits-listing.p-0
-          li
-            i.fas.fa-laptop
-            | Hand-on Training
-          li
-            i.fas.fa-book-reader
-            | Comprehensive Manual
-          li
-            i.fas.fa-utensils
-            | Refreshment & Lunch
-          li
-            i.fas.fa-info
-            | Post Course Support
+          = each ourCourseBenefits as |benefit|
+            li
+              img src=benefit.better_featured_image.source_url alt="image"
+              = html-safe benefit.title
