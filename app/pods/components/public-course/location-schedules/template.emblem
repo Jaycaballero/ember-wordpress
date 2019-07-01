@@ -1,4 +1,3 @@
-= log ourCourseBenefits
 .container.my-4
   .row
     .col-8.booking-table
@@ -9,9 +8,10 @@
           tr.legend
             td  Dates
             td  Price
+            td  Locations
             td
 
-          = each location.acf.details as |bookingInfo|
+          = each bookings as |bookingInfo|
             tr
               td.date
                 .data
@@ -23,6 +23,11 @@
                   .d-none.mobile-label-block
                     | Price:
                   = bookingInfo.price
+              td
+                .data.Location
+                  .d-none.mobile-label-block
+                    | Location:
+                  = bookingInfo.locationTitle
               td
                 = bs-button [
                   class="btn btn-primary book-now w-100"
