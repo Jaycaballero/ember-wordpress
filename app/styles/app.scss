@@ -254,6 +254,7 @@ section#footer {
       }
       &:hover a { color: #e84d3d !important; text-decoration: none;}
       &:last-child { margin-right: 0 !important; }
+      i { display: none; }
     }
   }
   ul.footer-social-icons {
@@ -786,9 +787,11 @@ body.sub-category.courses {
       h5.title { font-family: calibri-bold; color: #005f8b; }
       .choose-icon {
         position: absolute;
-        > i { font-size: 45px; color: #e84d3d; }
       }
-      .title-content { margin-left: 73px; }
+      .title-content { margin-left: 73px; width: 70%;}
+      &:not(:nth-child(1)) .choose-icon img {
+        width: 75%;
+      }
     }
   }
   section#subCat-ourLocations {
@@ -810,6 +813,7 @@ body.sub-category.courses {
       }
       .location-title { font-size: 23px; color: #005f8b; }
       .get-directions { color: #005f8b; text-decoration: underline; }
+      p { margin-bottom: 0; }
     }
   }
   section#more-information {
@@ -854,8 +858,12 @@ body.sub-category.courses {
       }
     }
     p { color: #005f8b; }
-    .phone, .email > a { font-size: 23px; color: #005f8b; }
-    .phone i, .email i { color: #e84d3d; font-size: 30px; }
+    ul.contact-infos li {
+      margin-bottom: 5px;
+      list-style: none;
+      p, a { font-size: 23px; color: #005f8b; margin-bottom: 0;}
+      i { color: #e84d3d; font-size: 30px; margin-right: 15px; }
+    }
   }
 }
 body.outline.course {

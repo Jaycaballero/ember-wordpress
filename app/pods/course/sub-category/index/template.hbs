@@ -43,29 +43,31 @@
   </div>
 </section>
 <section id="why-choose">
-  <div class="container pt-5">
-    <div class="my-5">
-      <div class="row">
-        <div class="col-6">
-          <div class="why-chooose">
-            <h1 class="mb-3">Why Choose</h1>
-            <div class="logo mb-3">
-              <img src="/images/systematix-logo2.png" alt="image" />
-            </div>
-            <div class="rating mb-3">
-              <img src="/assets/images/stars.png" alt="image" />
-            </div>
-            <div class="reviews">4.7 Goole Reviews, <a href="#">view all</a></div>
+  <div class="container py-5">
+    <div class="row py-5">
+      <div class="col-6">
+        <div class="why-chooose">
+          <h1 class="mb-3">Why Choose</h1>
+          <div class="logo mb-3">
+            <img src="/images/systematix-logo2.png" alt="image" />
           </div>
-        </div>
-        <div class="col-6">
-          {{components/testimonials/subcat-testimonials}}
+          <div class="rating mb-3">
+            <img src="/assets/images/stars.png" alt="image" />
+          </div>
+          <div class="reviews">4.7 Goole Reviews, <a href="#">view all</a></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col py-5">
-          {{components/skill-page/subcat-whychoose}}
-        </div>
+      <div class="col-6">
+        {{components/testimonials/subcat-testimonials
+          testimonials = testimonials
+        }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col py-5">
+        {{components/skill-page/subcat-whychoose
+          whyChoose = whyChoose
+        }}
       </div>
     </div>
   </div>
@@ -76,7 +78,9 @@
       <div class="col">
         <h1 class="text-center">Our Locations</h1>
         <div class="text-center"><p>We cover a wide range of locations and could be on your door stop.</p></div>
-        {{components/skill-page/subcat-our-locations}}
+        {{components/skill-page/subcat-our-locations
+          ourLocations = ourLocations
+        }}
       </div>
     </div>
   </div>
@@ -86,12 +90,9 @@
     <div class="row">
       <div class="col py-5">
         <h1>Looking for more information?</h1>
-        <ul class="moreInformation-lists p-0 d-table w-100 mt-4">
-          <li>What is Excel?</li>
-          <li>The Benefits of Excel</li>
-          <li>How do I book an Excel course?</li>
-          <li>Job roles that use Excel</li>
-        </ul>
+        {{components/skill-page/more-info
+          moreInformations = moreInformations
+        }}
       </div>
     </div>
   </div>
@@ -108,13 +109,11 @@
     <div class="col-6 pl-5">
       <h1>Or get in touch:</h1>
       <p>Our team are always at hand to help with your training needs.</p>
-      <div class="phone mb-3">
-        <i class="fas fa-phone mr-3"></i> 0118 324 3000
-      </div>
-      <div class="email">
-        <i class="fas fa-envelope mr-3"></i>
-        <a href="mailto:request@systematix.co.uk">request@systematix.co.uk</a>
-      </div>
+      <ul class="contact-infos p-0">
+        {{#each contactInfos as |contactinfo| }}
+          <li>{{html-safe contactinfo.content}}</li>
+        {{/each}}
+      </ul>
     </div>
   </div>
 </div>
