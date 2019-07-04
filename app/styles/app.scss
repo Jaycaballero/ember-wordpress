@@ -711,12 +711,12 @@ body.sub-category.courses {
   }
   section#course-sub-category {
     .course-content .card {
-      padding: 0;
+      padding: 0; background-color: #f5f5f5;
       &:hover { box-shadow: none; }
     }
     .card-title {
-      padding: 95px 30px; font-family: calibri-bold; margin-bottom: 0;
-      h5 { font-size: 35px; color: #fff; }
+      padding: 95px 30px; margin-bottom: 0;
+      h3 { font-size: 35px; color: #fff; }
     }
     .card-text {
       padding: 30px;
@@ -759,6 +759,103 @@ body.sub-category.courses {
       }
     }
     .request-a-call-back-form, .get-started-form { background-color: #f1f2f2; }
+  }
+  section#why-choose {
+	  background-color: #ddf0f8;
+    .why-chooose {
+      h1 { font-size: 45px !important; font-family: calibri-regular !important; color: #005f8b; }
+      .reviews, .reviews a {
+        color: #e84d3d; font-size: 18px; font-family: calibri-bold;
+      }
+      .reviews a { text-decoration: underline; }
+    }
+    ul.testimonial {
+      li {
+        float: left; list-style: none;
+        .fas.fa-quote-left { color: #005f8b; }
+      }
+      li.quote-icon { width: 5%; margin-right: 10px; }
+      li.testimonial-content {
+        width: 90%;
+        .person { font-family: calibri-bold; color: #005f8b; }
+      }
+      .testimonial-content p { color: #005f8b; }
+    }
+    ul.whyChoose-listing li {
+      float: left; width: 50%; list-style: none; margin-bottom: 15px;
+      h5.title { font-family: calibri-bold; color: #005f8b; }
+      .choose-icon {
+        position: absolute;
+        > i { font-size: 45px; color: #e84d3d; }
+      }
+      .title-content { margin-left: 73px; }
+    }
+  }
+  section#subCat-ourLocations {
+    h1 {
+      font-size: 45px !important;
+      color: #005f8b; font-family:
+      calibri-regular !important;
+    }
+    ul.subCat-locationListing li {
+    	list-style: none;
+      float: left;
+      width: calc(33.33% - 10px);
+      margin-right: 15px;
+      &:last-child { margin-right: 0; }
+      .card-footer {
+        border: 1px solid #dcdedf;
+        background-color: #f5f5f5;
+        height: 160px;
+      }
+      .location-title { font-size: 23px; color: #005f8b; }
+      .get-directions { color: #005f8b; text-decoration: underline; }
+    }
+  }
+  section#more-information {
+    background: linear-gradient( rgba(0, 95, 139, 0.7), rgba(0, 95, 139, 0.7) ), url("/images/information.jpg");
+    background-position: center center;
+    background-size: cover;
+    h1 {
+      font-size: 45px !important;
+      font-family: calibri-regular !important;
+      color: #70d1ef;
+    }
+    ul.moreInformation-lists li {
+      list-style: none; color: #fff !important; float: left; width: 50%;
+      &::before {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        margin-right: 15px;
+        font-weight: 900;
+        font-size: 25px;
+        color: #70d1ef;
+      }
+    }
+  }
+  section#request-callback {
+	  background-color: #ddf0f8;
+    h1 {
+      font-family: calibri-regular !important;
+      font-size: 45px !important;
+      color: #005f8b;
+    }
+    .get-started-form {
+      padding: 5px 0 !important;
+      > h2 { display: none; }
+      .form-group {
+        margin-bottom: 10px;
+        .form-control {
+          border: 2px solid #bfd8e3 !important;
+        }
+        .btn.submit-button {
+        	width: 25%;
+        }
+      }
+    }
+    p { color: #005f8b; }
+    .phone, .email > a { font-size: 23px; color: #005f8b; }
+    .phone i, .email i { color: #e84d3d; font-size: 30px; }
   }
 }
 body.outline.course {

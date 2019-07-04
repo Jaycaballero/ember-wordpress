@@ -28,18 +28,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <ul class="scrollMenu-items mb-0 p-0">
-          <li>Are you looking for?</li>
-          <li>
-            {{#scroll-to href="#"}}Standard Excel Courses{{/scroll-to}}
-          </li>
-          <li>
-            {{#scroll-to href="#"}}Business Intelligence Excel Courses{{/scroll-to}}
-          </li>
-          <li>
-            {{#scroll-to href="#"}}Excel VBA Courses{{/scroll-to}}
-          </li>
-        </ul>
+        {{components/skill-page/subcat-menu-items}}
       </div>
     </div>
   </div>
@@ -48,319 +37,85 @@
   <div class="container py-5">
     <div class="row">
       <div class="col course-subcategory-content">
-        <div class="course-content">
-          <div class="row">
-            <div class="col-9">
-              <h2>Which Excel course is right for you?</h2>
-              <p>
-                We have bags of experience from teaching Excel over the last 20
-                years and we can help you choose the most useful course for your
-                purposes.
-              </p>
+        {{components/skill-page/subcat-course-group}}
+      </div>
+    </div>
+  </div>
+</section>
+<section id="why-choose">
+  <div class="container pt-5">
+    <div class="my-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="why-chooose">
+            <h1 class="mb-3">Why Choose</h1>
+            <div class="logo mb-3">
+              <img src="/images/systematix-logo2.png" alt="image" />
             </div>
-            <div class="col-3">
-              <img class="subCategory-image float-right" src="/images/dummy-image.png" alt="image" />
+            <div class="rating mb-3">
+              <img src="/assets/images/stars.png" alt="image" />
             </div>
+            <div class="reviews">4.7 Goole Reviews, <a href="#">view all</a></div>
           </div>
-          <h2>Standard Excel Courses</h2>
-          <div class="row-fluid d-table mb-5">
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #6394ad;">
-                  <h5>Excel Introduction</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #427c9f;">
-                  <h5>Excel Intermediate</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #124257;">
-                  <h5>Excel Advanced</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-          </div>
-          <h2>Business Intelligence Excel Courses</h2>
-          <div class="row-fluid d-table mb-5">
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #7fb583;">
-                  <h5>Excel Dashboards</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #5aac60;">
-                  <h5>Excel Pivot Tables</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #37863d;">
-                  <h5>Excel PowerPivot</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-          </div>
-          <h2>Excel VBA Courses</h2>
-          <div class="row-fluid d-table mb-5">
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #d1be9e;">
-                  <h5>Excel VBA Essentials</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #cca96d;">
-                  <h5>Excel VBA</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-            <div class="col-4 float-left card mt-4">
-              <div class="card-body p-0">
-                <div class="card-title" style="background-color: #ba9a64;">
-                  <h5>Excel Public Course</h5>
-                </div>
-                <div class="card-text">
-                  <div class="level mb-4">
-                    <i class="fas fa-circle"></i>
-                    <small>Intermediate</small>
-                  </div>
-                  <p>
-                    {{truncate
-                      "This course will provide you with the foundational Excel
-                      knowledge and skills necessary for business today. As you
-                      apply the robust functionality that's part of Excel to your
-                      organization's raw data, you will be able to gain a level of
-                      insight into that data that would have been almost impossible
-                      years ago. Excel helps you organize, calculate, analyze,
-                      revise, amend, and present your data in ways that will help
-                      you and the decision makers in your organization steer
-                      forward in the right direction"
-                      250 true
-                    }}
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#" class="view-outline">
-                  View Outline
-                </a>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div class="col-6">
+          {{components/testimonials/subcat-testimonials}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col py-5">
+          {{components/skill-page/subcat-whychoose}}
         </div>
       </div>
     </div>
   </div>
+</section>
+<section id="subCat-ourLocations">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">Our Locations</h1>
+        <div class="text-center"><p>We cover a wide range of locations and could be on your door stop.</p></div>
+        {{components/skill-page/subcat-our-locations}}
+      </div>
+    </div>
+  </div>
+</section>
+<section id="more-information">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col py-5">
+        <h1>Looking for more information?</h1>
+        <ul class="moreInformation-lists p-0 d-table w-100 mt-4">
+          <li>What is Excel?</li>
+          <li>The Benefits of Excel</li>
+          <li>How do I book an Excel course?</li>
+          <li>Job roles that use Excel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="request-callback">
+<div class="container py-5">
+  <div class="row py-5">
+    <div class="col-6 pr-5">
+      <h1>Request a call back</h1>
+      <div id="subCat-callbackForm">
+        {{forms/get-started-form}}
+      </div>
+    </div>
+    <div class="col-6 pl-5">
+      <h1>Or get in touch:</h1>
+      <p>Our team are always at hand to help with your training needs.</p>
+      <div class="phone mb-3">
+        <i class="fas fa-phone mr-3"></i> 0118 324 3000
+      </div>
+      <div class="email">
+        <i class="fas fa-envelope mr-3"></i>
+        <a href="mailto:request@systematix.co.uk">request@systematix.co.uk</a>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
