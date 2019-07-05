@@ -765,10 +765,7 @@ body.sub-category.courses {
 	  background-color: #ddf0f8;
     .why-chooose {
       h1 { font-size: 45px !important; font-family: calibri-regular !important; color: #005f8b; }
-      .reviews, .reviews a {
-        color: #e84d3d; font-size: 18px; font-family: calibri-bold;
-      }
-      .reviews a { text-decoration: underline; }
+      .reviews { color: #e84d3d; font-weight: bold; }
     }
     ul.testimonial {
       li {
