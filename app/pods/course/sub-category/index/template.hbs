@@ -1,124 +1,129 @@
 {{set-body-class "sub-category courses"}}
-<div itemscope itemtype="http://schema.org/Product">
-  <header class="course-header-banner">
-    {{#if subCategory.bannerImageUrl}}
-      {{#components/courses-background-image
-        class="course-banner-image"
-        imageUrl=subCategory.bannerImageUrl
-      }}
-        {{#course-outline/sub-category-header
-          catTitle=category.title
-          headerSubCatTitle=subCategory.title
+<div itemscope="" itemtype="http://schema.org/Service">
+  <meta itemprop="name" content="Business training">
+  <div id="aggregateRating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <header class="course-header-banner">
+      {{#if subCategory.bannerImageUrl}}
+        {{#components/courses-background-image
+          class="course-banner-image"
+          imageUrl=subCategory.bannerImageUrl
         }}
-        {{/course-outline/sub-category-header}}
-      {{/components/courses-background-image}}
-    {{else if subCategory.categories.firstObject.bannerImageUrl}}
-      {{#components/courses-background-image
-        class="course-banner-image"
-        imageUrl=subCategory.categories.firstObject.bannerImageUrl
-      }}
-        {{#course-outline/sub-category-header
-          catTitle=category.title
-          headerSubCatTitle=subCategory.title
+          {{#course-outline/sub-category-header
+            catTitle=category.title
+            headerSubCatTitle=subCategory.title
+          }}
+          {{/course-outline/sub-category-header}}
+        {{/components/courses-background-image}}
+      {{else if subCategory.categories.firstObject.bannerImageUrl}}
+        {{#components/courses-background-image
+          class="course-banner-image"
+          imageUrl=subCategory.categories.firstObject.bannerImageUrl
         }}
-        {{/course-outline/sub-category-header}}
-      {{/components/courses-background-image}}
-    {{/if}}
-  </header>
-  <section id="scroll-menus" class="py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          {{components/skill-page/subcat-menu-items}}
+          {{#course-outline/sub-category-header
+            catTitle=category.title
+            headerSubCatTitle=subCategory.title
+          }}
+          {{/course-outline/sub-category-header}}
+        {{/components/courses-background-image}}
+      {{/if}}
+    </header>
+    <section id="scroll-menus" class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            {{components/skill-page/subcat-menu-items}}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="course-sub-category">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col course-subcategory-content">
-          {{components/skill-page/subcat-course-group}}
+    </section>
+    <section id="course-sub-category">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col course-subcategory-content">
+            {{components/skill-page/subcat-course-group}}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="why-choose">
-    <div class="container py-5">
-      <div class="row py-5">
-        <div class="col-6">
-          <div class="why-chooose">
-            <h1 class="mb-3">Why Choose</h1>
-            <div class="logo mb-3">
-              <img src="/images/systematix-logo2.png" alt="image" />
-            </div>
-            <div class="rating mb-3">
-              <img src="/assets/images/stars.png" alt="image" />
-              <div class="reviews mt-3" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                Rated <span itemprop="ratingValue">4.7</span> Google Reviews
+    </section>
+    <section id="why-choose">
+      <div class="container py-5">
+        <div class="row py-5">
+          <div class="col-6">
+            <div class="why-chooose">
+              <h1 class="mb-3">Why Choose</h1>
+              <div class="logo mb-3">
+                <img src="/images/systematix-logo2.png" alt="image" />
+              </div>
+              <div class="rating mb-3">
+                <img src="/assets/images/stars.png" alt="image" />
+                <div class="reviews mt-3">Rated <span itemprop="ratingValue">4.7</span></div>
+                <meta itemprop="bestRating" content="5" />
+                <div class="reviews">
+                  <span itemprop="reviewCount">20</span> Google reviews
+                </div>
               </div>
             </div>
           </div>
+          <div class="col-6">
+            {{components/testimonials/subcat-testimonials
+              testimonials = testimonials
+            }}
+          </div>
         </div>
-        <div class="col-6">
-          {{components/testimonials/subcat-testimonials
-            testimonials = testimonials
-          }}
+        <div class="row">
+          <div class="col py-5">
+            {{components/skill-page/subcat-whychoose
+              whyChoose = whyChoose
+            }}
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col py-5">
-          {{components/skill-page/subcat-whychoose
-            whyChoose = whyChoose
-          }}
+    </section>
+    <section id="subCat-ourLocations">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col">
+            <h1 class="text-center">Our Locations</h1>
+            <div class="text-center"><p>We cover a wide range of locations and could be on your door stop.</p></div>
+            {{components/skill-page/subcat-our-locations
+              ourLocations = ourLocations
+            }}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="subCat-ourLocations">
+    </section>
+    <section id="more-information">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col py-5">
+            <h1>Looking for more information?</h1>
+            {{components/skill-page/more-info
+              moreInformations = moreInformations
+            }}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="request-callback">
     <div class="container py-5">
-      <div class="row">
-        <div class="col">
-          <h1 class="text-center">Our Locations</h1>
-          <div class="text-center"><p>We cover a wide range of locations and could be on your door stop.</p></div>
-          {{components/skill-page/subcat-our-locations
-            ourLocations = ourLocations
-          }}
+      <div class="row py-5">
+        <div class="col-6 pr-5">
+          <h1>Request a call back</h1>
+          <div id="subCat-callbackForm">
+            {{forms/get-started-form}}
+          </div>
+        </div>
+        <div class="col-6 pl-5">
+          <h1>Or get in touch:</h1>
+          <p>Our team are always at hand to help with your training needs.</p>
+          <ul class="contact-infos p-0">
+            {{#each contactInfos as |contactinfo| }}
+              <li>{{html-safe contactinfo.content}}</li>
+            {{/each}}
+          </ul>
         </div>
       </div>
     </div>
-  </section>
-  <section id="more-information">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col py-5">
-          <h1>Looking for more information?</h1>
-          {{components/skill-page/more-info
-            moreInformations = moreInformations
-          }}
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="request-callback">
-  <div class="container py-5">
-    <div class="row py-5">
-      <div class="col-6 pr-5">
-        <h1>Request a call back</h1>
-        <div id="subCat-callbackForm">
-          {{forms/get-started-form}}
-        </div>
-      </div>
-      <div class="col-6 pl-5">
-        <h1>Or get in touch:</h1>
-        <p>Our team are always at hand to help with your training needs.</p>
-        <ul class="contact-infos p-0">
-          {{#each contactInfos as |contactinfo| }}
-            <li>{{html-safe contactinfo.content}}</li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+    </section>
   </div>
-  </section>
 </div>
