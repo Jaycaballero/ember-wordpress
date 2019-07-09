@@ -70,7 +70,7 @@
             controlType="textarea"
           ]
       = bs-button [
-        defaultText="Submit to Systematix"
+        defaultText="Book"
         type="primary"
         class="btn-white-hover btn-orange float-right"
         buttonType="submit"
