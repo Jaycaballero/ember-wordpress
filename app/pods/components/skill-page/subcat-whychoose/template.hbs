@@ -1,0 +1,16 @@
+<ul class="whyChoose-listing p-0 d-table w-100 mb-0">
+  {{#each whyChoose as |chooseItem|}}
+    <li>
+      <div class="choose-icon">
+        <img src={{chooseItem.better_featured_image.source_url}} alt="image" />
+      </div>
+      <div class="title-content">
+        <h5 class="title mb-0">{{chooseItem.title}}</h5>
+        <div class="choose-content">
+          {{html-safe chooseItem.content}}
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>
+{{yield}}

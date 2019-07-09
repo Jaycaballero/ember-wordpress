@@ -14,10 +14,14 @@ export default Route.extend({
       ? this.modelFor('course').firstObject
       : this.modelFor('course');
     const subCategory = category.get('subCategories').findBy('slug', model.subCategorySlug);
+    controller.set('contactInfos', model.contactInfos);
     controller.set('coursesOutline', model.courses);
     controller.set('lead', model.crmLead);
     controller.set('category', category);
     controller.set('subCategory', subCategory);
     controller.set('testimonials', model.testimonials);
+    controller.set('whyChoose', model.whyChoose);
+    controller.set('moreInformations', model.moreInformations);
+    controller.set('ourLocations', model.ourLocations);
   }
 });
