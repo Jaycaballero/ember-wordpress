@@ -449,7 +449,15 @@
       }
     }
     section#booking-datas {
-      .booking-table td.date { width: 45% !important; }
+      .booking-table {
+        tr {
+          td.date { width: 45% !important; }
+          td {
+            .data { font-size: 18px; }
+            &:nth-child(4n) { width: 35%; }
+          }
+        }
+      }
       .trainingCentre-info { padding: 20px !important; }
     }
     section#course-content {
