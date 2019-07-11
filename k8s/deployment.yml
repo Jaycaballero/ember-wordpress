@@ -17,6 +17,11 @@ spec:
            configMapKeyRef:
              name: sx-ember-wordpress-config
              key: courses-api-url
+       - name: SITE_HOST
+         valueFrom:
+           configMapKeyRef:
+             name: sx-ember-wordpress-config
+             key: site-host
        ports:
        - containerPort: 4000
 

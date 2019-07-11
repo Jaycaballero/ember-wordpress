@@ -9,12 +9,17 @@ export default Controller.extend({
           set(this, 'tipsAndTricks', data);
         });
     },
-      clearFilter() {
-        return get(this, 'store').query('tipsandtrick', {per_page: 99, order: 'desc'})
-          .then((data) => {
-            set(this, 'tipsAndTricks', data);
-          });
-      }
-
+    clearFilter() {
+      return get(this, 'store').query('tipsandtrick', {per_page: 99, order: 'desc'})
+        .then((data) => {
+          set(this, 'tipsAndTricks', data);
+        });
+    },
+    createLead(lead) {
+      return lead.save()
+        .then(() => {
+          this.send('refreshModel');
+        });
+    }
   }
 });

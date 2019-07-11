@@ -1,0 +1,51 @@
+.container.my-4
+  .row
+    .col-8.booking-table
+      = if location.acf.details
+        h3.location-title
+          location.title
+        table.table
+          tr.legend
+            td  Dates
+            td  Price
+            td  Locations
+            td
+
+          = each bookings as |bookingInfo|
+            tr
+              td.date
+                .data
+                  .d-none.mobile-label-block
+                    | Date:
+                  = bookingInfo.date
+              td
+                .data.price
+                  .d-none.mobile-label-block
+                    | Price:
+                  = bookingInfo.price
+              td
+                .data.Location
+                  .d-none.mobile-label-block
+                    | Location:
+                  = bookingInfo.locationTitle
+              td
+                = bs-button [
+                  class="btn btn-primary book-now w-100"
+                  role="button"
+                  onClick=(action onSelectBooking bookingInfo location)
+                ]
+                  | Book Now
+
+    .col-4.trainingCentre-info
+      = if location.acf.training_centre
+        = each location.acf.training_centre as |Centre|
+          .reading-training.mb-5
+            = if Centre.our_training_centre
+              = html-safe Centre.our_training_centre
+      .ourCourse-benefits
+        h5 Our Course Benefits
+        ul.benefits-listing.p-0
+          = each ourCourseBenefits as |benefit|
+            li
+              img src=benefit.better_featured_image.source_url alt="image"
+              = html-safe benefit.title

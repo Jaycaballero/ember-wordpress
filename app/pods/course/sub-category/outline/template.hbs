@@ -1,6 +1,13 @@
 {{set-body-class "outline course"}}
 <header id="outline-header" class="position-relative">
-  <div class="outline-container-holder">
+  {{#components/outline-background-image
+    class="outline-container-holder background"
+    imageUrl=(if course.bannerImageUrl course.bannerImageUrl
+    (if course.subCategories.firstObject.bannerImageUrl
+      course.subCategories.firstObject.bannerImageUrl
+      course.categories.firstObject.bannerImageUrl
+    ))
+  }}
     <div class="container outline">
       <div class="row">
         <div class="col-8">
@@ -8,7 +15,7 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
                 {{#link-to "course" course.categories.firstObject.slug}}
-                  {{course.categories.firstObject.title}}
+                  {{course.categories.firstObject.title}} Training
                 {{/link-to}}
               </li>
               <li class="breadcrumb-item">
@@ -23,35 +30,22 @@
           </nav>
           <h1 class="display-3 text-white mb-2">{{course.title}}</h1>
           <ul class="course-header-info p-0 text-white">
-            <li><strong>Level:</strong> {{course.levels}}</li>
-            <li><strong>Duration:</strong> {{format-duration course.days}}</li>
+            {{#if course.levels}}
+              <li><strong>Level:</strong> {{course.levels}}</li>
+            {{/if}}
+            {{#if course.days}}
+              <li><strong>Duration:</strong> {{format-duration course.days}}</li>
+            {{/if}}
           </ul>
         </div>
         <div class="col-4">
           <div class="export-share-button float-right">
             <a href={{course.pdfUrl}} target="_blank" rel="noopener"><i class="fas fa-file-pdf mr-3"></i>Download PDF</a>
-            <a href="#"><i class="fas fa-share-alt mr-3"></i>Share this</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  {{#if course.bannerImageUrl}}
-    {{components/outline-background-image
-      class="background-image course-banner-image background"
-      imageUrl=course.bannerImageUrl
-    }}
-  {{else if course.subCategories.firstObject.bannerImageUrl}}
-    {{components/outline-background-image
-      class="background-image course-banner-image background"
-      imageUrl=course.subCategories.firstObject.bannerImageUrl
-    }}
-  {{else if course.categories.firstObject.bannerImageUrl}}
-    {{components/outline-background-image
-      class="background-image course-banner-image background"
-      imageUrl=course.categories.firstObject.bannerImageUrl
-    }}
-  {{/if}}
+  {{/components/outline-background-image}}
 </header>
 <section id="tabs">
   <div class="container">
@@ -62,7 +56,7 @@
             {{#tab.pane title="Overview"}}
               {{outline-tabs/overview course=course}}
             {{/tab.pane}}
-            {{#tab.pane title="Whats Included"}}
+            {{#tab.pane title="What's Included"}}
               {{outline-tabs/whats-include}}
             {{/tab.pane}}
           {{/bs-tab}}
@@ -70,8 +64,15 @@
       </div>
       <div class="col-4">
         <div class="outline-sidbar">
-          {{forms/get-started-form}}
-          {{outline-sidebar/related-course}}
+          {{forms/get-started-form
+            courseName=course.title
+            lead=lead
+            onSubmit=(action "createLead")
+          }}
+          {{outline-sidebar/related-course
+            currentCourseId=course.id
+            courses=subCategory.courses
+          }}
           {{outline-sidebar/testimonials}}
         </div>
       </div>

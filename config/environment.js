@@ -2,12 +2,13 @@
 
 module.exports = function(environment) {
   let ENV = {
-    wordpressHost: 'https://newdev.systematix.co.uk/',
+    wordpressHost: process.env.SITE_HOST,
     modulePrefix: 'systematix',
     podModulePrefix: 'systematix/pods',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'router-scroll',
+    historySupportMiddleware: true,
     'ember-cli-google': {
       recaptcha: {
         siteKey: '6Lfu5ogUAAAAAD0n-fJta20GLvMoWEtacLCSgjW7'

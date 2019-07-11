@@ -3,6 +3,9 @@ import ENV from '../../systematix/config/environment';
 export default function() {
 
   this.passthrough('/https://newdev.systematix.co.uk/**');
+  this.passthrough('/https://www3.systematix.co.uk/**');
+  this.passthrough('/https://www2.systematix.co.uk/**');
+  this.passthrough('/https://www.systematix.co.uk/**');
 
   this.urlPrefix = ENV.APP.coursesApi.host;
   this.namespace = 'api/site';

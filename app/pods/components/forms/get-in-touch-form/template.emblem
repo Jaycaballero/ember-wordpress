@@ -1,0 +1,66 @@
+.col.px-0
+  .get-in-touch-form.px-4.pt-4.pb-2
+    h2.mb-3 Get in touch
+    p
+      | If you need any more info, send up a message using this form.
+      br
+      | We will get back to you within 1 to 2 working hours.
+    = bs-form [
+      formLayout="vertical"
+      model=lead
+      onSubmit=(action "submit")
+    ] as |form|
+      .form-row
+        .form-group.col-md-6.pr-1.mb-0
+          = form.element [
+            id="name"
+            placeholder="Name*"
+            property="name"
+            disabled=(and form.isSubmitted (eq lead.errors.length 0))
+            customError=(map-by "message" lead.errors.name)
+          ]
+        .form-group.col-md-6.pr-1.mb-0
+          = form.element [
+            id="phone"
+            placeholder="Phone Number*"
+            property="phone"
+            disabled=(and form.isSubmitted (eq lead.errors.length 0))
+            customError=(map-by "message" lead.errors.phone)
+          ]
+      .form-row
+        .form-group.col-md-6.pr-1.mb-0
+          = form.element [
+            id="email"
+            placeholder="Email Address*"
+            property="email"
+            disabled=(and form.isSubmitted (eq lead.errors.length 0))
+            customError=(map-by "message" lead.errors.email)
+          ]
+        .form-group.col-md-6.pr-1.mb-0
+          = form.element [
+            id="company"
+            placeholder="Company"
+            property="accountName"
+            disabled=(and form.isSubmitted (eq lead.errors.length 0))
+          ]
+      .form-group
+        = form.element [
+          rows="6"
+          id="message"
+          controlType="textarea"
+          placeholder="Your Message"
+          property="message"
+          disabled=(and form.isSubmitted (eq lead.errors.length 0))
+        ]
+      = bs-button [
+        type="primary"
+        buttonType="submit"
+        class="btn-white-hover col submit-button mb-4"
+        disabled=(and form.isSubmitted (eq lead.errors.length 0))
+      ]
+        = if (and form.isSubmitted (eq lead.errors.length 0))
+          | Thank You!
+        else if form.isSubmitting
+          = fa-icon "spinner" spin=true
+        else
+          | Get in Touch

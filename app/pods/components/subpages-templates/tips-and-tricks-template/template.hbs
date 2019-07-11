@@ -43,7 +43,7 @@
 <section id="subpage-content" class="pt-4 pb-5">
   <div class="container mt-2">
     <div class="row">
-      <div class="col-md-4">
+      <div class="tipsTricks-filtering col-md-4">
         <div class="form-group select-category">
           {{#power-select
             selected=selectedCategory
@@ -54,13 +54,19 @@
           }}
             {{html-safe category.name}}
           {{/power-select}}
-          {{#bs-button onClick=(action "clear") class="clear"}}
+          {{#bs-button onClick=(action "clear") class="clear" disabled=isLoading}}
             X
           {{/bs-button}}
         </div>
+
       </div>
+      {{#if isLoading}}
+        <div class="col-md-1 mt-2">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </div>
+      {{/if}}
       <div class="col-md-12"><hr></div>
-      <div class="col-md-8">
+      <div class="col">
         {{#each content as |tipsAndTricksItems|}}
           <div class="col-md-6 px-0 py-3 float-left">
             <div class="card">
@@ -102,43 +108,6 @@
             </div>
           </div>
         {{/each}}
-      </div>
-      <div class="col-md-4 pt-5">
-        <form {{action on="submit"}}>
-          <div class="input-group">
-            {{input
-              value=search
-              placeholder="Search"
-              class="form-control py-2 border-right-0 border"
-            }}
-            <button
-              class="btn btn-outline-secondary bg-white border-left-0 border"
-              type="button"
-            >
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
-        </form>
-        <div class="signup-label mt-4 pt-3"><h2>Signup for Updates</h2></div>
-        <hr class="my-2">
-        <form {{action on="submit"}} class="my-4">
-          <div class="form-group input-group">
-            {{input
-              value=userEmail
-              placeholder="Email"
-              class="form-control py-2 border-right-0 border"
-            }}
-            <button
-              class="btn btn-outline-secondary bg-white border-left-0 border"
-              type="button"
-            >
-              <i class="far fa-envelope"></i>
-            </button>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-white-hover col submit-button">Sign Up</button>
-          </div>
-        </form>
       </div>
     </div>
   </div>

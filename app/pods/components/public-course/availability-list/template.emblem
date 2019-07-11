@@ -1,0 +1,48 @@
+.col.px-0
+  .availability-list.bg-white
+    .choose-option
+      .select-label Choose a Location
+      = power-select [
+        allowClear=true
+        options=locations
+        placeholder="All locations"
+        searchEnabled=false
+        selected=location
+        onchange=(pipe (action "setLocation"))
+      ] as |location|
+        = location.title
+    = bs-alert [
+      class="availability-list-alert"
+      visible=booked
+      fade=true
+      type="success"
+      dismissible=true
+      onDismiss=(toggle-action "booked" this)
+    ]
+      strong Thank you!
+      | Your booking has been recorded!
+    .bookingForm-container
+      ul.data-listing.p-0
+        = each bookings as |booking|
+          .list-wrapper.position-relative.d-table.w-100.p-2
+            li
+              span.date = booking.date
+              div.location = booking.location.title
+            li
+              div.price.font-weight-bold = booking.price
+            li
+              = bs-button [
+                class="booking btn btn-primary btn-large w-100"
+                role="button"
+                onClick=(action onSelectBooking booking booking.location)
+              ]
+                | Book Now
+    .availabilityList-footer
+      ul.p-0.d-table.m-auto
+        li
+          = scroll-to href="#booking-datas" class="view-all-dates" duration=1200
+            | View all training dates
+        li: span.formFooter-text Need something more custom ?
+        li
+          = link-to class="btn btn-primary btn-large w-75 d-table mx-auto mt-4" "page" "contact-us"
+            | Enquire

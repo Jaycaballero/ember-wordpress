@@ -1,0 +1,118 @@
+= set-body-class "public-sql-course"
+header.public-sql-course-banner.py-4
+  .py-5
+    .container.position-relative
+      .row
+        .col-7.header-text-content
+          = sqlCourse.defaultEditor
+        .col-5.availabilityList-container
+          = public-course/availability-list [
+            booked=booked
+            locations=locations
+            mapLocation=listLocation
+            onSetLocation=(action (mut selectedLocation))
+            onSelectBooking=(action "selectBooking")
+          ]
+
+section#two-day-training.py-5
+  .container
+    .row
+      .col
+        .training-container.d-table
+          = sqlCourse.sqlTrainingCourse
+
+section#branding-logo.py-5
+  .container
+    .row
+      .col
+        .branding-logos.d-table.w-100
+          = sqlCourse.sliderBranding
+
+section#sql-course
+  .sqlCourse.d-table.w-100
+    = sqlCourse.sqlCourse
+
+section#sqlCrash-course.py-5
+  .container.my-4
+    .row
+      .col
+        .sql-crash-course.d-table.m-auto
+          = sqlCourse.sqlCrashCourse
+
+section#learn-more.position-relative.py-4
+  .container
+    .row
+      .col-8
+        = sqlCourse.learnMore
+      .col-4
+        a [
+          class="download-now d-table w-100"
+          href={sqlCourse.pdfOutline}
+          target="_blank"
+        ]
+          | Dowload Now
+section#sign-up.py-5
+  .container.my-4
+    .row
+      .col
+        = sqlCourse.signUp
+        = scroll-to href="#booking-datas" class="book-now d-table w-25 mx-auto my-4" duration=1000
+          | View all dates
+
+section#map-section
+  ul.locations-map.d-table.p-0.w-100.mb-0
+    li.locations
+      h2 Locations
+      ul.location-listing.mt-5.d-table
+        = each locations as |location|
+            li.location-title{action  "setLocation" location} class="#{if (eq mapLocation.id location.id) 'active'}"
+              img class="location-image" src=location.better_featured_image.source_url
+              = location.title
+    li.map
+      = html-safe mapLocation.acf.map
+
+= if mapLocation
+  = public-course/location-schedules [
+    location=mapLocation
+    onSelectBooking=(action "selectBooking")
+    ourCourseBenefits=ourCourseBenefits
+  ]
+
+section#private-sql-training.py-3
+  .container.py-4
+    .row
+      .col
+        .private-sql
+          = sqlCourse.privateSqlTraining
+          = link-to class="btn btn-primary contact-button d-table w-25 mx-auto my-2" "page" "contact-us"
+            | Contact Us
+
+section#course-outline.py-5
+  .container.my-4
+    .row
+      .col
+        .course-outline
+          = sqlCourse.courseOutline
+        = if sqlCourse
+          .col
+          a [
+            class="btn btn-primary btn-large d-table mx-auto my-5 course-outline"
+            href={sqlCourse.pdfOutline}
+            target="_blank"
+            rel="noopener"
+          ]
+            i.fas.fa-file-pdf
+            | PDF Outline
+section#course-content.py-5
+  .container-fluid.my-4
+    .row-fluid
+      .col
+        .course-content
+          = sqlCourse.courseContent
+
+= forms/booking-form [
+  lead=crmLead
+  open=bookingFormVisible
+  onHidden=(action "cancelBooking")
+  onSubmit=(pipe (action "submit") (toggle-action "booked" this))
+]

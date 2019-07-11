@@ -23,6 +23,7 @@ export default Route.extend({
     controller.set('ourBenefitsSection', model.ourBenefitsSection);
     controller.set('sectionTitle', model.sectionTitle);
     controller.set('aboutUsSection', model.aboutUsSection);
+    controller.set('courses', {});
   }
 
 });

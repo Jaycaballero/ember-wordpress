@@ -1,0 +1,10 @@
+<ul class="testimonial p-0 d-table">
+  {{#each testimonials as |testimonial|}}
+    <li class="quote-icon"><i class="fas fa-quote-left mb-2"></i></li>
+    <li class="testimonial-content">
+      {{html-safe testimonial.acf.editor}}
+      <div class="person">{{testimonial.acf.name}}</div>
+    </li>
+  {{/each}}
+</ul>
+{{yield}}

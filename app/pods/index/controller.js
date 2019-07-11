@@ -13,9 +13,9 @@ export default Controller.extend({
   }),
   actions: {
     selectCourse([course]) {
-      const subCategory = course.subCategory.firstObject;
-      const category = course.category.firstObject;
-      this.transitionToRoute('course.sub-category', category.slug, subCategory.slug);
+      const category = course.categories.firstObject;
+      const subCategory = course.subCategories.firstObject;
+      this.transitionToRoute('course.sub-category.outline', category.slug, subCategory.slug, course.slug);
     }
   }
 });
