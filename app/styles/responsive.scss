@@ -34,9 +34,6 @@
   section#course-parent-category {
     ul.sub-category-listing li { width: calc(33% - 9px); }
   }
-  body.sub-category.courses {
-    .course-banner-image { height: 155px !important; }
-  }
   body.outline.course {
     #outline-header {
       .outline-container-holder {
@@ -126,6 +123,24 @@
     .custom-card {
       height: 850px;
       .card-content h3 { font-size: 24px; }
+    }
+  }
+  body.sub-category.courses {
+    #aggregateRating {
+      section#scroll-menus ul.scrollMenu-items li {
+        margin-right: 41px !important;
+        &:last-child { margin-right: 0 !important; }
+      }
+      section#course-sub-category .card-title h3 { font-size: 28px !important; }
+      section#request-callback {
+        > .container > .row.py-5 { padding: 0 15px !important; }
+        h1 {  font-size: 38px !important; }
+      }
+      section#why-choose > .container {
+        > .row.py-5 { padding: 0 !important; }
+        .row > .col.py-5 { padding-bottom: 0 !important; }
+      }
+      section#more-information > .container > .row > .col.py-5 { padding: 0 15px !important; }
     }
   }
 }
@@ -229,6 +244,7 @@
     transform: none;
     right: 0;
     position: relative !important;
+    margin-top: 25px;
   }
   body.about-us section#subpage-content .col-md-8 { max-width: 100%; flex: none; }
   body.about-us section#subpage-content .col-md-4 { max-width: 100%; }
@@ -263,7 +279,6 @@
     }
   }
   body.sub-category.courses {
-    .course-banner-image { height: 155px !important; }
     nav#scroll-to-section {
       ul.child-items-navigation li { margin-right: 19px !important; }
     }
@@ -483,6 +498,46 @@
       }
     }
   }
+  body.sub-category.courses {
+    #aggregateRating {
+      section#scroll-menus ul.scrollMenu-items li {
+        &:nth-child(1) { width: 100%; }
+        &:not(:nth-child(1)) { margin-right: 17px; }
+      }
+      .course-subcategory-content {
+        .subCategory-image { width: 100%; }
+      }
+      section#course-sub-category {
+        .card-title {
+          padding: 15px !important;
+          h3 { font-size: 19px !important; margin-bottom: 0; }
+        }
+        .card-text { padding: 15px !important; }
+        .card-footer { padding: 0 15px 15px !important; }
+      }
+      section#why-choose {
+        > .container {
+          > .row.py-5 { padding: 0 !important; }
+          .row > .col.py-5 { padding-bottom: 0 !important; }
+          ul.testimonial { margin-bottom: 40px; }
+        }
+      }
+      section#subCat-ourLocations h1 { font-size: 33px !important; }
+      section#request-callback {
+        > .container > .row.py-5 {
+          padding: 0 !important;
+          h1 { font-size: 33px !important; }
+        }
+        .get-started-form .form-group .btn.submit-button { width: 35%; }
+      }
+      section#more-information {
+        > .container {
+          h1 { font-size: 33px !important; }
+          > .row > .col.py-5 { padding: 15px 0 !important; }
+        }
+      }
+    }
+  }
 }
 
 /* Mobile Modes */
@@ -657,18 +712,14 @@
     ul.sub-category-listing {
       width: calc(100% - 15px) !important;
       li {
-        width: calc(50% - 8px);
-        margin-right: 15px !important;
-        height: auto;
+        width: calc(50% - 8px); margin-right: 15px !important; height: auto;
       }
       li:nth-child(2n) { margin-right: 0 !important; }
     }
   }
   section#course-sub-category {
     .course-subcategory-content, .course-subcategory-sidebar {
-    	padding-right: 15px !important;
-    	max-width: 100%;
-      flex: none;
+    	padding-right: 15px !important; max-width: 100%; flex: none;
     }
     .course-subcategory-sidebar {
 	    margin-top: 25px;
@@ -677,9 +728,67 @@
     }
   }
   body.sub-category.courses {
-    .course-banner-image { height: 155px !important; }
-    nav#scroll-to-section {
-      ul.child-items-navigation li { margin-right: 19px !important; }
+    #aggregateRating {
+      .header-call-to-action {
+      	position: relative !important;
+      	top: 0;
+      	transform: none;
+      	right: 0;
+      	margin-top: 25px;
+      }
+      .course-subcategory-content .subCategory-image { width: 100%; }
+      section#scroll-menus ul.scrollMenu-items li {
+      text-align: center; margin-right: 0; width: 100%;
+      }
+      nav#scroll-to-section {
+        ul.child-items-navigation li { margin-right: 19px !important; }
+      }
+      section#course-sub-category {
+        .course-content .card {
+          max-width: 100%; flex: none;
+          .card-title { padding: 30px; }
+        }
+      }
+      section#why-choose > .container {
+        h1 { font-size: 36px !important; }
+        > .row > .col-6 {
+        	max-width: 100%; flex: none; margin-bottom: 25px;
+        }
+        > .row.py-5 {padding: 0 !important; }
+        .rating, h1 { text-align: center; }
+        img { display: table; margin: auto; }
+        ul.whyChoose-listing li {
+          width: 100%;
+          .title-content { width: calc(100% - 73px); }
+        }
+      }
+      section#subCat-ourLocations {
+        h1 { font-size: 36px !important; }
+        ul.subCat-locationListing {
+          margin-bottom: 0;
+          li {
+            width: 100% !important;
+            margin-right: 0 !important;
+            float: none !important;
+            margin-bottom: 25px !important;
+            &:last-child { margin-bottom: 0; }
+          }
+        }
+      }
+      section#more-information > .container {
+        h1 { font-size: 36px !important; }
+        > .row > .col.py-5 { padding: 0 15px !important; }
+        ul.moreInformation-lists li { width: 100%; }
+      }
+      section#request-callback > .container {
+        h1 { font-size: 36px !important; }
+        .row.py-5 { padding: 0 !important; }
+        .row > .col-6 {
+          max-width: 100%; flex: none; padding: 0 15px !important;
+          &:nth-child(1) { margin-bottom: 15px; }
+        }
+        .get-started-form .form-group .btn.submit-button { width: 100%; }
+      }
     }
   }
   body.outline.course {
@@ -948,19 +1057,14 @@
       }
     }
     .navbar-brand.footer {
-      margin: auto;
-      margin-top: auto;
-      text-align: center;
-      display: block;
+      margin: auto; margin-top: auto; text-align: center; display: block;
     }
   }
 }
 
 @media (max-width: 480px) {
   section#top {
-    .top-buttons {
-      a.btn { width: 100%; margin-top: 10px; }
-    }
+    .top-buttons a.btn { width: 100%; margin-top: 10px; }
   }
   nav .navbar-header .navbar-brand { height: 45px; width: 219px; }
   .top-info-wrapper .top-info ul.info .col-md-2 { width: auto; }
