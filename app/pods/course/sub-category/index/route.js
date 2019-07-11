@@ -17,11 +17,13 @@ export default Route.extend({
     controller.set('contactInfos', model.contactInfos);
     controller.set('coursesOutline', model.courses);
     controller.set('lead', model.crmLead);
+    controller.set('locations', model.locations);
     controller.set('category', category);
     controller.set('subCategory', subCategory);
     controller.set('testimonials', model.testimonials);
     controller.set('whyChoose', model.whyChoose);
     controller.set('moreInformations', model.moreInformations);
     controller.set('ourLocations', model.ourLocations);
+    controller.set('courseGroups', model.courseGroups);
   }
 });

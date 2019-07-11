@@ -5,7 +5,6 @@ import { htmlSafe } from '@ember/string';
 
 export default Component.extend({
   ourBenefits: map('_our_Benefits_Section', function(benefit){
-    //console.log(benefit);
     return {
       content: htmlSafe(get(benefit, 'content')),
       image: get(benefit, 'better_featured_image.source_url'),

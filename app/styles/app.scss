@@ -725,6 +725,7 @@ body.sub-category.courses {
       border-right: 1px solid #dcdedf !important;
       p { margin-bottom: 0;}
       .level .fa-circle { color: #e84d3d; }
+      small { margin-left: 5px; }
     }
     ul {
       > li {
@@ -1594,4 +1595,17 @@ body.outline.course {
   border-radius: 0 !important;
   color: #ffffff;
   margin-bottom: 0;
+}
+
+
+/*skill/craft page*/
+.sub-category-image {
+  width: 100%;
+}
+
+.location-img-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  position: relative;
 }

@@ -1,0 +1,5 @@
+.row
+  .col-9
+    = html-safe subCategory.description
+  .col-3
+    img.sub-category-image.float-right src=subCategory.iconUrl alt=subCategory.title

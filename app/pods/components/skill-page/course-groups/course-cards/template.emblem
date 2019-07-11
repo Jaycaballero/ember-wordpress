@@ -1,0 +1,17 @@
+each courses as |course|
+  .col-4.float-left.card.mt-4
+    .card-body.p-0
+      = skill-page/course-groups/course-cards/card-title [
+        title=course.title
+        color=course.color
+      ]
+      .card-text
+        = if course.levels
+          .level.mb-4
+            = fa-icon "circle"
+            small
+              = course.levels
+        = truncate course.shortDescription
+      .card-footer
+        link-to "course.sub-category.outline" course.slug class="view-outline"
+          | View Outline

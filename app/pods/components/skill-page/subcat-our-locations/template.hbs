@@ -1,7 +1,7 @@
 <ul class="subCat-locationListing p-0 d-table my-5 w-100">
   {{#each ourLocations as |ourlocation|}}
     <li>
-      <img class="location-image" src={{ourlocation.better_featured_image.source_url}} width="100%" alt="image" />
+      <img class="location-image" src={{ourlocation.better_featured_image.source_url}} width="100%" alt="image" >
       <div class="card-footer">
         <div class="location-title">{{ourlocation.title}}</div>
         <div class="location-address">{{html-safe ourlocation.content}}</div>
