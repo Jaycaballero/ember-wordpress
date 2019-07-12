@@ -31,7 +31,11 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            {{components/skill-page/subcat-menu-items}}
+            {{skill-page/menu-items
+              courseGroups=courseGroups
+              showUngrouped=ungroupedCourses.length
+              subCategory=subCategory
+            }}
           </div>
         </div>
       </div>
@@ -40,7 +44,12 @@
       <div class="container py-5">
         <div class="col course-subcategory-content">
           <div class="course-content">
-            {{components/skill-page/sub-category-overview
+            {{skill-page/sub-category-overview
+              subCategory=subCategory
+            }}
+            {{skill-page/ungrouped-courses
+              courses=ungroupedCourses
+              showUngrouped=ungroupedCourses.length
               subCategory=subCategory
             }}
             {{skill-page/course-groups
@@ -90,21 +99,11 @@
           <div class="col">
             <h1 class="text-center">Our Locations</h1>
             <div class="text-center"><p>We cover a wide range of locations and could be on your door stop.</p></div>
-            {{skill-page/locations-list
-              locations=locations
-            }}
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="more-information">
-      <div class="container py-5">
-        <div class="row">
-          <div class="col py-5">
-            <h1>Looking for more information?</h1>
-            {{components/skill-page/more-info
-              moreInformations = moreInformations
-            }}
+            {{#if locations}}
+              {{skill-page/locations-list
+                locations=locations
+              }}
+            {{/if}}
           </div>
         </div>
       </div>

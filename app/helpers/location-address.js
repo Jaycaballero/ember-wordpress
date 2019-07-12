@@ -1,19 +1,20 @@
 import { helper } from '@ember/component/helper';
 
-export function locationAddress(address1, address2, address3) {
+export function locationAddress(params) {
+  let [address1, town, county] = params;
   let fullAddress = [];
 
   if (address1) {
     fullAddress.push(address1);
   }
-  if (address2) {
-    fullAddress.push(address2);
+  if (town) {
+    fullAddress.push(town);
   }
-  if (address3) {
-    fullAddress.push(address3);
+  if (county) {
+    fullAddress.push(county);
   }
 
-  return fullAddress[0].join(', ');
+  return fullAddress.join(', ');
 }
 
 export default helper(locationAddress);

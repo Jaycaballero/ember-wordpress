@@ -1,6 +1,6 @@
 .row
   each courses as |course|
-    .col.card.mt-4
+    .col-4.card.mt-4
       .card-body.p-0
         = skill-page/course-groups/course-cards/card-title [
           title=course.title

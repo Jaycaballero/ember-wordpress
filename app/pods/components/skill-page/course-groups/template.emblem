@@ -1,8 +1,9 @@
 each courseGroups as |courseGroup|
-  .mb-5
+  div class="mb-5" id=courseGroup.idName
     .row
       h2
         = courseGroup.name
+        |  Courses
     = skill-page/course-groups/course-cards [
       courses=courseGroup.courses
     ]

@@ -23,6 +23,7 @@ export default Route.extend({
     controller.set('testimonials', model.testimonials);
     controller.set('whyChoose', model.whyChoose);
     controller.set('moreInformations', model.moreInformations);
+    controller.set('ourLocations', model.ourLocations);
     controller.set('courseGroups', model.courseGroups);
   }
 });
