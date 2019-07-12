@@ -25,6 +25,17 @@
           }}
           {{/course-outline/sub-category-header}}
         {{/components/courses-background-image}}
+      {{else}}
+        {{#components/courses-background-image
+          class="course-banner-image"
+          imageUrl=""
+        }}
+          {{#course-outline/sub-category-header
+            catTitle=category.title
+            headerSubCatTitle=subCategory.title
+          }}
+          {{/course-outline/sub-category-header}}
+        {{/components/courses-background-image}}
       {{/if}}
     </header>
     <section id="scroll-menus" class="py-4">
