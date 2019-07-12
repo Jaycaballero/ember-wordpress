@@ -712,7 +712,7 @@ body.sub-category.courses {
   }
   section#course-sub-category {
     .course-content .card {
-      padding: 0; background-color: #f5f5f5;
+      padding: 0; background-color: #f5f5f5; border: 1px solid #dcdedf !important;
       &:hover { box-shadow: none; }
     }
     .headerCard-title {
@@ -730,8 +730,6 @@ body.sub-category.courses {
     }
     .card-text {
       padding: 30px;
-      border-left: 1px solid #dcdedf !important;
-      border-right: 1px solid #dcdedf !important;
       p { margin-bottom: 0;}
       .level .fa-circle { color: #e84d3d; }
       small { margin-left: 5px; }
@@ -744,6 +742,7 @@ body.sub-category.courses {
     }
     .card {
       .card-footer {
+        padding: 0 30px 30px 30px;
         a.view-outline {
         	background-color: #e84d3d;
         	color: #fff;
@@ -762,11 +761,6 @@ body.sub-category.courses {
             text-decoration: none;
           }
         }
-        padding: 0 30px 30px 30px;
-        border-left: 1px solid #dcdedf !important;
-        border-bottom: 1px solid #dcdedf !important;
-        border-right: 1px solid #dcdedf !important;
-        border-radius: 0 !important;
       }
     }
     .request-a-call-back-form, .get-started-form { background-color: #f1f2f2; }
