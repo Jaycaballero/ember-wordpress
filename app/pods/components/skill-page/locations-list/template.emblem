@@ -1,0 +1,12 @@
+ul.subCat-locationListing.p-0.d-table.my-5.w-100
+  each locations as |location|
+    li
+      .location-image
+        = skill-page/locations-list/location-image [
+          iconUrl=location.locationImageUrl
+        ]
+      .card-footer
+        .location-title
+          = location.name
+        .location-address
+          = location-address location.address1 location.address2 location.address3

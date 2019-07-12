@@ -143,6 +143,9 @@
       section#more-information > .container > .row > .col.py-5 { padding: 0 15px !important; }
     }
   }
+  .subCat-locationListing .location-img-background {
+    height: 204px;
+  }
 }
 
 /* Tablet Modes */
@@ -537,6 +540,9 @@
         }
       }
     }
+  }
+  .subCat-locationListing .location-img-background {
+    height: 149px;
   }
 }
 
@@ -1060,6 +1066,9 @@
       margin: auto; margin-top: auto; text-align: center; display: block;
     }
   }
+  .subCat-locationListing .location-img-background {
+    height: 347px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1225,5 +1234,8 @@
         tr.legend > td { display: none; }
       }
     }
+  }
+  .subCat-locationListing .location-img-background {
+    height: 306px;
   }
 }

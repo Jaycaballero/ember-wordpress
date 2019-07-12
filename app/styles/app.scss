@@ -716,8 +716,15 @@ body.sub-category.courses {
       &:hover { box-shadow: none; }
     }
     .card-title {
-      padding: 95px 30px; margin-bottom: 0;
-      h3 { font-size: 32px; color: #fff; }
+      position: relative; padding: 0 30px; margin-bottom: 0; height: 250px;
+      h3 {
+        font-size: 32px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: calc(100% - 35px);
+      }
     }
     .card-text {
       padding: 30px;
@@ -725,6 +732,7 @@ body.sub-category.courses {
       border-right: 1px solid #dcdedf !important;
       p { margin-bottom: 0;}
       .level .fa-circle { color: #e84d3d; }
+      small { margin-left: 5px; }
     }
     ul {
       > li {
@@ -1594,4 +1602,18 @@ body.outline.course {
   border-radius: 0 !important;
   color: #ffffff;
   margin-bottom: 0;
+}
+
+
+/*skill/craft page*/
+.sub-category-image {
+  width: 100%;
+}
+
+
+.location-img-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 245px;
+  position: relative;
 }

@@ -39,7 +39,14 @@
     <section id="course-sub-category">
       <div class="container py-5">
         <div class="col course-subcategory-content">
-          {{components/skill-page/subcat-course-group}}
+          <div class="course-content">
+            {{components/skill-page/sub-category-overview
+              subCategory=subCategory
+            }}
+            {{skill-page/course-groups
+              courseGroups=courseGroups
+            }}
+          </div>
         </div>
       </div>
     </section>
@@ -50,12 +57,12 @@
             <div class="why-chooose">
               <h1 class="mb-3">Why Choose</h1>
               <div class="logo mb-3">
-                <img src="/images/systematix-logo2.png" alt="image" />
+                <img src="/images/systematix-logo2.png" alt="image" >
               </div>
               <div class="rating mb-3">
-                <img src="/assets/images/stars.png" alt="image" />
+                <img src="/assets/images/stars.png" alt="image" >
                 <div class="reviews mt-3">Rated <span itemprop="ratingValue">4.7</span></div>
-                <meta itemprop="bestRating" content="5" />
+                <meta itemprop="bestRating" content="5" >
                 <div class="reviews">
                   <span itemprop="reviewCount">20</span> Google reviews
                 </div>
@@ -83,8 +90,8 @@
           <div class="col">
             <h1 class="text-center">Our Locations</h1>
             <div class="text-center"><p>We cover a wide range of locations and could be on your door stop.</p></div>
-            {{components/skill-page/subcat-our-locations
-              ourLocations = ourLocations
+            {{skill-page/locations-list
+              locations=locations
             }}
           </div>
         </div>
@@ -103,25 +110,25 @@
       </div>
     </section>
     <section id="request-callback">
-    <div class="container py-5">
-      <div class="row py-5">
-        <div class="col-6 pr-5">
-          <h1>Request a call back</h1>
-          <div id="subCat-callbackForm">
-            {{forms/get-started-form}}
+      <div class="container py-5">
+        <div class="row py-5">
+          <div class="col-6 pr-5">
+            <h1>Request a call back</h1>
+            <div id="subCat-callbackForm">
+              {{forms/get-started-form}}
+            </div>
+          </div>
+          <div class="col-6 pl-5">
+            <h1>Or get in touch:</h1>
+            <p>Our team are always at hand to help with your training needs.</p>
+            <ul class="contact-infos p-0">
+              {{#each contactInfos as |contactinfo| }}
+                <li>{{html-safe contactinfo.content}}</li>
+              {{/each}}
+            </ul>
           </div>
         </div>
-        <div class="col-6 pl-5">
-          <h1>Or get in touch:</h1>
-          <p>Our team are always at hand to help with your training needs.</p>
-          <ul class="contact-infos p-0">
-            {{#each contactInfos as |contactinfo| }}
-              <li>{{html-safe contactinfo.content}}</li>
-            {{/each}}
-          </ul>
-        </div>
       </div>
-    </div>
     </section>
   </div>
 </div>
