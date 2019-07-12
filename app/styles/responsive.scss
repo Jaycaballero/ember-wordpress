@@ -511,9 +511,12 @@
         .subCategory-image { width: 100%; }
       }
       section#course-sub-category {
-        .card-title {
-          padding: 15px !important;
-          h3 { font-size: 19px !important; margin-bottom: 0; }
+        .headerCard-title {
+          height: 160px;
+          .card-title {
+            padding: 15px !important;
+            h3 { font-size: 19px !important; margin-bottom: 0; }
+          }
         }
         .card-text { padding: 15px !important; }
         .card-footer { padding: 0 15px 15px !important; }

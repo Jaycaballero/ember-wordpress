@@ -715,15 +715,17 @@ body.sub-category.courses {
       padding: 0; background-color: #f5f5f5;
       &:hover { box-shadow: none; }
     }
-    .card-title {
-      position: relative; padding: 0 30px; margin-bottom: 0; height: 250px;
-      h3 {
-        font-size: 32px;
-        color: #fff;
+    .headerCard-title {
+      height: 250px;
+      .card-title {
         position: absolute;
+        padding: 0 30px;
+        margin-bottom: 0;
+        transform: translate(-50%, -50%);
+        left: 50%;
         top: 50%;
-        transform: translate(0, -50%);
-        width: calc(100% - 35px);
+        width: 100%;
+        h3 { font-size: 30px; color: #fff; }
       }
     }
     .card-text {
