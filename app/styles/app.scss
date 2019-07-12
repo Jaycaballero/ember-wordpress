@@ -711,6 +711,11 @@ body.sub-category.courses {
     }
   }
   section#course-sub-category {
+    h2 {
+      font-family: calibri-Regular !important;
+      font-size: 45px !important;
+      width: 70%;
+    }
     .course-content .card {
       padding: 0; background-color: #f5f5f5; border: 1px solid #dcdedf !important;
       &:hover { box-shadow: none; }
@@ -725,7 +730,7 @@ body.sub-category.courses {
         left: 50%;
         top: 50%;
         width: 100%;
-        h3 { font-size: 30px; color: #fff; }
+        h3 { font-size: 35px; color: #fff; }
       }
     }
     .card-text {
@@ -917,7 +922,7 @@ body.outline.course {
       }
     }
   }
-  .subpage-header { padding: 90px 15px; }
+  .subpage-header { padding: 45px 15px; }
   .custom-tabs {
     ul.nav-tabs {
       border: 0;
