@@ -26,6 +26,6 @@ export default Model.extend({
   version: attr('string'),
 
   categories: hasMany('category'),
-  subCategories: hasMany('sub-category'),
   courseGroups: hasMany('site-tag'),
+  subCategories: hasMany('sub-category'),
 });

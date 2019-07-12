@@ -716,8 +716,15 @@ body.sub-category.courses {
       &:hover { box-shadow: none; }
     }
     .card-title {
-      padding: 95px 30px; margin-bottom: 0;
-      h3 { font-size: 32px; color: #fff; }
+      position: relative; padding: 0 30px; margin-bottom: 0; height: 250px;
+      h3 {
+        font-size: 32px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: calc(100% - 35px);
+      }
     }
     .card-text {
       padding: 30px;
@@ -1603,9 +1610,10 @@ body.outline.course {
   width: 100%;
 }
 
+
 .location-img-background {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
+  height: 245px;
   position: relative;
 }

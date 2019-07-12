@@ -1,9 +1,8 @@
-.course-content
-  each courseGroups as |courseGroup|
-    .container-fluid
-      .row-fluid.d-table.mb-5
-        h2
-          = courseGroup.name
-        = skill-page/course-groups/course-cards [
-          courses=courseGroup.courses
-        ]
+each courseGroups as |courseGroup|
+  .mb-5
+    .row
+      h2
+        = courseGroup.name
+    = skill-page/course-groups/course-cards [
+      courses=courseGroup.courses
+    ]
