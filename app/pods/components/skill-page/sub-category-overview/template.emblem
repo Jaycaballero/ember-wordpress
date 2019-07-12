@@ -1,5 +1,9 @@
 .row
   .col-9.pl-0
-    = html-safe subCategory.description
+    h2
+      | Which&nbsp;
+      = subCategory.title
+      |  course is right for you?
+    = html-safe subCategory.shortDescription
   .col-3.pr-0
     img.sub-category-image.float-right src=subCategory.iconUrl alt=subCategory.title

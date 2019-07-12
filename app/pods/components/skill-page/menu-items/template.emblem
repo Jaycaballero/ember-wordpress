@@ -1,0 +1,13 @@
+ul.scrollMenu-items.mb-0.p-0
+  li Are you looking for?
+  = if showUngrouped
+    li
+      = scroll-to href="#ungrouped-courses"
+        | Standard&nbsp;
+        = subCategory.title
+        |  Courses
+  li
+  each courseGroups as |courseGroup|
+    li
+      = scroll-to href=courseGroup.hrefId
+        = courseGroup.name

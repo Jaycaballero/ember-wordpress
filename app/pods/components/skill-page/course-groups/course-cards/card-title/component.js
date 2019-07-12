@@ -6,7 +6,10 @@ export default Component.extend({
   attributeBindings: ['style'],
   classNames: ['headerCard-title position-relative'],
   style: computed('color', function(){
-    return htmlSafe(`background-color: ${this.get('color')}`);
+    if (this.get('color')) {
+      return htmlSafe(`background-color: ${this.get('color')}`);
+    }
+    return htmlSafe('background-color: #829399; border-right: solid 1px #fff;');
   }),
   color: null
 });

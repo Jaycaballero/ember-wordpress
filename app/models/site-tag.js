@@ -1,4 +1,6 @@
 import DS from 'ember-data';
+import { computed } from '@ember/object';
+import { dasherize } from '@ember/string';
 
 const {
   Model,
@@ -11,5 +13,12 @@ export default Model.extend({
   priority: attr('number'),
   name: attr('string'),
 
-  courses: hasMany('course')
+  courses: hasMany('course'),
+
+  idName: computed('name', function() {
+    return dasherize(this.name);
+  }),
+  hrefId: computed('name', function() {
+    return `#${dasherize(this.name)}`;
+  }),
 });
