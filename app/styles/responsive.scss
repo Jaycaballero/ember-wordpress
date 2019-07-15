@@ -511,6 +511,8 @@
         .subCategory-image { width: 100%; }
       }
       section#course-sub-category {
+        h2 { font-size: 35px !important; }
+        .subCatTitle-shortDesc-wrapper { margin-bottom: 20px; }
         .headerCard-title {
           height: 160px;
           .card-title {
@@ -528,13 +530,16 @@
           ul.testimonial { margin-bottom: 40px; }
         }
       }
-      section#subCat-ourLocations h1 { font-size: 33px !important; }
+      section#subCat-ourLocations h1 { font-size: 33px !important; margin-top: 0 !important; }
       section#request-callback {
         > .container > .row.py-5 {
           padding: 0 !important;
           h1 { font-size: 33px !important; }
         }
         .get-started-form .form-group .btn.submit-button { width: 35%; }
+        ul.contact-infos li p, ul.contact-infos li a {
+          font-size: 20px;
+        }
       }
       section#more-information {
         > .container {
@@ -803,6 +808,15 @@
     }
   }
   body.outline.course {
+    .subpage-header {
+      h1 { font-size: 30px !important; }
+      .container .breadcrumb {
+        > li > a, > li.active {
+    	    font-size: 20px !important;
+        }
+        li::before { font-size: 20px !important; margin-top: 4px !important; }
+      }
+    }
     #outline-header {
       height: auto !important;
       .outline-container-holder {
@@ -1141,6 +1155,7 @@
             margin-right: 0 !important;
           }
         }
+        ol.breadcrumb li { padding: 0 !important; }
       }
     }
     section#tabs > .container > .row > .col-8 {
@@ -1243,8 +1258,19 @@
   .subCat-locationListing .location-img-background {
     height: 306px;
   }
-  body.sub-category.courses section#course-sub-category .course-subcategory-content {
-    h2 { font-size: 25px !important; }
-    .headerCard-title .card-title h3 { font-size: 30px !important; }
+  body.sub-category.courses {
+    .subpage-header .container .breadcrumb li { width: 100%; }
+    section#course-sub-category .course-subcategory-content {
+      h2 { font-size: 25px !important; }
+      .headerCard-title .card-title h3 { font-size: 30px !important; }
+    }
+    #aggregateRating {
+      section#request-callback > .container {
+        h1 {  font-size: 30px !important; }
+        ul.contact-infos li p, ul.contact-infos li a { font-size: 20px; }
+      }
+      section#subCat-ourLocations h1,
+      section#why-choose > .container h1 { font-size: 30px !important; margin-top: 0 !important; }
+    }
   }
 }

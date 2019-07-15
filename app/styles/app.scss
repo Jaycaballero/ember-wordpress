@@ -3,15 +3,31 @@
 @import "ember-power-select";
 
 @font-face {
-    font-family: 'calibri-regular';
-    font-display: auto;
-    src: local('calibri-regular'), url(../fonts/calibri-regular.woff2) format('woff2');
+  font-family: 'calibri-regular';
+  font-display: auto;
+  src: local('calibri-regular'), url(../fonts/calibri-regular.woff2) format('woff2');
 }
 @font-face {
-    font-family: 'calibri-bold';
-    font-display: auto;
-    src: local('calibri-bold'), url(../fonts/calibri-bold.woff2) format('woff2');
+  font-family: 'calibri-bold';
+  font-display: auto;
+  src: local('calibri-bold'), url(../fonts/calibri-bold.woff2) format('woff2');
 }
+@font-face {
+  font-family: 'helveticaneue';
+  font-display: auto;
+  src: local('helveticaneue'), url(../fonts/helveticaneue.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'helveticaneue-bold';
+  font-display: auto;
+  src: local('helveticaneue-bold'), url(../fonts/helveticaneue-bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'helveticaneue-light';
+  font-display: auto;
+  src: local('helveticaneue-light'), url(../fonts/helveticaneue-light.woff2) format('woff2');
+}
+
 button:focus {
   outline: none !important;
 }
@@ -688,6 +704,9 @@ body.sub-category-page .course-category-listing { display: none; }
 	width: 20%; margin: 0 auto 30px !important;
 }
 body.sub-category.courses {
+  .breadcrumb li.active { font-family: helveticaneue-bold; }
+  .header-call-to-action a { font-family: helveticaneue-bold; font-size: 18px; }
+  h1 { font-family: helveticaneue-bold !important; font-size: 45px !important; }
   nav#scroll-to-section {
     background-color: #f1f2f2;
     ul.child-items-navigation li {
@@ -707,13 +726,21 @@ body.sub-category.courses {
       display: inline-block;
       margin-right: 50px;
       color: #005f8b;
-      a { font-family: calibri-bold; color: #005f8b; text-decoration: none; }
+      font-family: helveticaneue;
+      font-size: 18px;
+      a {
+        font-family: helveticaneue-bold;
+        color: #005f8b; text-decoration: none;
+        font-size: 18px;
+      }
     }
   }
   section#course-sub-category {
-    .subCatTitle-shortDesc-wrapper { width: 70%; }
+    .subCatTitle-shortDesc-wrapper {
+      width: 70%; font-family: helveticaneue; font-size: 18px; color: #747474;
+    }
     h2 {
-      font-family: calibri-Regular !important;
+      font-family: helveticaneue-light !important;
       font-size: 45px !important;
     }
     .course-content .card {
@@ -736,14 +763,14 @@ body.sub-category.courses {
         left: 50%;
         top: 50%;
         width: 100%;
-        h3 { font-family: Calibri-Regular; font-size: 35px; color: #fff; }
+        h3 { font-family: helveticaneue-light; font-size: 45px; color: #fff; }
       }
     }
     .card-text {
-      padding: 30px;
+      padding: 30px; font-family: helveticaneue; font-size: 18px; color: #999;
       p { margin-bottom: 0;}
       .level .fa-circle { color: #e84d3d; }
-      small { margin-left: 5px; }
+      small { margin-left: 5px; font-family: helveticaneue; color: #747474; }
     }
     ul {
       > li {
@@ -759,9 +786,9 @@ body.sub-category.courses {
         	color: #fff;
         	border: 1px solid #e84d3d !important;
         	border-radius: 0.25rem;
-        	font-size: 18px;
+        	font-size: 16px;
         	padding: 8px;
-        	font-family: calibri-bold;
+        	font-family: helveticaneue-bold;
         	transition: 0.3s ease-in-out;
         	display: table;
         	width: 100%;
@@ -779,8 +806,8 @@ body.sub-category.courses {
   section#why-choose {
 	  background-color: #ddf0f8;
     .why-chooose {
-      h1 { font-size: 45px !important; font-family: calibri-regular !important; color: #005f8b; }
-      .reviews { color: #e84d3d; font-weight: bold; }
+      h1 { font-size: 45px !important; font-family: helveticaneue-light !important; color: #005f8b; }
+      .reviews { color: #e84d3d; font-family: helveticaneue-bold; font-size: 18px; }
     }
     ul.testimonial {
       li {
@@ -790,17 +817,22 @@ body.sub-category.courses {
       li.quote-icon { width: 5%; margin-right: 10px; }
       li.testimonial-content {
         width: 90%;
-        .person { font-family: calibri-bold; color: #005f8b; }
+        .person { font-family: helveticaneue-bold; color: #005f8b; font-size: 18px; }
       }
-      .testimonial-content p { color: #005f8b; }
+      .testimonial-content p {
+        color: #005f8b; font-family: helveticaneue-light; font-size: 18px; font-style: italic;
+      }
     }
     ul.whyChoose-listing li {
       float: left; width: 50%; list-style: none; margin-bottom: 15px;
-      h5.title { font-family: calibri-bold; color: #005f8b; }
+      h5.title { font-family: helveticaneue-bold; color: #005f8b; font-size: 18px; }
       .choose-icon {
         position: absolute;
       }
-      .title-content { margin-left: 73px; width: 70%;}
+      .title-content {
+        margin-left: 73px; width: 70%;
+        .choose-content p { font-family: helveticaneue; font-size: 18px; color: #005f8b; }
+      }
       &:not(:nth-child(1)) .choose-icon img {
         width: 75%;
       }
@@ -808,10 +840,9 @@ body.sub-category.courses {
   }
   section#subCat-ourLocations {
     h1 {
-      font-size: 45px !important;
-      color: #005f8b; font-family:
-      calibri-regular !important;
+      font-size: 45px !important; color: #005f8b;  font-family: helveticaneue-light !important;
     }
+    p { font-family: helveticaneue; font-size: 18px; color: #747474; }
     ul.subCat-locationListing li {
     	list-style: none;
       float: left;
@@ -823,7 +854,8 @@ body.sub-category.courses {
         background-color: #f5f5f5;
         height: 160px;
       }
-      .location-title { font-size: 23px; color: #005f8b; }
+      .location-title { color: #005f8b; font-family: helveticaneue; font-size: 20px; }
+      .location-address { font-family: helveticaneue; font-size: 18px; color: #333333; }
       .get-directions { color: #005f8b; text-decoration: underline; }
       p { margin-bottom: 0; }
     }
@@ -852,7 +884,7 @@ body.sub-category.courses {
   section#request-callback {
 	  background-color: #ddf0f8;
     h1 {
-      font-family: calibri-regular !important;
+      font-family: helveticaneue-light !important;
       font-size: 45px !important;
       color: #005f8b;
     }
@@ -865,16 +897,25 @@ body.sub-category.courses {
           border: 2px solid #bfd8e3 !important;
         }
         .btn.submit-button {
-        	width: 25%;
+        	width: 25%; font-family: helveticaneue-bold; font-size: 18px;
         }
       }
     }
-    p { color: #005f8b; }
+    p { color: #005f8b; font-family: helveticaneue; font-size: 18px;}
     ul.contact-infos li {
       margin-bottom: 5px;
       list-style: none;
-      p, a { font-size: 23px; color: #005f8b; margin-bottom: 0;}
+      p, a { font-size: 30px; font-family: helveticaneue; color: #005f8b; margin-bottom: 0;}
       i { color: #e84d3d; font-size: 30px; margin-right: 15px; }
+    }
+    #subCat-callbackForm form input[type="text"],
+    #subCat-callbackForm input[type="text"]::placeholder,
+    #subCat-callbackForm form input[type="email"]::placeholder,
+    #subCat-callbackForm form textarea::placeholder {
+    	font-family: helveticaneue !important;
+    	font-size: 18px !important;
+    	color: #999999 !important;
+    	opacity: 1 !important;
     }
   }
 }
@@ -890,7 +931,7 @@ body.outline.course {
         > li {
           color: #fff; font-size: 25px;
           > a {
-            text-decoration: none; color: #fff; font-size: 25px;
+            text-decoration: none; color: #fff; font-size: 25px; font-family: helveticaneue-bold;
           }
         }
         li.active { color: #70d1ef; }
@@ -1057,7 +1098,7 @@ body.outline.course {
       }
     }
   }
-  a { color: #e84d3d; font-family: calibri-regular; font-size: 20px; }
+  a { color: #e84d3d; font-family: calibri-regular; }
 }
 #subpage-content {
   ul.other-pages li {
