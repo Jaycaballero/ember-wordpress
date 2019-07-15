@@ -1611,16 +1611,24 @@ body.outline.course {
   margin-bottom: 0;
 }
 
-
 /*skill/craft page*/
 .sub-category-image {
   width: 100%;
 }
-
 
 .location-img-background {
   background-repeat: no-repeat;
   background-size: cover;
   height: 245px;
   position: relative;
+}
+.cookie-policy-link {
+  color: #005f8b !important;
+}
+.cookie-policy-button {
+  background-color: #e84d3d !important;
+  border-color: #e84d3d !important;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
 }
