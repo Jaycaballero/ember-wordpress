@@ -929,18 +929,17 @@ body.outline.course {
       	background-color: transparent;
       	padding: 0;
         > li {
-          color: #fff; font-size: 25px;
+          color: #fff; font-size: 22px;
           > a {
-            text-decoration: none; color: #fff; font-size: 25px; font-family: helveticaneue-bold;
+            text-decoration: none; color: #fff; font-size: 22px; font-family: helveticaneue-bold;
           }
         }
-        li.active { color: #70d1ef; }
+        li.active { color: #70d1ef; font-family: helveticaneue-bold; font-size: 22px; }
         li::before {
           content: "\f054";
           font-weight: 900;
           font-family: "Font Awesome 5 Free";
           color: #70d1ef;
-          margin-top: -3px;
         }
         li:nth-child(1)::before { content: none; }
       }
