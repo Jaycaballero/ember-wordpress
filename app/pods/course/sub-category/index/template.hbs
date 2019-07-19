@@ -125,7 +125,11 @@
           <div class="col-6 pr-5">
             <h1>Request a call back</h1>
             <div id="subCat-callbackForm">
-              {{forms/get-started-form}}
+              {{forms/get-started-form
+                courseName=subCategory.title
+                lead=lead
+                onSubmit=(action "createLead")
+              }}
             </div>
           </div>
           <div class="col-6 pl-5">

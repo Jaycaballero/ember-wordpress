@@ -7,7 +7,10 @@ export default Component.extend({
     submit() {
       set(this, 'lead.source', 'Request a Quote');
       set(this, 'lead.sourceDescription', `Course: ${get(this, 'courseName')}`);
-      get(this, 'onSubmit')(get(this, 'lead'));
+      get(this, 'onSubmit')(get(this, 'lead'))
+        .then(() => {
+          this.set('disableForm', true);
+        });
     }
   }
 });
