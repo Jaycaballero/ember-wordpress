@@ -7,10 +7,7 @@ export default Controller.extend({
   }),
   actions: {
     createLead(lead) {
-      return lead.save()
-        .then(() => {
-          this.send('refreshModel');
-        });
+      return lead.save();
     }
   }
 });

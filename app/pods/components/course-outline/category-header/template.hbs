@@ -4,21 +4,17 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="back-to-link">
-            <a href="/courses">
-              Courses
-            </a>
+            {{#link-to "page" "courses"}}
+              Course
+            {{/link-to}}
           </div>
           <h1 class="display-3 text-white mb-0">{{ title }} Training</h1>
         </div>
         <div class="col-lg-6">
           <div class="header-call-to-action position-absolute">
-            <a
-              class="btn btn-primary btn-white-hover"
-              href="/contact"
-              role="button"
-            >
+            {{#link-to "page" "contact-us" class="btn btn-primary btn-white-hover" role="button"}}
               Request More Information
-            </a>
+            {{/link-to}}
           </div>
         </div>
       </div>
