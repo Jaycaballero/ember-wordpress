@@ -516,15 +516,18 @@
       section#course-sub-category {
         h2 { font-size: 35px !important; }
         .subCatTitle-shortDesc-wrapper { margin-bottom: 20px; }
-        .headerCard-title {
-          height: 160px;
-          .card-title {
-            padding: 15px !important;
-            h3 { font-size: 25px !important; margin-bottom: 0; }
+        .card {
+          height: 450px;
+          .headerCard-title {
+            height: 160px;
+            .card-title {
+              padding: 15px !important;
+              h3 { font-size: 25px !important; margin-bottom: 0; }
+            }
           }
+          .card-text { padding: 15px !important; }
+          .card-footer { padding: 0 15px !important; bottom: 15px; }
         }
-        .card-text { padding: 15px !important; }
-        .card-footer { padding: 0 15px 15px !important; }
       }
       section#why-choose {
         > .container {
@@ -764,8 +767,12 @@
       }
       section#course-sub-category {
         .course-content .card {
-          max-width: 100%; flex: none;
+          max-width: 100%; flex: none; height: auto;
           .card-title { padding: 30px; }
+        }
+        .card .card-footer {
+          position: relative;
+          margin-top: 30px;
         }
       }
       section#why-choose > .container {

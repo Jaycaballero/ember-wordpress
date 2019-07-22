@@ -1,2 +1,2 @@
-.card-title
-  h3 = title
+link-to "course.sub-category.outline" slug class="card-title"
+    h3 = title
