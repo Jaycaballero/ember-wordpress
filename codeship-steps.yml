@@ -1,4 +1,4 @@
-- type: parallel
+- type: serial
   name: "Build Stage"
   steps:
   - name: "Building Image"
@@ -6,7 +6,7 @@
     tag: ^(master|staging)
     command: echo "Build completed"
 
-- type: parallel
+- type: serial
   name: "Push Stage"
   steps:
   - name: 'Push SHA tag'
