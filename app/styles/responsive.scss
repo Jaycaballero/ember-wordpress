@@ -133,10 +133,6 @@
   }
   body.sub-category.courses {
     #aggregateRating {
-      section#scroll-menus ul.scrollMenu-items li {
-        margin-right: 41px !important;
-        &:last-child { margin-right: 0 !important; }
-      }
       section#course-sub-category .card-title h3 { font-size: 28px !important; }
       section#request-callback {
         > .container > .row.py-5 { padding: 0 15px !important; }
@@ -506,10 +502,6 @@
   }
   body.sub-category.courses {
     #aggregateRating {
-      section#scroll-menus ul.scrollMenu-items li {
-        &:nth-child(1) { width: 100%; }
-        &:not(:nth-child(1)) { margin-right: 17px; }
-      }
       .course-subcategory-content {
         .subCategory-image { width: 100%; }
       }
@@ -754,9 +746,6 @@
       	margin-top: 25px;
       }
       .course-subcategory-content .subCategory-image { width: 100%; }
-      section#scroll-menus ul.scrollMenu-items li {
-      text-align: center; margin-right: 0; width: 100%;
-      }
       nav#scroll-to-section {
         ul.child-items-navigation li { margin-right: 19px !important; }
       }
