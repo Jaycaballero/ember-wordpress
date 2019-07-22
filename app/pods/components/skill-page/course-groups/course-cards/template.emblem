@@ -4,6 +4,7 @@
       = skill-page/course-groups/course-cards/card-title [
         title=course.title
         color=course.color
+        slug=course.slug
       ]
       .card-holder
         .card-body.p-0
