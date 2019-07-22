@@ -38,19 +38,6 @@
         {{/components/courses-background-image}}
       {{/if}}
     </header>
-    <section id="scroll-menus" class="py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            {{skill-page/menu-items
-              courseGroups=courseGroups
-              showUngrouped=ungroupedCourses.length
-              subCategory=subCategory
-            }}
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="course-sub-category">
       <div class="container py-5">
         <div class="col course-subcategory-content">
@@ -62,6 +49,7 @@
               courses=ungroupedCourses
               showUngrouped=ungroupedCourses.length
               subCategory=subCategory
+              showTitle=courseGroups.length
             }}
             {{skill-page/course-groups
               courseGroups=courseGroups

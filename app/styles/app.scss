@@ -663,7 +663,7 @@ body.sub-category-page .course-category-listing { display: none; }
 }
 body.sub-category.courses {
   .breadcrumb li.active { font-family: helveticaneue-bold; }
-  .header-call-to-action a { font-family: helveticaneue-bold; font-size: 18px; }
+  .header-call-to-action { display: none; }
   h1 { font-family: helveticaneue-bold !important; font-size: 45px !important; }
   nav#scroll-to-section {
     background-color: #f1f2f2;
@@ -674,22 +674,6 @@ body.sub-category.courses {
         font-family: calibri-bold;
         transition: color 0.3s ease-in-out;
         &:hover { text-decoration: none; color: #e84d3d; }
-      }
-    }
-  }
-  section#scroll-menus {
-    background-color: #ddf0f8;
-    ul.scrollMenu-items li {
-      list-style: none;
-      display: inline-block;
-      margin-right: 50px;
-      color: #005f8b;
-      font-family: helveticaneue;
-      font-size: 18px;
-      a {
-        font-family: helveticaneue-bold;
-        color: #005f8b; text-decoration: none;
-        font-size: 18px;
       }
     }
   }
