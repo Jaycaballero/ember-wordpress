@@ -617,7 +617,7 @@ section#subpage-content.courses {
 ul.sub-category-listing {
 	list-style: none; padding: 15px;
   li{
-    width: calc(33% - 8px);
+    width: calc(25% - 12px);
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
@@ -626,43 +626,12 @@ ul.sub-category-listing {
       .course-subcategory-title { color: #005f8b; }
     }
   }
-  li:nth-child(3n) { margin-right: 0; }
+  li:nth-child(4n) { margin-right: 0; }
   .course-subcategory-introtext { color: #666666; font-size: 17px; }
 }
 ul.course-sub-category-listing li a {
 	text-decoration: none;
   &:hover .course-subCategory-title { color: #005f8b !important; }
-}
-ul.sidebar-category-lists {
-  > li {
-    .cat-title-and-icon {
-      img.cat-ico {
-        width: 5%;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-      }
-      .cat-title { margin-left: 30px; }
-    }
-  	list-style: none;
-  	border-top: 1px solid #e1e2e3;
-  	padding: 7px 15px;
-    > a {
-      color: #666666;
-      text-decoration: none;
-      &::after {
-        content: "\f054";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translate(0, -50%);
-        font-size: 13px;
-      }
-    }
-    &:hover a, &:hover a:after { color: #005f8b; }
-  }
 }
 ul.sub-category-listing {
   > li {
@@ -684,17 +653,6 @@ ul.sub-category-listing {
     .card-body {
       .course-subcategory-title {
         font-family: calibri-bold; color: #666666;
-      }
-      .learn-more {
-      	background-color: #e84d3d;
-      	color: #fff;
-      	border: 1px solid #e84d3d !important;
-      	border-radius: 0.45rem;
-      	font-size: 16px;
-      	padding: 4px 31px;
-      	font-family: calibri-bold;
-        transition: 0.3s ease-in-out;
-        &:hover { color: #e84d3d; background-color: transparent; }
       }
     }
   }
