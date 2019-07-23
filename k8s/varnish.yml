@@ -68,6 +68,10 @@ data:
             return (pass);
         }
 
+        if (req.url ~ "\.(css|js|png|gif|jp(e?)g)|swf|ico|svg|woff2") {
+          unset req.http.Cookie;
+        }
+
 
         # WordPress - Did not cache the admin and login pages
         if (req.url ~ "/wp-(login|admin|sxlogin)") {
@@ -79,7 +83,6 @@ data:
           return (pass);
         }
 
-        unset req.http.Cookie;
 
         set req.http.host = "www.systematix.co.uk";
         return (hash);
