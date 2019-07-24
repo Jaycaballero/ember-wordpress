@@ -823,10 +823,11 @@
           .col-8, .col-4 {
             max-width: 100% !important; flex: none !important;
           }
+          ul.course-header-info li { font-family: calibri-bold; }
         }
         .export-share-button {
           float: none !important; margin: 20px 0;
-          a { text-align: center; }
+          a { text-align: center; font-family: calibri-bold !important; }
         }
       }
     }
@@ -1082,6 +1083,11 @@
   .subCat-locationListing .location-img-background {
     height: 347px;
   }
+  body.outline.course section#tabs > .container > .row > .col-8 .custom-tabs {
+    ul.nav-tabs li.nav-item a {
+      font-size: 20px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -1155,7 +1161,7 @@
     section#tabs > .container > .row > .col-8 {
       .custom-tabs {
         ul.nav-tabs li.nav-item a {
-        	font-size: 16px !important; margin-right: 30px !important;
+        	font-size: 20px !important; margin-right: 30px !important;
         }
         ul.nav-tabs li:last-child.nav-item a { margin-right: 0 !important; }
         .tab-content {
