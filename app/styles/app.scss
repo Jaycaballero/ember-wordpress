@@ -125,7 +125,7 @@ section#top .top-buttons a.btn:hover {
   display: flex;
   .search-banner {
     .ember-power-select-trigger {
-	    width: 89%;
+	    width: 100%;
       background-color: transparent;
       border: 0;
       padding: 0;
@@ -151,6 +151,11 @@ section#top .top-buttons a.btn:hover {
       background-color: #e84d3d !important;
       border: 1px solid #e84d3d !important;
       border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 16px;
+      padding: 12px;
     }
     .fa.fa-search { color: #fff; }
     button.btn:hover { background-color: #e84d3d !important; }
