@@ -1256,6 +1256,10 @@
       .headerCard-title .card-title h3 { font-size: 30px !important; }
     }
     #aggregateRating {
+      .course-subcategory-content .row {
+        .col-9, .col-3 { max-width: 100%; flex: none; padding: 0; }
+        .col-3 .sub-category-image { margin-bottom: 20px;}
+      }
       section#request-callback > .container {
         h1 {  font-size: 30px !important; }
         ul.contact-infos li p, ul.contact-infos li a { font-size: 20px; }
