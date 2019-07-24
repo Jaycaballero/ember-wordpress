@@ -644,7 +644,10 @@
   }
   header .subpage-header .background-image.banner-image { display: none; }
   header .subpage-header .container .col-lg-6:first-child {
-    padding: 0 15px 25px 15px;
+    padding: 25px 15px 25px 15px;
+  }
+  body.courses header .subpage-header .container .col-lg-6:first-child {
+    padding-top: 0;
   }
   header .subpage-header .call-to-action a.btn { margin-bottom: 24px; }
   section#subpage-content .container .col-md-4 {
@@ -654,8 +657,8 @@
   section#subpage-content .card .custom-card-holder { height: auto; }
   section#subpage-content .card-footer { position: inherit; }
   .subpage-banner-content h1 { font-size: 42px !important; }
-  body.full-item-view #full-item-view-content .col-md-6 > h2 {
-    margin-top: 15px; font-size: 26px !important;
+  body.full-item-view #full-item-view-content {
+    .col-md-6 > h2 { margin-top: 15px; font-size: 26px !important; }
   }
   section#full-item-view-content { padding: 0 !important; }
   body.tips-and-tricks #subpage-content .container .col-md-8 > .col-md-6 {
@@ -903,7 +906,7 @@
   body.tips-and-tricks .subpage-thumbnails .background-image { height: 310px; }
   section#footer .menu-footer { max-width: 100%; flex: none; }
   section#footer .social-footer { max-width: 100%; flex: none; }
-  section#footer ul.footer-menu li { margin-right: 32px; }
+  section#footer ul.footer-menu li { margin-right: 0; }
   .business-header .search-banner .input-group { max-width: 100%; }
   .banner-content .search-banner .ember-power-select-trigger {
 	  width: 82% !important;
