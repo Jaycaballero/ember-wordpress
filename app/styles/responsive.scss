@@ -1267,4 +1267,8 @@
       section#why-choose > .container h1 { font-size: 30px !important; margin-top: 0 !important; }
     }
   }
+  .course-outline-section .row .col-6 {
+  	max-width: 100%;
+  	flex: none;
+  }
 }

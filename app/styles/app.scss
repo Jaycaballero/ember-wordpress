@@ -1020,6 +1020,17 @@ body.outline.course {
           }
         }
       }
+      .course-outline-section {
+        table {
+          margin: 10px 0 10px 0;
+          tr.legend td {
+        	  border-top: 3px solid #005f8b;
+            border-bottom: 3px solid #005f8b;
+            padding: 10px 12px;
+          }
+          tr:nth-child(3n) td { border: 0; }
+        }
+      }
     }
   }
   .outline-sidbar {
