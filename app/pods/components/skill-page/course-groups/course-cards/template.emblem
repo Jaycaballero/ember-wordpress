@@ -14,7 +14,7 @@
                 = fa-icon "circle"
                 small
                   = course.levels
-            = truncate course.shortDescription
+            = html-safe course.shortDescription
         .card-footer
           link-to "course.sub-category.outline" course.slug class="view-outline"
             | View Outline
