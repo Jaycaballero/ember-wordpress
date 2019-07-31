@@ -9,6 +9,7 @@ const {
 export default Model.extend({
   bannerImageUrl: attr('string'),
   description: attr('string'),
+  descriptionEnd: attr('string'),
   duration: attr('string'),
   headerTitle: attr('string'),
   icon: attr('string'),
