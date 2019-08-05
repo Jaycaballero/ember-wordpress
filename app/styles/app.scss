@@ -714,8 +714,30 @@ body.sub-category.courses {
     .card-text {
       padding: 30px; font-family: helveticaneue; font-size: 18px; color: #999;
       p { margin-bottom: 0;}
-      .level .fa-circle { color: #e84d3d; }
-      small { margin-left: 5px; font-family: helveticaneue; color: #747474; }
+      .level .fa-circle { 
+        .introduction{
+          color: green;
+        }
+
+        .intermediate{
+          color: yellow;
+        }
+
+        .advanced{
+          color: red;
+        }
+
+        .other{
+          color: blue;
+        }
+      }
+      small { 
+        margin-left: 5px; font-family: helveticaneue; color: #747474; 
+
+        .duration{
+          float: right;
+        }
+      }
     }
     ul {
       > li {
