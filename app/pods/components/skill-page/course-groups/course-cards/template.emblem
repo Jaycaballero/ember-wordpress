@@ -11,21 +11,18 @@
           .card-text
             = if course.levels
               .level.mb-4
-                if eq course.level "Introduction"
+                = if (eq course.levels "Introduction")
                   = fa-icon "circle" class="introduction"
-                else if eq course.level "Intermediate"
+                = else if (eq course.levels "Intermediate")
                   = fa-icon "circle" class="intermediate"
-                else if eq course.level "Advanced"
+                = else if (eq course.levels "Advanced")
                   = fa-icon "circle" class="advanced"
-                else if eq course.level "Other"
+                = else
                   = fa-icon "circle" class="other"
                 small
                   = course.levels
                 small class="duration"
-                  if gt course.days 1
-                    = concat course.days "Days"
-                  else
-                    = concat course.days "Day"
+                  = format-duration course.days
             = html-safe course.shortDescription
         .card-footer
           link-to "course.sub-category.outline" course.slug class="view-outline"

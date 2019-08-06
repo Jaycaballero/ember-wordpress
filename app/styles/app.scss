@@ -713,31 +713,13 @@ body.sub-category.courses {
     }
     .card-text {
       padding: 30px; font-family: helveticaneue; font-size: 18px; color: #999;
-      p { margin-bottom: 0;}
-      .level .fa-circle { 
-        .introduction{
-          color: green;
-        }
-
-        .intermediate{
-          color: yellow;
-        }
-
-        .advanced{
-          color: red;
-        }
-
-        .other{
-          color: blue;
-        }
-      }
-      small { 
-        margin-left: 5px; font-family: helveticaneue; color: #747474; 
-
-        .duration{
-          float: right;
-        }
-      }
+      .introduction{color: #37863D;}
+      .intermediate{color: #E8D931;}
+      .advanced{color: #e84d3d;}
+      .other{color: #0785BF;}
+      p { margin-bottom: 0; }
+      small { margin-left: 5px; font-family: helveticaneue; }
+      .duration{float: right; font-weight: 700;}
     }
     ul {
       > li {
