@@ -9,7 +9,7 @@ export default Route.extend({
       crmLead: this.store.createRecord('crm-lead', {}),
       moreInformations: this.store.query('moreinformation', {per_page: 99, order: 'asc'}),
       locations: this.store.query('bifrost-location', {limit: 3}),
-      testimonials: this.store.query('clienttestimonial', {per_page: 1, order: 'asc', testimonialcategories: 20}),
+      testimonials: this.store.query('clienttestimonial', {per_page: 99, order: 'asc'}),
       subCategorySlug: sub_category_slug,
       whyChoose: this.store.query('whychoose', {per_page: 4, order: 'asc'}),
     });
