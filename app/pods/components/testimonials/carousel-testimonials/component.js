@@ -5,6 +5,7 @@ import { htmlSafe } from '@ember/string';
 
 
 export default Component.extend({
+  classNames: ['carousel-testimonials'],
   testimonialsTextContent: map('_client_Testimonials', function(testimonials){
     return {
       company: get(testimonials, 'acf.company'),

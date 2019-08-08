@@ -340,7 +340,8 @@ b, strong { font-family: calibri-bold; font-size: 20px; color: #707070;}
 #subpage-content ul li { list-style: none; }
 #subpage-content ul li::before { content: "\2022"; color: #005f8b; margin-right: 5px; }
 section#subpage-content a { color: #e84d3d; }
-ul.client-testimonials-listing { margin: 0; }
+ul.client-testimonials-listing { margin: 0; outline: none !important; }
+.carousel.slide { outline: none !important; }
 ul.client-testimonials-listing li::before { content: none !important; }
 ul.client-testimonials-listing .carousel-item > li:nth-child(2) {
   position: relative; margin-top: 45px;
@@ -765,9 +766,11 @@ body.sub-category.courses {
       h1 { font-size: 45px !important; font-family: helveticaneue-light !important; color: #005f8b; }
       .reviews { color: #e84d3d; font-family: helveticaneue-bold; font-size: 18px; }
     }
+    .carousel-testimonials:focus { outline: none !important; }
+    ul.client-testimonials-listing.testimonial:focus { outline: none !important; }
     ul.client-testimonials-listing.testimonial {
       width: 100%;
-      .carousel.slide { width: 100%; }
+      .carousel.slide { width: 100%; outline: none !important; }
       .carousel-item > li:nth-child(2)::after { background: none; }
       .carousel-item > li:nth-child(2) { margin-top: 0; }
     }
