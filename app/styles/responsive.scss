@@ -204,7 +204,17 @@
   section#branding .col-md-6.pr-5 { padding-right: 0 !important; }
   h2, section#branding .container h3 { font-size: 30px !important; }
   section#about-us h3.card-title { font-size: 25px; }
-  section#footer ul.info li { margin-right: 0 !important; }
+  section#footer {
+    ul.info li { margin-right: 0 !important; }
+    .navbar-brand.footer { width: 100% !important; height: 43px !important; }
+    .iso-90001 { width: 100% !important; background-size: cover; height: 161px !important; }
+    ul.info li {
+      .col-md-2 { padding-right: 10px; }
+      img { width: 18px !important; }
+      a, p { font-size: 17px !important; margin-top: 4px !important; margin-bottom: 0 !important; }
+    }
+  }
+
   header .subpage-header .subpage-banner-content {
     top: 0;
     transform: none;
@@ -622,14 +632,13 @@
     margin-top: 0 !important; margin-bottom: 0 !important;
   }
   section#about-us .container .row > .col-md-4 { padding-bottom: 15px; }
-  section#footer ul.info { text-align: left !important; }
+  section#footer ul.info { display: table; margin: auto !important;}
   section#footer ul.info li .row .col-md-2 { width: auto; }
   section#footer ul.footer-social-icons {
-    float: left !important; padding-left: 0; margin-top: 20px;
+    float: none !important; padding-left: 0; display: table; margin: 20px auto !important;
   }
-  section#footer ul.info li a, section#footer ul.info li p {
-    font-size: 20px !important;
-  }
+  section#footer ul.info li a, section#footer ul.info li p { font-size: 20px !important; }
+  section#footer ul.info li:nth-child(1) { margin-right: 10px; }
   body.tips-and-tricks #full-item-view-content .post-full-item-image {
     width: 100% !important; margin-bottom: 15px;
   }
@@ -901,7 +910,7 @@
   body.tips-and-tricks .subpage-thumbnails .background-image { height: 310px; }
   section#footer .menu-footer { max-width: 100%; flex: none; }
   section#footer .social-footer { max-width: 100%; flex: none; }
-  section#footer ul.footer-menu li { margin-right: 0; }
+  section#footer ul.footer-menu li { margin-right: 0; display: block; text-align: center; }
   .business-header .search-banner .input-group { max-width: 100%; }
   section#subpage-content.courses {
     .col-md-4.courseCategories-container { max-width: 100%; }
@@ -1095,11 +1104,12 @@
   .banner-content h1, section#benefits h1 { font-size: 37px !important; }
   .banner-content .pre-text p { font-size: 18px !important; }
   section#branding .container h3 { font-size: 29px !important; }
-  section#footer ul.footer-menu > li { width: 100%; margin-bottom: 5px; }
+  section#footer ul.footer-menu > li { width: 100%; margin-bottom: 5px;}
   section#benefits .container .row.mt-5 > .col-md-4:last-child {
     margin-bottom: 0 !important;
   }
-  section#footer ul.info li { margin-right: 0; }
+  section#footer ul.info li { margin-right: 0 !important; }
+  section#footer ul.info { text-align: center !important; }
   body.tips-and-tricks .custom-card-holder .card-title {
     font-size: 20px !important;
   }
