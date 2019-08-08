@@ -270,7 +270,7 @@ section#footer {
   ul {
     list-style: none;
     li {
-      display: inline-block; margin-right: 35px;
+      display: inline-block;
       a { color: #d1d3d4; transition: color 0.2s ease-out;
       }
       &:hover a { color: #e84d3d !important; text-decoration: none;}
@@ -283,6 +283,13 @@ section#footer {
       margin-right: 20px;
       &:last-child { margin-right: 0 !important; }
     }
+  }
+  .iso-90001 {
+    background-image: url(../assets/images/iso.png);
+    width: 265px;
+    height: 204px;
+    display: table;
+    margin: 30px auto 20px;
   }
   .navbar-brand.footer {
     height: 55px; width: 268px;
@@ -1078,6 +1085,7 @@ body.outline.course {
 }
 .aboutUs-fullItem-View #full-item-view-content ul li {
   list-style: none;
+  .fas.fa-check { color: #008b2c; margin-right: 10px; }
   .full-item.background-image {
   	float: left; width: 50%; margin-right: 25px;
   }
