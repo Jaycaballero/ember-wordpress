@@ -1,10 +1,23 @@
-<ul class="testimonial p-0 d-table">
-  {{#each testimonials as |testimonial|}}
-    <li class="quote-icon"><i class="fas fa-quote-left mb-2"></i></li>
-    <li class="testimonial-content">
-      {{html-safe testimonial.acf.editor}}
-      <div class="person">{{testimonial.acf.name}}</div>
-    </li>
-  {{/each}}
+<ul class="client-testimonials-listing testimonial p-0 d-table">
+  <BsCarousel
+    @wrap={{true}}
+    @index={{0}}
+    @interval={{5000}}
+    @keyboard={{true}}
+    @ltr={{true}}
+    @pauseOnMouseEnter={{true}}
+    @showControls={{false}}
+    @showIndicators={{true}}
+    as |car|>
+    {{#each testimonials as |testimonial|}}
+      <car.slide>
+        <li class="quote-icon"><i class="fas fa-quote-left mb-2"></i></li>
+        <li class="testimonial-content">
+          {{html-safe testimonial.acf.editor}}
+          <div class="person">{{testimonial.acf.name}}</div>
+        </li>
+      </car.slide>
+    {{/each}}
+  </BsCarousel>
 </ul>
 {{yield}}

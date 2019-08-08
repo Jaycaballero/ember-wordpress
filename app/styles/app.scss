@@ -765,6 +765,12 @@ body.sub-category.courses {
       h1 { font-size: 45px !important; font-family: helveticaneue-light !important; color: #005f8b; }
       .reviews { color: #e84d3d; font-family: helveticaneue-bold; font-size: 18px; }
     }
+    ul.client-testimonials-listing.testimonial {
+      width: 100%;
+      .carousel.slide { width: 100%; }
+      .carousel-item > li:nth-child(2)::after { background: none; }
+      .carousel-item > li:nth-child(2) { margin-top: 0; }
+    }
     ul.testimonial {
       li {
         float: left; list-style: none;
@@ -772,7 +778,6 @@ body.sub-category.courses {
       }
       li.quote-icon { width: 5%; margin-right: 10px; }
       li.testimonial-content {
-        width: 90%;
         .person { font-family: helveticaneue-bold; color: #005f8b; font-size: 18px; }
       }
       .testimonial-content p {
