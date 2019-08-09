@@ -278,6 +278,7 @@ section#footer {
       i { display: none; }
     }
   }
+  ul.footer-menu li { margin-right: 25px; }
   ul.footer-social-icons {
     li {
       margin-right: 20px;
@@ -340,8 +341,8 @@ b, strong { font-family: calibri-bold; font-size: 20px; color: #707070;}
 #subpage-content ul li { list-style: none; }
 #subpage-content ul li::before { content: "\2022"; color: #005f8b; margin-right: 5px; }
 section#subpage-content a { color: #e84d3d; }
-ul.client-testimonials-listing { margin: 0; outline: none !important; }
-.carousel.slide { outline: none !important; }
+ul.client-testimonials-listing { margin: 0; }
+ul.client-testimonials-listing:focus, .carousel.slide:focus { outline: none !important; }
 ul.client-testimonials-listing li::before { content: none !important; }
 ul.client-testimonials-listing .carousel-item > li:nth-child(2) {
   position: relative; margin-top: 45px;
