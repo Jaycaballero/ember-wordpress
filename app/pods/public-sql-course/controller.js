@@ -48,7 +48,7 @@ export default Controller.extend({
         bookingDateVenue: booking.date,
         bookingPrice: booking.price,
         bookingLocation: location.title,
-        source: 'SQL',
+        source: 'SQL Introduction Course',
         sourceDescription: 'Public Booking'
       });
       this.setProperties({ crmLead, bookingFormVisible: true });

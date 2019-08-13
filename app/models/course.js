@@ -26,6 +26,7 @@ export default Model.extend({
   version: attr('string'),
 
   categories: hasMany('category'),
+  publicDates: hasMany('public-date'),
   courseGroups: hasMany('site-tag'),
   subCategories: hasMany('sub-category'),
 });

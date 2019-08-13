@@ -5,7 +5,8 @@
 ] as |modal|
   = modal.header
     div
-      h2.modal-title SQL Introduction Course
+      h2.modal-title
+        = lead.source
       p Please complete the booking form with your requirements. We will get back to you to confirm your booking.
   = modal.body
     = bs-form [

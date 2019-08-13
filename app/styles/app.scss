@@ -837,6 +837,27 @@ body.sub-category.courses {
       }
     }
   }
+  section#public-courses-list {
+    margin-top: -20px;
+    margin-bottom: 50px;
+    h1 {
+      font-family: helveticaneue-light !important;
+      font-size: 45px !important;
+      color: #005f8b;
+    }
+    h6 {
+      color: #005f8b;
+      font-family: helveticaneue;
+      margin-top: 10px;
+    }
+    .power-select-control {
+      display: block;
+      div {
+        width: 300px;
+        margin-bottom: 20px;
+      }
+    }
+  }
   section#request-callback {
 	  background-color: #ddf0f8;
     h1 {

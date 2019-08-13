@@ -114,6 +114,20 @@
         </div>
       </div>
     </section>
+    <section id="public-courses-list">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            {{skill-page/public-courses
+              bookingSuccessful=bookingSuccessful
+              locations=locations
+              publicDates=publicDates
+              onSelectBooking=(action "selectBooking")
+            }}
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="request-callback">
       <div class="container py-5">
         <div class="row py-5">
@@ -141,3 +155,10 @@
     </section>
   </div>
 </div>
+
+{{forms/booking-form
+  lead=crmLead
+  open=bookingFormVisible
+  onHidden=(action "cancelLead")
+  onSubmit=(pipe (action "createLead") (action (mut bookingFormVisible) false) (action (mut bookingSuccessful) true))
+}}
