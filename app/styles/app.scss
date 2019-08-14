@@ -1646,10 +1646,31 @@ body.outline.course {
   width: 100%;
 }
 
-
 .location-img-background {
   background-repeat: no-repeat;
   background-size: cover;
   height: 245px;
   position: relative;
+}
+
+#location-pagination {
+  .pagination-centered {
+    .pagination {
+      justify-content: center;
+    }
+  }
+  .pagination {
+    > li {
+      padding: 5px;
+    }
+    .active {
+      text-decoration: underline solid #005f8b;
+    }
+    .disabled > a {
+      color: #6c757d;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }

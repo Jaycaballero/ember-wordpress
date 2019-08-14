@@ -7,7 +7,7 @@ h1 Dates and Prices
         options=locations
         placeholder="Choose a location..."
         selected=selectedLocation
-        onchange=(action (mut selectedLocation))
+        onchange=(action "selectLocation")
       ] as |location|
         = location.name
 .row
@@ -22,6 +22,8 @@ h1 Dates and Prices
       | Thank you! Your booking has been recorded!
 .location-row
   = skill-page/public-courses/single-schedule [
-    publicDates=locationDates
+    publicDates=pagedPublicDates
     onSelectBooking=onSelectBooking
   ]
+  #location-pagination
+    = page-numbers content=pagedPublicDates
