@@ -212,7 +212,7 @@
     ul.info li { margin-right: 0 !important; }
     .navbar-brand.footer { width: 100% !important; height: 43px !important; }
     ul.info li {
-      .col-md-2 { padding-right: 10px; }
+      .col-md-2 { padding-right: 10px; display: block !important;}
       img { width: 18px !important; }
       a, p { font-size: 17px !important; margin-top: 4px !important; margin-bottom: 0 !important; }
     }

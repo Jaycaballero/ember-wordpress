@@ -278,7 +278,9 @@ section#footer {
       i { display: none; }
     }
   }
-  ul.info li:not(:nth-child(2)) { margin-right: 75px; }
+  ul.info li:not(:nth-child(2)) {
+    margin-right: 70px;
+  }
   ul.footer-menu li { margin-right: 25px; }
   ul.footer-social-icons {
     li {
