@@ -278,6 +278,7 @@ section#footer {
       i { display: none; }
     }
   }
+  ul.info li:not(:nth-child(2)) { margin-right: 75px; }
   ul.footer-menu li { margin-right: 25px; }
   ul.footer-social-icons {
     li {
@@ -287,10 +288,13 @@ section#footer {
   }
   .iso-90001 {
     background-image: url(../assets/images/iso.png);
-    width: 265px;
-    height: 204px;
+    width: 90px;
+    height: 71px;
     display: table;
-    margin: 30px auto 20px;
+    margin: 10px 0;
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   .navbar-brand.footer {
     height: 55px; width: 268px;
