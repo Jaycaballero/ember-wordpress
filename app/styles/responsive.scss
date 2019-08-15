@@ -3,7 +3,11 @@
   #navbarSupportedContent ul.navbar-nav > li:not(:last-child) > a {
     margin-right: 12px;
   }
-  section#footer ul.info li { margin-right: 0; }
+  section#footer ul.info li {
+    margin-right: 0;
+    a, p { font-size: 20px !important; }
+    &:not(:nth-child(2)) { margin-right: 35px !important; }
+  }
   section#subpage-content.courses {
     .course-category-image img { width: 25%; }
   }
@@ -207,7 +211,6 @@
   section#footer {
     ul.info li { margin-right: 0 !important; }
     .navbar-brand.footer { width: 100% !important; height: 43px !important; }
-    .iso-90001 { width: 100% !important; background-size: cover; height: 161px !important; }
     ul.info li {
       .col-md-2 { padding-right: 10px; }
       img { width: 18px !important; }
@@ -554,6 +557,14 @@
   .subCat-locationListing .location-img-background {
     height: 149px;
   }
+  section#footer {
+    ul.info { text-align: right; }
+    .col-md-2.iso-logo, .col-md-6.footer-contactDetails {
+      max-width: 33.33%; flex: 0 0 33.3333333333%;
+    }
+    .iso-90001 { margin: 10px auto !important; }
+    .footer-contactDetails > .mt-4 { margin-top: 10px !important; }
+  }
 }
 
 /* Mobile Modes */
@@ -638,7 +649,11 @@
     float: none !important; padding-left: 0; display: table; margin: 20px auto !important;
   }
   section#footer ul.info li a, section#footer ul.info li p { font-size: 20px !important; }
-  section#footer ul.info li:nth-child(1) { margin-right: 10px; }
+  section#footer ul.info li:nth-child(1) { margin-right: 20px !important; }
+  section#footer {
+    .iso-90001 { margin: 30px auto !important; }
+    .footer-contactDetails .mt-4 { margin-top: 0 !important; }
+  }
   body.tips-and-tricks #full-item-view-content .post-full-item-image {
     width: 100% !important; margin-bottom: 15px;
   }
@@ -910,7 +925,7 @@
   body.tips-and-tricks .subpage-thumbnails .background-image { height: 310px; }
   section#footer .menu-footer { max-width: 100%; flex: none; }
   section#footer .social-footer { max-width: 100%; flex: none; }
-  section#footer ul.footer-menu li { margin-right: 0; display: block; text-align: center; }
+  section#footer ul.footer-menu li { margin-right: 0 !important; display: block; text-align: center; }
   .business-header .search-banner .input-group { max-width: 100%; }
   section#subpage-content.courses {
     .col-md-4.courseCategories-container { max-width: 100%; }
