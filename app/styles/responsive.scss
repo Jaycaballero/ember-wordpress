@@ -6,7 +6,6 @@
   section#footer ul.info li {
     margin-right: 0;
     a, p { font-size: 20px !important; }
-    &:not(:nth-child(2)) { margin-right: 35px !important; }
   }
   section#subpage-content.courses {
     .course-category-image img { width: 25%; }
@@ -559,9 +558,6 @@
   }
   section#footer {
     ul.info { text-align: right; }
-    .col-md-2.iso-logo, .col-md-6.footer-contactDetails {
-      max-width: 33.33%; flex: 0 0 33.3333333333%;
-    }
     .iso-90001 { margin: 10px auto !important; }
     .footer-contactDetails > .mt-4 { margin-top: 10px !important; }
   }
