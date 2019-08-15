@@ -853,6 +853,27 @@ body.sub-category.courses {
       }
     }
   }
+  section#public-courses-list {
+    margin-top: -20px;
+    margin-bottom: 50px;
+    h1 {
+      font-family: helveticaneue-light !important;
+      font-size: 45px !important;
+      color: #005f8b;
+    }
+    h6 {
+      color: #005f8b;
+      font-family: helveticaneue;
+      margin-top: 10px;
+    }
+    .power-select-control {
+      display: block;
+      div {
+        width: 300px;
+        margin-bottom: 20px;
+      }
+    }
+  }
   section#request-callback {
 	  background-color: #ddf0f8;
     h1 {
@@ -1641,10 +1662,31 @@ body.outline.course {
   width: 100%;
 }
 
-
 .location-img-background {
   background-repeat: no-repeat;
   background-size: cover;
   height: 245px;
   position: relative;
+}
+
+#location-pagination {
+  .pagination-centered {
+    .pagination {
+      justify-content: center;
+    }
+  }
+  .pagination {
+    > li {
+      padding: 5px;
+    }
+    .active {
+      text-decoration: underline solid #005f8b;
+    }
+    .disabled > a {
+      color: #6c757d;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
