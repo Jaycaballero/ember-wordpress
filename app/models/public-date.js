@@ -13,6 +13,6 @@ export default Model.extend({
   startDate: attr('string'),
   endDate: attr('string'),
 
-  course: belongsTo('course'),
+  course: belongsTo(),
   location: belongsTo('bifrost-location')
 });
