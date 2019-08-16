@@ -1065,6 +1065,18 @@ body.outline.course {
         }
       }
       .course-outline-section {
+        .accordion .card {
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          -o-box-shadow: none;
+          .card-header h5 button {
+          	color: #707070;
+          	font-family: calibri-bold;
+          	font-size: 25px;
+          	border: 0;
+          }
+        }
         table {
           margin: 10px 0 10px 0;
           tr.legend td {
