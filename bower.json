@@ -1,0 +1,6 @@
+{
+  "name": "systematix",
+  "dependencies": {
+    "slick-carousel": "1.5.8"
+  }
+}

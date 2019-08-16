@@ -209,7 +209,6 @@
   section#about-us h3.card-title { font-size: 25px; }
   section#footer {
     ul.info li { margin-right: 0 !important; }
-    .navbar-brand.footer { width: 100% !important; height: 43px !important; }
     ul.info li {
       .col-md-2 { padding-right: 10px; display: block !important;}
       img { width: 18px !important; }
@@ -557,8 +556,8 @@
     height: 149px;
   }
   section#footer {
+    .copyright-text { margin: 25px 0 0; }
     ul.info { text-align: right; }
-    .iso-90001 { margin: 10px auto !important; }
     .footer-contactDetails > .mt-4 { margin-top: 10px !important; }
   }
 }
@@ -639,7 +638,7 @@
     margin-top: 0 !important; margin-bottom: 0 !important;
   }
   section#about-us .container .row > .col-md-4 { padding-bottom: 15px; }
-  section#footer ul.info { display: table; margin: auto !important;}
+  section#footer ul.info { display: table; margin: 20px auto !important; }
   section#footer ul.info li .row .col-md-2 { width: auto; }
   section#footer ul.footer-social-icons {
     float: none !important; padding-left: 0; display: table; margin: 20px auto !important;
@@ -647,7 +646,6 @@
   section#footer ul.info li a, section#footer ul.info li p { font-size: 20px !important; }
   section#footer ul.info li:nth-child(1) { margin-right: 20px !important; }
   section#footer {
-    .iso-90001 { margin: 30px auto !important; }
     .footer-contactDetails .mt-4 { margin-top: 0 !important; }
   }
   body.tips-and-tricks #full-item-view-content .post-full-item-image {

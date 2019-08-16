@@ -285,16 +285,6 @@ section#footer {
       &:last-child { margin-right: 0 !important; }
     }
   }
-  .iso-90001 {
-    background-image: url(../assets/images/iso.png);
-    width: 90px;
-    height: 71px;
-    display: table;
-    margin: 10px 0;
-    background-size: 100% auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
   .navbar-brand.footer {
     height: 55px; width: 268px;
     background-image: url("../images/logo-footer.svg") !important;
@@ -302,7 +292,10 @@ section#footer {
   ul.info {
     li {
       a, p {
-        font-size: 23px; color: #d1d3d4; transition: color 0.2s ease-out;
+        font-size: 23px;
+        color: #d1d3d4;
+        transition: color 0.2s ease-out;
+        margin-bottom: 5px;
       }
     }
   }
