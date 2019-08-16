@@ -69,22 +69,22 @@ as |navbar|
       <div class="col"><hr></div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-8">
         {{#link-to
           "index"
           class="navbar-brand footer mt-2"
         }}
         {{/link-to}}
       </div>
-      <div class="col-md-6">
-        <div class="mt-4 d-table w-100">
+      <div class="col-md-4 footer-contactDetails">
+        <div class="mt-2 d-table w-100">
           {{home-page-components/contact-details _contact_Details=contactDetails}}
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <div class="copyright-text mt-4 text-center">
+        <div class="copyright-text text-center">
           {{home-page-components/copyright _copyrightFooter=copyrightFooter}}
         </div>
       </div>

@@ -3,7 +3,10 @@
   #navbarSupportedContent ul.navbar-nav > li:not(:last-child) > a {
     margin-right: 12px;
   }
-  section#footer ul.info li { margin-right: 0; }
+  section#footer ul.info li {
+    margin-right: 0;
+    a, p { font-size: 20px !important; }
+  }
   section#subpage-content.courses {
     .course-category-image img { width: 25%; }
   }
@@ -32,14 +35,17 @@
     -webkit-transform-origin: 0 0;
   }
   section#course-parent-category {
-    ul.sub-category-listing li { width: calc(33% - 9px); }
-  }
-  body.sub-category.courses {
-    .course-banner-image { height: 155px !important; }
+    ul.sub-category-listing li {
+      width: calc(25% - 12px);
+      &:nth-child(4n) { margin-right: 0; }
+    }
   }
   body.outline.course {
     #outline-header {
       .outline-container-holder {
+        .breadcrumb > li > a, .breadcrumb > li.active, .breadcrumb > li > a, .breadcrumb > li {
+        	font-size: 18px !important;
+        }
         .container.outline {
           .export-share-button a {
 	          padding: 7px !important;
@@ -51,9 +57,6 @@
   }
   .tipsTricks-filtering.col-md-4 { flex: none !important; max-width: 40%; }
   section#footer ul.footer-menu li { margin-right: 32px !important; }
-  .banner-content .search-banner .ember-power-select-trigger {
-	  width: 87% !important;
-  }
   section#footer ul.info li { margin-right: 0 !important; }
   h3.course-category-title { font-size: 19px; }
   body.outline.course .outline-sidbar .related-course {
@@ -128,6 +131,23 @@
       .card-content h3 { font-size: 24px; }
     }
   }
+  body.sub-category.courses {
+    #aggregateRating {
+      section#course-sub-category .card-title h3 { font-size: 28px !important; }
+      section#request-callback {
+        > .container > .row.py-5 { padding: 0 15px !important; }
+        h1 {  font-size: 38px !important; }
+      }
+      section#why-choose > .container {
+        > .row.py-5 { padding: 0 !important; }
+        .row > .col.py-5 { padding-bottom: 0 !important; }
+      }
+      section#more-information > .container > .row > .col.py-5 { padding: 0 15px !important; }
+    }
+  }
+  .subCat-locationListing .location-img-background {
+    height: 204px;
+  }
 }
 
 /* Tablet Modes */
@@ -187,7 +207,15 @@
   section#branding .col-md-6.pr-5 { padding-right: 0 !important; }
   h2, section#branding .container h3 { font-size: 30px !important; }
   section#about-us h3.card-title { font-size: 25px; }
-  section#footer ul.info li { margin-right: 0 !important; }
+  section#footer {
+    ul.info li { margin-right: 0 !important; }
+    ul.info li {
+      .col-md-2 { padding-right: 10px; display: block !important;}
+      img { width: 18px !important; }
+      a, p { font-size: 17px !important; margin-top: 4px !important; margin-bottom: 0 !important; }
+    }
+  }
+
   header .subpage-header .subpage-banner-content {
     top: 0;
     transform: none;
@@ -229,6 +257,7 @@
     transform: none;
     right: 0;
     position: relative !important;
+    margin-top: 25px;
   }
   body.about-us section#subpage-content .col-md-8 { max-width: 100%; flex: none; }
   body.about-us section#subpage-content .col-md-4 { max-width: 100%; }
@@ -254,16 +283,12 @@
     .col-md-8 { margin-top: 30px; }
   }
   section#course-parent-category {
-    ul.sidebar-category-lists {
-      > li .cat-title-and-icon .cat-title { margin-left: 18px; font-size: 19px;}
-    }
     ul.sub-category-listing {
       li { width: calc(50% - 8px); margin-right: 15px !important; }
       li:nth-child(2n) { margin-right: 0 !important; }
     }
   }
   body.sub-category.courses {
-    .course-banner-image { height: 155px !important; }
     nav#scroll-to-section {
       ul.child-items-navigation li { margin-right: 19px !important; }
     }
@@ -320,9 +345,6 @@
   .blog-fullwidth-content img { width: calc(50% - 3px) !important; }
   section#footer .menu-footer { max-width: 70%; flex: none; }
   section#footer .social-footer { max-width: 30%; flex: none; }
-  .banner-content .search-banner .ember-power-select-trigger {
-	  width: 82% !important;
-  }
   h4.services-title { font-size: 21px; }
   section#subpage-content.courses {
     .col-md-4.courseCategories-container { max-width: 100%; }
@@ -483,6 +505,61 @@
       }
     }
   }
+  body.sub-category.courses {
+    #aggregateRating {
+      .course-subcategory-content {
+        .subCategory-image { width: 100%; }
+      }
+      section#course-sub-category {
+        h2 { font-size: 35px !important; }
+        .subCatTitle-shortDesc-wrapper { margin-bottom: 20px; }
+        .card {
+          height: 450px;
+          .headerCard-title {
+            height: 160px;
+            .card-title {
+              padding: 15px !important;
+              h3 { font-size: 25px !important; margin-bottom: 0; }
+            }
+          }
+          .card-text { padding: 15px !important; }
+          .card-footer { padding: 0 15px !important; bottom: 15px; }
+        }
+      }
+      section#why-choose {
+        > .container {
+          > .row.py-5 { padding: 0 !important; }
+          .row > .col.py-5 { padding-bottom: 0 !important; }
+          ul.testimonial { margin-bottom: 40px; }
+        }
+      }
+      section#subCat-ourLocations h1 { font-size: 33px !important; margin-top: 0 !important; }
+      section#request-callback {
+        > .container > .row.py-5 {
+          padding: 0 !important;
+          h1 { font-size: 33px !important; }
+        }
+        .get-started-form .form-group .btn.submit-button { width: 35%; }
+        ul.contact-infos li p, ul.contact-infos li a {
+          font-size: 20px;
+        }
+      }
+      section#more-information {
+        > .container {
+          h1 { font-size: 33px !important; }
+          > .row > .col.py-5 { padding: 15px 0 !important; }
+        }
+      }
+    }
+  }
+  .subCat-locationListing .location-img-background {
+    height: 149px;
+  }
+  section#footer {
+    .copyright-text { margin: 25px 0 0; }
+    ul.info { text-align: right; }
+    .footer-contactDetails > .mt-4 { margin-top: 10px !important; }
+  }
 }
 
 /* Mobile Modes */
@@ -561,13 +638,15 @@
     margin-top: 0 !important; margin-bottom: 0 !important;
   }
   section#about-us .container .row > .col-md-4 { padding-bottom: 15px; }
-  section#footer ul.info { text-align: left !important; }
+  section#footer ul.info { display: table; margin: 20px auto !important; }
   section#footer ul.info li .row .col-md-2 { width: auto; }
   section#footer ul.footer-social-icons {
-    float: left !important; padding-left: 0; margin-top: 20px;
+    float: none !important; padding-left: 0; display: table; margin: 20px auto !important;
   }
-  section#footer ul.info li a, section#footer ul.info li p {
-    font-size: 20px !important;
+  section#footer ul.info li a, section#footer ul.info li p { font-size: 20px !important; }
+  section#footer ul.info li:nth-child(1) { margin-right: 20px !important; }
+  section#footer {
+    .footer-contactDetails .mt-4 { margin-top: 0 !important; }
   }
   body.tips-and-tricks #full-item-view-content .post-full-item-image {
     width: 100% !important; margin-bottom: 15px;
@@ -577,7 +656,10 @@
   }
   header .subpage-header .background-image.banner-image { display: none; }
   header .subpage-header .container .col-lg-6:first-child {
-    padding: 0 15px 25px 15px;
+    padding: 25px 15px 25px 15px;
+  }
+  body.courses header .subpage-header .container .col-lg-6:first-child {
+    padding-top: 0;
   }
   header .subpage-header .call-to-action a.btn { margin-bottom: 24px; }
   section#subpage-content .container .col-md-4 {
@@ -587,8 +669,8 @@
   section#subpage-content .card .custom-card-holder { height: auto; }
   section#subpage-content .card-footer { position: inherit; }
   .subpage-banner-content h1 { font-size: 42px !important; }
-  body.full-item-view #full-item-view-content .col-md-6 > h2 {
-    margin-top: 15px; font-size: 26px !important;
+  body.full-item-view #full-item-view-content {
+    .col-md-6 > h2 { margin-top: 15px; font-size: 26px !important; }
   }
   section#full-item-view-content { padding: 0 !important; }
   body.tips-and-tricks #subpage-content .container .col-md-8 > .col-md-6 {
@@ -649,40 +731,98 @@
     width: 100% !important;
   }
   section#course-parent-category {
-    ul.sidebar-category-lists {
-      > li {
-        .cat-title { margin-left: 40px; }
-      }
-    }
     ul.sub-category-listing {
       width: calc(100% - 15px) !important;
       li {
-        width: calc(50% - 8px);
-        margin-right: 15px !important;
-        height: auto;
+        width: calc(50% - 8px); margin-right: 15px !important; height: auto;
       }
       li:nth-child(2n) { margin-right: 0 !important; }
     }
   }
-  section#course-sub-category {
-    .course-subcategory-content, .course-subcategory-sidebar {
-    	padding-right: 15px !important;
-    	max-width: 100%;
-      flex: none;
-    }
-    .course-subcategory-sidebar {
-	    margin-top: 25px;
-      .col { padding: 0; }
-      .rct-container { margin-top: 25px !important; }
+  body.sub-category.courses {
+    section#course-sub-category {
+      .course-subcategory-content {
+      	padding-right: 15px !important; max-width: 100%; flex: none;
+        .subCatTitle-shortDesc-wrapper {
+          width: 100% !important; margin-bottom: 25px;
+        }
+        h2 { font-size: 33px !important; }
+        #excel-vba.mb-5 { margin-bottom: 0 !important; }
+      }
     }
   }
   body.sub-category.courses {
-    .course-banner-image { height: 155px !important; }
-    nav#scroll-to-section {
-      ul.child-items-navigation li { margin-right: 19px !important; }
+    #aggregateRating {
+      .header-call-to-action {
+      	position: relative !important;
+      	top: 0;
+      	transform: none;
+      	right: 0;
+      	margin-top: 25px;
+      }
+      .course-subcategory-content .subCategory-image { width: 100%; }
+      nav#scroll-to-section {
+        ul.child-items-navigation li { margin-right: 19px !important; }
+      }
+      section#course-sub-category {
+        .course-content .card {
+          max-width: 100%; flex: none; height: auto;
+          .card-title { padding: 30px; }
+        }
+        .card .card-footer {
+          position: relative;
+          margin-top: 30px;
+        }
+      }
+      section#why-choose > .container {
+        h1 { font-size: 36px !important; }
+        > .row > .col-6 {
+        	max-width: 100%; flex: none; margin-bottom: 25px;
+        }
+        > .row.py-5 {padding: 0 !important; }
+        .rating, h1 { text-align: center; }
+        img { display: table; margin: auto; }
+        ul.whyChoose-listing li {
+          width: 100%;
+          .title-content { width: calc(100% - 73px); }
+        }
+      }
+      section#subCat-ourLocations {
+        h1 { font-size: 36px !important; }
+        ul.subCat-locationListing {
+          margin-bottom: 0 !important;
+          li {
+            width: 100% !important;
+            margin-right: 0 !important;
+            float: none !important;
+            margin-bottom: 25px !important;
+            &:last-child { margin-bottom: 0 !important; }
+          }
+        }
+      }
+      section#more-information > .container {
+        h1 { font-size: 36px !important; }
+        > .row > .col.py-5 { padding: 0 15px !important; }
+        ul.moreInformation-lists li { width: 100%; }
+      }
+      section#request-callback > .container {
+        h1 { font-size: 36px !important; }
+        .row.py-5 { padding: 0 !important; }
+        .row > .col-6 {
+          max-width: 100%; flex: none; padding: 0 15px !important;
+          &:nth-child(1) { margin-bottom: 15px; }
+        }
+        .get-started-form .form-group .btn.submit-button { width: 100%; }
+      }
     }
   }
   body.outline.course {
+    .subpage-header {
+      h1 { font-size: 30px !important; }
+      .container .breadcrumb {
+        li::before { font-size: 20px !important; margin-top: 4px !important; }
+      }
+    }
     #outline-header {
       height: auto !important;
       .outline-container-holder {
@@ -695,10 +835,11 @@
           .col-8, .col-4 {
             max-width: 100% !important; flex: none !important;
           }
+          ul.course-header-info li { font-family: calibri-bold; }
         }
         .export-share-button {
           float: none !important; margin: 20px 0;
-          a { text-align: center; }
+          a { text-align: center; font-family: calibri-bold !important; }
         }
       }
     }
@@ -778,18 +919,15 @@
   body.tips-and-tricks .subpage-thumbnails .background-image { height: 310px; }
   section#footer .menu-footer { max-width: 100%; flex: none; }
   section#footer .social-footer { max-width: 100%; flex: none; }
-  section#footer ul.footer-menu li { margin-right: 32px; }
+  section#footer ul.footer-menu li { margin-right: 0 !important; display: block; text-align: center; }
   .business-header .search-banner .input-group { max-width: 100%; }
-  .banner-content .search-banner .ember-power-select-trigger {
-	  width: 82% !important;
-  }
   section#subpage-content.courses {
     .col-md-4.courseCategories-container { max-width: 100%; }
   }
   body.outline.course #outline-header .outline-container-holder {
     .container.outline { padding: 40px 15px !important; }
     .breadcrumb > li {
-      font-size: 18px !important;
+      font-size: 18px !important; width: 100%; padding: 0; margin-bottom: 7px;
       > a { font-size: 18px !important; }
     }
   }
@@ -948,19 +1086,22 @@
       }
     }
     .navbar-brand.footer {
-      margin: auto;
-      margin-top: auto;
-      text-align: center;
-      display: block;
+      margin: auto; margin-top: auto; text-align: center; display: block;
+    }
+  }
+  .subCat-locationListing .location-img-background {
+    height: 347px;
+  }
+  body.outline.course section#tabs > .container > .row > .col-8 .custom-tabs {
+    ul.nav-tabs li.nav-item a {
+      font-size: 20px;
     }
   }
 }
 
 @media (max-width: 480px) {
   section#top {
-    .top-buttons {
-      a.btn { width: 100%; margin-top: 10px; }
-    }
+    .top-buttons a.btn { width: 100%; margin-top: 10px; }
   }
   nav .navbar-header .navbar-brand { height: 45px; width: 219px; }
   .top-info-wrapper .top-info ul.info .col-md-2 { width: auto; }
@@ -972,11 +1113,12 @@
   .banner-content h1, section#benefits h1 { font-size: 37px !important; }
   .banner-content .pre-text p { font-size: 18px !important; }
   section#branding .container h3 { font-size: 29px !important; }
-  section#footer ul.footer-menu > li { width: 100%; margin-bottom: 5px; }
+  section#footer ul.footer-menu > li { width: 100%; margin-bottom: 5px;}
   section#benefits .container .row.mt-5 > .col-md-4:last-child {
     margin-bottom: 0 !important;
   }
-  section#footer ul.info li { margin-right: 0; }
+  section#footer ul.info li { margin-right: 0 !important; }
+  section#footer ul.info { text-align: center !important; }
   body.tips-and-tricks .custom-card-holder .card-title {
     font-size: 20px !important;
   }
@@ -1023,12 +1165,13 @@
             margin-right: 0 !important;
           }
         }
+        ol.breadcrumb li { padding: 0 !important; }
       }
     }
     section#tabs > .container > .row > .col-8 {
       .custom-tabs {
         ul.nav-tabs li.nav-item a {
-        	font-size: 16px !important; margin-right: 30px !important;
+        	font-size: 20px !important; margin-right: 30px !important;
         }
         ul.nav-tabs li:last-child.nav-item a { margin-right: 0 !important; }
         .tab-content {
@@ -1066,7 +1209,6 @@
   .full-item.background-image { height: 200px !important; }
   .select-category .ember-basic-dropdown-trigger { width: 87% !important; }
   body.tips-and-tricks .subpage-thumbnails .background-image { height: 178px; }
-  .banner-content .search-banner .ember-power-select-trigger { width: 82% !important; }
   .blog-fullwidth-content ol.steps-process li .step-count {
     position: relative; transform: none; left: 0; margin: 15px auto;
   }
@@ -1121,5 +1263,31 @@
         tr.legend > td { display: none; }
       }
     }
+  }
+  .subCat-locationListing .location-img-background {
+    height: 306px;
+  }
+  body.sub-category.courses {
+    .subpage-header .container .breadcrumb li { width: 100%; }
+    section#course-sub-category .course-subcategory-content {
+      h2 { font-size: 25px !important; }
+      .headerCard-title .card-title h3 { font-size: 30px !important; }
+    }
+    #aggregateRating {
+      .course-subcategory-content .row {
+        .col-9, .col-3 { max-width: 100%; flex: none; padding: 0; }
+        .col-3 .sub-category-image { margin-bottom: 20px;}
+      }
+      section#request-callback > .container {
+        h1 {  font-size: 30px !important; }
+        ul.contact-infos li p, ul.contact-infos li a { font-size: 20px; }
+      }
+      section#subCat-ourLocations h1,
+      section#why-choose > .container h1 { font-size: 30px !important; margin-top: 0 !important; }
+    }
+  }
+  .course-outline-section .row .col-6 {
+  	max-width: 100%;
+  	flex: none;
   }
 }

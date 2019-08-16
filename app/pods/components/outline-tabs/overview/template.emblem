@@ -1,0 +1,13 @@
+.container.py-5.px-0
+  h2 Course Information
+  .course-outline-section
+    = html-safe course.fullDescription
+  .courseOutline-holder.mt-5
+    h2 Course Outline
+    .course-outline-section
+      % BsAccordion @selected="value-0" as |Acc|
+        = each course.topics as |topic index|
+          = Acc.item value=(concat "value-" index) title=topic.title
+            ul
+              = each topic.topics as |subTopic|
+                li = subTopic.title

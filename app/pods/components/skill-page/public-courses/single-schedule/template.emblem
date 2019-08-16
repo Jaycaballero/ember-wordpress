@@ -1,0 +1,22 @@
+table.table
+  = each publicDates as |publicDate|
+    tr
+      td.date
+        .data = publicDate.course.title
+      td.date
+        .data = publicDate.location.name
+      td
+        .data = moment-format publicDate.startDate 'ddd Do MMM YYYY'
+      td
+        .data
+          | £
+          = publicDate.price
+      td
+        .data
+          = bs-button [
+            class="btn btn-primary book-now w-100"
+            onClick=(action "selectBooking" publicDate)
+          ]
+            | Enquire
+  = if (not publicDates.length)
+    h6 Sorry, there are no available classes for this location.

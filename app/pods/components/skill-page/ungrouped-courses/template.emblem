@@ -1,0 +1,11 @@
+= if showUngrouped
+  .mb-5#ungrouped-courses
+    .row
+      = if showTitle
+        h2
+          | Standard&nbsp;
+          = subCategory.title
+          |  Courses
+    = skill-page/course-groups/course-cards [
+      courses=courses
+    ]

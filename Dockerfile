@@ -3,7 +3,8 @@ RUN npm install -g ember-cli fastboot-app-server
 
 WORKDIR /usr/src/
 
-ADD package.json ./
+COPY package.json ./
+COPY package-lock.json ./
 RUN npm install
 
 COPY ./ /usr/src/

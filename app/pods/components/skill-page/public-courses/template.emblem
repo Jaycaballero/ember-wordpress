@@ -1,0 +1,29 @@
+h1 Dates and Prices
+.row
+  .col-md-12
+    .power-select-control
+      = power-select [
+        allowClear=true
+        options=locations
+        placeholder="Choose a location..."
+        selected=selectedLocation
+        onchange=(action "selectLocation")
+      ] as |location|
+        = location.name
+.row
+  .col-md-12
+    = bs-alert [
+      visible=bookingSuccessful
+      fade=true
+      type="success"
+      dismissible=true
+      onDismiss=(action (mut bookingSuccessful) false)
+    ]
+      | Thank you! Your booking has been recorded!
+.location-row
+  = skill-page/public-courses/single-schedule [
+    publicDates=pagedPublicDates
+    onSelectBooking=onSelectBooking
+  ]
+  #location-pagination
+    = page-numbers content=pagedPublicDates

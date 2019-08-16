@@ -1,4 +1,4 @@
-- type: parallel
+- type: serial
   name: "Build Stage"
   steps:
   - name: "Building Image"
@@ -6,7 +6,7 @@
     tag: ^(master|staging)
     command: echo "Build completed"
 
-- type: parallel
+- type: serial
   name: "Push Stage"
   steps:
   - name: 'Push SHA tag'
@@ -29,14 +29,6 @@
     service: master
     tag: ^([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+[0-9A-Za-z-]+)?
     type: push
-    image_name: "eu.gcr.io/neso-io/sx-ember-wordpress"
-    image_tag: "{{ .Branch }}"
-    registry: https://eu.gcr.io
-    dockercfg_service: codeship-gcr-dockercfg
-  - name: "Push stable tag"
-    service: master
-    type: push
-    tag: ^([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+[0-9A-Za-z-]+)?
     image_name: "eu.gcr.io/neso-io/sx-ember-wordpress"
     image_tag: "{{ .Branch }}"
     registry: https://eu.gcr.io

@@ -1,17 +1,34 @@
 @import "ember-bootstrap/bootstrap";
 @import "responsive";
+@import "course-outline";
 @import "ember-power-select";
 
 @font-face {
-    font-family: 'calibri-regular';
-    font-display: auto;
-    src: local('calibri-regular'), url(../fonts/calibri-regular.woff2) format('woff2');
+  font-family: 'calibri-regular';
+  font-display: auto;
+  src: local('calibri-regular'), url(../fonts/calibri-regular.woff2) format('woff2');
 }
 @font-face {
-    font-family: 'calibri-bold';
-    font-display: auto;
-    src: local('calibri-bold'), url(../fonts/calibri-bold.woff2) format('woff2');
+  font-family: 'calibri-bold';
+  font-display: auto;
+  src: local('calibri-bold'), url(../fonts/calibri-bold.woff2) format('woff2');
 }
+@font-face {
+  font-family: 'helveticaneue';
+  font-display: auto;
+  src: local('helveticaneue'), url(../fonts/helveticaneue.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'helveticaneue-bold';
+  font-display: auto;
+  src: local('helveticaneue-bold'), url(../fonts/helveticaneue-bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'helveticaneue-light';
+  font-display: auto;
+  src: local('helveticaneue-light'), url(../fonts/helveticaneue-light.woff2) format('woff2');
+}
+
 button:focus {
   outline: none !important;
 }
@@ -109,7 +126,7 @@ section#top .top-buttons a.btn:hover {
   display: flex;
   .search-banner {
     .ember-power-select-trigger {
-	    width: 89%;
+	    width: 100%;
       background-color: transparent;
       border: 0;
       padding: 0;
@@ -135,6 +152,11 @@ section#top .top-buttons a.btn:hover {
       background-color: #e84d3d !important;
       border: 1px solid #e84d3d !important;
       border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 16px;
+      padding: 12px;
     }
     .fa.fa-search { color: #fff; }
     button.btn:hover { background-color: #e84d3d !important; }
@@ -249,7 +271,7 @@ section#footer {
   ul {
     list-style: none;
     li {
-      display: inline-block; margin-right: 35px;
+      display: inline-block;
       a { color: #d1d3d4; transition: color 0.2s ease-out;
       }
       &:hover a { color: #e84d3d !important; text-decoration: none;}
@@ -257,6 +279,7 @@ section#footer {
       i { display: none; }
     }
   }
+  ul.footer-menu li { margin-right: 25px; }
   ul.footer-social-icons {
     li {
       margin-right: 20px;
@@ -270,7 +293,10 @@ section#footer {
   ul.info {
     li {
       a, p {
-        font-size: 23px; color: #d1d3d4; transition: color 0.2s ease-out;
+        font-size: 23px;
+        color: #d1d3d4;
+        transition: color 0.2s ease-out;
+        margin-bottom: 5px;
       }
     }
   }
@@ -313,6 +339,14 @@ b, strong { font-family: calibri-bold; font-size: 20px; color: #707070;}
 #subpage-content ul li::before { content: "\2022"; color: #005f8b; margin-right: 5px; }
 section#subpage-content a { color: #e84d3d; }
 ul.client-testimonials-listing { margin: 0; }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  /* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
+  ul.client-testimonials-listing:focus, .carousel.slide:focus { outline: none !important; }
+  body.about-us section#subpage-content ul.client-testimonials-listing .carousel.slide,
+  body.about-us section#subpage-content ul.client-testimonials-listing {
+    outline: none !important;
+  }
+}
 ul.client-testimonials-listing li::before { content: none !important; }
 ul.client-testimonials-listing .carousel-item > li:nth-child(2) {
   position: relative; margin-top: 45px;
@@ -580,17 +614,10 @@ section#subpage-content.courses {
   .col-md-4 {
   	max-width: calc(33.33% - 16px);
     background-color: #fff;
-    transition: transform 0.3s ease-in-out;
     .card {
       background-color: transparent;
       transition: none;
       &:hover { transform: none; box-shadow: none; }
-    }
-    &:hover {
-      transform: translate(0, -5%);
-    	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    	-webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    	-moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -601,7 +628,7 @@ section#subpage-content.courses {
 ul.sub-category-listing {
 	list-style: none; padding: 15px;
   li{
-    width: calc(33% - 8px);
+    width: calc(25% - 12px);
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
@@ -610,43 +637,12 @@ ul.sub-category-listing {
       .course-subcategory-title { color: #005f8b; }
     }
   }
-  li:nth-child(3n) { margin-right: 0; }
+  li:nth-child(4n) { margin-right: 0; }
   .course-subcategory-introtext { color: #666666; font-size: 17px; }
 }
 ul.course-sub-category-listing li a {
 	text-decoration: none;
   &:hover .course-subCategory-title { color: #005f8b !important; }
-}
-ul.sidebar-category-lists {
-  > li {
-    .cat-title-and-icon {
-      img.cat-ico {
-        width: 5%;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-      }
-      .cat-title { margin-left: 30px; }
-    }
-  	list-style: none;
-  	border-top: 1px solid #e1e2e3;
-  	padding: 7px 15px;
-    > a {
-      color: #666666;
-      text-decoration: none;
-      &::after {
-        content: "\f054";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translate(0, -50%);
-        font-size: 13px;
-      }
-    }
-    &:hover a, &:hover a:after { color: #005f8b; }
-  }
 }
 ul.sub-category-listing {
   > li {
@@ -661,24 +657,14 @@ ul.sub-category-listing {
       .image {
         width: 120px;
         height: 120px;
-        background-size: cover;
+        background-size: 100% auto;
         background-position: center center;
+        background-repeat: no-repeat;
       }
     }
     .card-body {
       .course-subcategory-title {
         font-family: calibri-bold; color: #666666;
-      }
-      .learn-more {
-      	background-color: #e84d3d;
-      	color: #fff;
-      	border: 1px solid #e84d3d !important;
-      	border-radius: 0.45rem;
-      	font-size: 16px;
-      	padding: 4px 31px;
-      	font-family: calibri-bold;
-        transition: 0.3s ease-in-out;
-        &:hover { color: #e84d3d; background-color: transparent; }
       }
     }
   }
@@ -688,6 +674,9 @@ body.sub-category-page .course-category-listing { display: none; }
 	width: 20%; margin: 0 auto 30px !important;
 }
 body.sub-category.courses {
+  .breadcrumb li.active { font-family: helveticaneue-bold; }
+  .header-call-to-action { display: none; }
+  h1 { font-family: helveticaneue-bold !important; font-size: 45px !important; }
   nav#scroll-to-section {
     background-color: #f1f2f2;
     ul.child-items-navigation li {
@@ -700,31 +689,51 @@ body.sub-category.courses {
       }
     }
   }
-  section#scroll-menus {
-    background-color: #ddf0f8;
-    ul.scrollMenu-items li {
-      list-style: none;
-      display: inline-block;
-      margin-right: 50px;
-      color: #005f8b;
-      a { font-family: calibri-bold; color: #005f8b; text-decoration: none; }
-    }
-  }
   section#course-sub-category {
-    .course-content .card {
-      padding: 0; background-color: #f5f5f5;
-      &:hover { box-shadow: none; }
+    .subCatTitle-shortDesc-wrapper {
+      font-family: helveticaneue; font-size: 18px; color: #747474;
     }
-    .card-title {
-      padding: 95px 30px; margin-bottom: 0;
-      h3 { font-size: 32px; color: #fff; }
+    h2 {
+      font-family: helveticaneue-light !important;
+      font-size: 45px !important;
+    }
+    .course-content .card {
+      padding: 0; border-bottom: 1px solid #dcdedf !important; height: 550px;
+      &:hover { box-shadow: none; }
+      .card-holder {
+      	background-color: #f5f5f5;
+      	border: 1px solid #dcdedf;
+      	padding-bottom: 10000px;
+      	margin-bottom: -10000px;
+      }
+    }
+    .headerCard-title {
+      height: 250px;
+      .card-title {
+        position: absolute;
+        padding: 0 30px;
+        margin-bottom: 0;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        a { text-decoration: none; }
+        h3 { font-family: helveticaneue-light; font-size: 30px; color: #fff; }
+      }
     }
     .card-text {
-      padding: 30px;
-      border-left: 1px solid #dcdedf !important;
-      border-right: 1px solid #dcdedf !important;
-      p { margin-bottom: 0;}
-      .level .fa-circle { color: #e84d3d; }
+      padding: 30px; font-family: helveticaneue; font-size: 18px; color: #999;
+      .introduction{color: #37863D;}
+      .intermediate{color: #E8D931;}
+      .advanced{color: #e84d3d;}
+      .other{color: #0785BF;}
+      p { margin-bottom: 0; }
+      small { margin-left: 5px; font-family: helveticaneue; }
+      .duration{float: right; font-weight: 700;}
     }
     ul {
       > li {
@@ -734,29 +743,25 @@ body.sub-category.courses {
     }
     .card {
       .card-footer {
+        padding: 0 30px; position: absolute; bottom: 30px; width: 100%;
         a.view-outline {
-        	background-color: #e84d3d;
+        	background-color: #005f8b;
         	color: #fff;
-        	border: 1px solid #e84d3d !important;
+        	border: 1px solid #005f8b !important;
         	border-radius: 0.25rem;
-        	font-size: 18px;
+        	font-size: 16px;
         	padding: 8px;
-        	font-family: calibri-bold;
+        	font-family: helveticaneue-bold;
         	transition: 0.3s ease-in-out;
         	display: table;
         	width: 100%;
         	text-align: center;
           &:hover {
             background-color: transparent !important;
-            color: #e84d3d !important;
+            color: #005f8b !important;
             text-decoration: none;
           }
         }
-        padding: 0 30px 30px 30px;
-        border-left: 1px solid #dcdedf !important;
-        border-bottom: 1px solid #dcdedf !important;
-        border-right: 1px solid #dcdedf !important;
-        border-radius: 0 !important;
       }
     }
     .request-a-call-back-form, .get-started-form { background-color: #f1f2f2; }
@@ -764,8 +769,16 @@ body.sub-category.courses {
   section#why-choose {
 	  background-color: #ddf0f8;
     .why-chooose {
-      h1 { font-size: 45px !important; font-family: calibri-regular !important; color: #005f8b; }
-      .reviews { color: #e84d3d; font-weight: bold; }
+      h1 { font-size: 45px !important; font-family: helveticaneue-light !important; color: #005f8b; }
+      .reviews { color: #e84d3d; font-family: helveticaneue-bold; font-size: 18px; }
+    }
+    .carousel-testimonials:focus { outline: none !important; }
+    ul.client-testimonials-listing.testimonial:focus { outline: none !important; }
+    ul.client-testimonials-listing.testimonial {
+      width: 100%;
+      .carousel.slide { width: 100%; outline: none !important; }
+      .carousel-item > li:nth-child(2)::after { background: none; }
+      .carousel-item > li:nth-child(2) { margin-top: 0; }
     }
     ul.testimonial {
       li {
@@ -774,18 +787,22 @@ body.sub-category.courses {
       }
       li.quote-icon { width: 5%; margin-right: 10px; }
       li.testimonial-content {
-        width: 90%;
-        .person { font-family: calibri-bold; color: #005f8b; }
+        .person { font-family: helveticaneue-bold; color: #005f8b; font-size: 18px; }
       }
-      .testimonial-content p { color: #005f8b; }
+      .testimonial-content p {
+        color: #005f8b; font-family: helveticaneue-light; font-size: 18px; font-style: italic;
+      }
     }
     ul.whyChoose-listing li {
       float: left; width: 50%; list-style: none; margin-bottom: 15px;
-      h5.title { font-family: calibri-bold; color: #005f8b; }
+      h5.title { font-family: helveticaneue-bold; color: #005f8b; font-size: 18px; }
       .choose-icon {
         position: absolute;
       }
-      .title-content { margin-left: 73px; width: 70%;}
+      .title-content {
+        margin-left: 73px; width: 70%;
+        .choose-content p { font-family: helveticaneue; font-size: 18px; color: #005f8b; }
+      }
       &:not(:nth-child(1)) .choose-icon img {
         width: 75%;
       }
@@ -793,10 +810,9 @@ body.sub-category.courses {
   }
   section#subCat-ourLocations {
     h1 {
-      font-size: 45px !important;
-      color: #005f8b; font-family:
-      calibri-regular !important;
+      font-size: 45px !important; color: #005f8b;  font-family: helveticaneue-light !important;
     }
+    p { font-family: helveticaneue; font-size: 18px; color: #747474; }
     ul.subCat-locationListing li {
     	list-style: none;
       float: left;
@@ -808,7 +824,8 @@ body.sub-category.courses {
         background-color: #f5f5f5;
         height: 160px;
       }
-      .location-title { font-size: 23px; color: #005f8b; }
+      .location-title { color: #005f8b; font-family: helveticaneue; font-size: 20px; }
+      .location-address { font-family: helveticaneue; font-size: 18px; color: #333333; }
       .get-directions { color: #005f8b; text-decoration: underline; }
       p { margin-bottom: 0; }
     }
@@ -823,7 +840,7 @@ body.sub-category.courses {
       color: #70d1ef;
     }
     ul.moreInformation-lists li {
-      list-style: none; color: #fff !important; float: left; width: 50%;
+      list-style: none; color: #fff !important; float: left; width: 50%; font-size: 23px;
       &::before {
         content: "\f054";
         font-family: "Font Awesome 5 Free";
@@ -834,10 +851,31 @@ body.sub-category.courses {
       }
     }
   }
+  section#public-courses-list {
+    margin-top: -20px;
+    margin-bottom: 50px;
+    h1 {
+      font-family: helveticaneue-light !important;
+      font-size: 45px !important;
+      color: #005f8b;
+    }
+    h6 {
+      color: #005f8b;
+      font-family: helveticaneue;
+      margin-top: 10px;
+    }
+    .power-select-control {
+      display: block;
+      div {
+        width: 300px;
+        margin-bottom: 20px;
+      }
+    }
+  }
   section#request-callback {
 	  background-color: #ddf0f8;
     h1 {
-      font-family: calibri-regular !important;
+      font-family: helveticaneue-light !important;
       font-size: 45px !important;
       color: #005f8b;
     }
@@ -850,16 +888,25 @@ body.sub-category.courses {
           border: 2px solid #bfd8e3 !important;
         }
         .btn.submit-button {
-        	width: 25%;
+        	width: 25%; font-family: helveticaneue-bold; font-size: 18px;
         }
       }
     }
-    p { color: #005f8b; }
+    p { color: #005f8b; font-family: helveticaneue; font-size: 18px;}
     ul.contact-infos li {
       margin-bottom: 5px;
       list-style: none;
-      p, a { font-size: 23px; color: #005f8b; margin-bottom: 0;}
+      p, a { font-size: 30px; font-family: helveticaneue; color: #005f8b; margin-bottom: 0;}
       i { color: #e84d3d; font-size: 30px; margin-right: 15px; }
+    }
+    #subCat-callbackForm form input[type="text"],
+    #subCat-callbackForm input[type="text"]::placeholder,
+    #subCat-callbackForm form input[type="email"]::placeholder,
+    #subCat-callbackForm form textarea::placeholder {
+    	font-family: helveticaneue !important;
+    	font-size: 18px !important;
+    	color: #999999 !important;
+    	opacity: 1 !important;
     }
   }
 }
@@ -873,18 +920,17 @@ body.outline.course {
       	background-color: transparent;
       	padding: 0;
         > li {
-          color: #fff; font-size: 25px;
+          color: #fff; font-size: 22px;
           > a {
-            text-decoration: none; color: #fff; font-size: 25px;
+            text-decoration: none; color: #fff; font-size: 22px; font-family: helveticaneue-bold;
           }
         }
-        li.active { color: #70d1ef; }
+        li.active { color: #70d1ef; font-family: helveticaneue-bold; font-size: 22px; }
         li::before {
           content: "\f054";
           font-weight: 900;
           font-family: "Font Awesome 5 Free";
           color: #70d1ef;
-          margin-top: -3px;
         }
         li:nth-child(1)::before { content: none; }
       }
@@ -913,7 +959,7 @@ body.outline.course {
       }
     }
   }
-  .subpage-header { padding: 90px 15px; }
+  .subpage-header { padding: 45px 15px; }
   .custom-tabs {
     ul.nav-tabs {
       border: 0;
@@ -1042,7 +1088,7 @@ body.outline.course {
       }
     }
   }
-  a { color: #e84d3d; font-family: calibri-regular; font-size: 20px; }
+  a { color: #e84d3d; font-family: calibri-regular; }
 }
 #subpage-content {
   ul.other-pages li {
@@ -1063,6 +1109,7 @@ body.outline.course {
 }
 .aboutUs-fullItem-View #full-item-view-content ul li {
   list-style: none;
+  .fas.fa-check { color: #008b2c; margin-right: 10px; }
   .full-item.background-image {
   	float: left; width: 50%; margin-right: 25px;
   }
@@ -1594,4 +1641,39 @@ body.outline.course {
   border-radius: 0 !important;
   color: #ffffff;
   margin-bottom: 0;
+}
+
+
+/*skill/craft page*/
+.sub-category-image {
+  width: 100%;
+}
+
+.location-img-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 245px;
+  position: relative;
+}
+
+#location-pagination {
+  .pagination-centered {
+    .pagination {
+      justify-content: center;
+    }
+  }
+  .pagination {
+    > li {
+      padding: 5px;
+    }
+    .active {
+      text-decoration: underline solid #005f8b;
+    }
+    .disabled > a {
+      color: #6c757d;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }

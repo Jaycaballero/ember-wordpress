@@ -1,4 +1,5 @@
 {{set-body-class "courses"}}
+
 <header class="subpage-header position-relative">
   <div class="subpage-header py-5">
     <div class="container">
@@ -11,15 +12,9 @@
         </div>
         <div class="col-lg-6">
           <div class="header-call-to-action position-absolute">
-            {{#each newLink as |callToAction|}}
-              <a
-                class="btn btn-primary btn-white-hover"
-                href={{callToAction.link}}
-                role="button"
-              >
-                {{callToAction.linkTitle}}
-              </a>
-            {{/each}}
+            {{#link-to "page" "contact-us" class="btn btn-primary btn-white-hover" role="button"}}
+              Request More Information
+            {{/link-to}}
           </div>
         </div>
       </div>

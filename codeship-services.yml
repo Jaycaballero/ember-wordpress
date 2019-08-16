@@ -21,4 +21,4 @@ codeship-gce-service:
     - ./:/deploy
 
 master:
-  image: eu.gcr.io/neso-io/mh-supplier-portal:master
+  image: eu.gcr.io/neso-io/sx-ember-wordpress:master

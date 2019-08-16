@@ -6,9 +6,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="/courses">
-                Course
-              </a>
+              {{#link-to "page" "courses"}}
+                Courses
+              {{/link-to}}
             </li>
             <li class="breadcrumb-item">
               {{#link-to "course"}}
@@ -24,13 +24,9 @@
       </div>
       <div class="col-lg-4">
         <div class="header-call-to-action position-absolute">
-          <a
-            class="btn btn-primary btn-white-hover"
-            href="/contact"
-            role="button"
-          >
+          {{#link-to "page" "contact-us" class="btn btn-primary btn-white-hover" role="button"}}
             Request More Information
-          </a>
+          {{/link-to}}
         </div>
       </div>
     </div>

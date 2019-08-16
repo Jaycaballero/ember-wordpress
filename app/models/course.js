@@ -10,6 +10,7 @@ const {
 export default Model.extend({
   attribute: belongsTo(),
   bannerImageUrl: attr('string'),
+  color: attr('string'),
   days: attr('number'),
   description: attr('string'),
   fullDescription: attr('string'),
@@ -24,6 +25,8 @@ export default Model.extend({
   topics: attr(),
   version: attr('string'),
 
-  categories: hasMany('category'),
-  subCategories: hasMany('sub-category'),
+  categories: hasMany(),
+  publicDates: hasMany(),
+  courseGroups: hasMany('site-tag'),
+  subCategories: hasMany(),
 });

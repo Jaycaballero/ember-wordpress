@@ -4,35 +4,7 @@
 <section id="course-parent-category">
   <div class="container py-5">
     <div class="row">
-      <div class="col-md-4 sidebar">
-        <ul class="sidebar-category-lists p-0 mt-3">
-          {{#each category.subCategories as |subCategory|}}
-            {{#if (gte subCategory.courses.length 1)}}
-              <li class="position-relative">
-                {{#link-to
-                  "course.sub-category"
-                  subCategory.slug
-                  class="course-sub-category-link"
-                }}
-                  <div class="cat-title-and-icon">
-                    {{#if subCategory.iconUrl}}
-                      <img src={{subCategory.iconUrl}} alt="image" class="cat-ico">
-                    {{else if subCategory.categories.firstObject.iconUrl}}
-                      <img
-                        src={{subCategory.categories.firstObject.iconUrl}}
-                        alt="image"
-                        class="cat-ico"
-                      >
-                    {{/if}}
-                    <div class="cat-title">{{subCategory.title}}</div>
-                  </div>
-                {{/link-to}}
-              </li>
-            {{/if}}
-          {{/each}}
-        </ul>
-      </div>
-      <div class="col-md-8 pr-0">
+      <div class="col pr-0">
         <ul class="sub-category-listing d-table w-100">
           {{#each category.subCategories as |subCategory|}}
             {{#if (gte subCategory.courses.length 1)}}
@@ -61,7 +33,6 @@
                     <div class="course-subcategory-title mb-3">
                       {{subCategory.title}}
                     </div>
-                    <div class="learn-more text-uppercase d-table m-auto">Learn</div>
                   </div>
                 {{/link-to}}
               </li>

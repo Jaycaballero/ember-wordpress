@@ -9,7 +9,9 @@ export default Route.extend({
   },
   model({ course }) {
     if (this.modelFor('page')) {
-      return this.modelFor('page').categories.findBy('slug', course);
+      if (this.modelFor('page').categories) {
+        return this.modelFor('page').categories.findBy('slug', course);
+      }
     }
     return this.get('store').query('category', { slug: course, include: ['subCategories', 'courses']});
   }
