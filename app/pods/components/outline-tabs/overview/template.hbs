@@ -3,20 +3,20 @@
   <div class="course-outline-section">
     {{html-safe course.fullDescription}}
   </div>
-  <br>
-
-  <h2>Course Outline</h2>
-  <div class="course-outline-section">
-    <BsAccordion @selected="value-0" as |Acc|>
-      {{#each course.topics as |topic index|}}
-        <Acc.item @value={{concat "value-" index}} @title={{topic.title}}>
-          <ul>
-            {{#each topic.topics as |subTopic|}}
-              <li>{{subTopic.title}}</li>
-            {{/each}}
-          </ul>
-        </Acc.item>
-      {{/each}}
-    </BsAccordion>
+  <div class="courseOutline-holder mt-5">
+    <h2>Course Outline</h2>
+    <div class="course-outline-section">
+      <BsAccordion @selected="value-0" as |Acc|>
+        {{#each course.topics as |topic index|}}
+          <Acc.item @value={{concat "value-" index}} @title={{topic.title}}>
+            <ul>
+              {{#each topic.topics as |subTopic|}}
+                <li>{{subTopic.title}}</li>
+              {{/each}}
+            </ul>
+          </Acc.item>
+        {{/each}}
+      </BsAccordion>
+    </div>
   </div>
 </div>
