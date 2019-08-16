@@ -1,5 +1,6 @@
 @import "ember-bootstrap/bootstrap";
 @import "responsive";
+@import "course-outline";
 @import "ember-power-select";
 
 @font-face {
@@ -1063,72 +1064,6 @@ body.outline.course {
             float: left;
             width: auto !important;
           }
-        }
-      }
-      .course-outline-section {
-        .accordion .card {
-          box-shadow: none;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          -o-box-shadow: none;
-          .card-header {
-            border-left: 1px solid #dbdbdb;
-            border-right: 1px solid #dbdbdb;
-            margin-bottom: 10px;
-            background-color: transparent;
-            padding: 0;
-            border-radius: 0;
-            position: relative;
-            h5 {
-              text-decoration: none !important;
-              button {
-                text-decoration: none !important;
-              	color: #707070 !important;
-              	font-family: calibri-bold;
-              	font-size: 20px;
-                border: 1px solid transparent !important;
-                &:hover { border: 1px solid transparent !important; text-decoration: none !important; }
-              }
-            }
-            &:nth-child(1){ border: 1px solid #dbdbdb; }
-            &::after {
-              content: "\f107";
-              font-family: FontAwesome;
-              font-weight: 900;
-              position: absolute;
-              right: 15px;
-              top: 50%;
-              transform: translate(0, -50%);
-              color: #005f8b;
-            }
-          }
-          .card-header.expanded {
-            margin-bottom: 0;
-            &::after {
-              content: "\f106";
-              font-family: FontAwesome;
-              font-weight: 900;
-              position: absolute;
-              right: 15px;
-              top: 50%;
-              transform: translate(0, -50%);
-              color: #005f8b;
-            }
-          }
-          .card-body {
-            background-color: rgba(0,0,0,.03);
-            padding: 20px 0;
-            margin-bottom: 10px;
-          }
-        }
-        table {
-          margin: 10px 0 10px 0;
-          tr.legend td {
-        	  border-top: 3px solid #005f8b;
-            border-bottom: 3px solid #005f8b;
-            padding: 10px 12px;
-          }
-          tr:nth-child(3n) td { border: 0; }
         }
       }
     }

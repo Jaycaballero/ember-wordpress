@@ -41,7 +41,6 @@
     "ember-cli-inject-live-reload": "^1.8.2",
     "ember-cli-mirage": "^0.4.14",
     "ember-cli-moment-shim": "^3.7.1",
-    "ember-cli-owl-carousel2": "0.0.8",
     "ember-cli-pagination": "^3.1.4",
     "ember-cli-sass": "^8.0.1",
     "ember-cli-sri": "^2.1.1",
