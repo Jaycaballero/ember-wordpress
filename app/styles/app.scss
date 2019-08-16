@@ -656,8 +656,9 @@ ul.sub-category-listing {
       .image {
         width: 120px;
         height: 120px;
-        background-size: cover;
+        background-size: 100% auto;
         background-position: center center;
+        background-repeat: no-repeat;
       }
     }
     .card-body {
